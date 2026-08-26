@@ -1,0 +1,12 @@
+Permutation test for adonis under reduced model
+Blocks:  factor(cmeta$cell) 
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = Dc ~ period, data = data.frame(period = cmeta$period), permutations = how(blocks = factor(cmeta$cell), nperm = CFG$perms))
+          Df SumOfSqs      R2      F Pr(>F)    
+Model      1    7.033 0.06035 19.525  0.001 ***
+Residual 304  109.509 0.93965                  
+Total    305  116.542 1.00000                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

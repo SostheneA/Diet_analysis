@@ -1,0 +1,13 @@
+pair,test,n_cells,n_thresholds,pct_agree
+pooled_2 vs pooled_1,p_comp,42400,100,99.4
+pooled_2 vs pooled_1,p_H,42400,100,99.3
+pooled_2 vs pooled_1,p_Bs,42400,100,99.9
+pooled_2 vs pooled_1,p_disp,42400,100,99.8
+pooled_2 vs per_predator,p_comp,12900,25,80.6
+pooled_2 vs per_predator,p_H,12900,25,77.1
+pooled_2 vs per_predator,p_Bs,12900,25,88.4
+pooled_2 vs per_predator,p_disp,12900,25,86
+pooled_1 vs per_predator,p_comp,10082,25,81.9
+pooled_1 vs per_predator,p_H,10082,25,81.6
+pooled_1 vs per_predator,p_Bs,10082,25,89.8
+pooled_1 vs per_predator,p_disp,10082,25,90.1

@@ -1,0 +1,6 @@
+Analysis of Variance Table
+
+Response: Distances
+           Df Sum Sq   Mean Sq F value Pr(>F)
+Groups      1 0.0126 0.0125965  1.6483 0.1996
+Residuals 756 5.7776 0.0076423               

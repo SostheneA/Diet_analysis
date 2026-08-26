@@ -1,0 +1,7 @@
+level,currency,n_cells,k_min,k_q25,k_median,k_q75,pct_k_lt4,pct_k_lt6,stomachs_per_set
+all_gulf,biomass,27100,3,10,18,31,0.7,4.4,2.4
+all_gulf,occurrence,27100,3,10,18,31,0.7,4.4,2.4
+ecoregion,biomass,43900,1,5,8,17,13,33,2.5
+ecoregion,occurrence,43900,1,5,8,17,13,33,2.5
+stratum,biomass,90000,1,2,3,4,55.6,85.1,2.8
+stratum,occurrence,90000,1,2,3,4,55.6,85.1,2.8
