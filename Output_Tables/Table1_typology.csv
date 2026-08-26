@@ -1,0 +1,10 @@
+Family,State,Composition,Shannon H',Niche breadth Bs,Ecological reading
+Stability,Stable Diet,ns,ns,ns,"Same prey, same proportions, same breadth."
+Stability,Emerging Shift,trend (0.05-0.10),ns,ns,"Early compositional signal, not yet significant."
+Substitution,Ghost Shift,significant,ns,ns,Prey identities turn over; diversity and breadth hold.
+Functional change,Niche Compression/Expansion,ns,ns,significant,Range of prey used changes on a stable prey list.
+Functional change,Internal Rebalancing,ns,significant,ns,Proportions shift within the same prey set.
+Functional change,Niche Restructuring,ns,significant,significant,Diversity and breadth both change without turnover.
+Reorganisation,Partial Diet Shift,significant,significant,ns,Turnover accompanied by a change in diversity.
+Reorganisation,Structural Shift,significant,ns,significant,Turnover accompanied by a change in breadth.
+Reorganisation,Major Shift,significant,significant,significant,Turnover with change in both diversity and breadth.

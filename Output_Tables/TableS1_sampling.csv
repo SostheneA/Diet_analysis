@@ -1,0 +1,60 @@
+Predator,Size class,Stomachs P1,Stomachs P2,Sets P1,Sets P2,Testable,Reliable
+Alewife,adult,81,81,33,32,TRUE,TRUE
+Alewife,juvenile,76,47,28,19,TRUE,TRUE
+Alligatorfish,adult,191,133,98,59,TRUE,TRUE
+Alligatorfish,juvenile,64,45,48,33,TRUE,TRUE
+American plaice,adult,221,88,154,69,TRUE,TRUE
+American plaice,juvenile,737,355,262,137,TRUE,TRUE
+Arctic alligatorfish,one_class,157,22,63,10,TRUE,FALSE
+Arctic hookear sculpin,one_class,68,39,29,16,TRUE,TRUE
+Arctic staghorn sculpin,adult,236,63,101,35,TRUE,TRUE
+Atlantic cod,adult,1376,108,184,45,TRUE,TRUE
+Atlantic cod,juvenile,707,337,149,100,TRUE,TRUE
+Atlantic herring,adult,156,132,64,36,TRUE,TRUE
+Atlantic herring,juvenile,134,47,44,19,TRUE,TRUE
+Atlantic hookear sculpin,one_class,342,46,112,22,TRUE,TRUE
+Atlantic mackerel,adult,10,20,6,12,TRUE,FALSE
+Atlantic mackerel,juvenile,42,56,22,24,TRUE,TRUE
+Atlantic poacher,one_class,309,75,118,30,TRUE,TRUE
+Atlantic spiny lumpsucker,one_class,160,46,69,23,TRUE,TRUE
+Capelin,adult,42,9,30,9,TRUE,FALSE
+Capelin,juvenile,390,169,131,61,TRUE,TRUE
+Daubed shanny,adult,96,29,60,21,TRUE,TRUE
+Daubed shanny,juvenile,364,96,137,47,TRUE,TRUE
+Dusky snailfish,one_class,191,172,79,71,TRUE,TRUE
+Fourbeard rockling,juvenile,93,47,46,25,TRUE,TRUE
+Fourline snakeblenny,one_class,200,82,75,31,TRUE,TRUE
+Greenland cod,juvenile,99,10,51,7,TRUE,FALSE
+Greenland halibut,adult,89,19,34,15,TRUE,FALSE
+Greenland halibut,juvenile,116,97,56,43,TRUE,TRUE
+Laval's eelpout,one_class,286,56,103,27,TRUE,TRUE
+Longhorn sculpin,adult,182,41,88,29,TRUE,TRUE
+Longhorn sculpin,juvenile,236,57,88,30,TRUE,TRUE
+Marlin-spike grenadier,one_class,74,69,31,19,TRUE,TRUE
+Moustache sculpin,one_class,422,105,139,47,TRUE,TRUE
+Northern sand lance,one_class,18,76,9,35,TRUE,FALSE
+Rainbow smelt,adult,138,94,42,27,TRUE,TRUE
+Rainbow smelt,juvenile,14,6,5,4,TRUE,FALSE
+Redfish unidentified,adult,81,74,28,32,TRUE,TRUE
+Redfish unidentified,juvenile,48,12,33,10,TRUE,FALSE
+Sea raven,one_class,77,23,52,15,TRUE,FALSE
+Shorthorn sculpin,adult,156,45,86,28,TRUE,TRUE
+Shorthorn sculpin,juvenile,11,7,10,6,TRUE,FALSE
+Smooth skate,juvenile,165,32,56,16,TRUE,TRUE
+Snakeblenny,adult,138,23,57,13,TRUE,FALSE
+Spatulate sculpin,one_class,272,88,109,33,TRUE,TRUE
+Stout eelblenny,one_class,237,59,68,19,TRUE,TRUE
+Thorny skate,juvenile,538,131,123,44,TRUE,TRUE
+Three-spined stickleback,adult,60,16,27,11,TRUE,FALSE
+Three-spined stickleback,juvenile,39,21,22,11,TRUE,FALSE
+Vahl's eelpout,one_class,87,11,41,9,TRUE,FALSE
+White hake,adult,157,63,60,27,TRUE,TRUE
+White hake,juvenile,143,106,53,40,TRUE,TRUE
+Windowpane flounder,adult,5,13,3,7,TRUE,FALSE
+Windowpane flounder,juvenile,42,19,12,9,TRUE,FALSE
+Winter flounder,adult,150,47,69,25,TRUE,TRUE
+Winter flounder,juvenile,199,116,75,43,TRUE,TRUE
+Witch flounder,adult,173,101,66,36,TRUE,TRUE
+Witch flounder,juvenile,78,16,37,12,TRUE,FALSE
+Yellowtail flounder,adult,183,37,95,21,TRUE,TRUE
+Yellowtail flounder,juvenile,349,160,133,66,TRUE,TRUE
