@@ -14,7 +14,6 @@ Malacostraca,gained,3
 Mollusca,lost,3
 Mysida,lost,3
 Pandalidae,gained,3
-Pandalus,lost,3
 Teleostei,gained,3
 egg_larvae,gained,3
 other_phyla,gained,3
@@ -23,7 +22,10 @@ Argis dentata,lost,2
 Bivalvia,lost,2
 Caridea,lost,2
 Crangon septemspinosa,gained,2
+Eualus macilentus,lost,2
 Euphausiacea,gained,2
+Pandalus,lost,2
+Pandalus montagui,lost,2
 Thoridae,gained,2
 Ampeliscidae,gained,1
 Caprellidae,gained,1
@@ -35,11 +37,14 @@ Cnidaria,gained,1
 Corophiida,gained,1
 Cyrtodaria siliqua,lost,1
 Echinodermata,gained,1
+Eualus gaimardii,lost,1
 Euechinoidea,gained,1
 Euphausiacea,lost,1
 Euphausiidae,gained,1
 Eusiridae,gained,1
+Hyas coarctatus,lost,1
 Lebbeus,gained,1
+Lebbeus polaris,lost,1
 Lumpenidae,lost,1
 Lysianassida,gained,1
 Lysianassidae,gained,1
@@ -48,7 +53,8 @@ Mysidae,gained,1
 Oedicerotidae,gained,1
 Oregoniidae,gained,1
 Paguridae,lost,1
-Pasiphaea,lost,1
+Pandalus borealis,lost,1
+Pasiphaea multidentata,lost,1
 Pectinariidae,gained,1
 Perciformes,gained,1
 Pleuronectiformes,gained,1

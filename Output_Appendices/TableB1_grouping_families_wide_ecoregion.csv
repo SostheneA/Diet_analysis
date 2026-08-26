@@ -1,0 +1,21 @@
+approach,currency,contrast,Stability,Substitution,Functional change,Reorganisation
+"Pooled grouping, q = 1 (main analysis)",Biomass,2004 vs 2006,60.1,15.3,19.9,4.6
+"Pooled grouping, q = 1 (main analysis)",Biomass,2004-2005 vs 2006,63.2,13.7,19.3,3.9
+"Pooled grouping, q = 1 (main analysis)",Biomass,2018 vs 2019,57.3,12.2,26.3,4.2
+"Pooled grouping, q = 1 (main analysis)",Biomass,2006 vs 2018,27.3,35.4,14.6,22.8
+"Pooled grouping, q = 1 (main analysis)",Biomass,2004-2006 vs 2018-2019,21.4,44.3,7.2,27.1
+"Pooled grouping, q = 1 (main analysis)",Occurrence,2004 vs 2006,63.5,15.7,8.1,12.8
+"Pooled grouping, q = 1 (main analysis)",Occurrence,2004-2005 vs 2006,62.3,18.3,9.9,9.5
+"Pooled grouping, q = 1 (main analysis)",Occurrence,2018 vs 2019,71.3,10.5,10.8,7.4
+"Pooled grouping, q = 1 (main analysis)",Occurrence,2006 vs 2018,20.9,52.6,4.8,21.7
+"Pooled grouping, q = 1 (main analysis)",Occurrence,2004-2006 vs 2018-2019,14.5,50.6,4.1,30.8
+"Pooled grouping, q = 2",Biomass,2004 vs 2006,60.6,15.2,20.2,4
+"Pooled grouping, q = 2",Biomass,2004-2005 vs 2006,63.4,13.4,19.5,3.7
+"Pooled grouping, q = 2",Biomass,2018 vs 2019,57,12.6,26.3,4.2
+"Pooled grouping, q = 2",Biomass,2006 vs 2018,27.3,35.3,15.3,22.1
+"Pooled grouping, q = 2",Biomass,2004-2006 vs 2018-2019,21.8,44.4,7.4,26.4
+"Pooled grouping, q = 2",Occurrence,2004 vs 2006,64.2,15.2,7.8,12.8
+"Pooled grouping, q = 2",Occurrence,2004-2005 vs 2006,62.8,17.8,9.8,9.6
+"Pooled grouping, q = 2",Occurrence,2018 vs 2019,71.8,9.9,10.8,7.5
+"Pooled grouping, q = 2",Occurrence,2006 vs 2018,21.1,52.6,4.6,21.7
+"Pooled grouping, q = 2",Occurrence,2004-2006 vs 2018-2019,14.1,49.9,4.2,31.8

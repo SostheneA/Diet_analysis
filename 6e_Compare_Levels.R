@@ -297,8 +297,9 @@ p_levels <- comp_table %>%
   theme(axis.text.y = element_text(face = "bold"),
         legend.position = "bottom")
 
-dir.create(paste0("Sensitivity_Plot_comparison", PREY_FAMILY), recursive = TRUE, showWarnings = FALSE)
-ggsave("Sensitivity_Plot_comparison/diagnostic_composition_by_level.png",
+out_dir_cmp <- paste0("Sensitivity_Plot_comparison", PREY_FAMILY)
+dir.create(out_dir_cmp, recursive = TRUE, showWarnings = FALSE)
+ggsave(file.path(out_dir_cmp, "diagnostic_composition_by_level.png"),
        p_levels, width = 10, height = 6, dpi = 300)
 print(p_levels)
 

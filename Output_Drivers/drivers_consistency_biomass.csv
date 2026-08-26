@@ -1,40 +1,42 @@
 prey,direction,Ecoregion,Predator,Size class
 Amphipoda,gained,4,15,3
+Arthropoda,gained,4,14,3
 Gammaridae,lost,4,14,3
-Arthropoda,gained,4,13,3
-Crustacea,lost,4,13,3
+Crustacea,lost,4,11,3
 Amphilochida,gained,4,10,3
 Cumacea,gained,4,8,3
-Mysida,lost,1,9,3
-Diastylis,lost,3,6,3
+Mysida,lost,1,8,3
+Diastylis,lost,2,6,3
 Annelida,gained,3,4,3
 Malacostraca,gained,3,4,3
-Eualus,lost,2,4,3
-egg_larvae,gained,2,5,2
+egg_larvae,gained,2,6,2
 Argis dentata,lost,2,3,3
-Bivalvia,lost,2,3,2
+Bivalvia,lost,2,4,2
+Eualus macilentus,lost,2,3,3
 Oregoniidae,gained,2,3,2
+Decapoda,gained,2,2,2
 Thoridae,gained,2,3,1
 Caridea,lost,1,2,2
-Decapoda,gained,2,1,2
+Eualus,lost,1,1,3
 Teleostei,gained,1,2,2
 Brachyura,gained,2,1,1
 Euphausiacea,gained,1,2,1
-Mollusca,lost,1,2,1
-other_phyla,gained,1,1,2
-Pandalus,lost,1,1,1
+Mollusca,lost,1,2,0
 Perciformes,gained,1,1,1
+other_phyla,gained,1,1,1
 Crangonidae,lost,0,1,2
 Crangon septemspinosa,gained,1,1,0
 Echinodermata,gained,1,1,0
 Eumalacostraca,lost,1,0,1
 Hyperiidae,gained,1,1,0
 Pandalidae,gained,1,0,1
+Pandalus,lost,1,0,1
+Pandalus montagui,lost,1,1,0
+Bivalvia,gained,0,2,0
 Brachyura,lost,0,2,0
 Nematoda,gained,0,2,0
 Chordata,lost,1,0,0
 Perciformes,lost,1,0,0
-Bivalvia,gained,0,1,0
 Copepoda,lost,0,1,0
 Hyperiidae,lost,0,1,0
 Pandalus,gained,0,1,0

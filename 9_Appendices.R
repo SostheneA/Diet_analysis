@@ -54,10 +54,10 @@ suppressPackageStartupMessages({
   library(stringr); library(sf); library(forcats)
 })
 
-source("R_helpers/Config_Mappings.R")
+PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
+source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
 
 DATA_PATH   <- "data/dat_classed.rda"
-PREY_FAMILY <- "_1"
 STRATA_PATH <- "strata_rv_gulf.rds"
 MAP_XLIM    <- c(-66.2, -60.0)
 MAP_YLIM    <- c(45.5, 49.2)
@@ -66,6 +66,8 @@ N_FLAG      <- 5
 save_app <- function(p, stem, w, h, dpi = 300) save_fig(p, stem, w, h, dpi, dir = DIR_APPEND)
 
 emit_app <- function(df, stem, caption) {
+  # Contrast codes never reach the appendix files: relabel to periods.
+  if ("contrast" %in% names(df)) df <- dplyr::mutate(df, contrast = contrast_label(contrast))
   write_csv(df, file.path(DIR_APPEND, paste0(stem, ".csv")))
   cat("\n\n===== ", caption, " =====\n", sep = "")
   print(as.data.frame(df), row.names = FALSE, digits = 4)
@@ -122,7 +124,7 @@ if (have_raw) {
   save_app(pA, "Fig2a_sampling_by_year", 8, 4.6)
 
   # Panel B: the same on the map, if the geometry is available.
-  strata_sf <- if (file.exists(STRATA_PATH)) readRDS(STRATA_PATH) else NULL
+  strata_sf <- load_strata(STRATA_PATH)   # gulf.spatial shapefile, else the .rds
   if (!is.null(strata_sf)) {
     strata_sf <- st_make_valid(strata_sf)
     if (is.na(st_crs(strata_sf))) st_crs(strata_sf) <- 4326
@@ -142,7 +144,7 @@ if (have_raw) {
                            name = "Stomachs") +
       coord_sf(xlim = MAP_XLIM, ylim = MAP_YLIM, expand = FALSE) +
       labs(title = "B. Stomachs analysed per stratum and survey year") +
-      theme_minimal(base_size = 10) +
+      theme_diag(base_size = 10) +
       theme(axis.title = element_blank(), axis.text = element_text(size = 5.5),
             strip.text = element_text(face = "bold"),
             panel.grid = element_line(colour = "grey93"))
@@ -181,7 +183,7 @@ if (have_raw) {
     emit_app(ncat %>% select(-col), "TableA0_prey_categories",
              "Prey categories retained at each aggregation threshold.")
   } else {
-    message("No prey_category_*_2 columns found; Figure 3A skipped.")
+    message("No prey_category_*", PREY_FAMILY, " columns found; Figure 3A skipped.")
   }
 }
 
@@ -247,7 +249,7 @@ tableA1 <- res_all %>%
   )
 
 emit_app(tableA1, "TableA1_set_depth",
-         "Trawl sets per cell by spatial level. k = min(sets in P1, sets in P2).")
+         "Trawl sets per cell by spatial level. k = min(sets in 2004-2006, sets in 2018-2019).")
 
 # Effect size next to detection rate.
 tableA2 <- res_all %>%
@@ -359,6 +361,7 @@ pS7 <- ggplot(sens, aes(contrast, pct, colour = family,
                         shape = subset, group = interaction(family, subset))) +
   geom_line(aes(linetype = subset), linewidth = 0.6) +
   geom_point(size = 2.2) +
+  scale_x_discrete(labels = CONTRAST_LAB) +
   facet_grid(currency ~ level,
              labeller = labeller(currency = CURRENCY_LAB, level = LEVEL_SHORT)) +
   scale_colour_manual(values = FAMILY_PAL, name = NULL) +
@@ -404,7 +407,7 @@ wl("")
 wl("CONTRASTS PRESENT")
 for (ct in CONTRAST_LEVELS) {
   n <- sum(as.character(res_all$contrast) == ct, na.rm = TRUE)
-  wl("  ", ct, ": ", n, " cell-rows")
+  wl("  ", CONTRAST_LAB_1L[[ct]], ": ", n, " cell-rows")
 }
 wl("")
 wl("TAXONOMIC RESOLUTIONS")
@@ -414,6 +417,9 @@ wl("  ", dplyr::n_distinct(res_all$x_threshold), " thresholds, from ",
 wl("")
 wl("TEST SETTINGS READ BACK FROM THE RESULTS")
 wl("  Niche breadth test: ", paste(unique(res_all$Bs_test), collapse = ", "))
+wl("  Prey-grouping family: ",
+   if ("prey_family" %in% names(res_all)) paste(unique(res_all$prey_family), collapse = ", ") else PREY_FAMILY)
+wl("  Result folders: ", paste(RDA_DIRS, collapse = ", "))
 wl("")
 wl("OUTPUT FILES")
 for (d in c(DIR_FIGURES, DIR_TABLES, DIR_APPEND, DIR_DRIVERS)) {

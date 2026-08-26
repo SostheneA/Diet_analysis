@@ -1,91 +1,91 @@
 Currency,Contrast,Family,State,Frequency (%)
-biomass,P1a,Stability,Stable Diet,44.5
-biomass,P1a,Stability,Emerging Shift,10.3
-biomass,P1a,Substitution,Ghost Shift,21.2
-biomass,P1a,Functional change,Niche Compression/Expansion,7.2
-biomass,P1a,Functional change,Internal Rebalancing,6.5
-biomass,P1a,Functional change,Niche Restructuring,1.9
-biomass,P1a,Reorganisation,Partial Diet Shift,1.5
-biomass,P1a,Reorganisation,Structural Shift,4.5
-biomass,P1a,Reorganisation,Major Shift,2.5
-biomass,P1b,Stability,Stable Diet,38.3
-biomass,P1b,Stability,Emerging Shift,10.8
-biomass,P1b,Substitution,Ghost Shift,22.5
-biomass,P1b,Functional change,Niche Compression/Expansion,9.9
-biomass,P1b,Functional change,Internal Rebalancing,8.3
-biomass,P1b,Functional change,Niche Restructuring,3
-biomass,P1b,Reorganisation,Partial Diet Shift,2.1
-biomass,P1b,Reorganisation,Structural Shift,4.5
-biomass,P1b,Reorganisation,Major Shift,0.7
-biomass,P2,Stability,Stable Diet,57.4
-biomass,P2,Stability,Emerging Shift,7.1
-biomass,P2,Substitution,Ghost Shift,14.3
-biomass,P2,Functional change,Niche Compression/Expansion,3.4
-biomass,P2,Functional change,Internal Rebalancing,14.2
-biomass,P2,Functional change,Niche Restructuring,0
-biomass,P2,Reorganisation,Partial Diet Shift,1.8
-biomass,P2,Reorganisation,Structural Shift,1.8
-biomass,P2,Reorganisation,Major Shift,0
-biomass,PTb,Stability,Stable Diet,10.9
-biomass,PTb,Stability,Emerging Shift,3.8
-biomass,PTb,Substitution,Ghost Shift,48.4
-biomass,PTb,Functional change,Niche Compression/Expansion,2.3
-biomass,PTb,Functional change,Internal Rebalancing,1.6
-biomass,PTb,Functional change,Niche Restructuring,1.6
-biomass,PTb,Reorganisation,Partial Diet Shift,19.3
-biomass,PTb,Reorganisation,Structural Shift,8.6
-biomass,PTb,Reorganisation,Major Shift,3.5
-biomass,PTa,Stability,Stable Diet,7
-biomass,PTa,Stability,Emerging Shift,3.7
-biomass,PTa,Substitution,Ghost Shift,54.7
-biomass,PTa,Functional change,Niche Compression/Expansion,0.8
-biomass,PTa,Functional change,Internal Rebalancing,1.7
-biomass,PTa,Functional change,Niche Restructuring,1.1
-biomass,PTa,Reorganisation,Partial Diet Shift,17.5
-biomass,PTa,Reorganisation,Structural Shift,9.7
-biomass,PTa,Reorganisation,Major Shift,3.8
-occurrence,P1a,Stability,Stable Diet,43.5
-occurrence,P1a,Stability,Emerging Shift,9.8
-occurrence,P1a,Substitution,Ghost Shift,27
-occurrence,P1a,Functional change,Niche Compression/Expansion,0.9
-occurrence,P1a,Functional change,Internal Rebalancing,1
-occurrence,P1a,Functional change,Niche Restructuring,0
-occurrence,P1a,Reorganisation,Partial Diet Shift,5
-occurrence,P1a,Reorganisation,Structural Shift,8.5
-occurrence,P1a,Reorganisation,Major Shift,4.4
-occurrence,P1b,Stability,Stable Diet,42.1
-occurrence,P1b,Stability,Emerging Shift,11.3
-occurrence,P1b,Substitution,Ghost Shift,26.5
-occurrence,P1b,Functional change,Niche Compression/Expansion,3.4
-occurrence,P1b,Functional change,Internal Rebalancing,1.9
-occurrence,P1b,Functional change,Niche Restructuring,0.2
-occurrence,P1b,Reorganisation,Partial Diet Shift,3.1
-occurrence,P1b,Reorganisation,Structural Shift,9.8
-occurrence,P1b,Reorganisation,Major Shift,1.8
-occurrence,P2,Stability,Stable Diet,55.9
-occurrence,P2,Stability,Emerging Shift,8.6
-occurrence,P2,Substitution,Ghost Shift,9.6
-occurrence,P2,Functional change,Niche Compression/Expansion,7.6
-occurrence,P2,Functional change,Internal Rebalancing,7.4
-occurrence,P2,Functional change,Niche Restructuring,0.5
-occurrence,P2,Reorganisation,Partial Diet Shift,5.2
-occurrence,P2,Reorganisation,Structural Shift,1.5
-occurrence,P2,Reorganisation,Major Shift,3.7
-occurrence,PTb,Stability,Stable Diet,7.5
-occurrence,PTb,Stability,Emerging Shift,2.9
-occurrence,PTb,Substitution,Ghost Shift,56.2
-occurrence,PTb,Functional change,Niche Compression/Expansion,1.1
-occurrence,PTb,Functional change,Internal Rebalancing,0.9
-occurrence,PTb,Functional change,Niche Restructuring,0
-occurrence,PTb,Reorganisation,Partial Diet Shift,17.2
-occurrence,PTb,Reorganisation,Structural Shift,6.7
-occurrence,PTb,Reorganisation,Major Shift,7.5
-occurrence,PTa,Stability,Stable Diet,4.2
-occurrence,PTa,Stability,Emerging Shift,3.2
-occurrence,PTa,Substitution,Ghost Shift,49.9
-occurrence,PTa,Functional change,Niche Compression/Expansion,0
-occurrence,PTa,Functional change,Internal Rebalancing,2
-occurrence,PTa,Functional change,Niche Restructuring,0.6
-occurrence,PTa,Reorganisation,Partial Diet Shift,18.3
-occurrence,PTa,Reorganisation,Structural Shift,13.4
-occurrence,PTa,Reorganisation,Major Shift,8.5
+biomass,2004 vs 2006,Stability,Stable Diet,44
+biomass,2004 vs 2006,Stability,Emerging Shift,10.1
+biomass,2004 vs 2006,Substitution,Ghost Shift,21.7
+biomass,2004 vs 2006,Functional change,Niche Compression/Expansion,7.2
+biomass,2004 vs 2006,Functional change,Internal Rebalancing,6.6
+biomass,2004 vs 2006,Functional change,Niche Restructuring,1.9
+biomass,2004 vs 2006,Reorganisation,Partial Diet Shift,1.5
+biomass,2004 vs 2006,Reorganisation,Structural Shift,4.5
+biomass,2004 vs 2006,Reorganisation,Major Shift,2.5
+biomass,2004-2005 vs 2006,Stability,Stable Diet,39.9
+biomass,2004-2005 vs 2006,Stability,Emerging Shift,9.7
+biomass,2004-2005 vs 2006,Substitution,Ghost Shift,22.7
+biomass,2004-2005 vs 2006,Functional change,Niche Compression/Expansion,9.9
+biomass,2004-2005 vs 2006,Functional change,Internal Rebalancing,7.5
+biomass,2004-2005 vs 2006,Functional change,Niche Restructuring,3
+biomass,2004-2005 vs 2006,Reorganisation,Partial Diet Shift,2.1
+biomass,2004-2005 vs 2006,Reorganisation,Structural Shift,4.6
+biomass,2004-2005 vs 2006,Reorganisation,Major Shift,0.7
+biomass,2018 vs 2019,Stability,Stable Diet,57.1
+biomass,2018 vs 2019,Stability,Emerging Shift,7.7
+biomass,2018 vs 2019,Substitution,Ghost Shift,14.1
+biomass,2018 vs 2019,Functional change,Niche Compression/Expansion,3.4
+biomass,2018 vs 2019,Functional change,Internal Rebalancing,14.2
+biomass,2018 vs 2019,Functional change,Niche Restructuring,0
+biomass,2018 vs 2019,Reorganisation,Partial Diet Shift,1.8
+biomass,2018 vs 2019,Reorganisation,Structural Shift,1.8
+biomass,2018 vs 2019,Reorganisation,Major Shift,0
+biomass,2006 vs 2018,Stability,Stable Diet,10.9
+biomass,2006 vs 2018,Stability,Emerging Shift,4.3
+biomass,2006 vs 2018,Substitution,Ghost Shift,48.3
+biomass,2006 vs 2018,Functional change,Niche Compression/Expansion,2.3
+biomass,2006 vs 2018,Functional change,Internal Rebalancing,1.1
+biomass,2006 vs 2018,Functional change,Niche Restructuring,1.6
+biomass,2006 vs 2018,Reorganisation,Partial Diet Shift,19.3
+biomass,2006 vs 2018,Reorganisation,Structural Shift,8.7
+biomass,2006 vs 2018,Reorganisation,Major Shift,3.6
+biomass,2004-2006 vs 2018-2019,Stability,Stable Diet,6.9
+biomass,2004-2006 vs 2018-2019,Stability,Emerging Shift,3.7
+biomass,2004-2006 vs 2018-2019,Substitution,Ghost Shift,55.1
+biomass,2004-2006 vs 2018-2019,Functional change,Niche Compression/Expansion,1.2
+biomass,2004-2006 vs 2018-2019,Functional change,Internal Rebalancing,1.7
+biomass,2004-2006 vs 2018-2019,Functional change,Niche Restructuring,1.2
+biomass,2004-2006 vs 2018-2019,Reorganisation,Partial Diet Shift,16.8
+biomass,2004-2006 vs 2018-2019,Reorganisation,Structural Shift,9.8
+biomass,2004-2006 vs 2018-2019,Reorganisation,Major Shift,3.6
+occurrence,2004 vs 2006,Stability,Stable Diet,43.1
+occurrence,2004 vs 2006,Stability,Emerging Shift,8.4
+occurrence,2004 vs 2006,Substitution,Ghost Shift,28.5
+occurrence,2004 vs 2006,Functional change,Niche Compression/Expansion,0.9
+occurrence,2004 vs 2006,Functional change,Internal Rebalancing,1.4
+occurrence,2004 vs 2006,Functional change,Niche Restructuring,0
+occurrence,2004 vs 2006,Reorganisation,Partial Diet Shift,4.9
+occurrence,2004 vs 2006,Reorganisation,Structural Shift,8.5
+occurrence,2004 vs 2006,Reorganisation,Major Shift,4.4
+occurrence,2004-2005 vs 2006,Stability,Stable Diet,42.4
+occurrence,2004-2005 vs 2006,Stability,Emerging Shift,10.5
+occurrence,2004-2005 vs 2006,Substitution,Ghost Shift,26.7
+occurrence,2004-2005 vs 2006,Functional change,Niche Compression/Expansion,3.4
+occurrence,2004-2005 vs 2006,Functional change,Internal Rebalancing,1.6
+occurrence,2004-2005 vs 2006,Functional change,Niche Restructuring,0.2
+occurrence,2004-2005 vs 2006,Reorganisation,Partial Diet Shift,3.5
+occurrence,2004-2005 vs 2006,Reorganisation,Structural Shift,9.8
+occurrence,2004-2005 vs 2006,Reorganisation,Major Shift,1.8
+occurrence,2018 vs 2019,Stability,Stable Diet,55.4
+occurrence,2018 vs 2019,Stability,Emerging Shift,9
+occurrence,2018 vs 2019,Substitution,Ghost Shift,10
+occurrence,2018 vs 2019,Functional change,Niche Compression/Expansion,7.6
+occurrence,2018 vs 2019,Functional change,Internal Rebalancing,7.3
+occurrence,2018 vs 2019,Functional change,Niche Restructuring,0.5
+occurrence,2018 vs 2019,Reorganisation,Partial Diet Shift,5
+occurrence,2018 vs 2019,Reorganisation,Structural Shift,1.5
+occurrence,2018 vs 2019,Reorganisation,Major Shift,3.7
+occurrence,2006 vs 2018,Stability,Stable Diet,7.2
+occurrence,2006 vs 2018,Stability,Emerging Shift,2.9
+occurrence,2006 vs 2018,Substitution,Ghost Shift,56.2
+occurrence,2006 vs 2018,Functional change,Niche Compression/Expansion,0.9
+occurrence,2006 vs 2018,Functional change,Internal Rebalancing,1.1
+occurrence,2006 vs 2018,Functional change,Niche Restructuring,0.3
+occurrence,2006 vs 2018,Reorganisation,Partial Diet Shift,16.7
+occurrence,2006 vs 2018,Reorganisation,Structural Shift,7.3
+occurrence,2006 vs 2018,Reorganisation,Major Shift,7.4
+occurrence,2004-2006 vs 2018-2019,Stability,Stable Diet,4.2
+occurrence,2004-2006 vs 2018-2019,Stability,Emerging Shift,3.2
+occurrence,2004-2006 vs 2018-2019,Substitution,Ghost Shift,51.5
+occurrence,2004-2006 vs 2018-2019,Functional change,Niche Compression/Expansion,0
+occurrence,2004-2006 vs 2018-2019,Functional change,Internal Rebalancing,2
+occurrence,2004-2006 vs 2018-2019,Functional change,Niche Restructuring,0.6
+occurrence,2004-2006 vs 2018-2019,Reorganisation,Partial Diet Shift,16.5
+occurrence,2004-2006 vs 2018-2019,Reorganisation,Structural Shift,13
+occurrence,2004-2006 vs 2018-2019,Reorganisation,Major Shift,9

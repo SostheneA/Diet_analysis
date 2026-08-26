@@ -1,5 +1,5 @@
 TROPHIC TRANSITION ANALYSIS - RUN MANIFEST
-Generated: 2026-08-20 08:50:39 ADT
+Generated: 2026-08-26 14:36:47 ADT
 ------------------------------------------------------------------------------
 
 SPATIAL LEVELS PRESENT
@@ -8,73 +8,112 @@ SPATIAL LEVELS PRESENT
   stratum: 180000 cell-rows across all resolutions and contrasts
 
 CONTRASTS PRESENT
-  P1a: 70400 cell-rows
-  P1b: 76200 cell-rows
-  P2: 40200 cell-rows
-  PTb: 53600 cell-rows
-  PTa: 81600 cell-rows
+  2004 vs 2006: 70400 cell-rows
+  2004-2005 vs 2006: 76200 cell-rows
+  2018 vs 2019: 40200 cell-rows
+  2006 vs 2018: 53600 cell-rows
+  2004-2006 vs 2018-2019: 81600 cell-rows
 
 TAXONOMIC RESOLUTIONS
   100 thresholds, from 10 to 1000
 
 TEST SETTINGS READ BACK FROM THE RESULTS
   Niche breadth test: welch
+  Prey-grouping family: _1
+  Result folders: Sensitivity_all_gulf_1, Sensitivity_ecoregion_1, Sensitivity_stratum_1
 
 OUTPUT FILES
   [Output_Figures]
-    data_crossscale_gradient.csv                              2.8 KB  2026-08-20 08:44
-    data_Fig5_gulf_families.csv                               0.9 KB  2026-08-20 08:44
-    data_Fig6_7_unit_families.csv                            16.7 KB  2026-08-20 08:44
-    Fig_crossscale_gradient.pdf                               6.3 KB  2026-08-20 08:42
-    Fig_crossscale_gradient.png                             204.9 KB  2026-08-20 08:42
-    Fig_heatmap_ecoregion.pdf                                 8.4 KB  2026-08-20 08:41
-    Fig_heatmap_ecoregion.png                               406.0 KB  2026-08-20 08:41
-    Fig_heatmap_stratum.pdf                                  17.1 KB  2026-08-20 08:42
-    Fig_heatmap_stratum.png                                 921.2 KB  2026-08-20 08:42
-    Fig5_regime_break_gulf.pdf                                6.8 KB  2026-08-20 08:40
-    Fig5_regime_break_gulf.png                              245.6 KB  2026-08-20 08:40
-    Fig6_regime_break_ecoregion.pdf                           9.3 KB  2026-08-20 08:41
-    Fig6_regime_break_ecoregion.png                         247.0 KB  2026-08-20 08:41
-    Fig7_map_families_biomass.pdf                          1103.1 KB  2026-08-20 08:43
-    Fig7_map_families_biomass.png                           946.9 KB  2026-08-20 08:42
-    Fig7b_map_families_combined.pdf                        2231.2 KB  2026-08-20 08:44
-    Fig7b_map_families_combined.png                        1868.4 KB  2026-08-20 08:43
-    FigS6_map_families_occurrence.pdf                      1103.1 KB  2026-08-20 08:43
-    FigS6_map_families_occurrence.png                       946.1 KB  2026-08-20 08:43
+    data_crossscale_gradient.csv                              3.2 KB  2026-08-26 14:30
+    data_Fig5_gulf_families.csv                               1.0 KB  2026-08-26 14:30
+    data_Fig6_7_unit_families.csv                            19.9 KB  2026-08-26 14:30
+    Fig_crossscale_gradient.pdf                               6.3 KB  2026-08-26 14:29
+    Fig_crossscale_gradient.png                             206.0 KB  2026-08-26 14:29
+    Fig_heatmap_ecoregion.pdf                                 8.4 KB  2026-08-26 14:29
+    Fig_heatmap_ecoregion.png                               389.8 KB  2026-08-26 14:28
+    Fig_heatmap_stratum.pdf                                  17.1 KB  2026-08-26 14:29
+    Fig_heatmap_stratum.png                                 884.1 KB  2026-08-26 14:29
+    Fig5_regime_break_gulf.pdf                                6.8 KB  2026-08-26 14:28
+    Fig5_regime_break_gulf.png                              243.1 KB  2026-08-26 14:28
+    Fig6_regime_break_ecoregion.pdf                           9.9 KB  2026-08-26 14:28
+    Fig6_regime_break_ecoregion.png                         565.7 KB  2026-08-26 14:28
+    Fig7_map_families_biomass.pdf                          1118.5 KB  2026-08-26 14:29
+    Fig7_map_families_biomass.png                          1063.2 KB  2026-08-26 14:29
+    Fig7b_map_families_combined.pdf                        2246.0 KB  2026-08-26 14:30
+    Fig7b_map_families_combined.png                        1987.4 KB  2026-08-26 14:30
+    FigS6_map_families_occurrence.pdf                      1118.5 KB  2026-08-26 14:29
+    FigS6_map_families_occurrence.png                      1062.9 KB  2026-08-26 14:29
   [Output_Tables]
-    Table1_typology.csv                                       1.0 KB  2026-08-20 08:46
-    Table1_typology.html                                      3.8 KB  2026-08-20 08:46
-    Table2_headline.csv                                       0.6 KB  2026-08-20 08:46
-    Table2_headline.html                                      4.2 KB  2026-08-20 08:46
-    Table3_crossscale.csv                                     1.3 KB  2026-08-20 08:46
-    Table3_crossscale.html                                   12.0 KB  2026-08-20 08:46
-    TableS1_sampling.csv                                      2.8 KB  2026-08-20 08:46
-    TableS1_sampling.html                                    23.1 KB  2026-08-20 08:46
-    TableS2_states_gulf.csv                                   4.4 KB  2026-08-20 08:47
-    TableS2_states_gulf.html                                 24.0 KB  2026-08-20 08:47
-    TableS3_by_ecoregion.csv                                  2.0 KB  2026-08-20 08:47
-    TableS3_by_ecoregion.html                                16.0 KB  2026-08-20 08:47
-    TableS4_by_stratum.csv                                    7.6 KB  2026-08-20 08:47
-    TableS4_by_stratum.html                                  86.1 KB  2026-08-20 08:47
-    TableS5_coverage.csv                                      1.2 KB  2026-08-20 08:47
-    TableS5_coverage.html                                    10.7 KB  2026-08-20 08:47
+    Table1_typology.csv                                       1.0 KB  2026-08-26 14:30
+    Table1_typology.html                                      3.8 KB  2026-08-26 14:30
+    Table2_headline.csv                                       0.6 KB  2026-08-26 14:31
+    Table2_headline.html                                      4.1 KB  2026-08-26 14:31
+    Table3_crossscale.csv                                     1.7 KB  2026-08-26 14:31
+    Table3_crossscale.html                                   12.4 KB  2026-08-26 14:31
+    TableS1_sampling.csv                                      2.9 KB  2026-08-26 14:31
+    TableS1_sampling.html                                    23.2 KB  2026-08-26 14:31
+    TableS2_states_gulf.csv                                   5.5 KB  2026-08-26 14:31
+    TableS2_states_gulf.html                                 25.1 KB  2026-08-26 14:31
+    TableS3_by_ecoregion.csv                                  2.4 KB  2026-08-26 14:31
+    TableS3_by_ecoregion.html                                16.4 KB  2026-08-26 14:31
+    TableS4_by_stratum.csv                                   10.4 KB  2026-08-26 14:31
+    TableS4_by_stratum.html                                  88.9 KB  2026-08-26 14:31
+    TableS5_coverage.csv                                      1.6 KB  2026-08-26 14:31
+    TableS5_coverage.html                                    11.1 KB  2026-08-26 14:31
   [Output_Appendices]
-    Fig2a_sampling_by_year.pdf                                5.0 KB  2026-08-20 08:49
-    Fig2a_sampling_by_year.png                               84.8 KB  2026-08-20 08:49
-    Fig3a_prey_categories.pdf                                10.1 KB  2026-08-20 08:49
-    Fig3a_prey_categories.png                               112.1 KB  2026-08-20 08:49
-    Fig3b_sweep_families.pdf                                 19.6 KB  2026-08-20 08:50
-    Fig3b_sweep_families.png                                402.2 KB  2026-08-20 08:49
-    FigS7_flagged_units.pdf                                  13.1 KB  2026-08-20 08:50
-    FigS7_flagged_units.png                                 343.3 KB  2026-08-20 08:50
-    manifest.txt                                              0.0 KB  2026-08-20 08:50
-    TableA0_prey_categories.csv                               0.7 KB  2026-08-20 08:49
-    TableA1_set_depth.csv                                     0.4 KB  2026-08-20 08:50
-    TableA2_power_vs_effect.csv                               1.7 KB  2026-08-20 08:50
-    TableA3_partition_crosswalk.csv                           0.6 KB  2026-08-20 08:50
-    TableA4_untestable.csv                                    1.0 KB  2026-08-20 08:50
-    TableA5_resolution_spread.csv                             2.0 KB  2026-08-20 08:50
-    TableA6_lowN_sensitivity.csv                              2.2 KB  2026-08-20 08:50
+    Fig2a_sampling_by_year.pdf                                5.0 KB  2026-08-26 14:34
+    Fig2a_sampling_by_year.png                               83.1 KB  2026-08-26 14:34
+    Fig2b_sampling_map.pdf                                  380.0 KB  2026-08-26 14:35
+    Fig2b_sampling_map.png                                  315.1 KB  2026-08-26 14:35
+    Fig3a_prey_categories.pdf                                10.3 KB  2026-08-26 14:35
+    Fig3a_prey_categories.png                               109.7 KB  2026-08-26 14:35
+    Fig3b_sweep_families.pdf                                 19.7 KB  2026-08-26 14:35
+    Fig3b_sweep_families.png                                400.1 KB  2026-08-26 14:35
+    FigB1_grouping_families_all_gulf.pdf                     15.9 KB  2026-08-26 14:25
+    FigB1_grouping_families_all_gulf.png                    492.9 KB  2026-08-26 14:25
+    FigB1_grouping_families_ecoregion.pdf                    16.0 KB  2026-08-26 14:26
+    FigB1_grouping_families_ecoregion.png                   470.3 KB  2026-08-26 14:25
+    FigB1_grouping_families_stratum.pdf                      15.3 KB  2026-08-26 14:26
+    FigB1_grouping_families_stratum.png                     450.6 KB  2026-08-26 14:26
+    FigB2_grouping_pct_significant_all_gulf.pdf               9.5 KB  2026-08-26 14:24
+    FigB2_grouping_pct_significant_all_gulf.png             178.7 KB  2026-08-26 14:24
+    FigB2_grouping_pct_significant_ecoregion.pdf              9.5 KB  2026-08-26 14:25
+    FigB2_grouping_pct_significant_ecoregion.png            178.4 KB  2026-08-26 14:25
+    FigB2_grouping_pct_significant_stratum.pdf                9.5 KB  2026-08-26 14:26
+    FigB2_grouping_pct_significant_stratum.png              187.1 KB  2026-08-26 14:26
+    FigS7_flagged_units.pdf                                  13.2 KB  2026-08-26 14:36
+    FigS7_flagged_units.png                                 346.2 KB  2026-08-26 14:36
+    manifest.txt                                              0.0 KB  2026-08-26 14:36
+    TableA0_prey_categories.csv                               0.7 KB  2026-08-26 14:35
+    TableA1_set_depth.csv                                     0.4 KB  2026-08-26 14:36
+    TableA2_power_vs_effect.csv                               2.1 KB  2026-08-26 14:36
+    TableA3_partition_crosswalk.csv                           0.6 KB  2026-08-26 14:36
+    TableA4_untestable.csv                                    1.3 KB  2026-08-26 14:36
+    TableA5_resolution_spread.csv                             2.4 KB  2026-08-26 14:35
+    TableA6_lowN_sensitivity.csv                              2.7 KB  2026-08-26 14:36
+    TableB1_grouping_families_all_gulf.csv                    9.6 KB  2026-08-26 14:24
+    TableB1_grouping_families_ecoregion.csv                   9.6 KB  2026-08-26 14:25
+    TableB1_grouping_families_stratum.csv                     9.6 KB  2026-08-26 14:26
+    TableB1_grouping_families_wide_all_gulf.csv               2.2 KB  2026-08-26 14:24
+    TableB1_grouping_families_wide_ecoregion.csv              2.3 KB  2026-08-26 14:25
+    TableB1_grouping_families_wide_stratum.csv                2.2 KB  2026-08-26 14:26
+    TableB2_grouping_pct_significant_all_gulf.csv            10.6 KB  2026-08-26 14:24
+    TableB2_grouping_pct_significant_ecoregion.csv           10.6 KB  2026-08-26 14:25
+    TableB2_grouping_pct_significant_stratum.csv             10.6 KB  2026-08-26 14:26
+  [Output_Drivers]
+    drivers_by_axis_biomass.csv                             134.5 KB  2026-08-20 08:53
+    drivers_consistency_biomass.csv                           1.0 KB  2026-08-20 08:53
+    drivers_mglm_indval_biomass.csv                           6.4 KB  2026-08-20 08:53
+    drivers_resolution_stability_biomass.csv                  1.2 KB  2026-08-20 08:55
+    drivers_resolution_sweep_biomass.csv                     30.2 KB  2026-08-20 08:55
+    Fig8_nmds_sets_biomass.pdf                               50.0 KB  2026-08-20 08:58
+    Fig8_nmds_sets_biomass.png                              699.6 KB  2026-08-20 08:58
+    Fig8b_nmds_cells_biomass.pdf                             28.4 KB  2026-08-20 08:59
+    Fig8b_nmds_cells_biomass.png                            641.7 KB  2026-08-20 08:59
+    permanova_aggregate_biomass.txt                           0.7 KB  2026-08-20 08:56
+    permanova_cellpaired_biomass.txt                          0.5 KB  2026-08-20 08:59
+    permdisp_period_biomass.txt                               0.2 KB  2026-08-20 08:56
+    simper_legacy_biomass.csv                                 5.3 KB  2026-08-20 08:56
 
 SESSION
 R version 4.5.2 (2025-10-31 ucrt)
@@ -95,27 +134,49 @@ time zone: America/Halifax
 tzcode source: internal
 
 attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
+[1] stats     graphics  grDevices utils     datasets 
+[6] methods   base     
 
 other attached packages:
- [1] knitr_1.51     tibble_3.3.1   stringr_1.6.0  readr_2.2.0    sf_1.0-16     
- [6] forcats_1.0.1  ggplot2_4.0.3  tidyr_1.3.2    dplyr_1.2.1    devtools_2.5.2
-[11] usethis_3.2.1 
+ [1] knitr_1.51        sf_1.0-16         forcats_1.0.1    
+ [4] stringr_1.6.0     tibble_3.3.1      readr_2.2.0      
+ [7] data.table_1.18.4 ggplot2_4.0.3     tidyr_1.3.2      
+[10] dplyr_1.2.1       devtools_2.5.2    usethis_3.2.1    
 
 loaded via a namespace (and not attached):
- [1] gtable_0.3.6       xfun_0.57          tzdb_0.5.0         vctrs_0.7.3       
- [5] tools_4.5.2        generics_0.1.4     parallel_4.5.2     proxy_0.4-29      
- [9] pkgconfig_2.0.3    KernSmooth_2.23-26 RColorBrewer_1.1-3 S7_0.2.2          
-[13] lifecycle_1.0.5    compiler_4.5.2     farver_2.1.2       textshaping_1.0.5 
-[17] htmltools_0.5.9    class_7.3-23       pillar_1.11.1      crayon_1.5.3      
-[21] ellipsis_0.3.3     classInt_0.4-11    cachem_1.1.0       sessioninfo_1.2.3 
-[25] tidyselect_1.2.1   digest_0.6.39      stringi_1.8.7      purrr_1.2.2       
-[29] labeling_0.4.3     fastmap_1.2.0      grid_4.5.2         cli_3.6.6         
-[33] magrittr_2.0.5     pkgbuild_1.4.8     utf8_1.2.6         e1071_1.7-17      
-[37] withr_3.0.2        scales_1.4.0       bit64_4.8.0        rmarkdown_2.31    
-[41] bit_4.6.0          otel_0.2.0         ragg_1.5.2         hms_1.1.4         
-[45] evaluate_1.0.5     kableExtra_1.4.0   memoise_2.0.1      viridisLite_0.4.3 
-[49] rlang_1.2.0        Rcpp_1.1.1-1.1     glue_1.8.1         DBI_1.3.0         
-[53] xml2_1.5.2         pkgload_1.5.2      svglite_2.2.2      rstudioapi_0.18.0 
-[57] vroom_1.7.1        R6_2.6.1           systemfonts_1.3.2  fs_2.1.0          
-[61] units_1.0-1       
+ [1] tidyselect_1.2.1   viridisLite_0.4.3 
+ [3] farver_2.1.2       S7_0.2.2          
+ [5] fastmap_1.2.0      digest_0.6.39     
+ [7] lifecycle_1.0.5    cluster_2.1.8.2   
+ [9] ellipsis_0.3.3     magrittr_2.0.5    
+[11] compiler_4.5.2     rlang_1.2.0       
+[13] tools_4.5.2        utf8_1.2.6        
+[15] labeling_0.4.3     bit_4.6.0         
+[17] pkgbuild_1.4.8     classInt_0.4-11   
+[19] here_1.0.2         xml2_1.5.2        
+[21] RColorBrewer_1.1-3 pkgload_1.5.2     
+[23] KernSmooth_2.23-26 withr_3.0.2       
+[25] purrr_1.2.2        grid_4.5.2        
+[27] e1071_1.7-17       scales_1.4.0      
+[29] MASS_7.3-65        cli_3.6.6         
+[31] rmarkdown_2.31     vegan_2.7-3       
+[33] crayon_1.5.3       ragg_1.5.2        
+[35] generics_0.1.4     otel_0.2.0        
+[37] rstudioapi_0.18.0  tzdb_0.5.0        
+[39] sessioninfo_1.2.3  DBI_1.3.0         
+[41] cachem_1.1.0       proxy_0.4-29      
+[43] splines_4.5.2      parallel_4.5.2    
+[45] vctrs_0.7.3        Matrix_1.7-4      
+[47] hms_1.1.4          bit64_4.8.0       
+[49] systemfonts_1.3.2  units_1.0-1       
+[51] glue_1.8.1         stringi_1.8.7     
+[53] gtable_0.3.6       pillar_1.11.1     
+[55] htmltools_0.5.9    R6_2.6.1          
+[57] textshaping_1.0.5  rprojroot_2.1.1   
+[59] vroom_1.7.1        evaluate_1.0.5    
+[61] kableExtra_1.4.0   lattice_0.22-7    
+[63] memoise_2.0.1      class_7.3-23      
+[65] Rcpp_1.1.1-1.1     svglite_2.2.2     
+[67] nlme_3.1-168       permute_0.9-10    
+[69] mgcv_1.9-3         xfun_0.57         
+[71] fs_2.1.0           pkgconfig_2.0.3   

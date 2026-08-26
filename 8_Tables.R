@@ -52,8 +52,8 @@ suppressPackageStartupMessages({
   library(dplyr); library(tidyr); library(readr); library(stringr); library(knitr)
 })
 
-source("R_helpers/Config_Mappings.R")
-PREY_FAMILY <- "_1"
+PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
+source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
 has_kable_extra <- requireNamespace("kableExtra", quietly = TRUE)
 
 # -----------------------------------------------------------------------------
@@ -164,7 +164,7 @@ table3 <- fam_level %>%
   arrange(currency, contrast, level) %>%
   mutate(across(all_of(FAMILY_LEVELS), ~round(.x, 1))) %>%
   transmute(Currency = CURRENCY_LAB[as.character(currency)],
-            Contrast = as.character(contrast),
+            Contrast = contrast_label(contrast),
             `Spatial level` = LEVEL_SHORT[as.character(level)],
             `Units` = ifelse(is.na(n_units_total), 1L, n_units_total),
             Stability, Substitution,
@@ -187,16 +187,16 @@ one_res <- res_all %>%
 
 tableS1 <- one_res %>%
   transmute(Predator = species, `Size class` = size_class,
-            `Stomachs P1` = n_sto_P1, `Stomachs P2` = n_sto_P2,
-            `Sets P1` = n_set_P1, `Sets P2` = n_set_P2,
+            `Stomachs 2004-2006` = n_sto_P1, `Stomachs 2018-2019` = n_sto_P2,
+            `Sets 2004-2006` = n_set_P1, `Sets 2018-2019` = n_set_P2,
             Testable = testable, Reliable = reliable) %>%
   arrange(Predator, `Size class`)
 
 if (nrow(tableS1)) {
   emit(tableS1, "TableS1_sampling",
-       "Table S1. Stomachs and trawl sets per predator and size class, PTa contrast, biomass currency, finest taxonomic resolution.")
+       paste0("Table S1. Stomachs and trawl sets per predator and size class, ", CONTRAST_LAB_1L[["PTa"]], " contrast, biomass currency, finest taxonomic resolution."))
 } else {
-  message("TableS1 skipped: no PTa biomass run at the Gulf-wide level.")
+  message("TableS1 skipped: no 2004-2006 vs 2018-2019 biomass run at the Gulf-wide level.")
 }
 
 # =============================================================================
@@ -210,6 +210,7 @@ tableS2 <- res_all %>%
   filter(!is.na(contrast)) %>%
   mutate(Family = as.character(family_of(diagnostic)),
          pct = round(pct, 1)) %>%
+  mutate(contrast = contrast_label(contrast)) %>%
   select(Currency = currency, Contrast = contrast, Family,
          State = diagnostic, `Frequency (%)` = pct) %>%
   arrange(Currency, Contrast,
@@ -229,8 +230,8 @@ unit_table <- function(lvl, stem, caption) {
     mutate(across(all_of(FAMILY_LEVELS), ~round(.x, 1)),
            flag = ifelse(!is.na(n_units) & n_units < 5, "*", "")) %>%
     transmute(Currency = CURRENCY_LAB[as.character(currency)],
-              Contrast = as.character(contrast),
-              Unit = paste0(spatial_unit, flag),
+              Contrast = contrast_label(contrast),
+              Unit = paste0(area_label(spatial_unit), flag),
               `n units` = n_units,
               Stability, Substitution,
               `Functional change`, Reorganisation)
@@ -258,7 +259,7 @@ tableS5 <- coverage_by(res_all, keys = c("level", "currency", "contrast")) %>%
   arrange(level, currency, contrast) %>%
   transmute(`Spatial level` = LEVEL_SHORT[as.character(level)],
             Currency = CURRENCY_LAB[as.character(currency)],
-            Contrast = as.character(contrast),
+            Contrast = contrast_label(contrast),
             `Cells (all resolutions)` = n_cells,
             `Testable (%)` = pct_testable,
             `Reliable (%)` = pct_reliable,

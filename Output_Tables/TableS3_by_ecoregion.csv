@@ -1,41 +1,41 @@
 Currency,Contrast,Unit,n units,Stability,Substitution,Functional change,Reorganisation
-Biomass,P1a,Baie des Chaleurs,12,65.4,8.3,17.9,8.3
-Biomass,P1a,Central,18,76.6,2.8,18,2.6
-Biomass,P1a,Magdalen Shallows,49,49,25.7,20.7,4.6
-Biomass,P1a,Northumberland,16,76.8,0,23.2,0
-Biomass,P1b,Baie des Chaleurs,12,69.8,8.3,13.6,8.2
-Biomass,P1b,Central,19,81.8,0,18.1,0.1
-Biomass,P1b,Magdalen Shallows,52,51.1,23,21,4.9
-Biomass,P1b,Northumberland,16,78.6,0,21.4,0
-Biomass,P2,Baie des Chaleurs*,3,100,0,0,0
-Biomass,P2,Central,8,65.2,5.2,29.5,0
-Biomass,P2,Magdalen Shallows,40,55.5,12,26,6.6
-Biomass,P2,Northumberland,14,49.2,21.3,29.5,0
-Biomass,PTb,Baie des Chaleurs,8,33.4,29.1,22.4,15
-Biomass,PTb,Central,15,21.4,27.6,22.3,28.6
-Biomass,PTb,Magdalen Shallows,44,21.3,45.4,7.4,25.8
-Biomass,PTb,Northumberland,12,54.5,9.1,32.6,3.7
-Biomass,PTa,Baie des Chaleurs,12,9.1,42.7,23.4,24.8
-Biomass,PTa,Central,17,13.1,46.8,5.1,34.9
-Biomass,PTa,Magdalen Shallows,53,13.7,50.8,5.6,29.9
-Biomass,PTa,Northumberland,19,59.5,25.5,5.1,9.9
-Occurrence,P1a,Baie des Chaleurs,12,66.7,8.3,16.7,8.3
-Occurrence,P1a,Central,18,86.9,3.4,3.8,5.9
-Occurrence,P1a,Magdalen Shallows,49,50,22.6,7.3,20.1
-Occurrence,P1a,Northumberland,16,82.9,9.9,7.1,0
-Occurrence,P1b,Baie des Chaleurs,12,66.7,8.3,16.7,8.3
-Occurrence,P1b,Central,19,83.4,5.4,5.6,5.6
-Occurrence,P1b,Magdalen Shallows,52,49.1,26.5,10.5,13.9
-Occurrence,P1b,Northumberland,16,82.9,9.9,7.1,0
-Occurrence,P2,Baie des Chaleurs*,3,98.5,1.5,0,0
-Occurrence,P2,Central,8,87.4,0,6.9,5.8
-Occurrence,P2,Magdalen Shallows,40,70.4,8.9,11.4,9.3
-Occurrence,P2,Northumberland,14,61.8,21.1,13.2,3.9
-Occurrence,PTb,Baie des Chaleurs,8,25.6,53.4,0,21
-Occurrence,PTb,Central,15,28.4,33.5,7.1,31
-Occurrence,PTb,Magdalen Shallows,44,11.6,58.3,5.7,24.4
-Occurrence,PTb,Northumberland,12,45.9,54.1,0,0
-Occurrence,PTa,Baie des Chaleurs,12,21.6,68.5,0.8,9.1
-Occurrence,PTa,Central,17,23.4,44,0,32.6
-Occurrence,PTa,Magdalen Shallows,53,6.5,48.5,3.1,41.9
-Occurrence,PTa,Northumberland,19,22.7,48.4,12.9,15.9
+Biomass,2004 vs 2006,Chaleur Bay,12,62.4,8.3,20.9,8.3
+Biomass,2004 vs 2006,Central,18,77.2,2.8,14.4,5.6
+Biomass,2004 vs 2006,Magdalen Shallows,49,48.7,26,20.7,4.7
+Biomass,2004 vs 2006,Northumberland,16,76.8,0,23.2,0
+Biomass,2004-2005 vs 2006,Chaleur Bay,12,65.6,8.3,17.8,8.2
+Biomass,2004-2005 vs 2006,Central,19,81.8,0,15.4,2.8
+Biomass,2004-2005 vs 2006,Magdalen Shallows,52,51.8,23.5,20.4,4.3
+Biomass,2004-2005 vs 2006,Northumberland,16,78.6,0,21.4,0
+Biomass,2018 vs 2019,Chaleur Bay*,3,100,0,0,0
+Biomass,2018 vs 2019,Central,8,65.2,5.2,29.5,0
+Biomass,2018 vs 2019,Magdalen Shallows,40,56,11.5,26,6.6
+Biomass,2018 vs 2019,Northumberland,14,49.2,21.3,29.5,0
+Biomass,2006 vs 2018,Chaleur Bay,8,33.4,29.1,22.4,15
+Biomass,2006 vs 2018,Central,15,21.4,27.6,22.3,28.6
+Biomass,2006 vs 2018,Magdalen Shallows,44,21.2,45.6,7.4,25.8
+Biomass,2006 vs 2018,Northumberland,12,54.5,9.1,28,8.4
+Biomass,2004-2006 vs 2018-2019,Chaleur Bay,12,9.1,42.7,23.4,24.8
+Biomass,2004-2006 vs 2018-2019,Central,17,13.1,46.8,5.1,34.9
+Biomass,2004-2006 vs 2018-2019,Magdalen Shallows,53,13.6,50,5.6,30.8
+Biomass,2004-2006 vs 2018-2019,Northumberland,19,57.7,27.3,4.3,10.7
+Occurrence,2004 vs 2006,Chaleur Bay,12,66.7,8.3,16.7,8.3
+Occurrence,2004 vs 2006,Central,18,86.9,3.4,3.8,5.9
+Occurrence,2004 vs 2006,Magdalen Shallows,49,49.6,22.5,7.8,20.1
+Occurrence,2004 vs 2006,Northumberland,16,79.5,13.4,7.1,0
+Occurrence,2004-2005 vs 2006,Chaleur Bay,12,66.7,8.3,16.7,8.3
+Occurrence,2004-2005 vs 2006,Central,19,83.7,5.2,5.6,5.6
+Occurrence,2004-2005 vs 2006,Magdalen Shallows,52,49,26.6,10.5,13.8
+Occurrence,2004-2005 vs 2006,Northumberland,16,79.9,12.9,7.1,0
+Occurrence,2018 vs 2019,Chaleur Bay*,3,98.5,1.5,0,0
+Occurrence,2018 vs 2019,Central,8,86.9,0,7.4,5.8
+Occurrence,2018 vs 2019,Magdalen Shallows,40,70.4,9.3,11.2,9.1
+Occurrence,2018 vs 2019,Northumberland,14,59.7,23.2,13.2,3.9
+Occurrence,2006 vs 2018,Chaleur Bay,8,25.6,53.4,0,21
+Occurrence,2006 vs 2018,Central,15,28.4,33.5,7.1,30.9
+Occurrence,2006 vs 2018,Magdalen Shallows,44,11.3,58.3,6,24.4
+Occurrence,2006 vs 2018,Northumberland,12,45.9,54.1,0,0
+Occurrence,2004-2006 vs 2018-2019,Chaleur Bay,12,21.6,68.5,0.8,9.1
+Occurrence,2004-2006 vs 2018-2019,Central,17,23.4,44,0,32.6
+Occurrence,2004-2006 vs 2018-2019,Magdalen Shallows,53,7.2,48.8,3,41
+Occurrence,2004-2006 vs 2018-2019,Northumberland,19,22.7,51.1,12.9,13.3

@@ -113,21 +113,30 @@ CONTRAST_FROM_PERIODS <- c(
 
 CONTRAST_RECODE <- c(P1 = "P1a", P3 = "P1b", P2 = "P2", P4 = "PTb", PT = "PTa")
 
+# Manuscript labels: explicit periods only. The short codes (P1a ... PTa) stay
+# internal (filters, ordering) and never appear in figures, tables or CSVs.
 CONTRAST_LAB_1L <- c(
-  P1a = "P1a (2004 vs 2006)",
-  P1b = "P1b (2004-05 vs 2006)",
-  P2  = "P2 (2018 vs 2019)",
-  PTb = "PTb (2006 vs 2018)",
-  PTa = "PTa (2004-06 vs 2018-19)"
+  P1a = "2004 vs 2006",
+  P1b = "2004-2005 vs 2006",
+  P2  = "2018 vs 2019",
+  PTb = "2006 vs 2018",
+  PTa = "2004-2006 vs 2018-2019"
 )
 
 CONTRAST_LAB <- c(
-  P1a = "P1a\n2004 vs 2006",
-  P1b = "P1b\n2004-2005 vs 2006",
-  P2  = "P2\n2018 vs 2019",
-  PTb = "PTb\n2006 vs 2018",
-  PTa = "PTa\n2004-2006 vs 2018-2019"
+  P1a = "2004\nvs 2006",
+  P1b = "2004-2005\nvs 2006",
+  P2  = "2018\nvs 2019",
+  PTb = "2006\nvs 2018",
+  PTa = "2004-2006\nvs 2018-2019"
 )
+
+# One-line label for a contrast code (or vector of codes); NA-safe. Returned as
+# a factor in manuscript order so that arrange()/facets keep the P1a..PTa order
+# (alphabetical order of the period strings would not).
+contrast_label <- function(x) {
+  factor(unname(CONTRAST_LAB_1L[as.character(x)]), levels = unname(CONTRAST_LAB_1L))
+}
 
 INTRA_CONTRASTS <- c("P1a", "P1b", "P2")
 INTER_CONTRASTS <- c("PTb", "PTa")
@@ -162,11 +171,18 @@ LEVEL_SHORT <- c(all_gulf = "Gulf", ecoregion = "Ecoregion", stratum = "Stratum"
 # Output column each level writes its spatial unit into.
 LEVEL_SPATIAL_COL <- c(all_gulf = "Area", ecoregion = "Area", stratum = "str")
 
-# Default folders, matching the run scripts. Override before sourcing if needed.
+# Prey-grouping family used for the manuscript. The run scripts (6b-6d) write
+# to Sensitivity_<level><PREY_FAMILY>/ ; "_1" is the main analysis, "_2" the
+# original pooled grouping (kept for the appendix comparison, see 6f).
+# Define PREY_FAMILY before sourcing this file to override.
+if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_1"
+
+# Folders read by 7/8/9, derived from PREY_FAMILY. Override before sourcing if
+# needed (e.g. RDA_DIRS for a different family).
 if (!exists("RDA_DIRS")) {
-  RDA_DIRS <- c(all_gulf  = "Sensitivity_all_gulf",
-                ecoregion = "Sensitivity_ecoregion",
-                stratum   = "Sensitivity_stratum")
+  RDA_DIRS <- c(all_gulf  = paste0("Sensitivity_all_gulf",  PREY_FAMILY),
+                ecoregion = paste0("Sensitivity_ecoregion", PREY_FAMILY),
+                stratum   = paste0("Sensitivity_stratum",   PREY_FAMILY))
 }
 
 # =============================================================================
@@ -200,16 +216,36 @@ decade_bands <- function() {
   )
 }
 
-theme_diag <- function(base_size = 11) {
-  ggplot2::theme_minimal(base_size = base_size) +
+# Period colours, shared by every script that colours by period (10, 6f).
+PERIOD_PAL <- c("2004-2006" = "#2c7bb6", "2018-2019" = "#d7191c")
+
+# Ecoregion display names (co-author request: English names on all outputs).
+AREA_LAB <- c("Baie des Chaleurs" = "Chaleur Bay",
+              "Chaleur Bay"       = "Chaleur Bay")
+area_label <- function(x) {
+  x <- as.character(x)
+  ifelse(x %in% names(AREA_LAB), unname(AREA_LAB[x]), x)
+}
+
+# One theme for every figure (7, 9, 10, 6f): same font family and sizes.
+# Set FIG_FONT before sourcing to change the family; "sans" resolves to Arial /
+# Helvetica on Windows and macOS PDF/PNG devices.
+if (!exists("FIG_FONT")) FIG_FONT <- "sans"
+
+theme_diag <- function(base_size = 11, base_family = FIG_FONT) {
+  ggplot2::theme_minimal(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       panel.grid.minor = ggplot2::element_blank(),
       legend.position  = "top",
       legend.title     = ggplot2::element_blank(),
       strip.text       = ggplot2::element_text(face = "bold"),
-      axis.text.x      = ggplot2::element_text(size = 8)
+      axis.text.x      = ggplot2::element_text(size = 8),
+      plot.title       = ggplot2::element_text(face = "bold", size = base_size + 1),
+      plot.caption     = ggplot2::element_text(hjust = 0, size = base_size - 2)
     )
 }
+# Make it the default for every ggplot built after sourcing this file.
+if (requireNamespace("ggplot2", quietly = TRUE)) ggplot2::theme_set(theme_diag())
 
 # =============================================================================
 # 5. READING THE PIPELINE OUTPUT
@@ -222,15 +258,19 @@ theme_diag <- function(base_size = 11) {
 
 parse_run_name <- function(path) {
   b  <- sub("\\.rda$", "", basename(path))
-  rx <- paste0("^(biomass|occurrence)_([A-Za-z0-9]+)_(",
+  # Scenario token may carry the family suffix ("P1" or "P1_1" / "PT_PP").
+  rx <- paste0("^(biomass|occurrence)_([A-Za-z0-9_]+)_(",
                paste(SPATIAL_LEVELS_ORD, collapse = "|"), ")_(.+)_vs_(.+)$")
   m  <- regmatches(b, regexec(rx, b))[[1]]
   if (!length(m)) {
     return(list(currency = NA_character_, scenario = NA_character_,
-                level = NA_character_, period_1 = NA_character_,
-                period_2 = NA_character_))
+                family = NA_character_, level = NA_character_,
+                period_1 = NA_character_, period_2 = NA_character_))
   }
-  list(currency = m[2], scenario = m[3], level = m[4],
+  sc  <- m[3]
+  fam <- if (grepl("_", sc)) sub("^[^_]+", "", sc) else ""
+  sc  <- sub("_.*$", "", sc)
+  list(currency = m[2], scenario = sc, family = fam, level = m[4],
        period_1 = gsub("_", "-", m[5]), period_2 = gsub("_", "-", m[6]))
 }
 
@@ -353,6 +393,22 @@ if (!exists("DIR_DRIVERS")) DIR_DRIVERS <- "Output_Drivers"
 
 for (d in c(DIR_TABLES, DIR_FIGURES, DIR_APPEND, DIR_DRIVERS)) {
   dir.create(d, recursive = TRUE, showWarnings = FALSE)
+}
+
+# Survey-stratum polygons: the gulf.spatial shapefile when the package is
+# installed, otherwise a local sf object saved as .rds; NULL if neither exists.
+load_strata <- function(rds_path = "strata_rv_gulf.rds") {
+  shp <- suppressWarnings(
+    system.file("extdata/shapefiles/survey.stratum.polygons.shp",
+                package = "gulf.spatial"))
+  if (nzchar(shp) && file.exists(shp)) {
+    s <- sf::read_sf(shp)
+    s <- s[s$survey == "rv" & s$region == "gulf" & s$type == "polygon", ]
+    s$str <- as.character(s$stratum)
+    return(s)
+  }
+  if (file.exists(rds_path)) return(readRDS(rds_path))
+  NULL
 }
 
 # Writes a figure in both raster and vector form under the same stem.

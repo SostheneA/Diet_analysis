@@ -56,7 +56,8 @@ suppressPackageStartupMessages({
   library(sf); library(readr); library(stringr)
 })
 
-source("R_helpers/Config_Mappings.R")
+PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
+source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
 
 # -----------------------------------------------------------------------------
 # Configuration
@@ -66,8 +67,7 @@ STRATA_PATH <- "strata_rv_gulf.rds"     # sf object, or leave to the package
 COAST_PATH  <- "gulf.coast.intermediate.csv"   # optional coastline (x, y, pid)
 MAP_XLIM    <- c(-66.2, -60.0)
 MAP_YLIM    <- c(45.5, 49.2)
-PREY_FAMILY <- "_1"
-# Contrasts to show on the maps. PTb is not estimable at the stratum scale, so
+# Contrasts to show on the maps. 2006 vs 2018 is not estimable at the stratum scale, so
 # including it would produce a column of empty panels.
 MAP_CONTRASTS <- c("P1a", "P1b", "P2", "PTa")
 
@@ -132,9 +132,9 @@ d5 <- long_of(fam_gulf) %>%
 fig5 <- ggplot(d5, aes(x, pct, colour = family, shape = family,
                        linetype = currency, group = interaction(family, currency))) +
   decade_bands() +
-  annotate("text", x = 2,   y = Inf, label = "WITHIN DECADE",
+  annotate("text", x = 2,   y = Inf, label = "WITHIN PERIOD",
            colour = "#2F4A5A", fontface = 2, size = 3.6, vjust = 1.8) +
-  annotate("text", x = 4.5, y = Inf, label = "BETWEEN DECADES",
+  annotate("text", x = 4.5, y = Inf, label = "BETWEEN PERIODS",
            colour = "#9B2226", fontface = 2, size = 3.6, vjust = 1.8) +
   geom_line(linewidth = 0.8) +
   geom_point(size = 2.6, fill = "white") +
@@ -167,10 +167,11 @@ cat("\nFigure 6: by ecoregion\n")
 
 d6 <- long_of(filter(fam_unit, level == "ecoregion")) %>%
   filter(!is.na(contrast)) %>%
-  mutate(unit_lab = paste0(spatial_unit, "\n(n = ", n_units, " units)"))
+  mutate(unit_lab = paste0(area_label(spatial_unit), "\n(n = ", n_units, " units)"))
 
 fig6 <- ggplot(d6, aes(contrast, pct, fill = family)) +
   geom_col(width = 0.72, colour = "grey25", linewidth = 0.2) +
+  scale_x_discrete(labels = CONTRAST_LAB) +
   geom_hline(yintercept = c(25, 50, 75), colour = "white",
              linewidth = 0.3, linetype = "dotted") +
   facet_grid(currency ~ unit_lab,
@@ -218,7 +219,7 @@ make_heatmap <- function(lvl, stem, height) {
     labs(title = paste0("Family composition by ", LEVEL_SHORT[[lvl]]),
          subtitle = "Rows ordered by Stability; n = predator x size-class units",
          x = NULL, y = NULL) +
-    theme_minimal(base_size = 10) +
+    theme_diag(base_size = 10) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, face = "bold"),
           axis.text.y = element_text(size = 6.5),
           strip.text  = element_text(face = "bold", size = 8),
@@ -255,7 +256,8 @@ fig_grad <- ggplot(d_grad, aes(level, pct, colour = family, group = family)) +
                               all_gulf = "Gulf-wide")) +
   scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 20)) +
   labs(
-    title = "Effect of spatial aggregation on the diagnostic composition (PTa)",
+    title = paste0("Effect of spatial aggregation on the diagnostic composition (",
+                   CONTRAST_LAB_1L[["PTa"]], ")"),
     subtitle = paste0("Stratum and ecoregion values are means across units; the ",
                       "Gulf-wide value is a single pooled test.\nAggregation ",
                       "raises apparent Reorganisation and lowers Stability, ",
@@ -274,21 +276,8 @@ save_fig(fig_grad, "Fig_crossscale_gradient", width = 9.5, height = 5.4)
 # often fails to load, hence the fallback.
 cat("\nFigure 7: stratum maps\n")
 
-load_strata <- function() {
-  shp <- suppressWarnings(
-    system.file("extdata/shapefiles/survey.stratum.polygons.shp",
-                package = "gulf.spatial"))
-  if (nzchar(shp) && file.exists(shp)) {
-    s <- sf::read_sf(shp)
-    s <- s[s$survey == "rv" & s$region == "gulf" & s$type == "polygon", ]
-    s$str <- as.character(s$stratum)
-    return(s)
-  }
-  if (file.exists(STRATA_PATH)) return(readRDS(STRATA_PATH))
-  NULL
-}
-
-strata <- load_strata()
+# load_strata() now lives in R_helpers/Config_Mappings.R (shared with 9).
+strata <- load_strata(STRATA_PATH)
 
 if (is.null(strata)) {
   message("Stratum geometry not found (neither gulf.spatial nor ", STRATA_PATH,
@@ -352,8 +341,8 @@ if (is.null(strata)) {
       labs(title = title,
            subtitle = paste0("Every stratum shown; * = built on < ", N_FLAG,
                              " predator x size-class units (interpret with ",
-                             "caution). PTb is not estimable at this scale.")) +
-      theme_minimal(base_size = 11) +
+                             "caution). 2006 vs 2018 is not estimable at this scale.")) +
+      theme_diag(base_size = 11) +
       theme(panel.grid   = element_line(colour = "grey92"),
             axis.title   = element_blank(),
             axis.text    = element_text(size = 6),
@@ -388,8 +377,14 @@ if (is.null(strata)) {
 # =============================================================================
 # 8_Tables.R rebuilds these independently; writing them here means a figure can
 # always be traced back to the exact numbers it was drawn from.
-write_csv(fam_gulf,  file.path(DIR_FIGURES, "data_Fig5_gulf_families.csv"))
-write_csv(fam_unit,  file.path(DIR_FIGURES, "data_Fig6_7_unit_families.csv"))
-write_csv(fam_level, file.path(DIR_FIGURES, "data_crossscale_gradient.csv"))
+# Contrast codes are replaced by explicit period labels in the exported CSVs.
+export_csv <- function(x, name) {
+  x %>%
+    mutate(contrast = contrast_label(contrast)) %>%
+    write_csv(file.path(DIR_FIGURES, name))
+}
+export_csv(fam_gulf,  "data_Fig5_gulf_families.csv")
+export_csv(fam_unit,  "data_Fig6_7_unit_families.csv")
+export_csv(fam_level, "data_crossscale_gradient.csv")
 
 cat("\nFigures and their source tables written to ", normalizePath(DIR_FIGURES), "\n", sep = "")

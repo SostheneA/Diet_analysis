@@ -91,6 +91,7 @@ suppressPackageStartupMessages({
   library(mvabund); library(labdsv)
 })
 
+PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
 source("R_helpers/Config_Mappings.R")
 
 # =============================================================================
@@ -114,7 +115,7 @@ CFG <- list(
 
   # Resolution retained for the manuscript, and the sweep used to check that a
   # reported taxon is not an artefact of one aggregation threshold.
-  PREY_FAMILY <- "_1",
+  prey_family = PREY_FAMILY,
   res_col     = paste0("prey_category_440", PREY_FAMILY),
   sweep_cols  = paste0("prey_category_", c(100, 440, 750), PREY_FAMILY),
   yr_early  = 2004:2006,
@@ -130,11 +131,13 @@ CFG <- list(
   perms = 999,
   alpha = 0.05,
   top_n_vectors = 12,       # driver arrows on the NMDS
-  run_legacy_simper = TRUE
+  # SIMPER is no longer reported in the manuscript (replaced by MGLM + IndVal);
+  # set TRUE only to regenerate the legacy comparison for the appendix.
+  run_legacy_simper = FALSE
 )
 
 set.seed(CFG$seed)
-PER_COL <- c("2004-2006" = "#2C6E91", "2018-2019" = "#D2691E")
+PER_COL <- PERIOD_PAL   # shared period colours (Config_Mappings.R)
 
 save_drv <- function(p, stem, w, h, dpi = 320) save_fig(p, stem, w, h, dpi, dir = DIR_DRIVERS)
 
@@ -525,7 +528,7 @@ for (cur in CFG$currencies) {
                                      "ellipses = 95%% per period.\nArrows are ",
                                      "prey associated with the period contrast."),
                               nm$stress)) +
-      theme_classic(base_size = 11) + theme(legend.position = "top")
+      theme_diag(base_size = 11) + theme(panel.grid = element_blank(), legend.position = "top")
 
     save_drv(p_sets, sprintf("Fig8_nmds_sets_%s", cur), 7.4, 6.2)
   }
@@ -612,7 +615,7 @@ for (cur in CFG$currencies) {
                                        "ecoregion and period; stress = %.2f.\n",
                                        "Arrows link the same cell across decades."),
                                 nmc$stress)) +
-        theme_classic(base_size = 11) + theme(legend.position = "top")
+        theme_diag(base_size = 11) + theme(panel.grid = element_blank(), legend.position = "top")
 
       save_drv(p_cell, sprintf("Fig8b_nmds_cells_%s", cur), 7.4, 6.2)
 

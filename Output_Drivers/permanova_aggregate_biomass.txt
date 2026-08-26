@@ -5,11 +5,12 @@ Number of permutations: 999
 
 adonis2(formula = D ~ period * Area + size_class, data = perm_df, permutations = CFG$perms, by = "terms")
              Df SumOfSqs      R2       F Pr(>F)    
-period        1   12.442 0.04676 39.7749  0.001 ***
-Area          3    9.942 0.03736 10.5944  0.001 ***
-size_class    2    5.771 0.02169  9.2244  0.001 ***
-period:Area   3    3.951 0.01485  4.2100  0.001 ***
-Residual    748  233.986 0.87934                   
-Total       757  266.092 1.00000                   
+period        1   12.362 0.04594 39.1771  0.001 ***
+Area          3   10.921 0.04058 11.5363  0.001 ***
+size_class    2    5.806 0.02158  9.2005  0.001 ***
+period:Area   3    3.990 0.01483  4.2152  0.001 ***
+Residual    748  236.026 0.87708                   
+Total       757  269.105 1.00000                   
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

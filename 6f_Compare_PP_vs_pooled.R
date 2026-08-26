@@ -1,80 +1,77 @@
 # =============================================================================
-# 6f_Compare_PP_vs_pooled.R — Comparaison des 3 approches de regroupement
-#   (pooled_2 = sans suffixe, pooled_1 = _1, per_predator = _PP, projet frere)
-# pour CHAQUE niveau spatial (all_gulf, ecoregion, stratum), selon les
-# resultats disponibles. Deux sorties par niveau :
+# 6f_Compare_PP_vs_pooled.R - APPENDIX: SENSITIVITY TO THE PREY-GROUPING RULE
+# -----------------------------------------------------------------------------
+# Compares the three prey-grouping approaches at each spatial level
+# (all_gulf, ecoregion, stratum):
 #
-#   A. pct_significant_<niveau>.png / .csv
-#      % de cellules testables significatives par approche x scenario x mode
-#      x test (p_comp, p_H, p_Bs, p_disp), moyenne +/- ecart-type entre seuils.
+#   pooled_q1     = "_1"  pooled across predators, q = 1   (MAIN ANALYSIS)
+#   pooled_q2     = ""    pooled across predators, q = 2   (original rule)
+#   per_predator  = "_PP" grouping rebuilt inside each predator (sibling project)
 #
-#   B. regime_break_compare_<niveau>.png / .csv   (style Fig5 du manuscrit)
-#      Frequence des 4 familles diagnostiques (Stability, Substitution,
-#      Functional change, Reorganisation) par contraste (P1a, P1b, P2, PTb,
-#      PTa) x currency (biomass/occurrence), moyennee entre les resolutions —
-#      UNE facette par approche, pour comparer les 3 en un coup d'oeil.
+# Outputs, written to Output_Appendices/ (DIR_APPEND from Config_Mappings.R):
 #
-#   C. regime_break_by_family_<niveau>.png
-#      Meme contenu, transpose : une LIGNE de facettes par famille diagnostique
-#      et, dans chaque panneau, les 3 approches en couleur — le changement du
-#      a l'approche se lit directement dans chaque figure.
+#   FigB1_grouping_families_<level>   4 diagnostic families x 2 currencies, the
+#                                     three approaches in colour, explicit period
+#                                     labels on the x axis (Fig5 grammar).
+#   FigB2_grouping_pct_significant_<level>
+#                                     % of testable cells significant per test
+#                                     (composition, H', Bs, dispersion).
+#   TableB1_grouping_families_<level>.csv        long (approach x currency x
+#                                                contrast x family, mean +/- sd)
+#   TableB1_grouping_families_wide_<level>.csv   one column per family
+#   TableB2_grouping_pct_significant_<level>.csv
 #
-# Tolerant aux campagnes en cours : assemblage depuis les dossiers
-# Sensitivity_* si le all_runs consolide manque ; approche/niveau absent saute.
-# A lancer depuis le PROJET PRINCIPAL.
+# Everything shared with the manuscript pipeline (family mapping, contrast
+# labels, palettes, theme, output folders) comes from Config_Mappings.R, so the
+# appendix percentages are computed exactly like Tables 2-3 and Fig 5:
+# families from STATE_TO_FAMILY, percentages within each resolution on the
+# full family grid (absent family = 0, not NA), then averaged across the
+# resolutions common to the approaches present.
+#
+# Tolerant to partial runs: an approach or level without results is skipped.
+# Run from the MAIN project. Set PP_PROJECT below if the PP project is not the
+# sibling folder <main>_PP.
 # =============================================================================
 
-library(data.table)
-library(ggplot2)
+suppressPackageStartupMessages({
+  library(data.table); library(ggplot2)
+})
 
-MAIN_PROJECT <- normalizePath(here::here())
-PP_PROJECT   <- file.path(dirname(MAIN_PROJECT), paste0(basename(MAIN_PROJECT), "_PP"))
+PREY_FAMILY <- "_1"                     # main analysis, for Config defaults
+source("R_helpers/Config_Mappings.R")   # STATE_TO_FAMILY, CONTRAST_*, FAMILY_PAL, theme_diag, DIR_APPEND
+
+MAIN_PROJECT <- normalizePath(getwd())
+if (!exists("PP_PROJECT"))
+  PP_PROJECT <- file.path(dirname(MAIN_PROJECT), paste0(basename(MAIN_PROJECT), "_PP"))
 
 ALPHA  <- 0.05
-LEVELS <- c("all_gulf", "ecoregion", "stratum")
+LEVELS <- SPATIAL_LEVELS_ORD
 P_COLS <- c("p_comp", "p_H", "p_Bs", "p_disp")
+TEST_LAB <- c(p_comp = "Composition (PERMANOVA)", p_H = "Diversity H'",
+              p_Bs = "Niche breadth Bs", p_disp = "Dispersion (PERMDISP)")
 
 APPROACHES <- list(
-  pooled_2     = list(root = MAIN_PROJECT, suffix = ""),
-  pooled_1     = list(root = MAIN_PROJECT, suffix = "_1"),
+  pooled_q1    = list(root = MAIN_PROJECT, suffix = "_1"),
+  pooled_q2    = list(root = MAIN_PROJECT, suffix = ""),
   per_predator = list(root = PP_PROJECT,   suffix = "_PP")
 )
+APPROACH_LAB <- c(pooled_q1    = "Pooled grouping, q = 1 (main analysis)",
+                  pooled_q2    = "Pooled grouping, q = 2",
+                  per_predator = "Per-predator grouping")
+APPROACH_PAL <- c(pooled_q1 = "#2F4A5A", pooled_q2 = "#7F9CAB", per_predator = "#D96C4A")
 
-# Scenario (run) -> contraste (label manuscrit, ordre de la Fig5)
+# Scenario -> contrast code, from the period labels stored in the results.
 SCEN_MAP <- data.table(
   period_1 = c("2004", "2004-2005", "2018", "2006", "2004-2006"),
   period_2 = c("2006", "2006",      "2019", "2018", "2018-2019"),
-  scenario = c("P1",   "P3",        "P2",   "P4",   "PT"),
   contrast = c("P1a",  "P1b",       "P2",   "PTb",  "PTa")
 )
-CONTRAST_ORD <- c("P1a", "P1b", "P2", "PTb", "PTa")
+FAM_MAP <- data.table(diagnostic = names(STATE_TO_FAMILY),
+                      family     = unname(STATE_TO_FAMILY))
 
-# Diagnostics (9 classes du moteur) -> 4 familles du manuscrit.
-# !! A VERIFIER contre add_families() de R_helpers/Config_Mappings.R :
-#    regle utilisee ici — Stability = pas de signal ; Functional change =
-#    indices (H/Bs) sans composition ; Substitution = composition SANS Bs ;
-#    Reorganisation = composition AVEC Bs.
-DIAG_FAMILY_MAP <- data.table(
-  diagnostic = c("Stable Diet", "Emerging Shift",
-                 "Ghost Shift", "Partial Diet Shift",
-                 "Internal Rebalancing", "Niche Compression/Expansion",
-                 "Niche Restructuring",
-                 "Structural Shift", "Major Shift"),
-  dfam = c("Stability", "Stability",
-           "Substitution", "Substitution",
-           "Functional change", "Functional change", "Functional change",
-           "Reorganisation", "Reorganisation")
-)
-FAMILY_ORD <- c("Stability", "Substitution", "Functional change", "Reorganisation")
-FAMILY_COL <- c("Stability"         = "#1f3b57",
-                "Substitution"      = "#e8804f",
-                "Functional change" = "#8aa8b8",
-                "Reorganisation"    = "#a01f1f")
+save_app <- function(p, stem, w, h) save_fig(p, stem, w, h, dir = DIR_APPEND)
 
-dir.create(file.path(MAIN_PROJECT, "data/Sensitivity"), recursive = TRUE, showWarnings = FALSE)
-dir.create(file.path(MAIN_PROJECT, "Sensitivity_Plot_PPcompare"), showWarnings = FALSE)
-
-# --- Chargement ---------------------------------------------------------------
+# --- Loading -----------------------------------------------------------------
 
 .is_results <- function(x)
   is.data.frame(x) && all(c("x_threshold", "p_comp", "mode") %in% names(x))
@@ -93,6 +90,7 @@ dir.create(file.path(MAIN_PROJECT, "Sensitivity_Plot_PPcompare"), showWarnings =
 }
 
 load_approach <- function(root, suffix, spatial) {
+  if (!dir.exists(root)) return(NULL)
   hit <- list.files(root, pattern = paste0("^all_runs_", spatial, suffix, "\\.rda$"),
                     recursive = TRUE, full.names = TRUE)
   if (length(hit)) {
@@ -105,14 +103,26 @@ load_approach <- function(root, suffix, spatial) {
     if (length(fs)) {
       tabs <- unlist(lapply(fs, .results_from_rda), recursive = FALSE)
       if (length(tabs)) return(list(dt = rbindlist(tabs, fill = TRUE),
-                                    src = paste0(d, " (", length(fs), " fichiers)")))
+                                    src = paste0(d, " (", length(fs), " files)")))
     }
   }
   NULL
 }
 
+# Shaded bands: within-period contrasts on the left, between-period on the right.
+period_bands <- function(n_within, n_total) {
+  list(
+    annotate("rect", xmin = 0.5, xmax = n_within + 0.5, ymin = -Inf, ymax = Inf,
+             fill = "#D7E6EC", alpha = 0.55),
+    annotate("rect", xmin = n_within + 0.5, xmax = n_total + 0.5,
+             ymin = -Inf, ymax = Inf, fill = "#F6E0D6", alpha = 0.65),
+    geom_vline(xintercept = n_within + 0.5, linetype = "dashed",
+               colour = "grey60", linewidth = 0.3)
+  )
+}
+
 # =============================================================================
-# BOUCLE SUR LES NIVEAUX SPATIAUX
+# LOOP OVER SPATIAL LEVELS
 # =============================================================================
 for (SPATIAL in LEVELS) {
 
@@ -126,161 +136,136 @@ for (SPATIAL in LEVELS) {
                   by = c("period_1", "period_2"), all.x = TRUE)
       res_list[[ap]] <- dt
       xs <- sort(unique(dt$x_threshold))
-      message(sprintf("[ok]     %-13s %s | %d lignes | X = %d-%d",
+      message(sprintf("[ok]     %-13s %s | %d rows | X = %d-%d",
                       ap, r$src, nrow(dt), min(xs), max(xs)))
     } else message("[absent] ", ap)
   }
-  if (!length(res_list)) { message("Aucune approche pour ", SPATIAL, " -> saute"); next }
+  if (length(res_list) < 2) {
+    message("Fewer than two approaches available for ", SPATIAL, " -> skipped")
+    next
+  }
 
   both <- rbindlist(res_list, fill = TRUE)
+  both[, approach := factor(approach, levels = names(APPROACHES))]
+  both[, contrast := factor(contrast, levels = CONTRAST_LEVELS)]
 
+  # Resolutions common to every approach present (the PP sweep is coarser).
   common_x <- Reduce(intersect, lapply(res_list, function(d) unique(d$x_threshold)))
-  sig_x    <- if (length(res_list) >= 2 && length(common_x)) common_x else
-    unique(both$x_threshold)
-  message(length(sig_x), " seuils (resolutions) utilises")
+  sig_x    <- if (length(common_x)) common_x else unique(both$x_threshold)
+  message(length(sig_x), " common resolutions used (",
+          min(sig_x), "-", max(sig_x), ")")
 
   # ===========================================================================
-  # A. % SIGNIFICATIF par approche x scenario x mode x test
+  # B2. % SIGNIFICANT per approach x contrast x currency x test
   # ===========================================================================
-  long <- melt(both[testable == TRUE & x_threshold %in% sig_x,
-                    c("approach", "scenario", "mode", "x_threshold",
+  long <- melt(both[testable == TRUE & x_threshold %in% sig_x & !is.na(contrast),
+                    c("approach", "contrast", "mode", "x_threshold",
                       intersect(P_COLS, names(both))), with = FALSE],
-               id.vars = c("approach", "scenario", "mode", "x_threshold"),
+               id.vars = c("approach", "contrast", "mode", "x_threshold"),
                variable.name = "test", value.name = "p")
 
   pct_by_x <- long[!is.na(p), .(pct_sig = 100 * mean(p < ALPHA), n_cells = .N),
-                   by = .(approach, scenario, mode, test, x_threshold)]
+                   by = .(approach, contrast, mode, test, x_threshold)]
 
   sig_summary <- pct_by_x[, .(pct_mean = round(mean(pct_sig), 1),
                               pct_sd = round(sd(pct_sig), 1),
                               n_thresholds = uniqueN(x_threshold),
                               n_cells_mean = round(mean(n_cells), 1)),
-                          by = .(approach, scenario, mode, test)]
-  setorder(sig_summary, test, scenario, mode, approach)
+                          by = .(approach, contrast, mode, test)]
+  setorder(sig_summary, test, contrast, mode, approach)
 
-  fwrite(sig_summary, file.path(MAIN_PROJECT, "data/Sensitivity",
-                                paste0("pct_significant_", SPATIAL, ".csv")))
-  fwrite(pct_by_x, file.path(MAIN_PROJECT, "data/Sensitivity",
-                             paste0("pct_significant_by_threshold_", SPATIAL, ".csv")))
+  fwrite(sig_summary[, .(approach = APPROACH_LAB[as.character(approach)],
+                         contrast = contrast_label(contrast),
+                         currency = CURRENCY_LAB[as.character(mode)],
+                         test = TEST_LAB[as.character(test)],
+                         pct_mean, pct_sd, n_thresholds, n_cells_mean)],
+         file.path(DIR_APPEND, paste0("TableB2_grouping_pct_significant_", SPATIAL, ".csv")))
 
-  pA <- ggplot(sig_summary, aes(x = scenario, y = pct_mean, fill = approach)) +
+  pB2 <- ggplot(sig_summary, aes(x = contrast, y = pct_mean, fill = approach)) +
     geom_col(position = position_dodge(width = 0.8), width = 0.7) +
     geom_errorbar(aes(ymin = pmax(pct_mean - pct_sd, 0),
                       ymax = pmin(pct_mean + pct_sd, 100)),
                   position = position_dodge(width = 0.8), width = 0.25) +
-    facet_grid(test ~ mode) +
-    labs(title = paste0("% de cellules testables significatives (p < ", ALPHA,
-                        ") — moyenne +/- ecart-type entre seuils (", SPATIAL, ")"),
-         x = "Scenario (comparaison de periodes)", y = "% significatif", fill = NULL) +
-    theme_minimal(base_size = 10)
-  ggsave(file.path(MAIN_PROJECT, "Sensitivity_Plot_PPcompare",
-                   paste0("pct_significant_", SPATIAL, ".png")),
-         pA, width = 11, height = 12, dpi = 200)
+    facet_grid(test ~ mode, labeller = labeller(test = TEST_LAB, mode = CURRENCY_LAB)) +
+    scale_x_discrete(labels = CONTRAST_LAB) +
+    scale_fill_manual(values = APPROACH_PAL, labels = APPROACH_LAB, name = NULL) +
+    labs(title = paste0("Share of testable cells significant (p < ", ALPHA,
+                        ") by prey-grouping approach, ", LEVEL_SHORT[[SPATIAL]], " scale"),
+         subtitle = paste0("Mean +/- SD across ", length(sig_x),
+                           " common taxonomic resolutions"),
+         x = NULL, y = "Cells significant (%)") +
+    theme_diag(base_size = 10)
+  save_app(pB2, paste0("FigB2_grouping_pct_significant_", SPATIAL), 10, 11)
 
   # ===========================================================================
-  # B. REGIME BREAK (style Fig5) : 4 familles diagnostiques x 3 approches
+  # B1. FAMILY COMPOSITION (Fig5 grammar) : 4 families x 3 approaches
   # ===========================================================================
   db <- both[testable == TRUE & x_threshold %in% sig_x &
-               !is.na(diagnostic) & diagnostic != "Inconclusive" &
+               !is.na(diagnostic) & diagnostic != INCONCLUSIVE_LAB &
                !is.na(contrast)]
-  db <- merge(db, DIAG_FAMILY_MAP, by = "diagnostic", all.x = TRUE)
-  if (anyNA(db$dfam))
-    warning("Diagnostics hors mapping : ",
-            paste(unique(db[is.na(dfam), diagnostic]), collapse = ", "))
+  db <- merge(db, FAM_MAP, by = "diagnostic", all.x = TRUE)
+  if (anyNA(db$family))
+    warning("Diagnostics outside STATE_TO_FAMILY: ",
+            paste(unique(db[is.na(family), diagnostic]), collapse = ", "))
+  db <- db[!is.na(family)]
 
-  # % de chaque famille AU SEIN de chaque resolution (somme = 100)...
-  fam_by_x <- db[!is.na(dfam),
-                 .(n = .N), by = .(approach, mode, contrast, x_threshold, dfam)]
-  fam_by_x[, pct := 100 * n / sum(n), by = .(approach, mode, contrast, x_threshold)]
+  # Percentage of each family WITHIN each resolution, on the full family grid
+  # (a family absent from a resolution is 0, not missing), as in
+  # freq_by_resolution() of Config_Mappings.R.
+  keys <- c("approach", "mode", "contrast", "x_threshold")
+  tot  <- db[, .(n_tot = .N), by = keys]
+  cnt  <- db[, .(n = .N), by = c(keys, "family")]
+  grid <- tot[, CJ(family = FAMILY_LEVELS), by = keys]
+  fam_by_x <- merge(grid, cnt, by = c(keys, "family"), all.x = TRUE)
+  fam_by_x <- merge(fam_by_x, tot, by = keys)
+  fam_by_x[is.na(n), n := 0L]
+  fam_by_x[, pct := 100 * n / n_tot]
 
-  # ...moyenne (+ ecart-type) entre les resolutions
+  # ...then the mean (+ SD) across the resolutions.
   fam_summary <- fam_by_x[, .(pct_mean = round(mean(pct), 1),
                               pct_sd   = round(sd(pct), 1),
                               n_thresholds = uniqueN(x_threshold)),
-                          by = .(approach, mode, contrast, dfam)]
-  fam_summary[, `:=`(contrast = factor(contrast, levels = CONTRAST_ORD),
-                     dfam     = factor(dfam, levels = FAMILY_ORD))]
-  setorder(fam_summary, approach, mode, contrast, dfam)
+                          by = .(approach, mode, contrast, family)]
+  fam_summary[, family := factor(family, levels = FAMILY_LEVELS)]
+  setorder(fam_summary, approach, mode, contrast, family)
 
-  fwrite(fam_summary, file.path(MAIN_PROJECT, "data/Sensitivity",
-                                paste0("regime_break_compare_", SPATIAL, ".csv")))
+  out_long <- fam_summary[, .(approach = APPROACH_LAB[as.character(approach)],
+                              currency = CURRENCY_LAB[as.character(mode)],
+                              contrast = contrast_label(contrast),
+                              family, pct_mean, pct_sd, n_thresholds)]
+  fwrite(out_long, file.path(DIR_APPEND, paste0("TableB1_grouping_families_", SPATIAL, ".csv")))
 
-  # Table large "manuscrit" : une colonne par famille
-  fam_wide <- dcast(fam_summary, approach + mode + contrast ~ dfam,
-                    value.var = "pct_mean")
-  fwrite(fam_wide, file.path(MAIN_PROJECT, "data/Sensitivity",
-                             paste0("regime_break_compare_wide_", SPATIAL, ".csv")))
+  fam_wide <- dcast(out_long, approach + currency + contrast ~ family, value.var = "pct_mean")
+  setcolorder(fam_wide, c("approach", "currency", "contrast", FAMILY_LEVELS))
+  fwrite(fam_wide, file.path(DIR_APPEND, paste0("TableB1_grouping_families_wide_", SPATIAL, ".csv")))
 
-  # Figure : meme grammaire que la Fig5 (lignes par famille, linetype par
-  # currency, bandes intra/inter-decennies), UNE FACETTE PAR APPROCHE.
+  # Figure: one row of panels per family, the approaches in colour.
   dplot <- copy(fam_summary)[, x := as.integer(contrast)]
-  n_within <- sum(c("P1a", "P1b", "P2") %in% levels(droplevels(dplot$contrast)))
+  present  <- levels(droplevels(dplot$contrast))
+  n_within <- sum(INTRA_CONTRASTS %in% present)
+  n_total  <- length(CONTRAST_LEVELS)
 
-  pB <- ggplot(dplot, aes(x = x, y = pct_mean,
-                          colour = dfam, linetype = mode,
-                          group = interaction(dfam, mode))) +
-    annotate("rect", xmin = 0.5, xmax = n_within + 0.5, ymin = -Inf, ymax = Inf,
-             fill = "#dfe9ee", alpha = 0.5) +
-    annotate("rect", xmin = n_within + 0.5, xmax = length(CONTRAST_ORD) + 0.5,
-             ymin = -Inf, ymax = Inf, fill = "#f7e2d6", alpha = 0.5) +
-    geom_vline(xintercept = n_within + 0.5, linetype = "dashed", colour = "grey55") +
-    geom_line(linewidth = 0.8) +
-    geom_point(size = 2) +
-    scale_x_continuous(breaks = seq_along(CONTRAST_ORD), labels = CONTRAST_ORD,
-                       limits = c(0.5, length(CONTRAST_ORD) + 0.5),
-                       expand = c(0, 0)) +
-    scale_colour_manual(values = FAMILY_COL) +
-    facet_wrap(~ approach, ncol = 1) +
-    labs(title = paste0("Diet regime break — comparaison des 3 approches (",
-                        SPATIAL, ")"),
-         subtitle = paste0("Frequence des 4 familles diagnostiques, moyenne sur ",
-                           length(sig_x), " resolutions communes ; ",
-                           "bande bleue = intra-decennie, orange = inter-decennies"),
-         x = NULL, y = "Frequency (%)", colour = NULL, linetype = NULL) +
-    theme_minimal(base_size = 11) +
-    theme(legend.position = "top")
-  ggsave(file.path(MAIN_PROJECT, "Sensitivity_Plot_PPcompare",
-                   paste0("regime_break_compare_", SPATIAL, ".png")),
-         pB, width = 10, height = 12, dpi = 200)
-
-  # ===========================================================================
-  # C. REGIME BREAK "par famille" : une ligne de facettes PAR FAMILLE
-  #    diagnostique, et DANS chaque panneau les 3 approches en couleur —
-  #    l'effet du choix d'approche se lit directement, famille par famille.
-  #    Lignes = approches ; colonnes = currency ; barres fines = +/- ecart-type
-  #    entre resolutions.
-  # ===========================================================================
-  pC <- ggplot(dplot, aes(x = x, y = pct_mean,
-                          colour = approach, group = approach)) +
-    annotate("rect", xmin = 0.5, xmax = n_within + 0.5, ymin = -Inf, ymax = Inf,
-             fill = "#dfe9ee", alpha = 0.5) +
-    annotate("rect", xmin = n_within + 0.5, xmax = length(CONTRAST_ORD) + 0.5,
-             ymin = -Inf, ymax = Inf, fill = "#f7e2d6", alpha = 0.5) +
-    geom_vline(xintercept = n_within + 0.5, linetype = "dashed", colour = "grey55") +
-    geom_errorbar(aes(ymin = pmax(pct_mean - pct_sd, 0),
-                      ymax = pct_mean + pct_sd),
+  pB1 <- ggplot(dplot, aes(x = x, y = pct_mean, colour = approach, group = approach)) +
+    period_bands(n_within, n_total) +
+    geom_errorbar(aes(ymin = pmax(pct_mean - pct_sd, 0), ymax = pct_mean + pct_sd),
                   width = 0.12, linewidth = 0.35, alpha = 0.8) +
     geom_line(linewidth = 0.8) +
     geom_point(size = 2) +
-    scale_x_continuous(breaks = seq_along(CONTRAST_ORD), labels = CONTRAST_ORD,
-                       limits = c(0.5, length(CONTRAST_ORD) + 0.5),
-                       expand = c(0, 0)) +
-    facet_grid(dfam ~ mode, scales = "free_y") +
-    labs(title = paste0("Diet regime break par famille diagnostique — ",
-                        "effet de l'approche de regroupement (", SPATIAL, ")"),
-         subtitle = paste0("Chaque panneau : les 3 approches pour une famille ; ",
-                           "moyenne +/- ecart-type sur ", length(sig_x),
-                           " resolutions communes ; bande bleue = intra-decennie, ",
-                           "orange = inter-decennies"),
-         x = NULL, y = "Frequency (%)", colour = NULL) +
-    theme_minimal(base_size = 11) +
-    theme(legend.position = "top")
-  ggsave(file.path(MAIN_PROJECT, "Sensitivity_Plot_PPcompare",
-                   paste0("regime_break_by_family_", SPATIAL, ".png")),
-         pC, width = 10, height = 12, dpi = 200)
+    scale_x_continuous(breaks = seq_len(n_total), labels = unname(CONTRAST_LAB),
+                       limits = c(0.5, n_total + 0.5), expand = c(0, 0)) +
+    scale_colour_manual(values = APPROACH_PAL, labels = APPROACH_LAB, name = NULL) +
+    facet_grid(family ~ mode, scales = "free_y",
+               labeller = labeller(mode = CURRENCY_LAB)) +
+    labs(title = paste0("Diagnostic families by prey-grouping approach, ",
+                        LEVEL_SHORT[[SPATIAL]], " scale"),
+         subtitle = paste0("Mean +/- SD across ", length(sig_x),
+                           " common taxonomic resolutions.\nShaded bands: ",
+                           "within-period (left) and between-period (right) contrasts."),
+         x = NULL, y = "Frequency (%)") +
+    theme_diag(base_size = 10)
+  save_app(pB1, paste0("FigB1_grouping_families_", SPATIAL), 9, 10)
 
-  message("Ecrit pour ", SPATIAL,
-          " : pct_significant + regime_break_compare + regime_break_by_family")
+  message("Written for ", SPATIAL, ": FigB1, FigB2, TableB1 (long + wide), TableB2")
 }
 
-cat("\nTermine. Sorties dans Sensitivity_Plot_PPcompare/ et data/Sensitivity/\n")
+cat("\nDone. Appendix outputs in ", normalizePath(DIR_APPEND), "\n", sep = "")
