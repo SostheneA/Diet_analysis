@@ -359,6 +359,51 @@ freq_by_resolution <- function(results, keys = c("currency", "contrast", "level"
     mutate(diagnostic = factor(diagnostic, levels = DIAG_LEVELS))
 }
 
+# Spread of the family frequencies across the resolution sweep, for error
+# bars. Same construction as freq_by_resolution(): the four family percentages
+# are computed WITHIN each resolution on the zero-filled grid, then summarised
+# across resolutions. Returns one row per key x family with pct_mean, pct_sd,
+# pct_min, pct_max and n_res. `keys` must be the same keys used for the
+# corresponding mean table so that the two can be joined.
+#   fam_gulf_sd <- spread_by_resolution(filter(res_all, level == "all_gulf"),
+#                                       keys = c("currency", "contrast"))
+family_by_resolution <- function(results, keys = c("currency", "contrast")) {
+  results %>%
+    filter(diagnostic %in% DIAG_LEVELS) %>%
+    mutate(family = family_of(diagnostic)) %>%
+    count(across(all_of(c(keys, "x_threshold"))), family, name = "n") %>%
+    group_by(across(all_of(c(keys, "x_threshold")))) %>%
+    mutate(pct = 100 * n / sum(n)) %>%
+    ungroup() %>%
+    select(-n) %>%
+    tidyr::complete(tidyr::nesting(!!!rlang::syms(c(keys, "x_threshold"))),
+                    family = factor(FAMILY_LEVELS, levels = FAMILY_LEVELS),
+                    fill = list(pct = 0))
+}
+
+spread_by_resolution <- function(results, keys = c("currency", "contrast")) {
+  family_by_resolution(results, keys) %>%
+    group_by(across(all_of(c(keys, "family")))) %>%
+    summarise(pct_mean = mean(pct), pct_sd = sd(pct),
+              pct_min = min(pct), pct_max = max(pct),
+              n_res = dplyr::n_distinct(x_threshold), .groups = "drop")
+}
+
+# For the disaggregated levels the reported value is a mean across spatial
+# units; its spread across resolutions is the SD of that across-unit mean,
+# i.e. compute the per-unit percentages within each resolution, average them
+# over units, then take the SD over resolutions.
+spread_by_resolution_units <- function(results, keys = c("currency", "contrast", "level"),
+                                       unit_col = "spatial_unit") {
+  family_by_resolution(results, keys = c(keys, unit_col)) %>%
+    group_by(across(all_of(c(keys, "x_threshold", "family")))) %>%
+    summarise(pct = mean(pct), .groups = "drop") %>%
+    group_by(across(all_of(c(keys, "family")))) %>%
+    summarise(pct_mean = mean(pct), pct_sd = sd(pct),
+              pct_min = min(pct), pct_max = max(pct),
+              n_res = dplyr::n_distinct(x_threshold), .groups = "drop")
+}
+
 # Number of independent predator x size-class units behind each group. This is
 # the n used for the low-sample flag and for the cluster-corrected error bars;
 # it is not the number of rows, which counts resolutions as well.

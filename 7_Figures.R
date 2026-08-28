@@ -125,9 +125,17 @@ long_of <- function(d) {
 # the envelope traced by P1a, P1b and P2.
 cat("\nFigure 5: Gulf-wide regime break\n")
 
+# Error bars = SD of the family frequencies across the ~100 resolutions
+# (spread_by_resolution() in Config_Mappings.R; same keys as fam_gulf).
+fam_gulf_sd <- spread_by_resolution(filter(res_all, level == "all_gulf"),
+                                    keys = c("currency", "contrast")) %>%
+  select(currency, contrast, family, sd = pct_sd) %>%
+  mutate(currency = factor(currency, levels = names(CURRENCY_LAB)))
+
 d5 <- long_of(fam_gulf) %>%
   filter(!is.na(contrast)) %>%
-  mutate(x = as.integer(contrast))
+  left_join(fam_gulf_sd, by = c("currency", "contrast", "family")) %>%
+  mutate(x = as.integer(contrast) + ifelse(currency == "biomass", -0.06, 0.06))
 
 fig5 <- ggplot(d5, aes(x, pct, colour = family, shape = family,
                        linetype = currency, group = interaction(family, currency))) +
@@ -136,6 +144,9 @@ fig5 <- ggplot(d5, aes(x, pct, colour = family, shape = family,
            colour = "#2F4A5A", fontface = 2, size = 3.6, vjust = 1.8) +
   annotate("text", x = 4.5, y = Inf, label = "BETWEEN PERIODS",
            colour = "#9B2226", fontface = 2, size = 3.6, vjust = 1.8) +
+  geom_errorbar(aes(ymin = pmax(pct - sd, 0), ymax = pmin(pct + sd, 100)),
+                width = 0.08, linewidth = 0.4, linetype = "solid",
+                alpha = 0.7, show.legend = FALSE) +
   geom_line(linewidth = 0.8) +
   geom_point(size = 2.6, fill = "white") +
   scale_x_continuous(breaks = seq_along(CONTRAST_LEVELS),
@@ -149,7 +160,7 @@ fig5 <- ggplot(d5, aes(x, pct, colour = family, shape = family,
   labs(
     title = "Diet regime break at the Gulf-wide scale",
     subtitle = paste0("Frequency of the four diagnostic families among predator x ",
-                      "size-class cells,\naveraged across ~100 prey taxonomic resolutions"),
+                      "size-class cells: mean and\nstandard deviation across ~100 prey taxonomic resolutions"),
     x = NULL, y = "Frequency (%)"
   ) +
   theme_diag() +
@@ -165,24 +176,30 @@ save_fig(fig5, "Fig5_regime_break_gulf", width = 9, height = 5.6)
 # the contrast axis stays readable across four panels.
 cat("\nFigure 6: by ecoregion\n")
 
+# n_units varies by contrast, so it must not be part of the facet label
+# (that would split each ecoregion into one facet per contrast); it is
+# printed above each bar instead.
 d6 <- long_of(filter(fam_unit, level == "ecoregion")) %>%
   filter(!is.na(contrast)) %>%
-  mutate(unit_lab = paste0(area_label(spatial_unit), "\n(n = ", n_units, " units)"))
+  mutate(unit_lab = area_label(spatial_unit))
+d6_n <- d6 %>% distinct(currency, unit_lab, contrast, n_units)
 
 fig6 <- ggplot(d6, aes(contrast, pct, fill = family)) +
   geom_col(width = 0.72, colour = "grey25", linewidth = 0.2) +
+  geom_text(data = d6_n, aes(contrast, 101, label = paste0("n=", n_units)),
+            inherit.aes = FALSE, size = 2.3, vjust = 0, colour = "grey30") +
   scale_x_discrete(labels = CONTRAST_LAB) +
   geom_hline(yintercept = c(25, 50, 75), colour = "white",
              linewidth = 0.3, linetype = "dotted") +
   facet_grid(currency ~ unit_lab,
              labeller = labeller(currency = CURRENCY_LAB)) +
   scale_fill_manual(values = FAMILY_PAL, name = NULL) +
-  scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25),
+  scale_y_continuous(limits = c(0, 108), breaks = seq(0, 100, 25),
                      expand = expansion(mult = c(0, 0.02))) +
   labs(
     title = "Diet regime break by ecoregion",
     subtitle = paste0("Composition of the four families within each ecoregion. ",
-                      "n = predator x size-class units contributing to the panel."),
+                      "n = predator x size-class units contributing to each bar."),
     x = NULL, y = "Within-ecoregion frequency (%)"
   ) +
   theme_diag() +
@@ -240,11 +257,27 @@ if (any(fam_unit$level == "stratum"))   make_heatmap("stratum",   "Fig_heatmap_s
 # made.
 cat("\nCross-scale gradient\n")
 
+# Error bars: SD across resolutions of the Gulf-wide percentage (all_gulf)
+# and of the across-unit mean (ecoregion, stratum).
+grad_sd <- bind_rows(
+  spread_by_resolution(filter(res_all, level == "all_gulf"),
+                       keys = c("currency", "contrast")) %>%
+    mutate(level = "all_gulf"),
+  spread_by_resolution_units(filter(res_all, level != "all_gulf"),
+                             keys = c("currency", "contrast", "level"))
+) %>%
+  transmute(currency = factor(currency, levels = names(CURRENCY_LAB)),
+            contrast, level = as.character(level), family, sd = pct_sd)
+
 d_grad <- long_of(fam_level) %>%
   filter(contrast == "PTa") %>%
+  mutate(level = as.character(level)) %>%
+  left_join(grad_sd, by = c("currency", "contrast", "level", "family")) %>%
   mutate(level = factor(level, levels = rev(SPATIAL_LEVELS_ORD)))
 
 fig_grad <- ggplot(d_grad, aes(level, pct, colour = family, group = family)) +
+  geom_errorbar(aes(ymin = pmax(pct - sd, 0), ymax = pmin(pct + sd, 100)),
+                width = 0.1, linewidth = 0.4, alpha = 0.7, show.legend = FALSE) +
   geom_line(linewidth = 0.9) +
   geom_point(aes(shape = family), size = 3.2) +
   geom_text(aes(label = sprintf("%.1f", pct)), vjust = -1.1,
@@ -259,7 +292,7 @@ fig_grad <- ggplot(d_grad, aes(level, pct, colour = family, group = family)) +
     title = paste0("Effect of spatial aggregation on the diagnostic composition (",
                    CONTRAST_LAB_1L[["PTa"]], ")"),
     subtitle = paste0("Stratum and ecoregion values are means across units; the ",
-                      "Gulf-wide value is a single pooled test.\nAggregation ",
+                      "Gulf-wide value is a single pooled test.\nBars = SD across resolutions. Aggregation ",
                       "raises apparent Reorganisation and lowers Stability, ",
                       "while Substitution is scale-invariant."),
     x = "Spatial unit, from finest to coarsest", y = "Frequency (%)"
