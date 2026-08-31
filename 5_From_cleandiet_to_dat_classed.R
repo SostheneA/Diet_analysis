@@ -67,7 +67,7 @@ col_period <- c("2004-2006" = "#2c7bb6", "2018-2019" = "#d7191c")
 col_Area   <- c("Northumberland"    = "#1b7837",
                 "Magdalen Shallows" = "#762a83",
                 "Central"           = "#e08214",
-                "Baie des Chaleurs" = "#2166ac")
+                "Chaleur Bay" = "#2166ac")
 
 # Data Cleaning: Filter invalid lengths and factorize key variables
 dat <- data_doc %>%

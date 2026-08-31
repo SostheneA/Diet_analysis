@@ -47,7 +47,7 @@ quick_intersect0 <- function(sf_a, sf_b, name) {
 
 # 1. Baie des Chaleurs (PID 50 + 4TM/4TN)
 z_4tmn <- NAFO_4T_sf %>% filter(level_2 %in% c("4TM", "4TN")) %>% st_union()
-baie_chaleurs <- quick_intersect(EAR_sf %>% filter(PID == 50), z_4tmn, "Baie des Chaleurs")
+baie_chaleurs <- quick_intersect(EAR_sf %>% filter(PID == 50), z_4tmn, "Chaleur Bay")
 
 # 2. Northumberland (PID 6 + 4TH/4TL/4TG)
 # Planar processing (S2 off) is safer for complex coastal intersections

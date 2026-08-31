@@ -16,7 +16,7 @@ stopifnot(approach %in% c(1, 2))
 target <- paste0('"_', approach, '"')
 
 # Motif : debut de ligne (indentation permise), PREY_FAMILY, <- ou =, "_1" ou "_2"
-pat <- '^(\\s*PREY_FAMILY\\s*(<-|=)\\s*)"_[12]"'
+pat <- '^(\\s*(?:if \\(!exists\\("PREY_FAMILY"\\)\\) )?PREY_FAMILY\\s*(<-|=)\\s*)"_(1|2|PP)"'
 
 files <- list.files(".", pattern = "\\.R$", recursive = TRUE, full.names = TRUE)
 files <- files[!grepl("0_set_prey_family\\.R$", files)]   # ne pas se modifier soi-meme

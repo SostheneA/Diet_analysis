@@ -329,59 +329,103 @@ if (have_raw && all(c("Area", "stratum") %in% names(raw))) {
 }
 
 # =============================================================================
-# 6. FIGURE S7 - SENSITIVITY TO LOW-SAMPLE UNITS
+# 6. FIGURE S7 - SENSITIVITY TO LOW-SAMPLE UNITS (three scales, with intervals)
 # =============================================================================
-# The composites are recomputed with and without the units below N_FLAG. If the
-# two versions agree, the spatial signal does not rest on the sparse units.
+# The across-unit composites are recomputed with and without the units built
+# on fewer than N_FLAG predator x size-class cells. If the two versions agree,
+# the spatial signal does not rest on the sparse units. Gulf-wide (a single
+# unit, never filtered) is shown as the reference column.
+#
+# Uncertainty: the composite is computed WITHIN each taxonomic resolution
+# (mean over the retained units), then summarised ACROSS resolutions, exactly
+# like Figs 5, 7 and 8. The interval is either
+#   S7_BAND = "q95" : empirical 2.5-97.5 % interval across resolutions
+#   S7_BAND = "sd"  : mean +/- SD across resolutions (same band as Fig 5)
+# Resolutions are not independent samples, so this is a sensitivity envelope,
+# not a parametric confidence interval - the caption should say so.
 cat("\nFigure S7: low-sample sensitivity\n")
 
-fam_unit <- res_all %>%
-  filter(level != "all_gulf") %>%
-  freq_by_resolution(keys = c("currency", "contrast", "level", "spatial_unit")) %>%
-  add_families(keys = c("currency", "contrast", "level", "spatial_unit")) %>%
-  left_join(
-    n_units_by(filter(res_all, level != "all_gulf"),
-               keys = c("currency", "contrast", "level", "spatial_unit")),
-    by = c("currency", "contrast", "level", "spatial_unit")
-  )
+S7_BAND <- "q95"
 
-sens <- bind_rows(
-  fam_unit %>% mutate(subset = "All units"),
-  fam_unit %>% filter(!is.na(n_units), n_units >= N_FLAG) %>%
-    mutate(subset = paste0("n units >= ", N_FLAG))
+res_s7 <- res_all %>%
+  mutate(spatial_unit = if_else(level == "all_gulf", "Gulf-wide", spatial_unit))
+
+unit_keys <- c("currency", "contrast", "level", "spatial_unit")
+
+# cells (predator x size-class) behind each unit, for the >= N_FLAG filter
+cells_per_unit <- n_units_by(res_s7, keys = unit_keys) %>%
+  rename(n_cells = n_units)
+
+# family percentages per unit AND per resolution (absent family = 0)
+fam_ux <- family_by_resolution(res_s7, keys = unit_keys) %>%
+  left_join(cells_per_unit, by = unit_keys) %>%
+  filter(!is.na(contrast))
+
+sub_lab <- paste0("n cells >= ", N_FLAG)
+
+comp_by_x <- bind_rows(
+  fam_ux %>% mutate(subset = "All units"),
+  fam_ux %>%
+    filter(level != "all_gulf", !is.na(n_cells), n_cells >= N_FLAG) %>%
+    mutate(subset = sub_lab)
 ) %>%
-  group_by(level, currency, contrast, subset) %>%
-  summarise(across(all_of(FAMILY_LEVELS), ~mean(.x, na.rm = TRUE)),
-            n_units_kept = dplyr::n(), .groups = "drop") %>%
-  filter(!is.na(contrast)) %>%
-  pivot_longer(all_of(FAMILY_LEVELS), names_to = "family", values_to = "pct") %>%
-  mutate(family = factor(family, levels = FAMILY_LEVELS))
+  # composite for one resolution = mean over the units retained
+  group_by(level, currency, contrast, subset, family, x_threshold) %>%
+  summarise(pct = mean(pct), n_units_kept = n_distinct(spatial_unit),
+            .groups = "drop")
 
-pS7 <- ggplot(sens, aes(contrast, pct, colour = family,
+sens <- comp_by_x %>%
+  group_by(level, currency, contrast, subset, family) %>%
+  summarise(pct_mean = mean(pct), pct_sd = sd(pct),
+            q_lo = unname(quantile(pct, 0.025)), q_hi = unname(quantile(pct, 0.975)),
+            n_res = n_distinct(x_threshold), n_units_kept = min(n_units_kept),
+            .groups = "drop") %>%
+  mutate(lo = if (S7_BAND == "sd") pmax(pct_mean - pct_sd, 0) else q_lo,
+         hi = if (S7_BAND == "sd") pmin(pct_mean + pct_sd, 100) else q_hi,
+         level    = factor(level, levels = SPATIAL_LEVELS_ORD),
+         subset   = factor(subset, levels = c("All units", sub_lab)),
+         family   = factor(family, levels = FAMILY_LEVELS),
+         contrast = factor(contrast, levels = CONTRAST_LEVELS),
+         # numeric x with a small offset by subset so the intervals do not overlap
+         x = as.integer(contrast) + if_else(subset == "All units", -0.07, 0.07))
+
+band_lab <- if (S7_BAND == "sd") "mean +/- SD across taxonomic resolutions" else
+  "95 % interval (2.5-97.5 %) across taxonomic resolutions"
+
+pS7 <- ggplot(sens, aes(x = x, y = pct_mean, colour = family,
                         shape = subset, group = interaction(family, subset))) +
+  geom_errorbar(aes(ymin = lo, ymax = hi, linetype = subset),
+                width = 0.1, linewidth = 0.35, alpha = 0.85) +
   geom_line(aes(linetype = subset), linewidth = 0.6) +
-  geom_point(size = 2.2) +
-  scale_x_discrete(labels = CONTRAST_LAB) +
+  geom_point(size = 2.2, fill = "white") +
+  scale_x_continuous(breaks = seq_along(CONTRAST_LEVELS), labels = unname(CONTRAST_LAB),
+                     limits = c(0.5, length(CONTRAST_LEVELS) + 0.5), expand = c(0, 0)) +
   facet_grid(currency ~ level,
              labeller = labeller(currency = CURRENCY_LAB, level = LEVEL_SHORT)) +
   scale_colour_manual(values = FAMILY_PAL, name = NULL) +
-  scale_shape_manual(values = c(16, 1), name = NULL) +
-  scale_linetype_manual(values = c("solid", "dashed"), name = NULL) +
+  scale_shape_manual(values = c(16, 21), name = NULL, drop = FALSE) +
+  scale_linetype_manual(values = c("solid", "dashed"), name = NULL, drop = FALSE) +
   scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25)) +
   labs(title = "Sensitivity of the across-unit composites to sparsely sampled units",
-       subtitle = paste0("Solid = every unit; dashed = units built on at least ",
-                         N_FLAG, " predator x size-class cells"),
+       subtitle = paste0("Solid = every unit; dashed = units built on at least ", N_FLAG,
+                         " predator x size-class cells. Bars: ", band_lab,
+                         ".\nGulf-wide is a single unit and is shown as the reference."),
        x = NULL, y = "Frequency (%)") +
-  theme_diag()
+  theme_diag() +
+  theme(legend.position = "top")
 
-save_app(pS7, "FigS7_flagged_units", 10, 6)
+save_app(pS7, "FigS7_flagged_units", 13, 6.5)
 
 emit_app(
   sens %>%
-    pivot_wider(names_from = family, values_from = pct) %>%
-    mutate(across(all_of(FAMILY_LEVELS), ~round(.x, 1))),
+    select(level, currency, contrast, subset, family, pct_mean, lo, hi,
+           n_res, n_units_kept) %>%
+    mutate(across(c(pct_mean, lo, hi), ~round(.x, 1))) %>%
+    pivot_wider(names_from = family, values_from = c(pct_mean, lo, hi),
+                names_glue = "{family}_{.value}"),
   "TableA6_lowN_sensitivity",
-  "Across-unit composites with and without sparsely sampled units.")
+  paste0("Across-unit composites with and without sparsely sampled units; ",
+         band_lab, "."))
 
 # =============================================================================
 # 7. MANIFEST

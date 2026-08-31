@@ -27,8 +27,8 @@
 #     "_by_unit_"  the same breakdown, one panel per ecoregion.
 # =============================================================================
 
-rm(list = ls())
-PREY_FAMILY <- "_1"
+rm(list = setdiff(ls(), "PREY_FAMILY"))   # PREY_FAMILY may be set by a driver
+if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_1"   # "_1" (main), "_2" or "_PP"
 # =============================================================================
 # 1. GLOBAL ANALYSIS PARAMETERS & SWITCHES
 # =============================================================================
@@ -55,7 +55,7 @@ DRIVER_RELATIVE <- TRUE       # Standardize abundance for IndVal
 SPATIAL_LEVEL <- "ecoregion"
 
 # Source the engine (defines objects only, runs nothing)
-PREY_FAMILY <- "_1"
+if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_1"   # "_1" (main), "_2" or "_PP"
 source("6a_Engine_Trophic.R")
 
 # =============================================================================

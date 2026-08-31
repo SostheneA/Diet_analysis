@@ -209,6 +209,68 @@ fig6 <- ggplot(d6, aes(contrast, pct, fill = family)) +
 save_fig(fig6, "Fig6_regime_break_ecoregion", width = 11, height = 6.4)
 
 # =============================================================================
+# 3b. REGIME BREAK AT THE ECOREGION AND STRATUM SCALES (one figure per scale)
+# =============================================================================
+# Same grammar as Figure 5 (lines per family, linetype per currency, shaded
+# within/between-period bands, SD error bars), applied to the across-unit mean
+# of each disaggregated scale. Values are those of Table 3; error bars are the
+# SD across the ~100 resolutions of the across-unit mean
+# (spread_by_resolution_units in Config_Mappings.R).
+cat("\nRegime break at the ecoregion and stratum scales\n")
+
+rb_sd <- spread_by_resolution_units(filter(res_all, level != "all_gulf"),
+                                    keys = c("currency", "contrast", "level")) %>%
+  transmute(currency = factor(currency, levels = names(CURRENCY_LAB)),
+            contrast, level = as.character(level), family, sd = pct_sd)
+
+make_regime_break <- function(lvl, stem, title_txt, subtitle_txt) {
+  d <- long_of(filter(fam_level, level == lvl)) %>%
+    filter(!is.na(contrast)) %>%
+    mutate(level = as.character(level)) %>%
+    left_join(rb_sd, by = c("currency", "contrast", "level", "family")) %>%
+    mutate(x = as.integer(contrast) + ifelse(currency == "biomass", -0.06, 0.06))
+
+  g <- ggplot(d, aes(x, pct, colour = family, shape = family,
+                     linetype = currency,
+                     group = interaction(family, currency))) +
+    decade_bands() +
+    annotate("text", x = 2,   y = Inf, label = "WITHIN PERIOD",
+             colour = "#2F4A5A", fontface = 2, size = 3.6, vjust = 1.8) +
+    annotate("text", x = 4.5, y = Inf, label = "BETWEEN PERIODS",
+             colour = "#9B2226", fontface = 2, size = 3.6, vjust = 1.8) +
+    geom_errorbar(aes(ymin = pmax(pct - sd, 0), ymax = pmin(pct + sd, 100)),
+                  width = 0.08, linewidth = 0.4, linetype = "solid",
+                  alpha = 0.7, show.legend = FALSE) +
+    geom_line(linewidth = 0.8) +
+    geom_point(size = 2.6, fill = "white") +
+    scale_x_continuous(breaks = seq_along(CONTRAST_LEVELS),
+                       labels = unname(CONTRAST_LAB[CONTRAST_LEVELS]),
+                       expand = expansion(add = 0.25)) +
+    scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 20)) +
+    scale_colour_manual(values = FAMILY_PAL, name = NULL) +
+    scale_shape_manual(values = FAMILY_SHAPE, name = NULL) +
+    scale_linetype_manual(values = c(biomass = "solid", occurrence = "22"),
+                          labels = CURRENCY_LAB, name = NULL) +
+    labs(title = title_txt, subtitle = subtitle_txt, x = NULL, y = "Frequency (%)") +
+    theme_diag() +
+    theme(legend.box = "horizontal")
+
+  save_fig(g, stem, width = 9, height = 5.6)
+}
+
+make_regime_break(
+  "ecoregion", "Fig7_regime_break_ecoregion_mean",
+  "Diet regime break at the ecoregion scale",
+  paste0("Family frequencies averaged across the four ecoregions: mean and\n",
+         "standard deviation across ~100 prey taxonomic resolutions"))
+
+make_regime_break(
+  "stratum", "Fig8_regime_break_stratum_mean",
+  "Diet regime break at the stratum scale",
+  paste0("Family frequencies averaged across survey strata: mean and\n",
+         "standard deviation across ~100 prey taxonomic resolutions"))
+
+# =============================================================================
 # 4. HEATMAP - DENSE ALTERNATIVE FOR THE STRATUM SCALE
 # =============================================================================
 # With ~25 strata a bar panel per unit is unreadable. The heatmap keeps every

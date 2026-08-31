@@ -62,7 +62,7 @@ pick <- function(env, obj) tidy_level(get(obj, envir = env))
 # lines to compare any other scenario or mode.
 OBJ  <- "res_biomass_PT"
 all3 <- bind_rows(pick(env_L1, OBJ), pick(env_L2, OBJ), pick(env_L3, OBJ))
-
+library(sf)
 # =============================================================================
 # 0. STRATUM-TO-ECOREGION CROSSWALK
 # =============================================================================
@@ -73,6 +73,7 @@ load("data/dat_classed.rda")
 # stratum is numeric in the source data but character in the results, where it
 # was written through factor(); casting here keeps the join types compatible.
 xwalk_raw <- as.data.frame(dat_classed) %>%
+  st_drop_geometry() %>%
   mutate(stratum = as.character(stratum)) %>%
   count(Area, stratum, name = "n_rec") %>%
   filter(n_rec > 0)

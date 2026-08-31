@@ -24,7 +24,7 @@
 #   is exactly what levels L2 and L3 are there to resolve.
 # =============================================================================
 
-rm(list = ls())
+rm(list = setdiff(ls(), "PREY_FAMILY"))   # PREY_FAMILY may be set by a driver
 
 # =============================================================================
 # 1. GLOBAL ANALYSIS PARAMETERS & SWITCHES
@@ -52,7 +52,7 @@ DRIVER_RELATIVE <- TRUE       # Standardize abundance for IndVal
 SPATIAL_LEVEL <- "all_gulf"
 
 # Source the engine (defines objects only, runs nothing)
-PREY_FAMILY <- "_1"
+if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_1"   # "_1" (main), "_2" or "_PP"
 source("6a_Engine_Trophic.R")
 
 # =============================================================================

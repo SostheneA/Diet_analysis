@@ -1,41 +1,51 @@
-level,currency,contrast,subset,n_units_kept,Stability,Substitution,Functional change,Reorganisation
-ecoregion,biomass,2004 vs 2006,All units,4,66.3,9.3,19.8,4.7
-ecoregion,biomass,2004 vs 2006,n units >= 5,4,66.3,9.3,19.8,4.7
-ecoregion,biomass,2004-2005 vs 2006,All units,4,69.5,8,18.8,3.8
-ecoregion,biomass,2004-2005 vs 2006,n units >= 5,4,69.5,8,18.8,3.8
-ecoregion,biomass,2018 vs 2019,All units,4,67.6,9.5,21.2,1.6
-ecoregion,biomass,2018 vs 2019,n units >= 5,3,56.8,12.7,28.3,2.2
-ecoregion,biomass,2006 vs 2018,All units,4,32.6,27.9,20,19.4
-ecoregion,biomass,2006 vs 2018,n units >= 5,4,32.6,27.9,20,19.4
-ecoregion,biomass,2004-2006 vs 2018-2019,All units,4,23.4,41.7,9.6,25.3
-ecoregion,biomass,2004-2006 vs 2018-2019,n units >= 5,4,23.4,41.7,9.6,25.3
-ecoregion,occurrence,2004 vs 2006,All units,4,70.7,11.9,8.8,8.6
-ecoregion,occurrence,2004 vs 2006,n units >= 5,4,70.7,11.9,8.8,8.6
-ecoregion,occurrence,2004-2005 vs 2006,All units,4,69.8,13.3,10,6.9
-ecoregion,occurrence,2004-2005 vs 2006,n units >= 5,4,69.8,13.3,10,6.9
-ecoregion,occurrence,2018 vs 2019,All units,4,78.9,8.5,8,4.7
-ecoregion,occurrence,2018 vs 2019,n units >= 5,3,72.3,10.8,10.6,6.3
-ecoregion,occurrence,2006 vs 2018,All units,4,27.8,49.8,3.3,19.1
-ecoregion,occurrence,2006 vs 2018,n units >= 5,4,27.8,49.8,3.3,19.1
-ecoregion,occurrence,2004-2006 vs 2018-2019,All units,4,18.7,53.1,4.2,24
-ecoregion,occurrence,2004-2006 vs 2018-2019,n units >= 5,4,18.7,53.1,4.2,24
-stratum,biomass,2004 vs 2006,All units,23,78.7,4.5,14.3,2.5
-stratum,biomass,2004 vs 2006,n units >= 5,20,79.9,4.1,13.2,2.9
-stratum,biomass,2004-2005 vs 2006,All units,24,80.1,5.2,12,2.7
-stratum,biomass,2004-2005 vs 2006,n units >= 5,20,79.6,4.8,12.3,3.3
-stratum,biomass,2018 vs 2019,All units,19,68.8,1.7,28.3,1.2
-stratum,biomass,2018 vs 2019,n units >= 5,6,74.2,2.4,19.9,3.5
-stratum,biomass,2006 vs 2018,All units,22,56.5,19.2,11.8,12.5
-stratum,biomass,2006 vs 2018,n units >= 5,15,53.2,22,12.5,12.2
-stratum,biomass,2004-2006 vs 2018-2019,All units,27,37.8,41.1,7.1,14
-stratum,biomass,2004-2006 vs 2018-2019,n units >= 5,24,39.7,41,8,11.2
-stratum,occurrence,2004 vs 2006,All units,23,77.8,7.5,11.7,2.9
-stratum,occurrence,2004 vs 2006,n units >= 5,20,76.9,7.5,12.2,3.4
-stratum,occurrence,2004-2005 vs 2006,All units,24,77.7,7.7,11.6,3.1
-stratum,occurrence,2004-2005 vs 2006,n units >= 5,20,77.2,6.9,12.2,3.7
-stratum,occurrence,2018 vs 2019,All units,19,81.2,4.4,11.4,3
-stratum,occurrence,2018 vs 2019,n units >= 5,6,77.9,11.7,9.3,1.1
-stratum,occurrence,2006 vs 2018,All units,22,48.5,39.2,3.3,9
-stratum,occurrence,2006 vs 2018,n units >= 5,15,45.1,41.4,2.9,10.5
-stratum,occurrence,2004-2006 vs 2018-2019,All units,27,24.6,59.5,4.8,11.1
-stratum,occurrence,2004-2006 vs 2018-2019,n units >= 5,24,27.7,54.5,5.4,12.4
+level,currency,contrast,subset,n_res,n_units_kept,Stability_pct_mean,Substitution_pct_mean,Functional change_pct_mean,Reorganisation_pct_mean,Stability_lo,Substitution_lo,Functional change_lo,Reorganisation_lo,Stability_hi,Substitution_hi,Functional change_hi,Reorganisation_hi
+all_gulf,biomass,2004 vs 2006,All units,100,1,54.1,21.7,15.6,8.5,50,18.5,13,7.4,58.4,25.9,16.7,11.1
+all_gulf,biomass,2004-2005 vs 2006,All units,100,1,48.3,24.2,20.3,7.3,45.5,20,18.2,5.5,50.9,27.3,21.8,9.1
+all_gulf,biomass,2018 vs 2019,All units,100,1,64.2,14.7,17.5,3.6,54.9,11.8,11.8,0,68.6,19.6,19.6,11.8
+all_gulf,biomass,2006 vs 2018,All units,100,1,15.2,47.4,4.9,32.5,10.5,38.5,1.9,26.9,17.3,51.9,7.7,44.2
+all_gulf,biomass,2004-2006 vs 2018-2019,All units,100,1,10.7,55.1,4.1,30.2,6.8,45.8,3.4,23.7,13.6,61,5.1,44.1
+all_gulf,occurrence,2004 vs 2006,All units,100,1,51.5,28.5,2.3,17.8,44.4,21.2,0,14.8,57.4,37,7.4,20.4
+all_gulf,occurrence,2004-2005 vs 2006,All units,100,1,52.9,26.7,5.2,15.1,46.3,21.8,2.7,14.5,59.1,30.9,7.3,16.4
+all_gulf,occurrence,2018 vs 2019,All units,100,1,63.4,10.9,15.6,10.2,60.8,5.9,11.8,5.9,66.7,15.7,19.6,13.7
+all_gulf,occurrence,2006 vs 2018,All units,100,1,10.1,58.1,2.3,29.5,7.7,48.1,0,23.1,11.5,63.5,3.8,42.3
+all_gulf,occurrence,2004-2006 vs 2018-2019,All units,100,1,7.4,50.6,2.6,39.4,3.4,42.4,1.7,30.5,10.2,55.9,5.1,49.2
+ecoregion,biomass,2004 vs 2006,All units,100,4,65.9,9.3,20.2,4.6,62.1,7.5,18.2,3.1,69.2,10.3,22.7,7.5
+ecoregion,biomass,2004 vs 2006,n cells >= 5,100,4,65.9,9.3,20.2,4.6,62.1,7.5,18.2,3.1,69.2,10.3,22.7,7.5
+ecoregion,biomass,2004-2005 vs 2006,All units,100,4,69.5,8,18.7,3.9,66.4,7,15.6,3.1,73.4,9.4,20.7,4.9
+ecoregion,biomass,2004-2005 vs 2006,n cells >= 5,100,4,69.5,8,18.7,3.9,66.4,7,15.6,3.1,73.4,9.4,20.7,4.9
+ecoregion,biomass,2018 vs 2019,All units,100,4,69.5,9.6,17.7,3.2,61.3,5.5,13.3,1.2,75.3,14.9,23.1,6.6
+ecoregion,biomass,2018 vs 2019,n cells >= 5,100,3,59.4,12.8,23.5,4.3,48.5,7.3,17.8,1.7,67.1,19.9,30.8,8.8
+ecoregion,biomass,2006 vs 2018,All units,100,4,34.5,30.4,18.3,16.8,31.8,28.7,15.7,14,37.7,33.5,21,20.6
+ecoregion,biomass,2006 vs 2018,n cells >= 5,100,4,34.5,30.4,18.3,16.8,31.8,28.7,15.7,14,37.7,33.5,21,20.6
+ecoregion,biomass,2004-2006 vs 2018-2019,All units,100,4,24.6,41.7,9.6,24.1,18,38.3,3,19.8,27.3,45.5,12.8,35.2
+ecoregion,biomass,2004-2006 vs 2018-2019,n cells >= 5,100,4,24.6,41.7,9.6,24.1,18,38.3,3,19.8,27.3,45.5,12.8,35.2
+ecoregion,occurrence,2004 vs 2006,All units,100,4,70.7,11.9,8.8,8.6,67.4,8.8,7,8.2,72.9,16.6,10.3,9.3
+ecoregion,occurrence,2004 vs 2006,n cells >= 5,100,4,70.7,11.9,8.8,8.6,67.4,8.8,7,8.2,72.9,16.6,10.3,9.3
+ecoregion,occurrence,2004-2005 vs 2006,All units,100,4,69.8,13.3,10,6.9,66.9,11.1,9.3,6.4,72.4,16.7,10.3,7.4
+ecoregion,occurrence,2004-2005 vs 2006,n cells >= 5,100,4,69.8,13.3,10,6.9,66.9,11.1,9.3,6.4,72.4,16.7,10.3,7.4
+ecoregion,occurrence,2018 vs 2019,All units,100,4,78,9.4,7.3,5.4,69.7,6.7,4,1.2,81.7,16.7,11.9,8.3
+ecoregion,occurrence,2018 vs 2019,n cells >= 5,100,3,71.1,12,9.7,7.2,66.1,8.9,5.3,1.7,75.6,15,15.8,11.1
+ecoregion,occurrence,2006 vs 2018,All units,100,4,28.3,48.7,3.3,19.8,24.4,45.2,2.1,17,31.9,52.2,3.8,21.4
+ecoregion,occurrence,2006 vs 2018,n cells >= 5,100,4,28.3,48.7,3.3,19.8,24.4,45.2,2.1,17,31.9,52.2,3.8,21.4
+ecoregion,occurrence,2004-2006 vs 2018-2019,All units,100,4,16.9,53.9,5,24.1,11.1,50.6,1.8,21.7,20.8,59.8,8,27.2
+ecoregion,occurrence,2004-2006 vs 2018-2019,n cells >= 5,100,4,16.9,53.9,5,24.1,11.1,50.6,1.8,21.7,20.8,59.8,8,27.2
+stratum,biomass,2004 vs 2006,All units,100,23,78.7,4.5,14.3,2.4,76.3,3.4,10,1.7,83,6.2,17,3.6
+stratum,biomass,2004 vs 2006,n cells >= 5,100,20,79.9,4.1,13.2,2.8,77.9,2.6,10,1.9,82,5.9,15.3,4.2
+stratum,biomass,2004-2005 vs 2006,All units,100,24,80.3,5.2,11.8,2.7,78.2,3.9,10.1,2.2,82.3,6.9,14,3.8
+stratum,biomass,2004-2005 vs 2006,n cells >= 5,100,20,79.8,4.8,12.1,3.3,77.9,3.5,9.6,2.7,81.3,6.6,14.2,4.5
+stratum,biomass,2018 vs 2019,All units,100,19,68.8,1.6,28.4,1.2,64,0,21.1,1.1,77.1,5.9,33,2.1
+stratum,biomass,2018 vs 2019,n cells >= 5,100,6,74.3,2.2,19.9,3.5,69.4,0,17.2,3.3,78.2,5.4,23.9,6.7
+stratum,biomass,2006 vs 2018,All units,100,22,56,20.1,11.6,12.3,46.6,16,8.1,6.6,60.4,25.3,21.5,15.7
+stratum,biomass,2006 vs 2018,n cells >= 5,100,16,55.5,21.9,11.4,11.2,47.1,17.8,8,9.1,59.1,25.3,18.6,13.8
+stratum,biomass,2004-2006 vs 2018-2019,All units,100,27,37.4,41.1,7.2,14.3,34.8,36.9,4.1,10.1,41,46.5,9.4,16.6
+stratum,biomass,2004-2006 vs 2018-2019,n cells >= 5,100,24,39.3,41,8.1,11.6,37.1,37.4,4.7,10.3,42.1,44.4,10.5,12.8
+stratum,occurrence,2004 vs 2006,All units,100,23,77.8,7.5,11.7,2.9,74.8,6.1,10.3,1.5,80.7,8.5,12.9,5.7
+stratum,occurrence,2004 vs 2006,n cells >= 5,100,20,76.8,7.5,12.2,3.4,74.8,6.7,10.7,1.7,79,8.6,13.8,6.5
+stratum,occurrence,2004-2005 vs 2006,All units,100,24,77.7,7.7,11.6,3.1,74.5,6.9,9.1,2,80.5,8.9,13.5,4.5
+stratum,occurrence,2004-2005 vs 2006,n cells >= 5,100,20,77.2,6.9,12.2,3.7,74.7,6,10.7,2.4,79,8.2,13.6,5.4
+stratum,occurrence,2018 vs 2019,All units,100,19,82.1,6.1,8.7,3,76.6,1.1,3.9,1.8,86.2,12.4,13.6,5
+stratum,occurrence,2018 vs 2019,n cells >= 5,100,6,78.3,11.4,9.3,1.1,66,3.3,4.2,0,88.7,20.7,11.8,3.3
+stratum,occurrence,2006 vs 2018,All units,100,22,48.6,39.9,3.1,8.5,36.2,35.8,0,6.8,55.9,48.5,7.2,10.2
+stratum,occurrence,2006 vs 2018,n cells >= 5,100,16,48.7,39.7,2.3,9.2,37.2,34.9,0,7.7,54.5,49.6,5.2,11.1
+stratum,occurrence,2004-2006 vs 2018-2019,All units,100,27,24.8,59.2,4.8,11.2,19.5,54.7,3.9,8.1,29.7,62.1,5.7,17.6
+stratum,occurrence,2004-2006 vs 2018-2019,n cells >= 5,100,24,27.9,54.2,5.4,12.5,22,49.1,4.4,9.1,33.2,57.3,6.4,19

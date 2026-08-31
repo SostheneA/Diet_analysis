@@ -13,14 +13,12 @@ library(sf)
 library(readr)
 
 load("data/prey_groups.RData")
-#load("data/prey_groups_fixed.RData")
 load("data/diet_corr.RData")
 
 # --- b) Data Integration & Variable Engineering -------------------------------
 
 # Merge predator diet data with prey functional groups
 prey_groups_unique <- unique(prey_groups, by = "prey_species_common_name")
-#prey_groups_unique <- unique(prey_groups_fixed, by = "prey_species_common_name")
 diet_dt <- merge(
   diet_corr[, prey_species_latin_name := NULL],
   prey_groups_unique,
@@ -29,6 +27,39 @@ diet_dt <- merge(
 )
 
 Database <- as.data.table(diet_dt)
+
+# --- Optional per-predator grouping family ("_PP") ---------------------------
+# If 3PP_taxonomic_groups.R has been run, its per-predator resolution columns
+# are merged here, keyed on (predator, prey), so that ONE dat_classed carries
+# the three families: prey_category_<x>_1, _<x>_2 and _<x>_PP. If the file is
+# absent, the pipeline runs exactly as before with _1 and _2 only.
+if (file.exists("data/prey_groups_PP.RData")) {
+  load("data/prey_groups_PP.RData")   # prey_groups_PP, keyed (predator, prey)
+  pp_cols <- grep("^(prey_category|tax_level)_\\d+_PP$",
+                  names(prey_groups_PP), value = TRUE)
+  pp_map <- unique(prey_groups_PP[, c("predator", "prey_species_common_name",
+                                      pp_cols), with = FALSE])
+  # SAFETY 1: the (predator, prey) key must be unique, otherwise the merge
+  # would DUPLICATE diet rows and silently inflate every _PP result.
+  if (anyDuplicated(pp_map, by = c("predator", "prey_species_common_name")))
+    stop("prey_groups_PP: (predator, prey) key is not unique - fix 3PP first.")
+  n_before <- nrow(Database)
+  Database <- merge(
+    Database, pp_map,
+    by.x = c("predator_species_common_name", "prey_species_common_name"),
+    by.y = c("predator", "prey_species_common_name"),
+    all.x = TRUE
+  )
+  # SAFETY 2: an all.x merge on a unique key must not change the row count.
+  stopifnot(nrow(Database) == n_before)
+  # Coverage report: prey rows the PP mapping does not know stay NA and are
+  # treated as unclassified by the engine - keep an eye on this number.
+  first_pp <- grep("^prey_category_\\d+_PP$", names(Database), value = TRUE)[1]
+  n_na <- sum(is.na(Database[[first_pp]]) &
+                !is.na(Database$prey_species_common_name))
+  cat("PP family merged:", length(pp_cols) %/% 2, "resolution columns (_PP);",
+      n_na, "prey rows without PP classification (NA)\n")
+}
 
 # Standardize formats and handle missing values
 Database <- Database %>%
@@ -50,7 +81,6 @@ Database[, period := factor(period, levels = c("2004-2006", "2018-2019"))]
 # --- c) Biological Constraint Auditing ----------------------------------------
 
 # Load biological reference table (Lmax per species)
-#lmat_predators <- read_csv("data/lmat_predators.csv") # LL20260715 fishbase in source column I think it is not enough informative, maybe a geographic information column
 lmat_predators <- fread("data/lmat_predators.csv", encoding = "Latin-1")
 setDT(lmat_predators)
 lmat_predators[lmat == "Unknown" | is.na(lmat), lmat := as.character(lmax)]
@@ -71,10 +101,14 @@ errors <- Database %>%
 Database_clean <- Database %>% left_join(refs, by = "predator_species_code")
 setDT(Database_clean)
 
+Database_clean[, somatic_length_cm_orig := somatic_length_cm]
+
 # STRATEGY 1: Unit Correction (Millimeters to Centimeters)
 # If length is > 2x the biological max, it is likely a unit entry error (mm) # LL20260715 it has a problem with smooth skate lmax
+# NOTE: correction EN PLACE (pas de colonne _p), sinon la strategie 2
+# plafonne la valeur originale et la correction d'unite est perdue.
 Database_clean[somatic_length_cm > (2 * lmax),
-               somatic_length_cm_p := somatic_length_cm / 10]
+               somatic_length_cm := somatic_length_cm / 10]
 
 # STRATEGY 2: Capping Protocol
 # If length still exceeds Lmax, cap the value at Lmax to handle rounding/extremes
@@ -84,13 +118,31 @@ Database_clean[somatic_length_cm > lmax,
 # Update the main Database with corrected values
 Database$somatic_length_cm <- Database_clean$somatic_length_cm
 
+correction_log <- Database_clean[somatic_length_cm != somatic_length_cm_orig,
+                                 .(stomach_id, predator_species_code, predator_species_common_name,
+                                   original  = somatic_length_cm_orig,
+                                   corrected = somatic_length_cm, lmax,
+                                   action = fcase(
+                                     somatic_length_cm_orig > 2 * lmax & somatic_length_cm == somatic_length_cm_orig / 10, "unit mm->cm",
+                                     somatic_length_cm_orig > 2 * lmax & somatic_length_cm == lmax,                        "unit mm->cm PUIS cap",
+                                     somatic_length_cm == lmax,                                                            "cap a Lmax",
+                                     default = "autre"))]
+
+# Log au niveau POISSON (Database a une ligne par proie -> doublons sinon)
+correction_log_fish <- unique(correction_log, by = "stomach_id")
+print(correction_log_fish[, .N, by = action])
+print(correction_log_fish[, .N, by = predator_species_common_name][order(-N)])
+fwrite(correction_log_fish, "data/correction_log_lengths.csv")
+
 # Verification check: Ensure zero errors remain
 errors_test <- Database_clean %>%
   filter(somatic_length_cm > lmax) %>%
   select(stomach_id, predator_species_code,predator_species_common_name, somatic_length_cm, lmax)
 
 
-Database = merge(Database, refs, by="predator_species_code")
+# all.x = TRUE: un inner join supprimerait silencieusement tout predateur
+# absent du fichier lmat_predators.csv
+Database = merge(Database, refs, by="predator_species_code", all.x = TRUE)
 
 ##########
 
@@ -165,11 +217,22 @@ EAR_clean_sf         <- st_transform(new_gulf_clean, target_crs)
 # points located slightly offshore or on polygon boundaries.
 message("Assigning spatial attributes...")
 
+sf_use_s2(FALSE)
+
+new_ecoregions_clean <- st_make_valid(new_ecoregions_clean)
+new_regions_v2_clean <- st_make_valid(new_regions_v2_clean)
+NAFO_4T_sf           <- st_make_valid(NAFO_4T_sf)
+EAR_sf               <- st_make_valid(EAR_sf)
+EAR_clean_sf         <- st_make_valid(EAR_clean_sf)
+
 Database$EcoZone <- new_ecoregions_clean$EcoZone[st_nearest_feature(Database, new_ecoregions_clean)]
 Database$Zone    <- new_regions_v2_clean$Zone[st_nearest_feature(Database, new_regions_v2_clean)]
 Database$NAFO    <- NAFO_4T_sf$level_2[st_nearest_feature(Database, NAFO_4T_sf)]
 Database$Region  <- EAR_sf$regn_nm[st_nearest_feature(Database, EAR_sf)]
-Database$Area  <- EAR_clean_sf$Area[st_nearest_feature(Database, EAR_clean_sf)]
+Database$Area    <- EAR_clean_sf$Area[st_nearest_feature(Database, EAR_clean_sf)]
+
+sf_use_s2(TRUE)
+
 
 # --- 4. Quality Control & Handling Edge Cases ---
 # Fill missing spatial values (NAs) for points outside the specific polygon extents
@@ -202,7 +265,7 @@ diet_plot_data <- bind_rows(Database %>% mutate(year = as.character(year)),
 
 # Order facets so "All Years" is at the end
 diet_plot_data$year <- factor(diet_plot_data$year,
-                              levels = c(sort(unique(as.character(diet_dt$year))), "All Years"))
+                              levels = c(sort(unique(as.character(Database$year))), "All Years"))
 
 library(rnaturalearth)
 library(rnaturalearthdata)
@@ -300,8 +363,8 @@ map_period <- base_map +
 print(map_yearly)
 print(map_period)
 
-ggsave("output/Figures/map_yearly_diet.png",NAFO, width = 12, height = 10)
-ggsave("output/Figures/map_period_diet.png",NAFO, width = 12, height = 10)
+ggsave("output/Figures/map_yearly_diet.png", map_yearly, width = 12, height = 10)
+ggsave("output/Figures/map_period_diet.png", map_period, width = 12, height = 10)
 
 
 ######################
@@ -424,41 +487,53 @@ library(gulf)
 # 1. Passer en data.table
 setDT(diet_clean)
 
-# 2. Créer un tableau des combinaisons UNIQUES (Espèce, Taille, Année)
-# C'est ce tableau qui servira de dictionnaire pour interroger Oracle.
-# On filtre les NA pour ne pas envoyer de requêtes inutiles.
-unique_samples <- diet_clean[!is.na(predator_species_code) &
-                               !is.na(somatic_length_cm) &
-                               !is.na(year),
-                             .(n_fish = .N),
-                             by = .(predator_species_code, somatic_length_cm, year)]
+# 2-3. Estimated predator weight per (species, length, year) combination - CACHED
+# The full computation only runs if data/unique_samples.rda does not exist.
+# If the cache is outdated (new combinations after a length correction),
+# run R_helpers/Update_unique_samples.R once.
+if (file.exists("data/unique_samples.rda")) {
 
-# 3. Calculer le poids sur ce petit tableau (Très efficace)
-# On utilise une boucle par ligne sur ce tableau RÉDUIT
-unique_samples[, pred_weight_est := {
-  res <- tryCatch({
-    # Appel direct à la fonction gulf
-    w <- weight(somatic_length_cm, species = predator_species_code, year = year)*1000
-    if(length(w) > 0) w[1] else NA_real_
-  }, error = function(e) NA_real_)
-  res
-}, by = 1:nrow(unique_samples)]
+  load("data/unique_samples.rda")
+  setDT(unique_samples)
+  cat("unique_samples loaded from cache:", nrow(unique_samples), "combinations\n")
 
+  # Check: does the cache cover every combination in diet_clean?
+  combos <- diet_clean[!is.na(predator_species_code) &
+                         !is.na(somatic_length_cm) & !is.na(year),
+                       .N, by = .(predator_species_code, somatic_length_cm, year)]
+  n_missing <- nrow(combos[!unique_samples,
+                           on = .(predator_species_code, somatic_length_cm, year)])
+  if (n_missing > 0)
+    warning(n_missing, " combinations missing from the cache -> run ",
+            "R_helpers/Update_unique_samples.R", call. = FALSE)
 
-### uSE 2017 info for herring in 2018 to fill its NA values
+} else {
 
-unique_samples[year == 2018 & predator_species_code == 60,
-               pred_weight_est := weight(somatic_length_cm,
-                                         species = predator_species_code,
-                                         year = 2017) * 1000]
+  # Dictionary of unique (species, length, year) combinations to estimate
+  unique_samples <- diet_clean[!is.na(predator_species_code) &
+                                 !is.na(somatic_length_cm) & !is.na(year),
+                               .(n_fish = .N),
+                               by = .(predator_species_code, somatic_length_cm, year)]
 
-unique_samples[year == 2019 & predator_species_code == 60,
-               pred_weight_est := weight(somatic_length_cm,
-                                         species = predator_species_code,
-                                         year = 2017) * 1000]
+  # Length-weight estimate from the gulf package (g); NA if no relation exists
+  unique_samples[, pred_weight_est := {
+    res <- tryCatch({
+      w <- weight(somatic_length_cm, species = predator_species_code, year = year) * 1000
+      if (length(w) > 0) w[1] else NA_real_
+    }, error = function(e) NA_real_)
+    res
+  }, by = 1:nrow(unique_samples)]
 
+  # Herring (code 60) in 2018/2019: no relation available, fall back on 2017
+  unique_samples[year %in% c(2018, 2019) & predator_species_code == 60,
+                 pred_weight_est := weight(somatic_length_cm,
+                                           species = predator_species_code,
+                                           year = 2017) * 1000]
 
-save(unique_samples, file="data/unique_samples.rda")
+  save(unique_samples, file = "data/unique_samples.rda")
+  cat("Full computation:", nrow(unique_samples), "combinations saved\n")
+}
+
 
 # 4. Joindre le résultat au gros dataset (Update-on-join)
 # R va "mapper" instantanément les poids calculés sur vos milliers de lignes.

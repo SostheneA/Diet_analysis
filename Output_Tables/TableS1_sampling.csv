@@ -10,8 +10,8 @@ Arctic hookear sculpin,one_class,68,39,29,16,TRUE,TRUE
 Arctic staghorn sculpin,adult,236,63,101,35,TRUE,TRUE
 Atlantic cod,adult,1376,108,184,45,TRUE,TRUE
 Atlantic cod,juvenile,707,337,149,100,TRUE,TRUE
-Atlantic herring,adult,156,132,64,36,TRUE,TRUE
-Atlantic herring,juvenile,134,47,44,19,TRUE,TRUE
+Atlantic herring,adult,156,68,64,24,TRUE,TRUE
+Atlantic herring,juvenile,134,111,44,31,TRUE,TRUE
 Atlantic hookear sculpin,one_class,342,46,112,22,TRUE,TRUE
 Atlantic mackerel,adult,10,20,6,12,TRUE,FALSE
 Atlantic mackerel,juvenile,42,56,22,24,TRUE,TRUE
@@ -40,7 +40,7 @@ Redfish unidentified,juvenile,48,12,33,10,TRUE,FALSE
 Sea raven,one_class,77,23,52,15,TRUE,FALSE
 Shorthorn sculpin,adult,156,45,86,28,TRUE,TRUE
 Shorthorn sculpin,juvenile,11,7,10,6,TRUE,FALSE
-Smooth skate,juvenile,165,32,56,16,TRUE,TRUE
+Smooth skate,juvenile,158,32,54,16,TRUE,TRUE
 Snakeblenny,adult,138,23,57,13,TRUE,FALSE
 Spatulate sculpin,one_class,272,88,109,33,TRUE,TRUE
 Stout eelblenny,one_class,237,59,68,19,TRUE,TRUE

@@ -3,18 +3,18 @@ biomass,2004 vs 2006,Stability,54.1,2.4,50,59.3,100
 biomass,2004 vs 2006,Substitution,21.7,2.1,16.7,25.9,100
 biomass,2004 vs 2006,Functional change,15.6,1.4,13,16.7,100
 biomass,2004 vs 2006,Reorganisation,8.5,1.4,7.4,11.1,100
-biomass,2004-2005 vs 2006,Stability,49.6,1.4,45.5,52.7,100
-biomass,2004-2005 vs 2006,Substitution,22.7,1.9,18.2,27.3,100
-biomass,2004-2005 vs 2006,Functional change,20.4,1.2,18.2,21.8,100
+biomass,2004-2005 vs 2006,Stability,48.3,1.6,43.6,52.7,100
+biomass,2004-2005 vs 2006,Substitution,24.2,2.1,20,29.1,100
+biomass,2004-2005 vs 2006,Functional change,20.3,1.1,18.2,21.8,100
 biomass,2004-2005 vs 2006,Reorganisation,7.3,1.2,5.5,9.1,100
-biomass,2018 vs 2019,Stability,64.8,3.3,56.9,70.6,100
-biomass,2018 vs 2019,Substitution,14.1,1.7,9.8,17.6,100
+biomass,2018 vs 2019,Stability,64.2,3.9,54.9,70.6,100
+biomass,2018 vs 2019,Substitution,14.7,1.8,9.8,19.6,100
 biomass,2018 vs 2019,Functional change,17.5,2.2,11.8,21.6,100
 biomass,2018 vs 2019,Reorganisation,4.1,2.9,2,11.8,87
 biomass,2006 vs 2018,Stability,15.2,2,9.6,19.2,100
-biomass,2006 vs 2018,Substitution,48.3,3.3,40.4,53.8,100
+biomass,2006 vs 2018,Substitution,47.4,3.9,38.5,53.8,100
 biomass,2006 vs 2018,Functional change,4.9,1.2,1.9,7.7,100
-biomass,2006 vs 2018,Reorganisation,31.6,5,25,42.3,100
+biomass,2006 vs 2018,Reorganisation,32.5,5.6,26.9,44.2,100
 biomass,2004-2006 vs 2018-2019,Stability,10.7,2.1,5.1,13.6,100
 biomass,2004-2006 vs 2018-2019,Substitution,55.1,4.7,45.8,62.7,100
 biomass,2004-2006 vs 2018-2019,Functional change,4.1,0.9,1.7,5.1,100
@@ -27,15 +27,15 @@ occurrence,2004-2005 vs 2006,Stability,52.9,3.4,45.5,61.8,100
 occurrence,2004-2005 vs 2006,Substitution,26.7,2.7,20,30.9,100
 occurrence,2004-2005 vs 2006,Functional change,5.2,1.3,1.8,7.3,100
 occurrence,2004-2005 vs 2006,Reorganisation,15.1,1,12.7,18.2,100
-occurrence,2018 vs 2019,Stability,64.4,2.2,60.8,72.5,100
-occurrence,2018 vs 2019,Substitution,10,2.4,5.9,15.7,100
-occurrence,2018 vs 2019,Functional change,15.4,2.3,9.8,19.6,100
+occurrence,2018 vs 2019,Stability,63.4,1.9,58.8,70.6,100
+occurrence,2018 vs 2019,Substitution,10.9,2.8,5.9,17.6,100
+occurrence,2018 vs 2019,Functional change,15.6,2.1,11.8,19.6,100
 occurrence,2018 vs 2019,Reorganisation,10.2,2.1,3.9,13.7,100
 occurrence,2006 vs 2018,Stability,10.1,1.1,5.8,11.5,100
-occurrence,2006 vs 2018,Substitution,56.2,5.9,44.2,63.5,100
+occurrence,2006 vs 2018,Substitution,58.1,5.8,46.2,63.5,100
 occurrence,2006 vs 2018,Functional change,3.2,0.9,1.9,3.8,72
-occurrence,2006 vs 2018,Reorganisation,31.4,5.7,25,44.2,100
+occurrence,2006 vs 2018,Reorganisation,29.5,5.7,23.1,42.3,100
 occurrence,2004-2006 vs 2018-2019,Stability,7.4,2,3.4,10.2,100
-occurrence,2004-2006 vs 2018-2019,Substitution,51.5,4.8,42.4,57.6,100
+occurrence,2004-2006 vs 2018-2019,Substitution,50.6,4.3,42.4,57.6,100
 occurrence,2004-2006 vs 2018-2019,Functional change,2.6,1.3,1.7,5.1,100
-occurrence,2004-2006 vs 2018-2019,Reorganisation,38.5,5.4,30.5,49.2,100
+occurrence,2004-2006 vs 2018-2019,Reorganisation,39.4,4.9,30.5,49.2,100
