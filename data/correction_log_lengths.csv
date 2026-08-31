@@ -1,0 +1,188 @@
+stomach_id,predator_species_code,predator_species_common_name,original,corrected,lmax,action
+SL46315,62,Alewife,29.6,29,29,cap a Lmax
+SL47108,62,Alewife,31.5,29,29,cap a Lmax
+JR41582,62,Alewife,29.1,29,29,cap a Lmax
+JR36790,62,Alewife,29.1,29,29,cap a Lmax
+C4208,62,Alewife,41,29,29,cap a Lmax
+JR36466,62,Alewife,29.7,29,29,cap a Lmax
+JR36357,62,Alewife,29.4,29,29,cap a Lmax
+SC55083,340,Alligatorfish,21,19,19,cap a Lmax
+K190,40,American plaice,71,54,54,cap a Lmax
+J418,302,Arctic staghorn sculpin,49,27,27,cap a Lmax
+J463,60,Atlantic herring,57,36,36,cap a Lmax
+K154,60,Atlantic herring,272.2,27.22,36,unit mm->cm
+K136,60,Atlantic herring,228.5,22.85,36,unit mm->cm
+J51,60,Atlantic herring,321.1,32.11,36,unit mm->cm
+M103,60,Atlantic herring,110,11,36,unit mm->cm
+M104,60,Atlantic herring,135,13.5,36,unit mm->cm
+M105,60,Atlantic herring,125,12.5,36,unit mm->cm
+J63,60,Atlantic herring,208.6,20.86,36,unit mm->cm
+K131,60,Atlantic herring,245,24.5,36,unit mm->cm
+K48,60,Atlantic herring,307,30.7,36,unit mm->cm
+K69,60,Atlantic herring,193,19.3,36,unit mm->cm
+K71,60,Atlantic herring,186.6,18.66,36,unit mm->cm
+K72,60,Atlantic herring,182,18.2,36,unit mm->cm
+K73,60,Atlantic herring,285.7,28.57,36,unit mm->cm
+K75,60,Atlantic herring,246.5,24.65,36,unit mm->cm
+K76,60,Atlantic herring,279.9,27.99,36,unit mm->cm
+K77,60,Atlantic herring,271.8,27.18,36,unit mm->cm
+K78,60,Atlantic herring,293,29.3,36,unit mm->cm
+K79,60,Atlantic herring,212.3,21.23,36,unit mm->cm
+K93,60,Atlantic herring,185.2,18.52,36,unit mm->cm
+K94,60,Atlantic herring,126.8,12.68,36,unit mm->cm
+K95,60,Atlantic herring,152,15.2,36,unit mm->cm
+K96,60,Atlantic herring,150.6,15.06,36,unit mm->cm
+K100,60,Atlantic herring,129.7,12.97,36,unit mm->cm
+K102,60,Atlantic herring,214.5,21.45,36,unit mm->cm
+K312,60,Atlantic herring,244,24.4,36,unit mm->cm
+K103,60,Atlantic herring,223.5,22.35,36,unit mm->cm
+K109,60,Atlantic herring,121.5,12.15,36,unit mm->cm
+K110,60,Atlantic herring,119.4,11.94,36,unit mm->cm
+K113,60,Atlantic herring,251.4,25.14,36,unit mm->cm
+K114,60,Atlantic herring,284.2,28.42,36,unit mm->cm
+K129,60,Atlantic herring,226.1,22.61,36,unit mm->cm
+K130,60,Atlantic herring,199.6,19.96,36,unit mm->cm
+K132,60,Atlantic herring,217,21.7,36,unit mm->cm
+K133,60,Atlantic herring,215.7,21.57,36,unit mm->cm
+K134,60,Atlantic herring,188.9,18.89,36,unit mm->cm
+K135,60,Atlantic herring,209.6,20.96,36,unit mm->cm
+K137,60,Atlantic herring,246.8,24.68,36,unit mm->cm
+K138,60,Atlantic herring,269,26.9,36,unit mm->cm
+K139,60,Atlantic herring,249.8,24.98,36,unit mm->cm
+K140,60,Atlantic herring,264,26.4,36,unit mm->cm
+K141,60,Atlantic herring,247.3,24.73,36,unit mm->cm
+K144,60,Atlantic herring,261.2,26.12,36,unit mm->cm
+K145,60,Atlantic herring,258.2,25.82,36,unit mm->cm
+K149,60,Atlantic herring,285.5,28.55,36,unit mm->cm
+J36,60,Atlantic herring,289.2,28.92,36,unit mm->cm
+J37,60,Atlantic herring,292.3,29.23,36,unit mm->cm
+J38,60,Atlantic herring,187.7,18.77,36,unit mm->cm
+J40,60,Atlantic herring,244.8,24.48,36,unit mm->cm
+J41,60,Atlantic herring,236.1,23.61,36,unit mm->cm
+J43,60,Atlantic herring,149.8,14.98,36,unit mm->cm
+J45,60,Atlantic herring,132.4,13.24,36,unit mm->cm
+J46,60,Atlantic herring,123.2,12.32,36,unit mm->cm
+J48,60,Atlantic herring,262,26.2,36,unit mm->cm
+J50,60,Atlantic herring,219.9,21.99,36,unit mm->cm
+J52,60,Atlantic herring,129,12.9,36,unit mm->cm
+J53,60,Atlantic herring,299.8,29.98,36,unit mm->cm
+J54,60,Atlantic herring,263.6,26.36,36,unit mm->cm
+J55,60,Atlantic herring,260.9,26.09,36,unit mm->cm
+J56,60,Atlantic herring,223.8,22.38,36,unit mm->cm
+J57,60,Atlantic herring,217.2,21.72,36,unit mm->cm
+J59,60,Atlantic herring,205,20.5,36,unit mm->cm
+J60,60,Atlantic herring,218.9,21.89,36,unit mm->cm
+J61,60,Atlantic herring,223.6,22.36,36,unit mm->cm
+J62,60,Atlantic herring,229.4,22.94,36,unit mm->cm
+J64,60,Atlantic herring,260.7,26.07,36,unit mm->cm
+J65,60,Atlantic herring,256.3,25.63,36,unit mm->cm
+J67,60,Atlantic herring,297.4,29.74,36,unit mm->cm
+J69,60,Atlantic herring,249.6,24.96,36,unit mm->cm
+J70,60,Atlantic herring,287.2,28.72,36,unit mm->cm
+J71,60,Atlantic herring,308,30.8,36,unit mm->cm
+K887,60,Atlantic herring,95,9.5,36,unit mm->cm
+K900,60,Atlantic herring,110,11,36,unit mm->cm
+K927,60,Atlantic herring,115,11.5,36,unit mm->cm
+K931,60,Atlantic herring,105,10.5,36,unit mm->cm
+K120,60,Atlantic herring,225.1,22.51,36,unit mm->cm
+J32,60,Atlantic herring,269.3,26.93,36,unit mm->cm
+K876,60,Atlantic herring,100,10,36,unit mm->cm
+K60,60,Atlantic herring,206.2,20.62,36,unit mm->cm
+K61,60,Atlantic herring,288.1,28.81,36,unit mm->cm
+K62,60,Atlantic herring,259.5,25.95,36,unit mm->cm
+K63,60,Atlantic herring,151.3,15.13,36,unit mm->cm
+K64,60,Atlantic herring,141.8,14.18,36,unit mm->cm
+K65,60,Atlantic herring,127.9,12.79,36,unit mm->cm
+K66,60,Atlantic herring,131.6,13.16,36,unit mm->cm
+K67,60,Atlantic herring,119.7,11.97,36,unit mm->cm
+K68,60,Atlantic herring,199.8,19.98,36,unit mm->cm
+K125,60,Atlantic herring,222.9,22.29,36,unit mm->cm
+J49,60,Atlantic herring,174.3,17.43,36,unit mm->cm
+K875,60,Atlantic herring,120,12,36,unit mm->cm
+K47,60,Atlantic herring,299,29.9,36,unit mm->cm
+K49,60,Atlantic herring,284,28.4,36,unit mm->cm
+K51,60,Atlantic herring,271,27.1,36,unit mm->cm
+K52,60,Atlantic herring,275,27.5,36,unit mm->cm
+K327,60,Atlantic herring,227.9,22.79,36,unit mm->cm
+J34,60,Atlantic herring,275,27.5,36,unit mm->cm
+K53,60,Atlantic herring,277,27.7,36,unit mm->cm
+K119,60,Atlantic herring,231.5,23.15,36,unit mm->cm
+K124,60,Atlantic herring,201,20.1,36,unit mm->cm
+K127,60,Atlantic herring,225,22.5,36,unit mm->cm
+K155,60,Atlantic herring,224.1,22.41,36,unit mm->cm
+K156,60,Atlantic herring,290.5,29.05,36,unit mm->cm
+K106,60,Atlantic herring,130.9,13.09,36,unit mm->cm
+K50,60,Atlantic herring,294,29.4,36,unit mm->cm
+K56,60,Atlantic herring,305,30.5,36,unit mm->cm
+K58,60,Atlantic herring,300,30,36,unit mm->cm
+K54,60,Atlantic herring,260,26,36,unit mm->cm
+K55,60,Atlantic herring,293,29.3,36,unit mm->cm
+K57,60,Atlantic herring,279.6,27.96,36,unit mm->cm
+K74,60,Atlantic herring,201.9,20.19,36,unit mm->cm
+K99,60,Atlantic herring,281.2,28.12,36,unit mm->cm
+K104,60,Atlantic herring,162,16.2,36,unit mm->cm
+K105,60,Atlantic herring,220.6,22.06,36,unit mm->cm
+K111,60,Atlantic herring,131.3,13.13,36,unit mm->cm
+K117,60,Atlantic herring,257.7,25.77,36,unit mm->cm
+K118,60,Atlantic herring,273.9,27.39,36,unit mm->cm
+K121,60,Atlantic herring,229.6,22.96,36,unit mm->cm
+K122,60,Atlantic herring,250,25,36,unit mm->cm
+K123,60,Atlantic herring,205.1,20.51,36,unit mm->cm
+K142,60,Atlantic herring,288.5,28.85,36,unit mm->cm
+K143,60,Atlantic herring,288.9,28.89,36,unit mm->cm
+K146,60,Atlantic herring,290.1,29.01,36,unit mm->cm
+K151,60,Atlantic herring,264.4,26.44,36,unit mm->cm
+J33,60,Atlantic herring,292.6,29.26,36,unit mm->cm
+J35,60,Atlantic herring,272.2,27.22,36,unit mm->cm
+J39,60,Atlantic herring,275.7,27.57,36,unit mm->cm
+J47,60,Atlantic herring,241.5,24.15,36,unit mm->cm
+J58,60,Atlantic herring,211.4,21.14,36,unit mm->cm
+J66,60,Atlantic herring,231.5,23.15,36,unit mm->cm
+K896,60,Atlantic herring,100,10,36,unit mm->cm
+K897,60,Atlantic herring,95,9.5,36,unit mm->cm
+K930,60,Atlantic herring,95,9.5,36,unit mm->cm
+K59,60,Atlantic herring,251.9,25.19,36,unit mm->cm
+K70,60,Atlantic herring,265,26.5,36,unit mm->cm
+K150,60,Atlantic herring,268.7,26.87,36,unit mm->cm
+K152,60,Atlantic herring,268.2,26.82,36,unit mm->cm
+EM55072,880,Atlantic hookear sculpin,47,4.7,9,unit mm->cm
+EM59822,880,Atlantic hookear sculpin,52,5.2,9,unit mm->cm
+EM55074,880,Atlantic hookear sculpin,47,4.7,9,unit mm->cm
+SC58526,64,Capelin,19,18,18,cap a Lmax
+C854,626,Fourline snakeblenny,26,24,24,cap a Lmax
+J22,300,Longhorn sculpin,42,37,37,cap a Lmax
+SC56443,300,Longhorn sculpin,52,37,37,cap a Lmax
+A81,304,Moustache sculpin,17.5,17,17,cap a Lmax
+SL47717,610,Northern sand lance,26.6,24,24,cap a Lmax
+JR39615,63,Rainbow smelt,165,16.5,25,unit mm->cm
+C3866,314,Spatulate sculpin,17,14,14,cap a Lmax
+SL39754,314,Spatulate sculpin,14.4,14,14,cap a Lmax
+SL49476,201,Thorny skate,57,56,56,cap a Lmax
+SL49648,201,Thorny skate,56.1,56,56,cap a Lmax
+SB49649,201,Thorny skate,59,56,56,cap a Lmax
+SL46534,201,Thorny skate,57,56,56,cap a Lmax
+SL49464,201,Thorny skate,62,56,56,cap a Lmax
+SL41519,201,Thorny skate,62,56,56,cap a Lmax
+SC58220,201,Thorny skate,58,56,56,cap a Lmax
+SL49710,201,Thorny skate,60,56,56,cap a Lmax
+SL49735,201,Thorny skate,57,56,56,cap a Lmax
+SL47568,201,Thorny skate,58.5,56,56,cap a Lmax
+SB49561,201,Thorny skate,57,56,56,cap a Lmax
+SL49631,201,Thorny skate,60,56,56,cap a Lmax
+SL42037,201,Thorny skate,57,56,56,cap a Lmax
+SL47495,201,Thorny skate,61.4,56,56,cap a Lmax
+AM58343,201,Thorny skate,59,56,56,cap a Lmax
+SL49560,201,Thorny skate,62,56,56,cap a Lmax
+SL49562,201,Thorny skate,59,56,56,cap a Lmax
+SL42447,201,Thorny skate,57,56,56,cap a Lmax
+SB47771,201,Thorny skate,56.5,56,56,cap a Lmax
+SL42276,201,Thorny skate,62,56,56,cap a Lmax
+SC57165,201,Thorny skate,61,56,56,cap a Lmax
+SL47600,201,Thorny skate,61.3,56,56,cap a Lmax
+J116,201,Thorny skate,57,56,56,cap a Lmax
+SL48766,201,Thorny skate,57,56,56,cap a Lmax
+AM60412,201,Thorny skate,59,56,56,cap a Lmax
+SL43244,12,White hake,88,75,75,cap a Lmax
+M110,143,Windowpane flounder,81,64,64,cap a Lmax
+C2254,43,Winter flounder,48,47,47,cap a Lmax
+C2300,43,Winter flounder,227,22.7,47,unit mm->cm
