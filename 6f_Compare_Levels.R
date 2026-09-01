@@ -1,7 +1,7 @@
 # =============================================================================
 # 6f_Compare_Levels.R - CROSS-LEVEL CHECKS, ALL PREY-GROUPING FAMILIES
 # -----------------------------------------------------------------------------
-# Run after 6b, 6c, 6d (and 6f for the alternative families). For each family
+# Run after 6b, 6c, 6d (and 6e for the alternative families). For each family
 # present ("_1", "_2", "_PP") it reads the three all_runs files and writes to
 # Sensitivity_comparison/ :
 #   crosswalk_strata_ecoregions.csv         strata split across ecoregions (data)

@@ -22,7 +22,7 @@ source(paste0(project_path, "/R_helpers/taxonomic_rank_order.R"))
 source(paste0(project_path, "/R_helpers/PreyCategory.R"))
 load(paste0(project_path, "/data/prey_groups.RData"))
 load(paste0(project_path, "/data/diet_corr.RData"))
-setDT(prey_groups); setDT(diet_corr)
+data.table::setDT(prey_groups); data.table::setDT(diet_corr)
 
 # 1) Parameters ----------------------------------------------------------------
 PP_SUFFIX          <- "_PP"
@@ -87,8 +87,8 @@ prey_groups_PP <- rbindlist(lapply(main_predators, function(p) {
     bad <- phylum_tot[total_stomach < x, phylum]
     idx <- which(level == "phylum" & phylum_vec %in% bad)
     name[idx] <- "other_phyla"
-    set(pg, j = paste0("prey_category_", x, PP_SUFFIX), value = name)
-    set(pg, j = paste0("tax_level_", x, PP_SUFFIX),     value = level)
+    data.table::set(pg, j = paste0("prey_category_", x, PP_SUFFIX), value = name)
+    data.table::set(pg, j = paste0("tax_level_", x, PP_SUFFIX),     value = level)
   }
 
   pg[, predator := p]
@@ -96,8 +96,8 @@ prey_groups_PP <- rbindlist(lapply(main_predators, function(p) {
   pg
 }), fill = TRUE)
 
-setcolorder(prey_groups_PP,
-            c("predator", "prey_species_common_name", "prey_category", "tax_level"))
+data.table::setcolorder(prey_groups_PP,
+                        c("predator", "prey_species_common_name", "prey_category", "tax_level"))
 
 # 5) Checks and export ----------------------------------------------------------
 n_pp_cols <- sum(grepl(paste0("^prey_category_\\d+", PP_SUFFIX, "$"), names(prey_groups_PP)))

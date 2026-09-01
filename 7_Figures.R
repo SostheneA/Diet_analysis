@@ -14,6 +14,7 @@
 #   Fig10_crossscale_gradient     stratum -> ecoregion -> Gulf, between periods
 #   FigS3_regime_break_by_ecoregion   as Fig 5, one panel per ecoregion (2 x 2)
 #   FigS4_map_strata_occurrence   as Fig 9, occurrence
+#   FigS5/FigS6_map_strata_*_masked  as Fig 9 / S4, strata below N_FLAG units greyed
 #   data_Fig*.csv                 the numbers behind each figure
 # =============================================================================
 
@@ -356,21 +357,34 @@ if (is.null(strata)) {
 
   strata$spatial_unit <- as.character(strata$str)
 
+  # mask_low_n = FALSE : every stratum coloured, low-n values starred (Fig 9, S4)
+  # mask_low_n = TRUE  : strata below N_FLAG units greyed, no value (Fig S5, S6)
   render_map <- function(currencies, facet_formula, title, stem,
-                         ncol_panels, nrow_panels) {
+                         ncol_panels, nrow_panels, mask_low_n = FALSE) {
     d <- strata %>%
       left_join(filter(map_dat, currency %in% currencies), by = "spatial_unit") %>%
       filter(!is.na(pct)) %>%
       mutate(contrast = droplevels(factor(contrast, levels = CONTRAST_LEVELS)),
              currency = droplevels(factor(currency, levels = names(CURRENCY_LAB))))
+    d_col  <- if (mask_low_n) filter(d, !low_n) else d
+    d_grey <- if (mask_low_n) filter(d, low_n) else d[0, ]
 
-    lab <- d %>%
+    lab <- d_col %>%
       sf::st_drop_geometry() %>%
       left_join(lab_xy, by = "spatial_unit") %>%
       transmute(family, contrast, currency, X, Y,
-                lab = ifelse(low_n, paste0(sprintf("%.0f", pct), "*"),
+                lab = ifelse(low_n & !mask_low_n, paste0(sprintf("%.0f", pct), "*"),
                              sprintf("%.0f", pct)),
                 txt = ifelse(pct < 50, "grey95", "grey10"))
+
+    subtitle <- if (mask_low_n) {
+      paste0("Grey strata: fewer than ", N_FLAG, " predator x size-class units ",
+             "(value not shown). 2006 vs 2018 is not estimable at this scale.")
+    } else {
+      paste0("Every stratum shown; * = built on < ", N_FLAG,
+             " predator x size-class units (interpret with caution). ",
+             "2006 vs 2018 is not estimable at this scale.")
+    }
 
     g <- ggplot()
     if (!is.null(coast)) {
@@ -379,7 +393,11 @@ if (is.null(strata)) {
     }
     g <- g +
       geom_sf(data = strata, fill = "grey97", colour = "grey70", linewidth = 0.15) +
-      geom_sf(data = d, aes(fill = pct), colour = "grey45", linewidth = 0.15) +
+      geom_sf(data = d_col, aes(fill = pct), colour = "grey45", linewidth = 0.15)
+    if (nrow(d_grey)) {
+      g <- g + geom_sf(data = d_grey, fill = "grey78", colour = "grey45", linewidth = 0.15)
+    }
+    g <- g +
       geom_text(data = lab, aes(X, Y, label = lab, colour = txt),
                 size = 2.1, fontface = "bold") +
       scale_colour_identity() +
@@ -389,13 +407,13 @@ if (is.null(strata)) {
       scale_fill_viridis_c(option = "viridis", limits = c(0, 100),
                            breaks = seq(0, 100, 25),
                            name = "Within-stratum\nfrequency (%)") +
+      scale_x_continuous(breaks = seq(-65, -61, by = 1)) +
+      scale_y_continuous(breaks = seq(46, 49, by = 1)) +
       coord_sf(xlim = MAP_XLIM, ylim = MAP_YLIM, expand = FALSE) +
-      labs(title = title,
-           subtitle = paste0("Every stratum shown; * = built on < ", N_FLAG,
-                             " predator x size-class units (interpret with ",
-                             "caution). 2006 vs 2018 is not estimable at this scale.")) +
+      labs(title = title, subtitle = subtitle) +
       theme_diag(base_size = 11) +
       theme(panel.grid   = element_line(colour = "grey92"),
+            panel.spacing.x = unit(0.8, "lines"),
             axis.title   = element_blank(),
             axis.text    = element_text(size = 6),
             strip.text   = element_text(face = "bold"),
@@ -418,6 +436,14 @@ if (is.null(strata)) {
   render_map("occurrence", family ~ contrast,
              "Diagnostic families across survey strata - occurrence",
              "FigS4_map_strata_occurrence", n_ct, n_fm)
+
+  render_map("biomass", family ~ contrast,
+             "Diagnostic families across survey strata - biomass, low-n strata masked",
+             "FigS5_map_strata_biomass_masked", n_ct, n_fm, mask_low_n = TRUE)
+
+  render_map("occurrence", family ~ contrast,
+             "Diagnostic families across survey strata - occurrence, low-n strata masked",
+             "FigS6_map_strata_occurrence_masked", n_ct, n_fm, mask_low_n = TRUE)
 }
 
 # =============================================================================

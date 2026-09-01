@@ -1,0 +1,129 @@
+TROPHIC TRANSITION ANALYSIS - RUN MANIFEST
+Generated: 2026-09-01 14:18:43 ADT
+------------------------------------------------------------------------------
+
+SPATIAL LEVELS PRESENT
+  all_gulf: 54200 cell-rows across all resolutions and contrasts
+  ecoregion: 88400 cell-rows across all resolutions and contrasts
+  stratum: 179800 cell-rows across all resolutions and contrasts
+
+CONTRASTS PRESENT
+  2004 vs 2006: 70200 cell-rows
+  2004-2005 vs 2006: 76200 cell-rows
+  2018 vs 2019: 40600 cell-rows
+  2006 vs 2018: 53800 cell-rows
+  2004-2006 vs 2018-2019: 81600 cell-rows
+
+TAXONOMIC RESOLUTIONS
+  100 thresholds, from 10 to 1000
+
+TEST SETTINGS READ BACK FROM THE RESULTS
+  Niche breadth test: welch
+  Prey-grouping family: _1
+  Result folders: Sensitivity_all_gulf_1, Sensitivity_ecoregion_1, Sensitivity_stratum_1
+
+OUTPUT FILES
+  [Output_Figures]
+    data_Fig10_crossscale.csv                                 3.2 KB  2026-09-01 14:16
+    data_Fig5_gulf_families.csv                               1.0 KB  2026-09-01 14:16
+    data_Fig6_9_unit_families.csv                            19.9 KB  2026-09-01 14:16
+    Fig10_crossscale_gradient.png                           215.9 KB  2026-09-01 14:16
+    Fig2_sets_ecoregions.png                               1382.1 KB  2026-09-01 14:18
+    Fig3a_prey_categories.png                               109.7 KB  2026-09-01 14:18
+    Fig3b_sweep_families.png                                407.7 KB  2026-09-01 14:18
+    Fig5_regime_break_gulf.png                              258.0 KB  2026-09-01 14:15
+    Fig6_regime_break_ecoregion.png                         299.8 KB  2026-09-01 14:15
+    Fig7_regime_break_ecoregion.png                         231.3 KB  2026-09-01 14:15
+    Fig8_regime_break_stratum.png                           232.3 KB  2026-09-01 14:15
+    Fig9_map_strata_biomass.png                             989.8 KB  2026-09-01 14:16
+    FigS3_regime_break_by_ecoregion.png                     540.6 KB  2026-09-01 14:15
+    FigS4_map_strata_occurrence.png                         991.3 KB  2026-09-01 14:16
+    FigS5_map_strata_biomass_masked.png                     965.3 KB  2026-09-01 14:16
+    FigS6_map_strata_occurrence_masked.png                  966.3 KB  2026-09-01 14:16
+  [Output_Tables]
+    Table1_typology.csv                                       1.0 KB  2026-09-01 14:16
+    Table2_headline.csv                                       0.6 KB  2026-09-01 14:16
+    Table3_crossscale.csv                                     1.7 KB  2026-09-01 14:16
+    TableS1_sampling.csv                                      2.9 KB  2026-09-01 14:16
+    TableS2_states_gulf.csv                                   5.5 KB  2026-09-01 14:16
+    TableS3_by_ecoregion.csv                                  2.4 KB  2026-09-01 14:16
+    TableS4_by_stratum.csv                                   10.4 KB  2026-09-01 14:16
+    TableS5_coverage.csv                                      1.6 KB  2026-09-01 14:16
+  [Output_Appendices]
+    FigB1_grouping_families_all_gulf.png                    496.7 KB  2026-09-01 14:14
+    FigB1_grouping_families_ecoregion.png                   473.1 KB  2026-09-01 14:14
+    FigB1_grouping_families_stratum.png                     452.8 KB  2026-09-01 14:15
+    FigB2_grouping_pct_significant_all_gulf.png             178.7 KB  2026-09-01 14:14
+    FigB2_grouping_pct_significant_ecoregion.png            178.3 KB  2026-09-01 14:14
+    FigB2_grouping_pct_significant_stratum.png              187.1 KB  2026-09-01 14:15
+    FigS1_sampling_by_year.png                               82.9 KB  2026-09-01 14:18
+    FigS2_sampling_by_stratum.png                           314.7 KB  2026-09-01 14:18
+    FigS7_lowN_sensitivity.png                              532.3 KB  2026-09-01 14:18
+    manifest.txt                                              0.0 KB  2026-09-01 14:18
+    TableA0_prey_categories.csv                               0.7 KB  2026-09-01 14:18
+    TableA1_set_depth.csv                                     0.4 KB  2026-09-01 14:18
+    TableA2_power_vs_effect.csv                               2.1 KB  2026-09-01 14:18
+    TableA3_partition_crosswalk.csv                           0.6 KB  2026-09-01 14:18
+    TableA4_untestable.csv                                    1.3 KB  2026-09-01 14:18
+    TableA5_resolution_spread.csv                             2.5 KB  2026-09-01 14:18
+    TableA6_lowN_sensitivity.csv                              5.4 KB  2026-09-01 14:18
+    TableA7_identification_depth.csv                          0.3 KB  2026-09-01 14:18
+    TableB1_grouping_families_all_gulf.csv                    9.6 KB  2026-09-01 14:14
+    TableB1_grouping_families_ecoregion.csv                   9.6 KB  2026-09-01 14:14
+    TableB1_grouping_families_stratum.csv                     9.6 KB  2026-09-01 14:15
+    TableB1_grouping_families_wide_all_gulf.csv               2.2 KB  2026-09-01 14:14
+    TableB1_grouping_families_wide_ecoregion.csv              2.3 KB  2026-09-01 14:14
+    TableB1_grouping_families_wide_stratum.csv                2.2 KB  2026-09-01 14:15
+    TableB2_grouping_pct_significant_all_gulf.csv            10.6 KB  2026-09-01 14:14
+    TableB2_grouping_pct_significant_ecoregion.csv           10.6 KB  2026-09-01 14:14
+    TableB2_grouping_pct_significant_stratum.csv             10.6 KB  2026-09-01 14:15
+
+SESSION
+R version 4.5.2 (2025-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26100)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8  LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8 LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Halifax
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] vegan_2.7-3       permute_0.9-10    forcats_1.0.1     stringr_1.6.0     purrr_1.2.2      
+ [6] readr_2.2.0       tibble_3.3.1      ggplot2_4.0.3     tidyverse_2.0.0   sf_1.0-16        
+[11] lubridate_1.9.5   tidyr_1.3.2       dplyr_1.2.1       gulf_1.3.2024.1   data.table_1.18.4
+[16] devtools_2.5.2    usethis_3.2.1    
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.2.1              viridisLite_0.4.3             farver_2.1.2                 
+ [4] S7_0.2.2                      fastmap_1.2.0                 timechange_0.4.0             
+ [7] lifecycle_1.0.5               cluster_2.1.8.2               ellipsis_0.3.3               
+[10] ggspatial_1.1.10              magrittr_2.0.5                compiler_4.5.2               
+[13] rlang_1.2.0                   RODBC_1.3-26.1                tools_4.5.2                  
+[16] utf8_1.2.6                    labeling_0.4.3                bit_4.6.0                    
+[19] pkgbuild_1.4.8                classInt_0.4-11               here_1.0.2                   
+[22] RColorBrewer_1.1-3            pkgload_1.5.2                 KernSmooth_2.23-26           
+[25] withr_3.0.2                   grid_4.5.2                    e1071_1.7-17                 
+[28] scales_1.4.0                  MASS_7.3-65                   cli_3.6.6                    
+[31] crayon_1.5.3                  ragg_1.5.2                    generics_0.1.4               
+[34] otel_0.2.0                    rstudioapi_0.18.0             tzdb_0.5.0                   
+[37] sessioninfo_1.2.3             DBI_1.3.0                     cachem_1.1.0                 
+[40] proxy_0.4-29                  splines_4.5.2                 rnaturalearth_1.2.0          
+[43] parallel_4.5.2                s2_1.1.9                      vctrs_0.7.3                  
+[46] Matrix_1.7-4                  hms_1.1.4                     bit64_4.8.0                  
+[49] systemfonts_1.3.2             units_1.0-1                   rnaturalearthhires_1.0.0.9000
+[52] glue_1.8.1                    stringi_1.8.7                 gtable_0.3.6                 
+[55] pillar_1.11.1                 R6_2.6.1                      wk_0.9.5                     
+[58] textshaping_1.0.5             rprojroot_2.1.1               vroom_1.7.1                  
+[61] lattice_0.22-7                memoise_2.0.1                 class_7.3-23                 
+[64] Rcpp_1.1.1-1.1                nlme_3.1-168                  mgcv_1.9-3                   
+[67] fs_2.1.0                      pkgconfig_2.0.3              

@@ -1,5 +1,5 @@
 # =============================================================================
-# 9_Appendices.R - FIGURE 2, FIGURE 3, SUPPLEMENTARY FIGURES S1-S2 AND S5,
+# 9_Appendices.R - FIGURE 2, FIGURE 3, SUPPLEMENTARY FIGURES S1-S2 AND S7,
 #                  APPENDIX A TABLES AND THE RUN MANIFEST
 # -----------------------------------------------------------------------------
 # Run after 6b, 6c and 6d. Reads the saved results (read_all_runs) and
@@ -12,7 +12,7 @@
 #   Output_Appendices/
 #     FigS1_sampling_by_year       stomachs per year and ecoregion
 #     FigS2_sampling_by_stratum    stomachs per stratum and year
-#     FigS5_lowN_sensitivity       composites with / without sparse units
+#     FigS7_lowN_sensitivity       composites with / without sparse units
 #     TableA0 prey categories per threshold   TableA1 sets per cell
 #     TableA2 effect size vs detection        TableA3 stratum / ecoregion crosswalk
 #     TableA4 unclassifiable cells            TableA5 spread across resolutions
@@ -346,14 +346,14 @@ if (have_raw && all(c("Area", "stratum") %in% names(raw))) {
 }
 
 # =============================================================================
-# 6. FIGURE S5 - SENSITIVITY TO LOW-SAMPLE UNITS (three scales, with intervals)
+# 6. FIGURE S7 - SENSITIVITY TO LOW-SAMPLE UNITS (three scales, with intervals)
 # =============================================================================
 # Across-unit composites with and without the units built on fewer than N_FLAG
 # predator x size-class cells; Gulf-wide (single unit) is the reference column.
 # Composite computed within each resolution, then summarised across resolutions:
 #   S5_BAND = "q95"  empirical 2.5-97.5 % interval across resolutions
 #   S5_BAND = "sd"   mean +/- SD across resolutions
-cat("\nFigure S5: low-sample sensitivity\n")
+cat("\nFigure S7: low-sample sensitivity\n")
 
 S5_BAND <- "q95"
 
@@ -424,7 +424,7 @@ pS7 <- ggplot(sens, aes(x = x, y = pct_mean, colour = family,
   theme_diag() +
   theme(legend.position = "top")
 
-save_app(pS7, "FigS5_lowN_sensitivity", 13, 6.5)
+save_app(pS7, "FigS7_lowN_sensitivity", 13, 6.5)
 
 emit_app(
   sens %>%

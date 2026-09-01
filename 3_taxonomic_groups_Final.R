@@ -32,16 +32,16 @@ source(paste0(project_path, "/R_helpers/PreyCategory.R"))
 load(paste0(project_path, "/data/prey_taxon_data.rda"))
 
 prey_groups <- rbind(species_prey_id, species_prey_noid, fill = TRUE)
-setDT(prey_groups)
+data.table::setDT(prey_groups)
 
 # 1) Lowest available classification -------------------------------------------
 is_prey <- !is.na(prey_groups$prey_category) & prey_groups$prey_category == "identified_prey_species"
 pc_chr  <- as.character(prey_groups$prey_category)
 
-set(prey_groups, j = "prey_category_lowest",
-    value = ifelse(is_prey & !is.na(prey_groups$verified_name), as.character(prey_groups$verified_name), pc_chr))
-set(prey_groups, j = "tax_level_lowest",
-    value = ifelse(is_prey & !is.na(prey_groups$verified_name), as.character(prey_groups$tax_level), "prey_category"))
+data.table::set(prey_groups, j = "prey_category_lowest",
+                value = ifelse(is_prey & !is.na(prey_groups$verified_name), as.character(prey_groups$verified_name), pc_chr))
+data.table::set(prey_groups, j = "tax_level_lowest",
+                value = ifelse(is_prey & !is.na(prey_groups$verified_name), as.character(prey_groups$tax_level), "prey_category"))
 
 # 2) Shared inputs of the sweep ---------------------------------------------------
 chosen_ranks <- c("phylum", "subphylum", "class", "subclass", "order", "infraorder",
@@ -61,7 +61,7 @@ genus_vec  <- as.character(prey_groups$genus)
 phylum_vec <- as.character(prey_groups$phylum)
 
 # One resolution: assignment, non-prey labels, optional genus collapse,
-# phyla below the threshold, then two columns written with set().
+# phyla below the threshold, then two columns written with data.table::set().
 build_resolution <- function(x, n_pred, collapse_genus, col_name, col_level) {
   r <- PreyCategory(prey_groups, chosen_ranks, ranknfile, target_rows = target_rows,
                     n_stomach_threshold = x, n_predator_threshold = n_pred, counts = counts)
@@ -78,12 +78,12 @@ build_resolution <- function(x, n_pred, collapse_genus, col_name, col_level) {
   }
 
   bad <- if (n_pred >= 2) phylum_tot[total_stomach < x | total_pred < n_pred, phylum] else
-                          phylum_tot[total_stomach < x, phylum]
+    phylum_tot[total_stomach < x, phylum]
   idx <- which(level == "phylum" & phylum_vec %in% bad)
   name[idx] <- "other_phyla"
 
-  set(prey_groups, j = col_name,  value = name)
-  set(prey_groups, j = col_level, value = level)
+  data.table::set(prey_groups, j = col_name,  value = name)
+  data.table::set(prey_groups, j = col_level, value = level)
   invisible(NULL)
 }
 
@@ -124,9 +124,9 @@ for (cat_name in unique(keep_name[is_taxo])) {
   under <- Reduce(`|`, lapply(rank_mat, function(v) !is.na(v) & v == cat_name)) & is_taxo
   if (length(unique(keep_name[under])) > 1) has_child[!is.na(keep_name) & keep_name == cat_name] <- TRUE
 }
-set(prey_groups, j = "has_child", value = has_child)
-set(prey_groups, j = "prey_category_new",
-    value = ifelse(has_child, paste0(keep_name, "_others"), keep_name))
+data.table::set(prey_groups, j = "has_child", value = has_child)
+data.table::set(prey_groups, j = "prey_category_new",
+                value = ifelse(has_child, paste0(keep_name, "_others"), keep_name))
 
 cat("\nCategories at x = 440: ", uniqueN(prey_groups$prey_category_keep),
     " (", uniqueN(prey_groups$prey_category_new), " with the sibling rule)\n", sep = "")

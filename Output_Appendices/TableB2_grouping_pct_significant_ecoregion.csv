@@ -1,0 +1,121 @@
+approach,contrast,currency,test,pct_mean,pct_sd,n_thresholds,n_cells_mean
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Biomass,Composition (PERMANOVA),21.9,0.9,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Biomass,Composition (PERMANOVA),20.4,0.8,25,91
+Per-predator grouping,2004 vs 2006,Biomass,Composition (PERMANOVA),19.9,2.3,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Occurrence,Composition (PERMANOVA),31.1,1,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Occurrence,Composition (PERMANOVA),30.1,1.1,25,91
+Per-predator grouping,2004 vs 2006,Occurrence,Composition (PERMANOVA),23.1,3.7,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Biomass,Composition (PERMANOVA),19.2,0.6,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Biomass,Composition (PERMANOVA),18.2,0.8,25,95
+Per-predator grouping,2004-2005 vs 2006,Biomass,Composition (PERMANOVA),17.5,1.9,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Occurrence,Composition (PERMANOVA),30.6,1,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Occurrence,Composition (PERMANOVA),29.6,1,25,95
+Per-predator grouping,2004-2005 vs 2006,Occurrence,Composition (PERMANOVA),23.5,3.6,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Biomass,Composition (PERMANOVA),23.7,2,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Biomass,Composition (PERMANOVA),23,2.3,25,62
+Per-predator grouping,2018 vs 2019,Biomass,Composition (PERMANOVA),13.7,3.9,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Occurrence,Composition (PERMANOVA),17.1,1.7,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Occurrence,Composition (PERMANOVA),16.2,1.6,25,62
+Per-predator grouping,2018 vs 2019,Occurrence,Composition (PERMANOVA),13.1,3.9,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Biomass,Composition (PERMANOVA),62.7,2.3,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Biomass,Composition (PERMANOVA),61.1,2.4,25,76
+Per-predator grouping,2006 vs 2018,Biomass,Composition (PERMANOVA),45.9,6.3,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Occurrence,Composition (PERMANOVA),76.9,1.7,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Occurrence,Composition (PERMANOVA),76.8,2.4,25,76
+Per-predator grouping,2006 vs 2018,Occurrence,Composition (PERMANOVA),57.1,11.4,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Biomass,Composition (PERMANOVA),77.1,3.7,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Biomass,Composition (PERMANOVA),75.9,3.7,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Biomass,Composition (PERMANOVA),53,12.9,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Occurrence,Composition (PERMANOVA),86.6,2.4,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Occurrence,Composition (PERMANOVA),87.2,2.1,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Occurrence,Composition (PERMANOVA),64.1,13.2,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Biomass,Diversity H',18.6,0.7,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Biomass,Diversity H',17.9,0.9,25,91
+Per-predator grouping,2004 vs 2006,Biomass,Diversity H',17.1,1.3,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Occurrence,Diversity H',11.7,0.5,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Occurrence,Diversity H',10.6,0.9,25,91
+Per-predator grouping,2004 vs 2006,Occurrence,Diversity H',12.7,2.5,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Biomass,Diversity H',15.1,0.5,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Biomass,Diversity H',15.7,0.7,25,95
+Per-predator grouping,2004-2005 vs 2006,Biomass,Diversity H',17.2,3.2,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Occurrence,Diversity H',11.9,0.7,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Occurrence,Diversity H',11.2,0.5,25,95
+Per-predator grouping,2004-2005 vs 2006,Occurrence,Diversity H',8.6,2.4,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Biomass,Diversity H',25.5,1.9,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Biomass,Diversity H',25.5,1.9,25,62
+Per-predator grouping,2018 vs 2019,Biomass,Diversity H',19.2,3,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Occurrence,Diversity H',9.5,1.3,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Occurrence,Diversity H',9,0.8,25,62
+Per-predator grouping,2018 vs 2019,Occurrence,Diversity H',11.8,4.1,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Biomass,Diversity H',24.8,0.6,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Biomass,Diversity H',24.6,1.1,25,76
+Per-predator grouping,2006 vs 2018,Biomass,Diversity H',19.3,2,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Occurrence,Diversity H',26.3,1.6,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Occurrence,Diversity H',26,1.2,25,76
+Per-predator grouping,2006 vs 2018,Occurrence,Diversity H',12.4,2,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Biomass,Diversity H',28.5,3,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Biomass,Diversity H',28.9,3.1,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Biomass,Diversity H',18.5,3.4,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Occurrence,Diversity H',27.8,1.3,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Occurrence,Diversity H',30,1.5,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Occurrence,Diversity H',15.4,2.5,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Biomass,Niche breadth Bs,10.8,0.5,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Biomass,Niche breadth Bs,10.7,0.5,25,91
+Per-predator grouping,2004 vs 2006,Biomass,Niche breadth Bs,9.2,1.6,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Occurrence,Niche breadth Bs,12.5,0.5,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Occurrence,Niche breadth Bs,12.5,0.5,25,91
+Per-predator grouping,2004 vs 2006,Occurrence,Niche breadth Bs,13.8,1.5,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Biomass,Niche breadth Bs,9.5,0.2,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Biomass,Niche breadth Bs,9.2,0.5,25,95
+Per-predator grouping,2004-2005 vs 2006,Biomass,Niche breadth Bs,8.8,1.2,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Occurrence,Niche breadth Bs,10.9,1,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Occurrence,Niche breadth Bs,11.2,1,25,95
+Per-predator grouping,2004-2005 vs 2006,Occurrence,Niche breadth Bs,11.8,1.7,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Biomass,Niche breadth Bs,8.1,0.3,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Biomass,Niche breadth Bs,8.1,0.3,25,62
+Per-predator grouping,2018 vs 2019,Biomass,Niche breadth Bs,8.6,1,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Occurrence,Niche breadth Bs,7.7,0.7,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Occurrence,Niche breadth Bs,7.7,0.7,25,62
+Per-predator grouping,2018 vs 2019,Occurrence,Niche breadth Bs,9.2,1.4,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Biomass,Niche breadth Bs,17.4,0.6,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Biomass,Niche breadth Bs,17.1,0,25,76
+Per-predator grouping,2006 vs 2018,Biomass,Niche breadth Bs,14.8,1.8,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Occurrence,Niche breadth Bs,12.8,0.7,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Occurrence,Niche breadth Bs,11.5,0.6,25,76
+Per-predator grouping,2006 vs 2018,Occurrence,Niche breadth Bs,12.8,2.1,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Biomass,Niche breadth Bs,11,0.2,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Biomass,Niche breadth Bs,11,0.2,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Biomass,Niche breadth Bs,13.2,1.2,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Occurrence,Niche breadth Bs,17.5,0.5,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Occurrence,Niche breadth Bs,17.5,0.5,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Occurrence,Niche breadth Bs,19.6,2.2,25,96.7
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Biomass,Dispersion (PERMDISP),6.9,0.6,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Biomass,Dispersion (PERMDISP),6.1,0.7,25,91
+Per-predator grouping,2004 vs 2006,Biomass,Dispersion (PERMDISP),8.6,1.7,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004 vs 2006,Occurrence,Dispersion (PERMDISP),4.4,0.2,25,91
+"Pooled grouping, q = 2",2004 vs 2006,Occurrence,Dispersion (PERMDISP),4.4,0.2,25,91
+Per-predator grouping,2004 vs 2006,Occurrence,Dispersion (PERMDISP),7.1,1.5,25,87.6
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Biomass,Dispersion (PERMDISP),3.6,0.5,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Biomass,Dispersion (PERMDISP),3.4,0.4,25,95
+Per-predator grouping,2004-2005 vs 2006,Biomass,Dispersion (PERMDISP),6.8,2.6,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2004-2005 vs 2006,Occurrence,Dispersion (PERMDISP),1.5,0.6,25,95
+"Pooled grouping, q = 2",2004-2005 vs 2006,Occurrence,Dispersion (PERMDISP),1.3,0.5,25,95
+Per-predator grouping,2004-2005 vs 2006,Occurrence,Dispersion (PERMDISP),6.6,2.5,25,92.1
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Biomass,Dispersion (PERMDISP),7.5,1.5,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Biomass,Dispersion (PERMDISP),8.1,1.4,25,62
+Per-predator grouping,2018 vs 2019,Biomass,Dispersion (PERMDISP),3.6,1.8,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2018 vs 2019,Occurrence,Dispersion (PERMDISP),5.8,0.9,25,62
+"Pooled grouping, q = 2",2018 vs 2019,Occurrence,Dispersion (PERMDISP),5.9,0.9,25,62
+Per-predator grouping,2018 vs 2019,Occurrence,Dispersion (PERMDISP),5.5,2.1,25,57.9
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Biomass,Dispersion (PERMDISP),12.9,1.1,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Biomass,Dispersion (PERMDISP),11.5,1,25,76
+Per-predator grouping,2006 vs 2018,Biomass,Dispersion (PERMDISP),6.6,2.6,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2006 vs 2018,Occurrence,Dispersion (PERMDISP),13.8,1.5,25,76
+"Pooled grouping, q = 2",2006 vs 2018,Occurrence,Dispersion (PERMDISP),13.4,1.3,25,76
+Per-predator grouping,2006 vs 2018,Occurrence,Dispersion (PERMDISP),8.4,2.2,25,72.6
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Biomass,Dispersion (PERMDISP),18.2,1.5,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Biomass,Dispersion (PERMDISP),17.8,1.5,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Biomass,Dispersion (PERMDISP),11.5,2.7,25,96
+"Pooled grouping, q = 1 (main analysis)",2004-2006 vs 2018-2019,Occurrence,Dispersion (PERMDISP),25,2.6,25,100
+"Pooled grouping, q = 2",2004-2006 vs 2018-2019,Occurrence,Dispersion (PERMDISP),25.2,2.6,25,100
+Per-predator grouping,2004-2006 vs 2018-2019,Occurrence,Dispersion (PERMDISP),14.3,3.7,25,96.7

@@ -23,7 +23,7 @@ rank_counts <- function(dt, ranks, target_rows = NULL) {
     cn <- dt[rows, .(n_stomach  = uniqueN(unlist(list_stomach_id)),
                      n_predator = uniqueN(unlist(list_predator_id))),
              by = c(rank)]
-    setnames(cn, rank, "name")
+    data.table::setnames(cn, rank, "name")
     out[[rank]] <- cn
   }
   out
