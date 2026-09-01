@@ -1,5 +1,5 @@
 # =============================================================================
-# 9_Appendices.R - FIGURE 2, FIGURE 3, SUPPLEMENTARY FIGURES S1-S2 AND S7,
+# 9_Appendices.R - FIGURES 2, 3 AND 4, SUPPLEMENTARY FIGURES S1-S2 AND S7,
 #                  APPENDIX A TABLES AND THE RUN MANIFEST
 # -----------------------------------------------------------------------------
 # Run after 6b, 6c and 6d. Reads the saved results (read_all_runs) and
@@ -9,6 +9,7 @@
 #     Fig2_sets_ecoregions         trawl sets by year and pooled, four ecoregions
 #     Fig3a_prey_categories        prey categories by aggregation threshold
 #     Fig3b_sweep_families         family frequencies across the sweep
+#     Fig4_typology_tree           decision tree of the typology (svg + png)
 #   Output_Appendices/
 #     FigS1_sampling_by_year       stomachs per year and ecoregion
 #     FigS2_sampling_by_stratum    stomachs per stratum and year
@@ -122,6 +123,13 @@ if (have_raw && file.exists(ECO_PATH) && all(c("longitude", "latitude") %in% nam
 
   save_fig(p2, "Fig2_sets_ecoregions", width = 11, height = 7.6, dir = DIR_FIGURES)
 }
+
+# =============================================================================
+# 2a. FIGURE 4 - DECISION TREE OF THE TYPOLOGY (SVG + PNG, R_helpers/Fig4_typology_tree.R)
+# =============================================================================
+cat("\nFigure 4: decision tree\n")
+source("R_helpers/Fig4_typology_tree.R")
+draw_typology_tree(out_prefix = file.path(DIR_FIGURES, "Fig4_typology_tree"))
 
 # =============================================================================
 # 2b. FIGURES S1-S2 - SAMPLING (stomachs, not prey records)
@@ -571,3 +579,4 @@ close(con)
 
 cat("  -> manifest.txt\n")
 cat("\nAppendices written to ", normalizePath(DIR_APPEND), "\n", sep = "")
+
