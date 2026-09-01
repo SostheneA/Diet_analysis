@@ -60,7 +60,7 @@ fam_unit <- res_all %>%
 readings <- c(
   "Stable Diet"                 = "Same prey, same proportions, same breadth.",
   "Emerging Shift"              = "Early compositional signal, not yet significant.",
-  "Like-for-like turnover"                 = "Prey identities turn over; diversity and breadth hold.",
+  "Ghost Shift"                 = "Prey identities turn over; diversity and breadth hold.",
   "Niche Compression/Expansion" = "Range of prey used changes on a stable prey list.",
   "Internal Rebalancing"        = "Proportions shift within the same prey set.",
   "Niche Restructuring"         = "Diversity and breadth both change without turnover.",
