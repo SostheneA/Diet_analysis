@@ -175,7 +175,7 @@ LEVEL_SPATIAL_COL <- c(all_gulf = "Area", ecoregion = "Area", stratum = "str")
 
 # Prey-grouping family used for the manuscript. The run scripts (6b-6d) write
 # to Sensitivity_<level><PREY_FAMILY>/ ; "_1" is the main analysis, "_2" the
-# original pooled grouping (kept for the appendix comparison, see 6f).
+# original pooled grouping (kept for the appendix comparison, see 6e).
 # Define PREY_FAMILY before sourcing this file to override.
 if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_1"
 

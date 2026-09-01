@@ -4,7 +4,7 @@
 # One of three run scripts for 6a_Engine_Trophic.R (6b all_gulf, 6c ecoregion,
 # 6d stratum). They differ only in SPATIAL_LEVEL and must each run in their own
 # R session. Results: Sensitivity_all_gulf<family>/ and
-# data/Sensitivity/all_runs_all_gulf<family>.rda. 6f_Run_families.R reruns this
+# data/Sensitivity/all_runs_all_gulf<family>.rda. 6e_Run_families.R reruns this
 # script for the "_2" and "_PP" families.
 # =============================================================================
 rm(list = setdiff(ls(), "PREY_FAMILY"))

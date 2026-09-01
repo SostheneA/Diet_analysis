@@ -1,5 +1,5 @@
 # =============================================================================
-# 6f_Run_families.R - SENSITIVITY RUNS FOR THE ALTERNATIVE GROUPING FAMILIES
+# 6e_Run_families.R - SENSITIVITY RUNS FOR THE ALTERNATIVE GROUPING FAMILIES
 # -----------------------------------------------------------------------------
 # The manuscript uses the "_1" family (default of 6b/6c/6d: just run them).
 # This driver reruns the same three run scripts for the alternative families,

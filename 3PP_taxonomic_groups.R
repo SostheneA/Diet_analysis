@@ -12,7 +12,7 @@
 #          R_helpers/taxonomic_rank_order.R, R_helpers/PreyCategory.R
 # Output : data/prey_groups_PP.RData (prey_groups_PP: one row per predator x
 #          prey taxon). Script 4 merges it on (predator, prey_species_common_name);
-#          6b-6d run with PREY_FAMILY <- "_PP" (see 6f_Run_families.R).
+#          6b-6d run with PREY_FAMILY <- "_PP" (see 6e_Run_families.R).
 #------------------------------------------------------------------------------#
 
 project_path <- here::here()

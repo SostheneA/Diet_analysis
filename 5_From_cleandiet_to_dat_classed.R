@@ -25,8 +25,6 @@ diet_clean[, size_class := fcase(
   somatic_length_cm >= lmat,  "adult"
 )]
 
-diet_clean$size_class
-
 size_share <- diet_clean %>%
   st_drop_geometry() %>%
   count(predator_species_common_name, period, size_class) %>%

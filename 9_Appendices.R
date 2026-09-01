@@ -106,14 +106,19 @@ if (have_raw && file.exists(ECO_PATH) && all(c("longitude", "latitude") %in% nam
     facet_wrap(~panel, ncol = 3) +
     scale_fill_brewer(palette = "Set2", name = NULL) +
     scale_colour_brewer(palette = "Set2") +
+    scale_x_continuous(breaks = seq(-65, -61, by = 1)) +
+    scale_y_continuous(breaks = seq(46, 49, by = 1)) +
     coord_sf(crs = CRS_MAP, xlim = bb[c("xmin", "xmax")], ylim = bb[c("ymin", "ymax")],
              expand = FALSE) +
     labs(title = "Trawl sets with analysed stomachs, by survey year and pooled",
          x = NULL, y = NULL) +
     theme_diag(base_size = 10) +
-    theme(axis.text = element_text(size = 6), panel.grid = element_line(colour = "grey93"))
+    theme(axis.text = element_text(size = 6), panel.grid = element_line(colour = "grey93"),
+          panel.spacing.x = unit(1.2, "lines"), legend.position = "bottom")
   if (requireNamespace("ggspatial", quietly = TRUE))
-    p2 <- p2 + ggspatial::annotation_scale(location = "br", width_hint = 0.25, text_cex = 0.6)
+    p2 <- p2 + ggspatial::annotation_scale(
+      data = data.frame(panel = factor("All years", levels = panels)),
+      location = "br", width_hint = 0.25, text_cex = 0.6)
 
   save_fig(p2, "Fig2_sets_ecoregions", width = 11, height = 7.6, dir = DIR_FIGURES)
 }
@@ -566,4 +571,3 @@ close(con)
 
 cat("  -> manifest.txt\n")
 cat("\nAppendices written to ", normalizePath(DIR_APPEND), "\n", sep = "")
-
