@@ -1,5 +1,5 @@
 # =============================================================================
-# 8_Tables.R - MANUSCRIPT TABLES 1-3 AND S1-S5 (csv)
+# 8_Tables.R - MANUSCRIPT TABLES 1-3 AND S1-S6 (csv)
 # -----------------------------------------------------------------------------
 # Run after 6b, 6c and 6d. Same aggregation rule as the figures
 # (freq_by_resolution, Inconclusive excluded), so text, tables and figures
@@ -8,12 +8,12 @@
 #   Table1_typology      the nine states, their signal combination, family
 #   Table2_headline      families by contrast and currency, Gulf-wide
 #   Table3_crossscale    families by spatial level
-#   TableS1_sampling     stomachs and sets per predator, size class and period
-#   TableS2_states_gulf  the nine states, Gulf-wide
-#   TableS3_by_ecoregion / TableS4_by_stratum   families per unit
-#   TableS5_coverage     cells, testable, reliable, confounded dispersion
+#   TableS2_sampling     stomachs and sets per predator, size class and period
+#   TableS3_states_gulf  the nine states, Gulf-wide
+#   TableS4_by_ecoregion / TableS5_by_stratum   families per unit
+#   TableS6_coverage     cells, testable, reliable, confounded dispersion
 # Percentages in Tables 2 to S4 are computed on testable cells only; read
-# Table S5 alongside them.
+# Table S6 alongside them.
 # =============================================================================
 
 rm(list = ls())
@@ -60,7 +60,7 @@ fam_unit <- res_all %>%
 readings <- c(
   "Stable Diet"                 = "Same prey, same proportions, same breadth.",
   "Emerging Shift"              = "Early compositional signal, not yet significant.",
-  "Ghost Shift"                 = "Prey identities turn over; diversity and breadth hold.",
+  "Like-for-like turnover"                 = "Prey identities turn over; diversity and breadth hold.",
   "Niche Compression/Expansion" = "Range of prey used changes on a stable prey list.",
   "Internal Rebalancing"        = "Proportions shift within the same prey set.",
   "Niche Restructuring"         = "Diversity and breadth both change without turnover.",
@@ -130,7 +130,72 @@ emit(table3, "Table3_crossscale",
             "across units, each unit tested on its own data."))
 
 # =============================================================================
-# TABLE S1 - SAMPLING
+# TABLE S1 - THE PREDATORS
+# =============================================================================
+# One row per retained predator: common and scientific names, length range and
+# number of stomachs with prey in each period, Lmat and Lmax with their source.
+# Built from dat_classed (stomachs actually analysed) and data/lmat_predators.csv.
+DATA_PATH <- "data/dat_classed.rda"
+LMAT_PATH <- "data/lmat_predators.csv"
+
+if (file.exists(DATA_PATH) && file.exists(LMAT_PATH)) {
+  e <- new.env(); load(DATA_PATH, envir = e)
+  raw <- get(ls(e)[1], envir = e)
+  if (inherits(raw, "sf")) raw <- sf::st_drop_geometry(raw)
+  raw <- as.data.frame(raw)
+
+  has_code <- "predator_species_code" %in% names(raw)
+  if (!has_code) raw$predator_species_code <- NA_integer_
+
+  lmat_ref <- read_csv(LMAT_PATH, show_col_types = FALSE,
+                       locale = locale(encoding = "Latin1")) %>%
+    transmute(predator_species_code = as.integer(code),
+              predator_species_common_name = Predator,
+              `Scientific name` = latin_name,
+              `Lmat (cm)` = ifelse(tolower(lmat) %in% c("unknown", "na", ""), NA_character_, lmat),
+              `Lmax (cm)` = as.character(lmax),
+              Source = coalesce(`Information source`, "")) %>%
+    distinct(predator_species_code, .keep_all = TRUE)
+  join_key <- if (has_code) "predator_species_code" else "predator_species_common_name"
+  lmat_ref <- lmat_ref %>% select(-all_of(setdiff(c("predator_species_code", "predator_species_common_name"), join_key)))
+
+  fmt_range <- function(x) {
+    x <- x[!is.na(x)]
+    if (!length(x)) return(NA_character_)
+    paste0(format(round(min(x), 1), nsmall = 0), "-", format(round(max(x), 1), nsmall = 0))
+  }
+
+  per_period <- raw %>%
+    filter(period %in% c("2004-2006", "2018-2019")) %>%
+    distinct(predator_species_code, predator_species_common_name, period,
+             stomach_id, somatic_length_cm) %>%
+    group_by(predator_species_code, predator_species_common_name, period) %>%
+    summarise(n_sto = n_distinct(stomach_id),
+              range = fmt_range(somatic_length_cm), .groups = "drop")
+
+  tableS1 <- per_period %>%
+    pivot_wider(names_from = period, values_from = c(range, n_sto)) %>%
+    left_join(lmat_ref, by = join_key) %>%
+    transmute(Predator = predator_species_common_name,
+              `Scientific name`,
+              `Length range 2004-2006 (cm)` = `range_2004-2006`,
+              `Length range 2018-2019 (cm)` = `range_2018-2019`,
+              `Stomachs 2004-2006` = coalesce(`n_sto_2004-2006`, 0L),
+              `Stomachs 2018-2019` = coalesce(`n_sto_2018-2019`, 0L),
+              `Lmat (cm)`, `Lmax (cm)`, Source) %>%
+    arrange(desc(`Stomachs 2004-2006` + `Stomachs 2018-2019`))
+
+  emit(tableS1, "TableS1_predators",
+       paste0("Table S1. The ", nrow(tableS1), " predators retained: length range and number ",
+              "of stomachs with prey per period, length at maturity (Lmat) and maximum ",
+              "length (Lmax) with their source. Predators without a documented Lmat form ",
+              "a single size class."))
+} else {
+  message("TableS1 skipped: ", DATA_PATH, " or ", LMAT_PATH, " not found.")
+}
+
+# =============================================================================
+# TABLE S2 - SAMPLING BY CELL
 # =============================================================================
 # Built from one representative run per level so that the counts are not
 # multiplied by the resolution sweep. Stomach counts are identical across
@@ -139,26 +204,26 @@ one_res <- res_all %>%
   filter(level == "all_gulf", currency == "biomass", contrast == "PTa") %>%
   filter(x_threshold == min(x_threshold, na.rm = TRUE))
 
-tableS1 <- one_res %>%
+tableS2 <- one_res %>%
   transmute(Predator = species, `Size class` = size_class,
             `Stomachs 2004-2006` = n_sto_P1, `Stomachs 2018-2019` = n_sto_P2,
             `Sets 2004-2006` = n_set_P1, `Sets 2018-2019` = n_set_P2,
             Testable = testable, Reliable = reliable) %>%
   arrange(Predator, `Size class`)
 
-if (nrow(tableS1)) {
-  emit(tableS1, "TableS1_sampling",
-       paste0("Table S1. Stomachs and trawl sets per predator and size class, ", CONTRAST_LAB_1L[["PTa"]], " contrast, biomass currency, finest taxonomic resolution."))
+if (nrow(tableS2)) {
+  emit(tableS2, "TableS2_sampling",
+       paste0("Table S2. Stomachs and trawl sets per predator and size class, ", CONTRAST_LAB_1L[["PTa"]], " contrast, biomass currency, finest taxonomic resolution."))
 } else {
-  message("TableS1 skipped: no 2004-2006 vs 2018-2019 biomass run at the Gulf-wide level.")
+  message("TableS2 skipped: no 2004-2006 vs 2018-2019 biomass run at the Gulf-wide level.")
 }
 
 # =============================================================================
-# TABLE S2 - THE NINE STATES
+# TABLE S3 - THE NINE STATES
 # =============================================================================
 # What the collapse into families conceals. Reorganisation in particular is
 # three quite different states, and their relative weight is worth showing.
-tableS2 <- res_all %>%
+tableS3 <- res_all %>%
   filter(level == "all_gulf") %>%
   freq_by_resolution(keys = c("currency", "contrast")) %>%
   filter(!is.na(contrast)) %>%
@@ -171,8 +236,8 @@ tableS2 <- res_all %>%
           factor(Family, levels = FAMILY_LEVELS),
           factor(State, levels = DIAG_LEVELS))
 
-emit(tableS2, "TableS2_states_gulf",
-     "Table S2. Frequency (%) of each of the nine diagnostic states, Gulf-wide level.")
+emit(tableS3, "TableS3_states_gulf",
+     "Table S3. Frequency (%) of each of the nine diagnostic states, Gulf-wide level.")
 
 # =============================================================================
 # TABLES S3 AND S4 - PER UNIT
@@ -193,11 +258,11 @@ unit_table <- function(lvl, stem, caption) {
   emit(d, stem, caption)
 }
 
-unit_table("ecoregion", "TableS3_by_ecoregion",
-           "Table S3. Family frequency (%) per ecoregion. * = fewer than five predator x size-class units.")
+unit_table("ecoregion", "TableS4_by_ecoregion",
+           "Table S4. Family frequency (%) per ecoregion. * = fewer than five predator x size-class units.")
 
-unit_table("stratum", "TableS4_by_stratum",
-           "Table S4. Family frequency (%) per survey stratum. * = fewer than five predator x size-class units.")
+unit_table("stratum", "TableS5_by_stratum",
+           "Table S5. Family frequency (%) per survey stratum. * = fewer than five predator x size-class units.")
 
 # =============================================================================
 # TABLE S5 - COVERAGE AND CONFOUNDING
@@ -208,7 +273,7 @@ unit_table("stratum", "TableS4_by_stratum",
 # significant, i.e. where a location shift cannot be separated from a spread
 # difference. A high value at the Gulf-wide level is the expected cost of
 # pooling across heterogeneous prey fields.
-tableS5 <- coverage_by(res_all, keys = c("level", "currency", "contrast")) %>%
+tableS6 <- coverage_by(res_all, keys = c("level", "currency", "contrast")) %>%
   filter(!is.na(contrast)) %>%
   arrange(level, currency, contrast) %>%
   transmute(`Spatial level` = LEVEL_SHORT[as.character(level)],
@@ -219,8 +284,8 @@ tableS5 <- coverage_by(res_all, keys = c("level", "currency", "contrast")) %>%
             `Reliable (%)` = pct_reliable,
             `Location/dispersion confounded (%)` = pct_confounded)
 
-emit(tableS5, "TableS5_coverage",
-     paste0("Table S5. Coverage and confounding by level and contrast. Percentages ",
+emit(tableS6, "TableS6_coverage",
+     paste0("Table S6. Coverage and confounding by level and contrast. Percentages ",
             "in Tables 2 to S4 are computed on testable cells only."))
 
 # =============================================================================
@@ -249,7 +314,7 @@ if (length(miss_ct)) {
   cat("  Contrasts absent from the results: ", paste(miss_ct, collapse = ", "), "\n", sep = "")
 }
 
-low_cov <- tableS5 %>% filter(`Testable (%)` < 60)
+low_cov <- tableS6 %>% filter(`Testable (%)` < 60)
 if (nrow(low_cov)) {
   cat("  Level/contrast combinations below 60 % testable cells:\n")
   print(as.data.frame(low_cov), row.names = FALSE)
