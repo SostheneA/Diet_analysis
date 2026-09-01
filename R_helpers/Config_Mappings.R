@@ -1,7 +1,7 @@
 # =============================================================================
-# 0_Config_Mappings.R - SHARED CONFIGURATION AND READERS
+# Config_Mappings.R - SHARED CONFIGURATION AND READERS
 # -----------------------------------------------------------------------------
-# Single source of truth for everything scripts 7 to 10 have in common: the
+# Single source of truth for everything scripts 7 to 9 have in common: the
 # diagnostic typology, the contrast naming, the spatial levels, the colour
 # palettes, and the readers that turn the pipeline's .rda files into tidy
 # tables. Change a label here and every table, figure and map follows.
@@ -11,7 +11,9 @@
 #
 # It deliberately does NOT source the engine (6a_Engine_Trophic.R). The engine
 # fixes SPATIAL_SOURCE and SPATIAL_OUT to one level at source() time; scripts
-# 7 to 10 read all three levels at once and must not be tied to any of them.
+# 7 to 9 read all three levels at once and must not be tied to any of them.
+#
+# All figures are written as PNG (300 dpi) only, through save_fig().
 # =============================================================================
 
 suppressPackageStartupMessages({
@@ -216,10 +218,10 @@ decade_bands <- function() {
   )
 }
 
-# Period colours, shared by every script that colours by period (10, 6f).
+# Period colours, shared by every script that colours by period.
 PERIOD_PAL <- c("2004-2006" = "#2c7bb6", "2018-2019" = "#d7191c")
 
-# Ecoregion display names (co-author request: English names on all outputs).
+# Ecoregion display names (English names on all outputs).
 AREA_LAB <- c("Baie des Chaleurs" = "Chaleur Bay",
               "Chaleur Bay"       = "Chaleur Bay")
 area_label <- function(x) {
@@ -227,7 +229,7 @@ area_label <- function(x) {
   ifelse(x %in% names(AREA_LAB), unname(AREA_LAB[x]), x)
 }
 
-# One theme for every figure (7, 9, 10, 6f): same font family and sizes.
+# One theme for every figure: same font family and sizes.
 # Set FIG_FONT before sourcing to change the family; "sans" resolves to Arial /
 # Helvetica on Windows and macOS PDF/PNG devices.
 if (!exists("FIG_FONT")) FIG_FONT <- "sans"
@@ -434,9 +436,8 @@ coverage_by <- function(results, keys = c("currency", "contrast", "level")) {
 if (!exists("DIR_TABLES"))  DIR_TABLES  <- "Output_Tables"
 if (!exists("DIR_FIGURES")) DIR_FIGURES <- "Output_Figures"
 if (!exists("DIR_APPEND"))  DIR_APPEND  <- "Output_Appendices"
-if (!exists("DIR_DRIVERS")) DIR_DRIVERS <- "Output_Drivers"
 
-for (d in c(DIR_TABLES, DIR_FIGURES, DIR_APPEND, DIR_DRIVERS)) {
+for (d in c(DIR_TABLES, DIR_FIGURES, DIR_APPEND)) {
   dir.create(d, recursive = TRUE, showWarnings = FALSE)
 }
 
@@ -456,17 +457,15 @@ load_strata <- function(rds_path = "strata_rv_gulf.rds") {
   NULL
 }
 
-# Writes a figure in both raster and vector form under the same stem.
+# Writes a figure as PNG under the given stem.
 save_fig <- function(plot, stem, width, height, dpi = 300, dir = DIR_FIGURES) {
   ggplot2::ggsave(file.path(dir, paste0(stem, ".png")), plot,
                   width = width, height = height, dpi = dpi,
                   bg = "white", limitsize = FALSE)
-  ggplot2::ggsave(file.path(dir, paste0(stem, ".pdf")), plot,
-                  width = width, height = height, limitsize = FALSE)
-  cat("  wrote ", stem, ".png / .pdf\n", sep = "")
+  cat("  wrote ", stem, ".png\n", sep = "")
   invisible(plot)
 }
 
-message("0_Config_Mappings.R loaded: ",
+message("Config_Mappings.R loaded: ",
         length(DIAG_LEVELS), " states -> ", length(FAMILY_LEVELS), " families, ",
         length(SPATIAL_LEVELS_ORD), " spatial levels.")

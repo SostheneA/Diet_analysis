@@ -1,32 +1,19 @@
 #------------------------------------------------------------------------------#
-# Objective : Diet file correction and add
+# 1_diet_corrections.R - READ THE SURVEY DIET FILES AND CORRECT KNOWN ISSUES
 #
-# Input : data/diet_raw
-# Output : data/diet_corr,
-#
-# lists produced but not as output:
-#     potential_empty_element, problematic_stomach, empty_stomach_ids
-#
+# Input  : data/Survey_data/4T_*.csv (one file per vessel x year)
+# Output : data/diet_corr.RData (diet_corr, one row per prey record, with
+#          vessel.code, year and the is_empty flag per stomach)
 #------------------------------------------------------------------------------#
-# Clear workspace to ensure reproducibility
 rm(list = ls())
-gc()
 
-# 1) environment & data Loading ------------------------------------------------
-#------------------------------------------------------------------------------#
 project_path <- here::here()
 
 library(data.table)
-library(gulf)
-library(tidyverse)
-library(taxize)
-library(sf)
 library(dplyr)
-library(tidyr)
-library(ggplot2)
 
+# 1) Read ----------------------------------------------------------------------
 
-# Define file paths and vessel codes for iterative loading
 survey_files <- list(
   list(path = "data/Survey_data/4T_Needler_2004.csv", vessel = "N"),
   list(path = "data/Survey_data/4T_Needler_2005.csv", vessel = "N"),
@@ -37,7 +24,6 @@ survey_files <- list(
   list(path = "data/Survey_data/4T_TEL_2019.csv", vessel = "T")
 )
 
-# Read and merge all files while assigning vessel codes for traceability
 diet_list <- lapply(survey_files, function(f) {
   dt <- fread(f$path, encoding = "UTF-8")
   dt[, vessel.code := f$vessel]
@@ -63,13 +49,13 @@ diet_corr$prey_species_latin_name <- ifelse((is.na(diet_corr$prey_species_latin_
                                            diet_corr$prey_species_latin_name)
 
 ## Amphipod but just state in comments or or in WoRMs but not retrieved---------
-diet_corr$prey_species_latin_name <- ifelse(diet_corr$prey_id == 60840, "Amphipoda", diet_corr$prey_species_latin_name) # see comment.
+diet_corr$prey_species_latin_name <- ifelse(diet_corr$prey_id == 60840, "Amphipoda", diet_corr$prey_species_latin_name)
 diet_corr$prey_species_common_name <- ifelse(diet_corr$prey_id == 60840, "Amphipod unidentified", diet_corr$prey_species_common_name)
 diet_corr$prey_species_code <- ifelse(diet_corr$prey_id == 60840, 2800, diet_corr$prey_species_code)
 
 
 ## 68342 10044 Hyalellidae Hyalellidae (f.) ----
-diet_corr$prey_species_latin_name <- ifelse(diet_corr$prey_id == 68342, "Hyaloidea", diet_corr$prey_species_latin_name) # see comment.
+diet_corr$prey_species_latin_name <- ifelse(diet_corr$prey_id == 68342, "Hyaloidea", diet_corr$prey_species_latin_name)
 diet_corr$prey_species_common_name <- ifelse(diet_corr$prey_id == 68342, "Hyaloidea", diet_corr$prey_species_common_name)
 diet_corr$prey_species_code <- ifelse(diet_corr$prey_id == 68342, NA_integer_, diet_corr$prey_species_code)
 
@@ -83,11 +69,7 @@ diet_corr$predator_species_code <- ifelse(diet_corr$predator_species_code == 727
                                          diet_corr$predator_species_code)
 
 
-## Walruses ?-------------------------------------------------------------------
-#diet_corr$prey_species_latin_name <- ifelse(diet_corr$prey_species_latin_name == "Odobenidae (f.)", # Walruses
-#                                               NA_character_,
-#                                               diet_corr$prey_species_latin_name)
-
+## code 910 (Odobenidae, walruses) is not a prey code ---------------------------
 diet_corr$prey_species_code <- ifelse(diet_corr$prey_species_code == 910,
                                      NA_integer_,
                                      diet_corr$prey_species_code)
@@ -169,13 +151,12 @@ emptyness <- diet_corr[,
 ]
 
 empty_stomach_ids <- unique(emptyness$stomach_id)
-length(empty_stomach_ids)
 
 diet_corr[, is_empty := fifelse(stomach_id %in% empty_stomach_ids, TRUE, FALSE)]
 setDT(diet_corr)
 
 
-# Stomach that have a rows as if it was empty but that aren't empty.
+# Stomachs with an empty-looking row that are not empty.
 problematic_stomach <- diet_corr[!is_empty & is.na(prey_species_common_name),]$stomach_id
 problematic_stomach_table1 <- diet_corr[stomach_id %in% c(problematic_stomach),]
 problematic_stomach_table <- diet_corr[stomach_id %in% c(problematic_stomach),
@@ -200,14 +181,7 @@ diet_corr[stomach_id %in% problematic_stomach &
 ]
 setDT(diet_corr)
 
-#look_at_diet_corr_na <- diet_corr[is.na(prey_species_code),]
-
-# 4) when all item digested-----------------------------------------------------
-
-
-
-
-# 5) Save ----------------------------------------------------------------------
+# 4) Save ----------------------------------------------------------------------
 #------------------------------------------------------------------------------#
 save(diet_corr, file = paste0(project_path, "/data/diet_corr.RData"))
 

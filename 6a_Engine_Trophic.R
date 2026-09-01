@@ -1,106 +1,37 @@
 # =============================================================================
-# TROPHIC TRANSITION ANALYSIS ENGINE
-# =============================================================================
-#
-# This framework classifies dietary change in marine populations between two
-# temporal periods. The analytical unit throughout is the trawl set rather than
-# the individual stomach, because stomachs from one tow are not independent
-# (Hurlbert 1984; Pennington & Volstad 1994). What the engine produces is a
-# classification of observed change, not a causal account of it.
-#
-# The pipeline evaluates three axes of dietary change—alpha diversity, niche
-# breadth, and multivariate composition—to classify trophic transitions into
-# discrete ecological states.
-#
+# 6a_Engine_Trophic.R - TROPHIC TRANSITION ENGINE
 # -----------------------------------------------------------------------------
-# THREE LEVELS OF SPATIAL DISAGGREGATION
-# -----------------------------------------------------------------------------
-# One engine, three spatial levels. The run script sets SPATIAL_LEVEL before
-# sourcing this file; everything downstream is derived from it. Each level is a
-# separate pipeline run and the three are independent, so they can be launched
-# in three parallel R sessions.
+# Classifies the change in each predator x size-class cell between two periods
+# from three signals computed with the trawl set as the replicate unit
+# (Hurlbert 1984; Pennington & Volstad 1994): Shannon diversity H' (delete-one-
+# set jackknife, Welch t-test; Zahl 1977), Levins niche breadth Bs (per set,
+# Welch t-test) and prey composition (Bray-Curtis, PERMANOVA and PERMDISP;
+# Anderson 2001, 2006). The three significance flags give nine diagnostic
+# states, collapsed into four families by R_helpers/Config_Mappings.R.
 #
-#   L1  all_gulf    No spatial structure. Every trawl set enters a single
-#                   PERMANOVA. Answers: did the Gulf-wide diet change?
+# One engine, three spatial levels, chosen by SPATIAL_LEVEL before source():
+#   all_gulf   every trawl set in one matrix per cell (Gulf-wide test)
+#   ecoregion  cells = species x size class x ecoregion
+#   stratum    cells = species x size class x survey stratum
+# Each level runs in its own R session (6b, 6c, 6d): the engine fixes the
+# spatial columns at source() time.
 #
-#   L2  ecoregion   Cells are species x size class x ecoregion, tested within
-#                   each ecoregion. Answers: where did it change?
-#
-#   L3  stratum     Same, at the survey-stratum grain — the finest available.
-#
-# All three run on the same stomachs: the source data carries no missing Area
-# and no missing stratum, so no level drops rows the others keep. Differences
-# between levels are therefore attributable to the spatial treatment alone.
-# make_dat_classed() still reports any row it has to drop, so a future version
-# of the data that does contain gaps will announce itself rather than shift the
-# comparison silently.
-#
-# What each comparison isolates:
-#   L1 vs L2   aggregation: pooling the diet matrices before testing, versus
-#              testing within units
-#   L2 vs L3   spatial grain, at constant sample
-#
-# TWO KINDS OF POOLING — DO NOT CONFLATE THEM IN THE METHODS
-#   Pooling the DATA (level L1) merges every trawl set into one matrix and runs
-#   a single test. Spatial heterogeneity becomes within-group variance, which
-#   inflates dispersion; betadisper detects it, and it can either mask a real
-#   shift or manufacture one (Warton et al. 2012).
-#
-#   Pooling the RESULTS (the `_summary_` figure emitted by L2 and L3) counts how
-#   many local units fall in each diagnostic class. It is immune to the
-#   dispersion problem, but its n counts cells rather than independent
-#   replicates, which is what the n_eff correction in make_diag_plot2() handles.
-#
-#   The two answer different questions and both are produced. L1 is the
-#   Gulf-wide test; the `_summary_` figures are the proportion of local units
-#   showing each pattern.
+# This file defines objects only. run_all_scenarios() (section 8) runs the five
+# contrasts in both currencies and saves the results.
 # =============================================================================
-
-# =============================================================================
-# 0. ENVIRONMENT SETUP AND GLOBAL PARAMETERS
-# =============================================================================
-# The engine relies on `data.table` for high-performance data manipulation,
-# `vegan` for multivariate ecology metrics, and `mvabund` for resampling-based
-# linear models.
-#
-# Analytical parameters are declared with `if (!exists(...))`, so a run script
-# that sets them before sourcing this file keeps its own values; the assignments
-# here only supply defaults. SPATIAL_SOURCE and SPATIAL_OUT are deliberate
-# exceptions: they identify which spatial variant of the engine this file is,
-# and are fixed by plain assignment.
-
-packages <- c(
-  "tidyverse", "vegan", "DT", "plotly", "kableExtra",
-  "RColorBrewer", "htmltools", "sf", "data.table", "stringr",
-  "mvabund", "labdsv"
-)
-
-new_pkg <- packages[!packages %in% installed.packages()[, "Package"]]
-if (length(new_pkg)) install.packages(new_pkg, dependencies = TRUE)
 
 suppressPackageStartupMessages({
-  library(tidyverse); library(vegan); library(data.table)
-  library(sf); library(mvabund); library(labdsv)
+  library(tidyverse); library(vegan); library(data.table); library(sf)
 })
-
 if ("igraph" %in% (.packages())) detach("package:igraph", unload = TRUE)
 
 # -----------------------------------------------------------------------------
 # SPATIAL LEVEL
 # -----------------------------------------------------------------------------
-# SPATIAL_LEVEL selects one of the four levels. A run script sets it before
-# sourcing this file; the default below makes an unattended source() run the
-# broadest level rather than fail.
-#
-# Each entry declares:
-#   source  column in diet_clean holding the spatial unit; NA for L1, which
-#           needs no spatial information at all
-#   out     name of the spatial column written to the results, kept as "Area"
-#           and "str" so existing mapping scripts keep working
-#   pool    TRUE collapses every stomach into one unit before testing
-#   label   value written in the output column when pool = TRUE; distinct per
-#           level so L1 and L2 results stay distinguishable if row-bound
-#   title   human-readable name used in plot captions and messages
+#   source  column of diet_clean holding the spatial unit (NA for all_gulf)
+#   out     spatial column written to the results ("Area" or "str")
+#   pool    TRUE collapses every set into one unit before testing
+#   label   value written in `out` when pool = TRUE
 
 if (!exists("SPATIAL_LEVEL")) SPATIAL_LEVEL <- "all_gulf"
 
@@ -137,33 +68,27 @@ SPATIAL_TITLE  <- .lvl$title
 
 message("Spatial level: ", SPATIAL_TITLE)
 
-# Analytical Thresholds
-if (!exists("OCC_BINARY"))      OCC_BINARY      <- FALSE    # If TRUE, Jaccard for occurrence; else Bray-Curtis
-if (!exists("MIN_SETS"))        MIN_SETS        <- 3        # Minimum sets per period to run jackknife
-if (!exists("N_MIN"))           N_MIN           <- 5        # Minimum stomachs per cell
-if (!exists("N_STRICT"))        N_STRICT        <- 25       # Minimum stomachs per period for reliable inference
-if (!exists("ALPHA"))           ALPHA           <- 0.05     # Significance threshold
-if (!exists("R_PERM"))          R_PERM          <- 999      # Permutations for distance-based tests
+# -----------------------------------------------------------------------------
+# PARAMETERS (a run script may set them before sourcing this file)
+# -----------------------------------------------------------------------------
+if (!exists("PREY_FAMILY"))     PREY_FAMILY     <- "_1"     # prey-grouping family swept
+if (!exists("N_MIN"))           N_MIN           <- 5        # min stomachs with prey per cell and period
+if (!exists("N_STRICT"))        N_STRICT        <- 25       # min stomachs per period for the reliable flag
+if (!exists("MIN_SETS"))        MIN_SETS        <- 3        # min sets per period for jackknife / Welch
+if (!exists("ALPHA"))           ALPHA           <- 0.05
+if (!exists("R_PERM"))          R_PERM          <- 999      # permutations, PERMANOVA and PERMDISP
+if (!exists("BS_TEST"))         BS_TEST         <- "welch"  # "welch", "wilcox" or "perm"
+if (!exists("COMP_RELATIVE"))   COMP_RELATIVE   <- TRUE     # relative profiles before Bray-Curtis
+if (!exists("OCC_BINARY"))      OCC_BINARY      <- FALSE    # TRUE: Jaccard on presence/absence for occurrence
+if (!exists("ADD_NICHE_PART"))  ADD_NICHE_PART  <- TRUE     # set-level TNW / WIC / BIC
+if (!exists("ADD_IND_NICHE"))   ADD_IND_NICHE   <- FALSE    # stomach-level WIC / TNW (slow)
 
-# Methodological Switches
-if (!exists("BS_TEST"))         BS_TEST         <- "welch"    # Welch avoids the combinatorial floor of rank tests
-if (!exists("ADD_NICHE_PART"))  ADD_NICHE_PART  <- TRUE       # Set-level niche width decomposition
-if (!exists("ADD_IND_NICHE"))   ADD_IND_NICHE   <- FALSE      # Individual-level WIC/TNW (computationally heavy)
-if (!exists("DRIVER_PUNI"))     DRIVER_PUNI     <- "adjusted" # Step-down adjusted p-values across taxa
-if (!exists("DRIVER_RELATIVE")) DRIVER_RELATIVE <- TRUE       # Standardize abundance for Indicator Value
-if (!exists("COMP_RELATIVE"))   COMP_RELATIVE   <- TRUE       # Standardize row sums before Bray-Curtis
-
-
-# =========================================================
-# 1. PERIOD & SPATIAL PREPARATION
-# =========================================================
-# make_dat_classed() applies the period map and the row filters, and stores the
-# spatial unit under the reserved name `.spatial_src`. Keeping it under its own
-# name means pooling never overwrites the source column, so a pooled dataset can
-# still be audited against the disaggregated one.
-#
-# Rows with a missing spatial value are dropped at every level except all_gulf,
-# which is what makes L2, L3 and L4 run on the same stomachs.
+# =============================================================================
+# 1. PERIOD AND SPATIAL PREPARATION
+# =============================================================================
+# make_dat_classed() applies the period map and the row filters and stores the
+# spatial unit under `.spatial_src`; prepare_spatial_strata() writes the output
+# spatial column from it, pooled or not according to the level.
 
 make_dat_classed <- function(diet_clean, period_map,
                              spatial_var = SPATIAL_SOURCE) {
@@ -220,18 +145,12 @@ prepare_spatial_strata <- function(dat) {
   dat
 }
 
-
-
 # =============================================================================
-# 2. MATRIX CONSTRUCTION AND THE REPLICATE UNIT
+# 2. SET x PREY MATRICES
 # =============================================================================
-# The core mechanism to prevent pseudoreplication is aggregating stomach
-# contents up to the **trawl set** level. The set becomes the definitive
-# replicate for assessing ecological shifts across periods.
-#
-# For occurrence matrices, the data is normalized by the number of stomachs
-# sampled in that specific set. This generates a genuine proportional gradient
-# rather than a coarse binary presence/absence grid.
+# Stomach contents are summed to the trawl set: biomass = wet mass per prey
+# category and set; occurrence = share of the set's stomachs containing the
+# category.
 
 .add_set_uid <- function(d) {
   d$set_uid <- paste(d$year, d[["vessel.code"]], d$set, sep = "_")
@@ -340,37 +259,10 @@ align_mats <- function(m1, m2) {
   list(m1 = o1, m2 = o2)
 }
 
+# Guard: `somatic_wt_g` must hold the PREY weight (it varies among the prey
+# rows of one stomach and does not scale with predator length), otherwise the
+# biomass currency would sum predator mass. Warns, never stops.
 
-# -----------------------------------------------------------------------------
-# Guard: the weight column must hold the PREY weight
-# -----------------------------------------------------------------------------
-# build_biomass_set() sums `somatic_wt_g` per set and prey category, which is
-# only meaningful if that column carries the weight of the prey item on each
-# row. It does: confirmed against the upstream build.
-#
-# The check below is kept as a regression guard, not an open question. The
-# column name invites the opposite reading — "somatic weight" conventionally
-# means the gutted weight of a fish, and the neighbouring `somatic_length_cm`
-# IS a predator measurement — so a future change to the build could substitute
-# a predator weight without anything downstream complaining. It would not
-# error; it would quietly turn the biomass currency into a count of prey
-# records weighted by predator size.
-#
-# NOTE FOR THE DATA DICTIONARY AND THE METHODS
-#   `somatic_length_cm` describes the PREDATOR (it sets the size class relative
-#   to length at maturity); `somatic_wt_g` describes the PREY item. Two columns
-#   sharing the `somatic_` prefix describe different entities. State this
-#   explicitly wherever the data are archived.
-#
-# Two signatures separate the two cases:
-#   * a predator attribute is constant across the several prey rows of one
-#     stomach; a prey weight varies between them;
-#   * a predator weight scales allometrically with predator length, with a
-#     log-log slope near 3.
-#
-# Called by the run scripts before the sweep. It warns rather than stops, and
-# under the current build it should print a low constant-within-stomach share
-# and a flat slope, and raise nothing.
 check_prey_weight_column <- function(dat, wt_col = "somatic_wt_g",
                                      len_col = "somatic_length_cm",
                                      id_col = "stomach_id") {
@@ -423,15 +315,9 @@ check_prey_weight_column <- function(dat, wt_col = "somatic_wt_g",
   invisible(list(constant_within_stomach = const, allometric_slope = slope, r2 = r2))
 }
 
-
 # =============================================================================
-# 3. ALPHA DIVERSITY AND NICHE BREADTH
+# 3. DIVERSITY AND NICHE BREADTH
 # =============================================================================
-# To test differences in Shannon diversity (H'), the pipeline utilizes a
-# delete-one-set jackknife resampling procedure combined with a Welch's t-test
-# (Zahl, 1977). For Levins' niche breadth (Bs), the metric is standardized
-# using a fixed n_cat representing the total prey categories available in the
-# pooled temporal cell.
 
 shannon_from_vec <- function(x) {
   x <- as.numeric(x); x <- x[is.finite(x) & x > 0]
@@ -535,28 +421,13 @@ compare_index_sets <- function(v1, v2, test = BS_TEST, n_perm = R_PERM) {
   out
 }
 
-
 # =============================================================================
-# 4. MULTIVARIATE COMPOSITION AND PREY ASSOCIATED WITH THE CHANGE
+# 4. COMPOSITION
 # =============================================================================
-# Change in overall diet structure is tested by PERMANOVA (`adonis2`), with
-# PERMDISP (`betadisper`) to check whether a significant result reflects a shift
-# in location or a difference in dispersion.
-#
-# Prey associated with that change are identified by multivariate generalized
-# linear models (`manylm`) on Hellinger-transformed data, together with
-# Indicator Value analysis (`indval`). Both are associative: they identify prey
-# whose relative abundance differs between periods, or which characterise one
-# period. Neither establishes that a prey caused the compositional change. The
-# `driver_prey` column name is retained for schema continuity with earlier
-# outputs; read it as "prey associated with the transition".
-
-# Failure counters. Both tests run inside tryCatch() and return NA on error, so
-# without these a systematic failure (package API change, unexpected data shape)
-# would leave every cell blank while the sweep finishes normally. run_pipeline()
-# resets them at the start of a run and reports them at the end.
-.comp_fail_count   <- 0L
-.driver_fail_count <- 0L
+# PERMANOVA (adonis2) on Bray-Curtis dissimilarities between set profiles, with
+# PERMDISP (betadisper) to flag cells where location and dispersion effects
+# are confounded. Failures are counted so that a systematic error is visible.
+.comp_fail_count <- 0L
 
 run_composition_set <- function(s1, s2, mode = c("biomass", "occurrence"), perm = R_PERM, relative = COMP_RELATIVE) {
   mode <- match.arg(mode)
@@ -565,9 +436,6 @@ run_composition_set <- function(s1, s2, mode = c("biomass", "occurrence"), perm 
   al <- align_mats(s1, s2)
   if (is.null(al$m1) || is.null(al$m2)) return(empty)
 
-  # Set counts are recorded before the early return, so a cell with too few tows
-  # still reports its true depth. audit_set_depth() divides by
-  # (n_set_P1 + n_set_P2) and would return Inf on a zero.
   empty$n_set_P1 <- nrow(al$m1); empty$n_set_P2 <- nrow(al$m2)
   if (nrow(al$m1) < 2 || nrow(al$m2) < 2) return(empty)
 
@@ -602,9 +470,6 @@ run_composition_set <- function(s1, s2, mode = c("biomass", "occurrence"), perm 
       n_set_P1 = nrow(m1), n_set_P2 = nrow(m2)
     )
   }, error = function(e) {
-    # Failures are counted and the first few are printed, so a systematic cause
-    # (vegan API change, adonis2 output layout change) is visible instead of
-    # surfacing as a sweep where every cell is Inconclusive.
     .comp_fail_count <<- .comp_fail_count + 1L
     if (.comp_fail_count <= 5L) {
       message("run_composition_set failed (", .comp_fail_count, "): ",
@@ -614,107 +479,15 @@ run_composition_set <- function(s1, s2, mode = c("biomass", "occurrence"), perm 
   })
 }
 
-run_mglm_indval <- function(m1, m2, alpha = ALPHA, p_uni = DRIVER_PUNI, relative = DRIVER_RELATIVE, n_perm = R_PERM) {
-  if (is.null(m1) || is.null(m2)) return(NA_character_)
-  al <- align_mats(m1, m2)
-  combined <- rbind(al$m1, al$m2)
-  groups <- factor(c(rep("P1", nrow(al$m1)), rep("P2", nrow(al$m2))))
-
-  keep_col <- colSums(combined > 0) >= 2
-  combined <- combined[, keep_col, drop = FALSE]
-  if (ncol(combined) < 2 || nrow(combined) < 4 || any(table(groups) < 2)) return(NA_character_)
-
-  tryCatch({
-    mv <- mvabund(as.matrix(decostand(combined, method = "hellinger")))
-    fit <- manylm(mv ~ groups)
-    an <- anova(fit, test = "F", p.uni = p_uni, nBoot = n_perm)
-
-    # Non-finite entries are dropped from the p-value vector before its names
-    # are read, so taxon labels stay aligned with the p-values they belong to.
-    uni_p <- an$uni.p["groups", ]
-    uni_p <- uni_p[is.finite(uni_p)]
-    mglm_sig <- names(uni_p)[uni_p <= alpha]
-
-    # numitr is passed explicitly: indval() otherwise runs its own default of
-    # 1000 permutations, independent of R_PERM. as.integer() on the factor gives
-    # the level indices, which is what maxcls indexes back into below.
-    #
-    # API check, worth running once after any labdsv update:
-    #   args(labdsv:::indval.data.frame)
-    # expects (x, clustering, numitr = 1000, ...). If that signature has
-    # changed, this call will either error or silently ignore numitr, and the
-    # per-cell permutation count would stop tracking R_PERM.
-    iv_input <- if (relative) decostand(combined, "total") else combined
-    iv <- indval(as.data.frame(iv_input), as.integer(groups), numitr = n_perm)
-
-    indval_sig <- tibble(
-      prey = names(iv$indcls), indval = as.numeric(iv$indcls),
-      group = levels(groups)[iv$maxcls], p_indval = as.numeric(iv$pval)
-    ) %>% filter(p_indval <= alpha)
-
-    c1 <- colSums(al$m1[, colnames(combined), drop = FALSE])
-    c2 <- colSums(al$m2[, colnames(combined), drop = FALSE])
-    c1 <- c1 / sum(c1); c2 <- c2 / sum(c2)
-
-    sig <- intersect(colnames(combined), union(mglm_sig, indval_sig$prey))
-    if (length(sig) == 0) return(NA_character_)
-
-    keep <- tibble(prey = sig) %>% mutate(dProp = unname(c2[prey] - c1[prey])) %>% arrange(desc(abs(dProp))) %>% pull(prey)
-
-    out <- vapply(keep, function(px) {
-      iv_row <- indval_sig[indval_sig$prey == px, , drop = FALSE]
-      has_iv <- nrow(iv_row) > 0
-      dprop <- unname(c2[px] - c1[px])
-      sprintf("%s(MGLM=%s, IndVal=%s, grp=%s, p=%s, dProp=%+0.3f)",
-              px, px %in% mglm_sig, ifelse(has_iv, round(iv_row$indval[1], 2), NA),
-              ifelse(has_iv, iv_row$group[1], NA), ifelse(has_iv, round(iv_row$p_indval[1], 3), NA), dprop)
-    }, character(1))
-
-    paste(out, collapse = " | ")
-  }, error = function(e) {
-    # Same reporting logic as run_composition_set(): a driver_prey column that
-    # is empty because manylm or indval failed on every cell is otherwise
-    # indistinguishable from one where no prey reached significance.
-    .driver_fail_count <<- .driver_fail_count + 1L
-    if (.driver_fail_count <= 5L) {
-      message("run_mglm_indval failed (", .driver_fail_count, "): ",
-              conditionMessage(e))
-    }
-    NA_character_
-  })
-}
-
-
 # =============================================================================
-# 5. NICHE WIDTH PARTITIONING (Optional Information-Theoretic Decomposition)
+# 5. NICHE WIDTH PARTITION
 # =============================================================================
-# Shannon entropy decomposes additively over a nested grouping, so a total
-# niche width can be split into a within-unit and a between-unit component.
-# This engine provides TWO such decompositions. They answer different questions
-# and must not be described interchangeably in the Methods.
-#
-# niche_partition_set() — the unit is the TRAWL SET.
-#   TNW         : niche width of the period as a whole
-#   WIC_set     : mean niche width of a single tow
-#   BIC_set     : among-tow component, i.e. spatio-temporal heterogeneity of
-#                 prey availability within a period
-#   This is NOT the WIC of Roughgarden (1972) or Bolnick et al. (2002), whose
-#   within-unit component is the individual consumer. Do not cite those papers
-#   for WIC_TNW_set. It is always computed, and is the only partition produced
-#   when ADD_IND_NICHE = FALSE.
-#
-# niche_partition_ind() — the unit is the STOMACH. This IS the WIC/TNW of
-#   Roughgarden (1972; 1979:510) and Bolnick et al. (2002, eq. 4-6):
-#     TNW = WIC + BIC_within_set + BIC_among_set
-#   BIC_within_set is between-stomach variation among fish caught in the same
-#   tow — individual specialization net of local prey availability.
-#   BIC_among_set is tow-to-tow heterogeneity. Bolnick et al. (2002, "Sampling
-#   considerations") note that cross-sectional gut contents normally cannot
-#   separate the two; here the tow is recorded, so they can be. The nesting
-#   itself is a standard information-theoretic decomposition and is not a
-#   formula printed in either source paper — state that in the Methods.
-#   Biomass only: for a presence/absence stomach with k prey, H = log(k), and
-#   WIC would collapse to mean log-richness.
+# Shannon entropy decomposes additively over a nested grouping.
+#   niche_partition_set(): unit = trawl set. TNW = niche width of the period,
+#     WIC_set = mean width of one tow, BIC_set = among-tow component. This is
+#     not the individual WIC of Roughgarden (1972) / Bolnick et al. (2002).
+#   niche_partition_ind(): unit = stomach (Roughgarden 1972; Bolnick et al.
+#     2002), with BIC split within and among sets. Biomass only.
 
 niche_partition_set <- function(mat) {
   if (is.null(mat) || nrow(mat) == 0 || sum(mat) <= 0) return(NULL)
@@ -773,26 +546,18 @@ design_effect <- function(y, set_uid) {
   list(icc = round(icc, 3), deff = round(deff, 2), n_eff = round(n / deff, 1))
 }
 
-
 # =============================================================================
-# 6. MAIN PIPELINE & CLASSIFICATION
+# 6. MAIN PIPELINE AND CLASSIFICATION
 # =============================================================================
-# The analytical outputs cascade into a 9-state decision matrix, classifying
-# ecological dynamics based on the boolean convergence of structural stability
-# (H', Bs) and taxonomic composition.
 
-run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, period_2, do_driver_prey = FALSE, seed = 1234) {
+run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, period_2, seed = 1234) {
   mode <- match.arg(mode)
   if (!is.null(seed)) set.seed(seed)
-  .comp_fail_count   <<- 0L
-  .driver_fail_count <<- 0L
+  .comp_fail_count <<- 0L
 
-  # The spatial level comes from SPATIAL_LEVEL, not from an argument, so one
-  # session cannot mix two levels inside a single set of results.
   dat <- prepare_spatial_strata(dat)
   setDT(dat)
 
-  if (!exists("PREY_FAMILY")) PREY_FAMILY <- "_2"   # défaut = comportement actuel
   prey_cols <- names(dat)[grep(paste0("^prey_category_\\d+", PREY_FAMILY, "$"), names(dat))]
   out <- list(); inventory_all <- list()
 
@@ -821,10 +586,7 @@ run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, perio
 
     for (i in seq_len(nrow(inventory_x))) {
 
-      # The seed is set per cell, from the cell's own coordinates, so each cell
-      # draws the same permutations regardless of which cells ran before it.
-      # Two runs differing only in a switch such as COMP_RELATIVE then differ
-      # only through that switch, not through permutation noise.
+      # Seed per cell, so each cell draws the same permutations whatever ran before.
       if (!is.null(seed)) set.seed(seed + 1000L * curr_x + i)
       sp <- inventory_x$predator_species_common_name[i]
       sz <- as.character(inventory_x$size_class[i])
@@ -850,7 +612,6 @@ run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, perio
       idx1 <- row_indices_set(s1a, n_cat); idx2 <- row_indices_set(s2a, n_cat)
       Bscmp <- compare_index_sets(idx1$Bs, idx2$Bs)
       comp <- run_composition_set(s1a, s2a, mode = mode, perm = R_PERM)
-      driver_prey <- if (isTRUE(do_driver_prey)) run_mglm_indval(s1a, s2a, alpha = ALPHA) else NA_character_
 
       np1 <- np2 <- NULL
       if (isTRUE(ADD_NICHE_PART)) {
@@ -920,7 +681,7 @@ run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, perio
         n_sto_P1 = n_sto_P1, n_sto_P2 = n_sto_P2,
         n_set_P1 = comp$n_set_P1, n_set_P2 = comp$n_set_P2,
         testable = testable, reliable = reliable,
-        diagnostic = diagnostic, mode = mode, driver_prey = driver_prey
+        diagnostic = diagnostic, mode = mode
       )
       row[[SPATIAL_OUT]] <- ar
       res_x[[i]] <- row
@@ -936,90 +697,16 @@ run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, perio
             "(package version, data structure) rather than sparse cells.",
             call. = FALSE)
   }
-  if (.driver_fail_count > 0L) {
-    warning(.driver_fail_count, " prey-association test(s) failed and returned NA. ",
-            "Cells with an empty driver_prey are failures, not absences of ",
-            "associated prey.", call. = FALSE)
-  }
-  cat(sprintf(
-    "\n[%s] %d cells | %.1f%% testable | %d composition failures | %d association failures\n",
-    mode, nrow(res), 100 * mean(res$testable),
-    .comp_fail_count, .driver_fail_count))
+  cat(sprintf("\n[%s] %d cells | %.1f%% testable | %d composition failures\n",
+              mode, nrow(res), 100 * mean(res$testable), .comp_fail_count))
 
   list(results = res, inventory = bind_rows(inventory_all),
-       n_comp_failures   = .comp_fail_count,
-       n_driver_failures = .driver_fail_count)
+       n_comp_failures = .comp_fail_count)
 }
-
 
 # =============================================================================
-# 7. AUDIT HELPERS & DIAGNOSTIC TABLE
+# 7. PER-RUN FIGURE AND SAVE
 # =============================================================================
-# These helper functions allow users to review the underlying structure of
-# their dataset prior to interpretation. The diagnostics table maps the
-# combinatorial logic of the pipeline to formal ecological interpretations.
-
-audit_untestable <- function(results) {
-  results %>%
-    group_by(diagnostic) %>%
-    summarise(
-      n = n(),
-      n_no_H = sum(is.na(p_H)),
-      n_no_Bs = sum(is.na(p_Bs)),
-      n_no_comp = sum(is.na(p_comp)),
-      n_below_min_sets = sum(n_set_P1 < MIN_SETS | n_set_P2 < MIN_SETS),
-      .groups = "drop"
-    ) %>%
-    mutate(pct_of_total = round(100 * n / sum(n), 2)) %>%
-    arrange(desc(n))
-}
-
-audit_signal_overlap <- function(results) {
-  results %>%
-    group_by(x_threshold) %>%
-    summarise(
-      r_P1 = suppressWarnings(cor(H_P1, Bs_P1, use = "complete.obs")),
-      r_P2 = suppressWarnings(cor(H_P2, Bs_P2, use = "complete.obs")),
-      n = n(), .groups = "drop"
-    ) %>%
-    summarise(across(c(r_P1, r_P2),
-                     list(med = ~median(.x, na.rm = TRUE),
-                          min = ~min(.x, na.rm = TRUE),
-                          max = ~max(.x, na.rm = TRUE))))
-}
-
-bs_test_floor <- function(max_n = 8) {
-  tibble(n_sets = 2:max_n) %>%
-    mutate(min_p_exact = round(2 / choose(2 * n_sets, n_sets), 4))
-}
-
-audit_set_depth <- function(results) {
-  results %>%
-    mutate(k = pmin(n_set_P1, n_set_P2)) %>%
-    summarise(
-      n_cells = n(),
-      k_min = min(k, na.rm = TRUE),
-      k_q25 = quantile(k, 0.25, na.rm = TRUE),
-      k_med = median(k, na.rm = TRUE),
-      k_q75 = quantile(k, 0.75, na.rm = TRUE),
-      pct_k_lt4 = round(100 * mean(k < 4, na.rm = TRUE), 1),
-      pct_k_lt6 = round(100 * mean(k < 6, na.rm = TRUE), 1),
-      median_stomachs_per_set = round(median((n_sto_P1 + n_sto_P2) / (n_set_P1 + n_set_P2), na.rm = TRUE), 1)
-    )
-}
-
-compare_comp_relative <- function(results_raw, results_rel, key = c("x_threshold", "species", "size_class", SPATIAL_OUT)) {
-  inner_join(
-    results_raw %>% select(all_of(key), d_raw = diagnostic),
-    results_rel %>% select(all_of(key), d_rel = diagnostic),
-    by = key
-  ) %>%
-    summarise(
-      n = n(),
-      n_changed = sum(d_raw != d_rel),
-      pct_changed = round(100 * n_changed / n, 1)
-    )
-}
 
 diet_diagnostics_table <- tribble(
   ~Diagnostic, ~Statistical_Logic, ~Ecological_Interpretation,
@@ -1035,15 +722,6 @@ diet_diagnostics_table <- tribble(
   "Inconclusive", "Sample size or data consistency insufficient", "No diagnostic can be reliably assigned."
 )
 
-
-# =============================================================================
-# 8. VISUALIZATION AND EXECUTION WRAPPERS
-# =============================================================================
-# This final block provides a visualization utility that accounts for the
-# study design effect (`n_eff`) to accurately represent the variance across
-# ecological states, alongside an execution wrapper to run and save the
-# complete analysis in one step.
-
 make_diag_plot2 <- function(df, mode_label, period_1, period_2,
                             spatial_level = SPATIAL_LEVEL,
                             by_area = FALSE, file_out = NULL,
@@ -1054,11 +732,7 @@ make_diag_plot2 <- function(df, mode_label, period_1, period_2,
   if (drop_untestable && "testable" %in% names(df)) df <- dplyr::filter(df, testable)
   if (nrow(df) == 0) return(NULL)
 
-  # by_area is kept as the argument name for compatibility with existing
-  # scripts; it means "facet by spatial unit", whatever that unit is.
-  # A pooled level has a single spatial unit, so the facetted version would be
-  # a copy of the global one. run_save_plot() skips the call entirely at those
-  # levels; this guard covers direct calls.
+  # by_area = facet by spatial unit; meaningless with a single unit.
   if (by_area && dplyr::n_distinct(df[[SPATIAL_OUT]]) < 2) by_area <- FALSE
 
   STABILITY_LABS <- c("Stable Diet", "Emerging Shift")
@@ -1213,7 +887,6 @@ make_diag_plot2 <- function(df, mode_label, period_1, period_2,
 }
 
 run_save_plot <- function(dat, sc, mode, period_1, period_2,
-                          do_driver_prey = FALSE,
                           drop_untestable = TRUE,
                           out_dir  = paste0("Sensitivity_", SPATIAL_LEVEL),
                           plot_dir = paste0("Sensitivity_Plot_", SPATIAL_LEVEL)) {
@@ -1221,25 +894,16 @@ run_save_plot <- function(dat, sc, mode, period_1, period_2,
   dir.create(out_dir,  recursive = TRUE, showWarnings = FALSE)
   dir.create(plot_dir, recursive = TRUE, showWarnings = FALSE)
 
-  # The level is part of every filename, so the four levels can share a folder
-  # and can be run concurrently without overwriting one another.
   label <- paste0(
     sc,PREY_FAMILY, "_", SPATIAL_LEVEL, "_",
     gsub("[^A-Za-z0-9]+", "_", period_1), "_vs_",
     gsub("[^A-Za-z0-9]+", "_", period_2)
   )
 
-  res <- run_pipeline(
-    dat = dat, mode = mode,
-    period_1 = period_1, period_2 = period_2,
-    do_driver_prey = do_driver_prey
-  )
+  res <- run_pipeline(dat = dat, mode = mode, period_1 = period_1, period_2 = period_2)
 
   save(res, file = file.path(out_dir, paste0(mode, "_", label, ".rda")))
 
-  # Results-level summary. At a disaggregated level this counts diagnostics
-  # that were tested within units; at a pooled level it is the single global
-  # test. The two are not interchangeable.
   make_diag_plot2(
     df = res$results, inventory_df = res$inventory, mode_label = mode,
     period_1 = period_1, period_2 = period_2,
@@ -1271,73 +935,76 @@ run_save_plot <- function(dat, sc, mode, period_1, period_2,
   invisible(res)
 }
 
-# Row-binds the results of two or more levels for cross-level comparison. The
-# spatial columns differ between levels ("Area" vs "str"), so both are mapped to
-# a common `spatial_unit` column and the level is carried alongside.
-bind_levels <- function(...) {
-  parts <- list(...)
-  bind_rows(lapply(parts, function(r) {
-    d <- if (is.list(r) && !is.data.frame(r)) r$results else r
-    sp_col <- intersect(c("Area", "str"), names(d))[1]
-    d$spatial_unit <- if (is.na(sp_col)) NA_character_ else as.character(d[[sp_col]])
-    dplyr::select(d, -dplyr::any_of(c("Area", "str")))
-  }))
-}
+# =============================================================================
+# 8. ALL SCENARIOS FOR THE CURRENT LEVEL
+# =============================================================================
+# Five contrasts x two currencies, results in Sensitivity_<level><family>/ and
+# figures in Sensitivity_Plot_<level><family>/, then one .rda with all runs.
+SCENARIOS <- list(
+  P1 = list("2004"      = 2004,             "2006"      = 2006),
+  P2 = list("2018"      = 2018,             "2019"      = 2019),
+  P3 = list("2004-2005" = c(2004, 2005),    "2006"      = 2006),
+  P4 = list("2006"      = 2006,             "2018"      = 2018),
+  PT = list("2004-2006" = c(2004, 2005, 2006), "2018-2019" = c(2018, 2019))
+)
 
-# Diagnostic composition per level, the table that answers "what does changing
-# the spatial grain do to the classification".
-compare_levels <- function(...) {
-  bind_levels(...) %>%
-    filter(testable) %>%
-    count(spatial_level, diagnostic) %>%
-    group_by(spatial_level) %>%
-    mutate(pct = round(100 * n / sum(n), 1)) %>%
-    ungroup() %>%
-    tidyr::pivot_wider(names_from = spatial_level,
-                       values_from = c(n, pct), values_fill = 0)
+run_all_scenarios <- function(data_path = "data/dat_classed.rda") {
+  load(data_path)
+  diet_clean <- as.data.frame(dat_classed)
+  if (!is.na(SPATIAL_SOURCE)) {
+    if (!SPATIAL_SOURCE %in% names(diet_clean))
+      stop("Column '", SPATIAL_SOURCE, "' not found in dat_classed.")
+    diet_clean[[SPATIAL_SOURCE]] <- as.factor(diet_clean[[SPATIAL_SOURCE]])
+  }
+
+  cat("\n--- Stomachs per year ---\n")
+  print(diet_clean %>% filter(year %in% c(2004:2006, 2018:2019)) %>%
+          distinct(stomach_id, year) %>% count(year))
+  check_prey_weight_column(diet_clean)
+
+  out_dir_data  <- paste0("Sensitivity_", SPATIAL_LEVEL, PREY_FAMILY)
+  out_dir_plots <- paste0("Sensitivity_Plot_", SPATIAL_LEVEL, PREY_FAMILY)
+
+  runs <- list()
+  for (sc in names(SCENARIOS)) {
+    pm  <- SCENARIOS[[sc]]
+    dat <- make_dat_classed(diet_clean, period_map = pm)
+    for (mode in c("biomass", "occurrence")) {
+      cat("\n=== ", SPATIAL_LEVEL, PREY_FAMILY, " | ", sc, " | ", mode, " ===\n", sep = "")
+      runs[[paste0("res_", if (mode == "biomass") "biomass" else "occ", "_", sc)]] <-
+        run_save_plot(dat, sc, mode, names(pm)[1], names(pm)[2],
+                      out_dir = out_dir_data, plot_dir = out_dir_plots)
+    }
+  }
+
+  dir.create("data/Sensitivity", recursive = TRUE, showWarnings = FALSE)
+  list2env(runs, envir = environment())
+  save(list = names(runs),
+       file = paste0("data/Sensitivity/all_runs_", SPATIAL_LEVEL, PREY_FAMILY, ".rda"))
+  cat("\nDone: ", SPATIAL_LEVEL, PREY_FAMILY, " (", length(runs), " runs saved)\n", sep = "")
+  invisible(runs)
 }
 
 # =============================================================================
 # LITERATURE CITED
 # =============================================================================
 # Anderson, M. J. (2001). A new method for non-parametric multivariate analysis
-#   of variance. Austral Ecology, 26(1), 32-46.                    [PERMANOVA]
+#   of variance. Austral Ecology, 26, 32-46.
 # Anderson, M. J. (2006). Distance-based tests for homogeneity of multivariate
-#   dispersions. Biometrics, 62(1), 245-253.                      [betadisper]
-# Bolnick, D. I., Yang, L. H., Fordyce, J. A., Davis, J. M., & Svanback, R.
-#   (2002). Measuring individual-level resource specialization.
-#   Ecology, 83(10), 2936-2941.                       [WIC/TNW, discrete form]
-# Bolnick, D. I., Svanback, R., Fordyce, J. A., Yang, L. H., Davis, J. M.,
-#   Hulsey, C. D., & Forister, M. L. (2003). The ecology of individuals:
-#   incidence and implications of individual specialization.
-#   The American Naturalist, 161(1), 1-28.
-# Clarke, K. R. (1993). Non-parametric multivariate analyses of changes in
-#   community structure. Australian Journal of Ecology, 18(1), 117-143.
-#                                                        [SIMPER, superseded]
-# Dufrene, M., & Legendre, P. (1997). Species assemblages and indicator
-#   species: the need for a flexible asymmetrical approach.
-#   Ecological Monographs, 67(3), 345-366.                            [IndVal]
+#   dispersions. Biometrics, 62, 245-253.
+# Bolnick, D. I., et al. (2002). Measuring individual-level resource
+#   specialization. Ecology, 83, 2936-2941.
 # Hurlbert, S. H. (1978). The measurement of niche overlap and some relatives.
-#   Ecology, 59(1), 67-77.                        [standardisation of Levins B]
+#   Ecology, 59, 67-77.
 # Hurlbert, S. H. (1984). Pseudoreplication and the design of ecological field
-#   experiments. Ecological Monographs, 54(2), 187-211.
-# Kish, L. (1965). Survey Sampling. Wiley.                    [design effect]
-# Legendre, P., & Gallagher, E. D. (2001). Ecologically meaningful
-#   transformations for ordination of species data.
-#   Oecologia, 129(2), 271-280.                          [Hellinger transform]
-# Levins, R. (1968). Evolution in Changing Environments. Princeton University
-#   Press.                                                  [niche breadth B]
-# Roughgarden, J. (1972). Evolution of niche width. The American Naturalist,
-#   106(952), 683-718.                                             [WIC / TNW]
-# Wang, Y., Naumann, U., Wright, S. T., & Warton, D. I. (2012). mvabund - an R
-#   package for model-based analysis of multivariate abundance data.
-#   Methods in Ecology and Evolution, 3(3), 471-474.
-# Warton, D. I., Wright, S. T., & Wang, Y. (2012). Distance-based multivariate
-#   analyses confound location and dispersion effects.
-#   Methods in Ecology and Evolution, 3(1), 89-101.
-#                                     [rationale for replacing SIMPER by MGLM]
+#   experiments. Ecological Monographs, 54, 187-211.
+# Kish, L. (1965). Survey Sampling. Wiley.
+# Levins, R. (1968). Evolution in Changing Environments. Princeton Univ. Press.
+# Pennington, M., & Volstad, J. H. (1994). Assessing the effect of intra-haul
+#   correlation and variable density on estimates of population characteristics
+#   from marine surveys. Biometrics, 50, 725-732.
+# Roughgarden, J. (1972). Evolution of niche width. Am. Nat., 106, 683-718.
 # Welch, B. L. (1947). The generalization of "Student's" problem when several
-#   different population variances are involved. Biometrika, 34(1/2), 28-35.
-# Zahl, S. (1977). Jackknifing an index of diversity. Ecology, 58(4), 907-913.
-#                                              [delete-one-set jackknife of H']
+#   different population variances are involved. Biometrika, 34, 28-35.
+# Zahl, S. (1977). Jackknifing an index of diversity. Ecology, 58, 907-913.
 # =============================================================================

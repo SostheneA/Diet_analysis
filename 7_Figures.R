@@ -1,52 +1,20 @@
 # =============================================================================
-# 7_Figures.R - MANUSCRIPT FIGURES
+# 7_Figures.R - MAIN FIGURES 5-10 AND SUPPLEMENTARY S3-S4
 # -----------------------------------------------------------------------------
-# Builds the body figures from the saved pipeline results. Nothing is
-# recomputed: every .rda already holds the per-cell diagnostics, so this script
-# only aggregates, maps to the four families, and draws.
+# Run after 6b, 6c and 6d. Nothing is recomputed: the saved results hold the
+# per-cell diagnostics; this script aggregates (freq_by_resolution: percentages
+# within each resolution, then the mean across resolutions; Inconclusive cells
+# excluded) and draws. File names follow the manuscript numbering.
 #
-# Run after 6b, 6c and 6d have finished. Independent of which spatial level was
-# last sourced, because it reads all three from disk.
-#
-# WHAT THIS SCRIPT PRODUCES
-# -----------------------------------------------------------------------------
-#   Fig5_regime_break_gulf        Manuscript Figure 5.
-#                                 Family frequencies by contrast and currency at
-#                                 the Gulf-wide level. The headline figure: the
-#                                 within-decade contrasts set the baseline, PTa
-#                                 and PTb sit outside it.
-#
-#   Fig6_regime_break_ecoregion   Manuscript Figure 6.
-#                                 Same quantities per ecoregion, showing where
-#                                 the inter-decade break is expressed.
-#
-#   Fig7_map_families_biomass     Manuscript Figure 7.
-#   FigS6_map_families_occurrence Supplementary S6.
-#                                 Within-stratum family frequency mapped on the
-#                                 survey strata, one row per family, one column
-#                                 per contrast. Every stratum is shown; values
-#                                 built on fewer than N_FLAG predator x size
-#                                 units carry an asterisk.
-#
-#   Fig7b_map_families_combined   Both currencies in one figure, for review.
-#
-#   Fig_crossscale_gradient       The §3.3 result: as the spatial unit widens
-#                                 from stratum to ecoregion to the whole Gulf,
-#                                 Stability falls and Reorganisation rises while
-#                                 Substitution holds. This is the figure that
-#                                 justifies reporting three levels.
-#
-#   Fig_heatmap_units             Dense alternative to Figure 6: family by
-#                                 spatial unit, faceted by currency x contrast.
-#                                 Useful when the stratum panel count is too
-#                                 high for a bar chart.
-#
-# HOW THE NUMBERS ARE BUILT
-#   Percentages are computed within each taxonomic resolution and then averaged
-#   across the ~100 resolutions (freq_by_resolution() in the config module).
-#   Inconclusive cells are excluded before the percentage, so the four families
-#   sum to 100. Coverage — how many cells were classifiable — is reported
-#   separately by 8_Tables.R rather than hidden in these figures.
+#   Fig5_regime_break_gulf        families by contrast, Gulf-wide
+#   Fig6_regime_break_ecoregion   composition within each ecoregion
+#   Fig7_regime_break_ecoregion   families by contrast, mean across ecoregions
+#   Fig8_regime_break_stratum     families by contrast, mean across strata
+#   Fig9_map_strata_biomass       family frequency mapped on strata, biomass
+#   Fig10_crossscale_gradient     stratum -> ecoregion -> Gulf, between periods
+#   FigS3_regime_break_by_ecoregion   as Fig 5, one panel per ecoregion (2 x 2)
+#   FigS4_map_strata_occurrence   as Fig 9, occurrence
+#   data_Fig*.csv                 the numbers behind each figure
 # =============================================================================
 
 rm(list = ls())
@@ -56,20 +24,15 @@ suppressPackageStartupMessages({
   library(sf); library(readr); library(stringr)
 })
 
-PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
-source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
+PREY_FAMILY <- "_1"
+source("R_helpers/Config_Mappings.R")
 
-# -----------------------------------------------------------------------------
-# Configuration
-# -----------------------------------------------------------------------------
-N_FLAG      <- 5                        # below this many units: flag the value
-STRATA_PATH <- "strata_rv_gulf.rds"     # sf object, or leave to the package
-COAST_PATH  <- "gulf.coast.intermediate.csv"   # optional coastline (x, y, pid)
-MAP_XLIM    <- c(-66.2, -60.0)
-MAP_YLIM    <- c(45.5, 49.2)
-# Contrasts to show on the maps. 2006 vs 2018 is not estimable at the stratum scale, so
-# including it would produce a column of empty panels.
-MAP_CONTRASTS <- c("P1a", "P1b", "P2", "PTa")
+N_FLAG        <- 5                              # flag units built on fewer cells
+STRATA_PATH   <- "strata_rv_gulf.rds"           # sf object, or the gulf.spatial package
+COAST_PATH    <- "gulf.coast.intermediate.csv"  # optional coastline (x, y, pid)
+MAP_XLIM      <- c(-66.2, -60.0)
+MAP_YLIM      <- c(45.5, 49.2)
+MAP_CONTRASTS <- c("P1a", "P1b", "P2", "PTa")   # 2006 vs 2018 is not estimable by stratum
 
 # =============================================================================
 # 1. READ AND AGGREGATE
@@ -97,9 +60,8 @@ fam_unit <- res_all %>%
     by = c("currency", "contrast", "level", "spatial_unit")
   )
 
-# Cross-scale summary: the mean family composition at each level. For the two
-# disaggregated levels this is the mean across units, i.e. a pool of results,
-# not a pooled test. The distinction matters and is stated on the figure.
+# Mean family composition at each level (mean across units for ecoregion and
+# stratum).
 fam_level <- bind_rows(
   fam_gulf %>% mutate(level = "all_gulf", .before = 1),
   fam_unit %>%
@@ -119,14 +81,9 @@ long_of <- function(d) {
 # =============================================================================
 # 2. FIGURE 5 - GULF-WIDE REGIME BREAK
 # =============================================================================
-# One line per family, one linetype per currency, contrasts on the x axis in
-# manuscript order. The shaded bands separate the three within-decade contrasts
-# from the two between-decade ones: the visual claim is that PTa and PTb leave
-# the envelope traced by P1a, P1b and P2.
+# Lines per family, linetype per currency; error bars = SD across resolutions.
 cat("\nFigure 5: Gulf-wide regime break\n")
 
-# Error bars = SD of the family frequencies across the ~100 resolutions
-# (spread_by_resolution() in Config_Mappings.R; same keys as fam_gulf).
 fam_gulf_sd <- spread_by_resolution(filter(res_all, level == "all_gulf"),
                                     keys = c("currency", "contrast")) %>%
   select(currency, contrast, family, sd = pct_sd) %>%
@@ -169,16 +126,10 @@ fig5 <- ggplot(d5, aes(x, pct, colour = family, shape = family,
 save_fig(fig5, "Fig5_regime_break_gulf", width = 9, height = 5.6)
 
 # =============================================================================
-# 3. FIGURE 6 - BY ECOREGION
+# 3. FIGURE 6 - COMPOSITION BY ECOREGION
 # =============================================================================
-# The same reading, one panel per ecoregion. Stacked bars rather than lines:
-# with four families summing to 100 the stack shows composition directly, and
-# the contrast axis stays readable across four panels.
 cat("\nFigure 6: by ecoregion\n")
 
-# n_units varies by contrast, so it must not be part of the facet label
-# (that would split each ecoregion into one facet per contrast); it is
-# printed above each bar instead.
 d6 <- long_of(filter(fam_unit, level == "ecoregion")) %>%
   filter(!is.na(contrast)) %>%
   mutate(unit_lab = area_label(spatial_unit))
@@ -209,14 +160,11 @@ fig6 <- ggplot(d6, aes(contrast, pct, fill = family)) +
 save_fig(fig6, "Fig6_regime_break_ecoregion", width = 11, height = 6.4)
 
 # =============================================================================
-# 3b. REGIME BREAK AT THE ECOREGION AND STRATUM SCALES (one figure per scale)
+# 4. FIGURES 7-8 - REGIME BREAK AT THE ECOREGION AND STRATUM SCALES
 # =============================================================================
-# Same grammar as Figure 5 (lines per family, linetype per currency, shaded
-# within/between-period bands, SD error bars), applied to the across-unit mean
-# of each disaggregated scale. Values are those of Table 3; error bars are the
-# SD across the ~100 resolutions of the across-unit mean
-# (spread_by_resolution_units in Config_Mappings.R).
-cat("\nRegime break at the ecoregion and stratum scales\n")
+# Same grammar as Figure 5 on the across-unit mean; error bars = SD across
+# resolutions of that mean.
+cat("\nFigures 7-8: ecoregion and stratum scales\n")
 
 rb_sd <- spread_by_resolution_units(filter(res_all, level != "all_gulf"),
                                     keys = c("currency", "contrast", "level")) %>%
@@ -259,68 +207,81 @@ make_regime_break <- function(lvl, stem, title_txt, subtitle_txt) {
 }
 
 make_regime_break(
-  "ecoregion", "Fig7_regime_break_ecoregion_mean",
+  "ecoregion", "Fig7_regime_break_ecoregion",
   "Diet regime break at the ecoregion scale",
   paste0("Family frequencies averaged across the four ecoregions: mean and\n",
          "standard deviation across ~100 prey taxonomic resolutions"))
 
 make_regime_break(
-  "stratum", "Fig8_regime_break_stratum_mean",
+  "stratum", "Fig8_regime_break_stratum",
   "Diet regime break at the stratum scale",
   paste0("Family frequencies averaged across survey strata: mean and\n",
          "standard deviation across ~100 prey taxonomic resolutions"))
 
 # =============================================================================
-# 4. HEATMAP - DENSE ALTERNATIVE FOR THE STRATUM SCALE
+# 5. FIGURE S3 - REGIME BREAK WITHIN EACH ECOREGION
 # =============================================================================
-# With ~25 strata a bar panel per unit is unreadable. The heatmap keeps every
-# unit on one page: family on x, unit on y, faceted by currency x contrast.
-cat("\nHeatmap by spatial unit\n")
+# Same grammar as Figure 5, one panel per ecoregion; error bars = SD across
+# resolutions within the ecoregion.
+cat("\nFigure S3: regime break by ecoregion\n")
 
-make_heatmap <- function(lvl, stem, height) {
+unit_sd <- spread_by_resolution(filter(res_all, level != "all_gulf"),
+                                keys = c("currency", "contrast", "level", "spatial_unit")) %>%
+  transmute(currency = factor(currency, levels = names(CURRENCY_LAB)),
+            contrast, level = as.character(level), spatial_unit, family, sd = pct_sd)
+
+make_unit_regime_break <- function(lvl, stem, title_txt, ncol_panels, width, height,
+                                   base_size = 10, point_size = 1.8) {
   d <- long_of(filter(fam_unit, level == lvl)) %>%
-    filter(!is.na(contrast), contrast %in% MAP_CONTRASTS) %>%
-    mutate(unit_lab = paste0(spatial_unit, " (n=", n_units, ")"),
-           unit_lab = fct_reorder(unit_lab, pct * (family == "Stability"),
-                                  .fun = sum, .desc = FALSE))
+    filter(!is.na(contrast)) %>%
+    mutate(level = as.character(level)) %>%
+    left_join(unit_sd, by = c("currency", "contrast", "level", "spatial_unit", "family")) %>%
+    mutate(unit_lab = if (lvl == "ecoregion") area_label(spatial_unit) else paste("Stratum", spatial_unit),
+           x = as.integer(contrast) + ifelse(currency == "biomass", -0.08, 0.08))
+  n_cells <- d %>% group_by(unit_lab) %>% summarise(n = max(n_units, na.rm = TRUE), .groups = "drop")
+  d <- d %>% left_join(n_cells, by = "unit_lab") %>%
+    mutate(unit_lab = paste0(unit_lab, " (n = ", n, ")"))
+  if (lvl == "stratum") d <- d %>% mutate(unit_lab = fct_reorder(unit_lab, as.numeric(spatial_unit)))
 
-  g <- ggplot(d, aes(family, unit_lab, fill = pct)) +
-    geom_tile(colour = "white", linewidth = 0.4) +
-    geom_text(aes(label = sprintf("%.0f", pct),
-                  colour = ifelse(pct > 50, "white", "grey15")),
-              fontface = "bold", size = 2.7) +
-    scale_colour_identity() +
-    scale_fill_viridis_c(option = "mako", direction = -1, limits = c(0, 100),
-                         name = "Frequency\n(%)") +
-    facet_grid(currency ~ contrast,
-               labeller = labeller(currency = CURRENCY_LAB,
-                                   contrast = CONTRAST_LAB_1L)) +
-    labs(title = paste0("Family composition by ", LEVEL_SHORT[[lvl]]),
-         subtitle = "Rows ordered by Stability; n = predator x size-class units",
-         x = NULL, y = NULL) +
-    theme_diag(base_size = 10) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1, face = "bold"),
-          axis.text.y = element_text(size = 6.5),
-          strip.text  = element_text(face = "bold", size = 8),
-          panel.grid  = element_blank())
-  save_fig(g, stem, width = 12, height = height)
+  g <- ggplot(d, aes(x, pct, colour = family, shape = family,
+                     linetype = currency, group = interaction(family, currency))) +
+    decade_bands() +
+    geom_errorbar(aes(ymin = pmax(pct - sd, 0), ymax = pmin(pct + sd, 100)),
+                  width = 0.1, linewidth = 0.3, linetype = "solid",
+                  alpha = 0.7, show.legend = FALSE) +
+    geom_line(linewidth = 0.6) +
+    geom_point(size = point_size, fill = "white") +
+    facet_wrap(~unit_lab, ncol = ncol_panels) +
+    scale_x_continuous(breaks = seq_along(CONTRAST_LEVELS),
+                       labels = unname(CONTRAST_LAB[CONTRAST_LEVELS]),
+                       expand = expansion(add = 0.25)) +
+    scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25)) +
+    scale_colour_manual(values = FAMILY_PAL, name = NULL) +
+    scale_shape_manual(values = FAMILY_SHAPE, name = NULL) +
+    scale_linetype_manual(values = c(biomass = "solid", occurrence = "22"),
+                          labels = CURRENCY_LAB, name = NULL) +
+    labs(title = title_txt,
+         subtitle = paste0("Family frequencies within each unit: mean and SD across ~100 prey resolutions.\n",
+                           "Bands: within-period (left) and between-period (right) contrasts; ",
+                           "n = predator x size-class cells."),
+         x = NULL, y = "Frequency (%)") +
+    theme_diag(base_size = base_size) +
+    theme(legend.position = "bottom", legend.box = "horizontal",
+          axis.text.x = element_text(size = base_size - 3),
+          strip.text = element_text(size = base_size - 1))
+  save_fig(g, stem, width = width, height = height)
 }
 
-if (any(fam_unit$level == "ecoregion")) make_heatmap("ecoregion", "Fig_heatmap_ecoregion", 5.5)
-if (any(fam_unit$level == "stratum"))   make_heatmap("stratum",   "Fig_heatmap_stratum",   10)
+if (any(fam_unit$level == "ecoregion"))
+  make_unit_regime_break("ecoregion", "FigS3_regime_break_by_ecoregion",
+                         "Diet regime break within each ecoregion",
+                         ncol_panels = 2, width = 11, height = 8, base_size = 11, point_size = 2.2)
 
 # =============================================================================
-# 5. CROSS-SCALE GRADIENT
+# 6. FIGURE 10 - CROSS-SCALE GRADIENT (between-period contrast)
 # =============================================================================
-# The methodological result of §3.3 and §4.3. Pooling the diet matrices across
-# regionally distinct prey fields inflates apparent Reorganisation at the
-# expense of Stability, while Substitution is scale-invariant. Restricted to
-# the between-decade contrast, where the effect is largest and the claim is
-# made.
-cat("\nCross-scale gradient\n")
+cat("\nFigure 10: cross-scale gradient\n")
 
-# Error bars: SD across resolutions of the Gulf-wide percentage (all_gulf)
-# and of the across-unit mean (ecoregion, stratum).
 grad_sd <- bind_rows(
   spread_by_resolution(filter(res_all, level == "all_gulf"),
                        keys = c("currency", "contrast")) %>%
@@ -361,17 +322,13 @@ fig_grad <- ggplot(d_grad, aes(level, pct, colour = family, group = family)) +
   ) +
   theme_diag()
 
-save_fig(fig_grad, "Fig_crossscale_gradient", width = 9.5, height = 5.4)
+save_fig(fig_grad, "Fig10_crossscale_gradient", width = 9.5, height = 5.4)
 
 # =============================================================================
-# 6. FIGURE 7 - STRATUM MAPS
+# 7. FIGURE 9 AND S4 - STRATUM MAPS
 # =============================================================================
-# Geometry comes from the gulf.spatial shapefile when available, otherwise from
-# a pre-extracted sf object. gulf.spatial depends on the retired rgdal and
-# often fails to load, hence the fallback.
-cat("\nFigure 7: stratum maps\n")
+cat("\nFigures 9 and S4: stratum maps\n")
 
-# load_strata() now lives in R_helpers/Config_Mappings.R (shared with 9).
 strata <- load_strata(STRATA_PATH)
 
 if (is.null(strata)) {
@@ -455,31 +412,24 @@ if (is.null(strata)) {
   n_fm <- length(FAMILY_LEVELS)
 
   render_map("biomass", family ~ contrast,
-             "Diet-regime families across survey strata - biomass currency",
-             "Fig7_map_families_biomass", n_ct, n_fm)
+             "Diagnostic families across survey strata - biomass",
+             "Fig9_map_strata_biomass", n_ct, n_fm)
 
   render_map("occurrence", family ~ contrast,
-             "Diet-regime families across survey strata - occurrence currency",
-             "FigS6_map_families_occurrence", n_ct, n_fm)
-
-  render_map(c("biomass", "occurrence"), family ~ currency + contrast,
-             "Diet-regime families across survey strata - both currencies",
-             "Fig7b_map_families_combined", 2 * n_ct, n_fm)
+             "Diagnostic families across survey strata - occurrence",
+             "FigS4_map_strata_occurrence", n_ct, n_fm)
 }
 
 # =============================================================================
-# 7. SAVE THE AGGREGATED TABLES BEHIND THE FIGURES
+# 8. THE NUMBERS BEHIND THE FIGURES
 # =============================================================================
-# 8_Tables.R rebuilds these independently; writing them here means a figure can
-# always be traced back to the exact numbers it was drawn from.
-# Contrast codes are replaced by explicit period labels in the exported CSVs.
 export_csv <- function(x, name) {
   x %>%
     mutate(contrast = contrast_label(contrast)) %>%
     write_csv(file.path(DIR_FIGURES, name))
 }
 export_csv(fam_gulf,  "data_Fig5_gulf_families.csv")
-export_csv(fam_unit,  "data_Fig6_7_unit_families.csv")
-export_csv(fam_level, "data_crossscale_gradient.csv")
+export_csv(fam_unit,  "data_Fig6_9_unit_families.csv")
+export_csv(fam_level, "data_Fig10_crossscale.csv")
 
 cat("\nFigures and their source tables written to ", normalizePath(DIR_FIGURES), "\n", sep = "")

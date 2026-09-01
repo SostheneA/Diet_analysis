@@ -1,0 +1,4 @@
+spatial_level,n_cells,n_units,n_resolutions,stomachs,pct_testable,pct_reliable
+all_gulf,2850,1,50,15613,98.9,73.7
+ecoregion,5050,4,50,14800,95.8,49.4
+stratum,12250,27,50,9988,78.3,6.1

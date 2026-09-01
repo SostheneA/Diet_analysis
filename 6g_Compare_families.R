@@ -1,48 +1,31 @@
 # =============================================================================
-# 6f_Compare_PP_vs_pooled.R - APPENDIX: SENSITIVITY TO THE PREY-GROUPING RULE
+# 6g_Compare_families.R - APPENDIX B: SENSITIVITY TO THE PREY-GROUPING RULE
 # -----------------------------------------------------------------------------
-# Compares the three prey-grouping approaches at each spatial level
-# (all_gulf, ecoregion, stratum):
+# Compares the three prey-grouping families at each spatial level:
+#   pooled_q1     "_1"   pooled across predators, q = 1 (main analysis)
+#   pooled_q2     "_2"   pooled across predators, q = 2
+#   per_predator  "_PP"  grouping rebuilt inside each predator (3PP)
+# read from data/Sensitivity/all_runs_<level>_1 / _2 / _PP.rda (or the
+# Sensitivity_<level><family>/ folders). A family or level without results
+# is skipped.
 #
-#   pooled_q1     = "_1"  pooled across predators, q = 1   (MAIN ANALYSIS)
-#   pooled_q2     = "_2"  pooled across predators, q = 2   (original rule)
-#   per_predator  = "_PP" grouping rebuilt inside each predator (3PP)
-#
-# Outputs, written to Output_Appendices/ (DIR_APPEND from Config_Mappings.R):
-#
-#   FigB1_grouping_families_<level>   4 diagnostic families x 2 currencies, the
-#                                     three approaches in colour, explicit period
-#                                     labels on the x axis (Fig5 grammar).
-#   FigB2_grouping_pct_significant_<level>
-#                                     % of testable cells significant per test
-#                                     (composition, H', Bs, dispersion).
-#   TableB1_grouping_families_<level>.csv        long (approach x currency x
-#                                                contrast x family, mean +/- sd)
-#   TableB1_grouping_families_wide_<level>.csv   one column per family
-#   TableB2_grouping_pct_significant_<level>.csv
-#
-# Everything shared with the manuscript pipeline (family mapping, contrast
-# labels, palettes, theme, output folders) comes from Config_Mappings.R, so the
-# appendix percentages are computed exactly like Tables 2-3 and Fig 5:
-# families from STATE_TO_FAMILY, percentages within each resolution on the
-# full family grid (absent family = 0, not NA), then averaged across the
-# resolutions common to the approaches present.
-#
-# Tolerant to partial runs: an approach or level without results is skipped.
-# Everything lives in THIS project: the _2 and _PP runs are produced by the
-# same 6b/6c/6d scripts driven with PREY_FAMILY <- "_2" / "_PP" (see
-# 6z_Run_families.R), so every family is read from its own suffixed outputs:
-#   data/Sensitivity/all_runs_<level>_1.rda / _2.rda / _PP.rda
-#   Sensitivity_<level>_1/ , _2/ , _PP/
-# The unsuffixed folders (pre-family runs, if still present) are NEVER read.
+# Outputs (Output_Appendices/):
+#   FigB1_grouping_families_<level>          4 families x 2 currencies, the
+#                                            three families in colour
+#   FigB2_grouping_pct_significant_<level>   % of testable cells significant
+#                                            per test
+#   TableB1_grouping_families_<level>.csv (+ _wide), TableB2_..._<level>.csv
+# Percentages are computed as in Tables 2-3: families from STATE_TO_FAMILY,
+# within each resolution on the full family grid, then averaged across the
+# resolutions common to the families present.
 # =============================================================================
 
 suppressPackageStartupMessages({
   library(data.table); library(ggplot2)
 })
 
-PREY_FAMILY <- "_1"                     # main analysis, for Config defaults
-source("R_helpers/Config_Mappings.R")   # STATE_TO_FAMILY, CONTRAST_*, FAMILY_PAL, theme_diag, DIR_APPEND
+PREY_FAMILY <- "_1"
+source("R_helpers/Config_Mappings.R")
 
 MAIN_PROJECT <- normalizePath(getwd())
 
@@ -211,9 +194,8 @@ for (SPATIAL in LEVELS) {
             paste(unique(db[is.na(family), diagnostic]), collapse = ", "))
   db <- db[!is.na(family)]
 
-  # Percentage of each family WITHIN each resolution, on the full family grid
-  # (a family absent from a resolution is 0, not missing), as in
-  # freq_by_resolution() of Config_Mappings.R.
+  # Family percentages within each resolution on the full family grid (absent
+  # family = 0), then mean and SD across resolutions.
   keys <- c("approach", "mode", "contrast", "x_threshold")
   tot  <- db[, .(n_tot = .N), by = keys]
   cnt  <- db[, .(n = .N), by = c(keys, "family")]
@@ -223,7 +205,6 @@ for (SPATIAL in LEVELS) {
   fam_by_x[is.na(n), n := 0L]
   fam_by_x[, pct := 100 * n / n_tot]
 
-  # ...then the mean (+ SD) across the resolutions.
   fam_summary <- fam_by_x[, .(pct_mean = round(mean(pct), 1),
                               pct_sd   = round(sd(pct), 1),
                               n_thresholds = uniqueN(x_threshold)),

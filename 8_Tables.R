@@ -1,77 +1,35 @@
 # =============================================================================
-# 8_Tables.R - MANUSCRIPT TABLES
+# 8_Tables.R - MANUSCRIPT TABLES 1-3 AND S1-S5 (csv)
 # -----------------------------------------------------------------------------
-# Every numbered and supplementary table, built from the same aggregation rule
-# as the figures so that a number quoted in the text, a number in a table and a
-# point on a figure cannot disagree.
+# Run after 6b, 6c and 6d. Same aggregation rule as the figures
+# (freq_by_resolution, Inconclusive excluded), so text, tables and figures
+# cannot disagree.
 #
-# Each table is written three ways:
-#   .csv   the machine-readable version, for the data archive
-#   .html  a formatted version to paste into the manuscript
-#   the console, so the numbers can be read without leaving the session
-#
-# WHAT THIS SCRIPT PRODUCES
-# -----------------------------------------------------------------------------
-#   Table1_typology          The nine diagnostic states, the signal combination
-#                            that defines each, the family it belongs to, and
-#                            its ecological reading. This is the key to every
-#                            other table; it comes from the configuration
-#                            module, not from the data.
-#
-#   Table2_headline          Family frequency by contrast and currency at the
-#                            Gulf-wide level. The table behind the Results
-#                            paragraph on the inter-decade inversion.
-#
-#   Table3_crossscale        Family frequency by spatial level for the
-#                            between-decade contrast. The §3.3 gradient.
-#
-#   TableS1_sampling         Stomachs and cells per predator, size class and
-#                            period. The sample-size table reviewers ask for.
-#
-#   TableS2_states_gulf      The nine states, not just the four families, at
-#                            the Gulf-wide level. Shows what the collapse into
-#                            families hides.
-#
-#   TableS3_by_ecoregion     Family frequency per ecoregion.
-#   TableS4_by_stratum       Family frequency per stratum, with the low-sample
-#                            flag.
-#
-#   TableS5_coverage         Per level and contrast: how many cells existed, how
-#                            many were testable and reliable, and how often
-#                            composition and dispersion were both significant.
-#                            A family composition means little without this.
-#
-# READ TableS5 BEFORE THE OTHERS. Percentages in Tables 2 to S4 are computed on
-# testable cells only. If coverage is 45 % at one level and 90 % at another, the
-# two family compositions are not describing the same thing.
+#   Table1_typology      the nine states, their signal combination, family
+#   Table2_headline      families by contrast and currency, Gulf-wide
+#   Table3_crossscale    families by spatial level
+#   TableS1_sampling     stomachs and sets per predator, size class and period
+#   TableS2_states_gulf  the nine states, Gulf-wide
+#   TableS3_by_ecoregion / TableS4_by_stratum   families per unit
+#   TableS5_coverage     cells, testable, reliable, confounded dispersion
+# Percentages in Tables 2 to S4 are computed on testable cells only; read
+# Table S5 alongside them.
 # =============================================================================
 
 rm(list = ls())
 
 suppressPackageStartupMessages({
-  library(dplyr); library(tidyr); library(readr); library(stringr); library(knitr)
+  library(dplyr); library(tidyr); library(readr); library(stringr)
 })
 
-PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
-source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
-has_kable_extra <- requireNamespace("kableExtra", quietly = TRUE)
+PREY_FAMILY <- "_1"
+source("R_helpers/Config_Mappings.R")
 
-# -----------------------------------------------------------------------------
-# Writer: csv + html + console, under one stem
-# -----------------------------------------------------------------------------
 emit <- function(df, stem, caption, digits = 1) {
   write_csv(df, file.path(DIR_TABLES, paste0(stem, ".csv")))
-
-  kt <- knitr::kable(df, format = "html", digits = digits, caption = caption)
-  if (has_kable_extra) {
-    kt <- kableExtra::kable_styling(
-      kt, bootstrap_options = c("striped", "condensed"), full_width = FALSE)
-  }
-  writeLines(as.character(kt), file.path(DIR_TABLES, paste0(stem, ".html")))
-
   cat("\n\n===== ", caption, " =====\n", sep = "")
   print(as.data.frame(df), row.names = FALSE, digits = 4)
-  cat("  -> ", stem, ".csv / .html\n", sep = "")
+  cat("  -> ", stem, ".csv\n", sep = "")
   invisible(df)
 }
 
@@ -99,10 +57,6 @@ fam_unit <- res_all %>%
 # =============================================================================
 # TABLE 1 - THE TYPOLOGY
 # =============================================================================
-# Definitional, not empirical: it states what each label means before any
-# frequency is reported. The ecological readings are the ones carried in the
-# engine's diet_diagnostics_table, restated here so this script does not need
-# the engine.
 readings <- c(
   "Stable Diet"                 = "Same prey, same proportions, same breadth.",
   "Emerging Shift"              = "Early compositional signal, not yet significant.",
@@ -270,11 +224,8 @@ emit(tableS5, "TableS5_coverage",
             "in Tables 2 to S4 are computed on testable cells only."))
 
 # =============================================================================
-# CONSISTENCY CHECKS
+# CONSISTENCY CHECKS (warn, never stop)
 # =============================================================================
-# Cheap assertions that would have caught the aggregation errors this pipeline
-# has already been through. They warn rather than stop, so a partial run still
-# produces its tables.
 cat("\n\n===== Consistency checks =====\n")
 
 chk_sum <- fam_gulf %>%

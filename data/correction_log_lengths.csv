@@ -1,15 +1,9 @@
 stomach_id,predator_species_code,predator_species_common_name,original,corrected,lmax,action
-SL46315,62,Alewife,29.6,29,29,cap a Lmax
-SL47108,62,Alewife,31.5,29,29,cap a Lmax
-JR41582,62,Alewife,29.1,29,29,cap a Lmax
-JR36790,62,Alewife,29.1,29,29,cap a Lmax
-C4208,62,Alewife,41,29,29,cap a Lmax
-JR36466,62,Alewife,29.7,29,29,cap a Lmax
-JR36357,62,Alewife,29.4,29,29,cap a Lmax
-SC55083,340,Alligatorfish,21,19,19,cap a Lmax
-K190,40,American plaice,71,54,54,cap a Lmax
-J418,302,Arctic staghorn sculpin,49,27,27,cap a Lmax
-J463,60,Atlantic herring,57,36,36,cap a Lmax
+SL43244,12,White hake,88,75,75,cap at Lmax
+K190,40,American plaice,71,54,54,cap at Lmax
+C2254,43,Winter flounder,48,47,47,cap at Lmax
+C2300,43,Winter flounder,227,22.7,47,unit mm->cm
+J463,60,Atlantic herring,57,36,36,cap at Lmax
 K154,60,Atlantic herring,272.2,27.22,36,unit mm->cm
 K136,60,Atlantic herring,228.5,22.85,36,unit mm->cm
 J51,60,Atlantic herring,321.1,32.11,36,unit mm->cm
@@ -145,44 +139,50 @@ K59,60,Atlantic herring,251.9,25.19,36,unit mm->cm
 K70,60,Atlantic herring,265,26.5,36,unit mm->cm
 K150,60,Atlantic herring,268.7,26.87,36,unit mm->cm
 K152,60,Atlantic herring,268.2,26.82,36,unit mm->cm
+SL46315,62,Alewife,29.6,29,29,cap at Lmax
+SL47108,62,Alewife,31.5,29,29,cap at Lmax
+JR41582,62,Alewife,29.1,29,29,cap at Lmax
+JR36790,62,Alewife,29.1,29,29,cap at Lmax
+C4208,62,Alewife,41,29,29,cap at Lmax
+JR36466,62,Alewife,29.7,29,29,cap at Lmax
+JR36357,62,Alewife,29.4,29,29,cap at Lmax
+JR39615,63,Rainbow smelt,165,16.5,25,unit mm->cm
+SC58526,64,Capelin,19,18,18,cap at Lmax
+M110,143,Windowpane flounder,81,64,64,cap at Lmax
+SL49476,201,Thorny skate,57,56,56,cap at Lmax
+SL49648,201,Thorny skate,56.1,56,56,cap at Lmax
+SB49649,201,Thorny skate,59,56,56,cap at Lmax
+SL46534,201,Thorny skate,57,56,56,cap at Lmax
+SL49464,201,Thorny skate,62,56,56,cap at Lmax
+SL41519,201,Thorny skate,62,56,56,cap at Lmax
+SC58220,201,Thorny skate,58,56,56,cap at Lmax
+SL49710,201,Thorny skate,60,56,56,cap at Lmax
+SL49735,201,Thorny skate,57,56,56,cap at Lmax
+SL47568,201,Thorny skate,58.5,56,56,cap at Lmax
+SB49561,201,Thorny skate,57,56,56,cap at Lmax
+SL49631,201,Thorny skate,60,56,56,cap at Lmax
+SL42037,201,Thorny skate,57,56,56,cap at Lmax
+SL47495,201,Thorny skate,61.4,56,56,cap at Lmax
+AM58343,201,Thorny skate,59,56,56,cap at Lmax
+SL49560,201,Thorny skate,62,56,56,cap at Lmax
+SL49562,201,Thorny skate,59,56,56,cap at Lmax
+SL42447,201,Thorny skate,57,56,56,cap at Lmax
+SB47771,201,Thorny skate,56.5,56,56,cap at Lmax
+SL42276,201,Thorny skate,62,56,56,cap at Lmax
+SC57165,201,Thorny skate,61,56,56,cap at Lmax
+SL47600,201,Thorny skate,61.3,56,56,cap at Lmax
+J116,201,Thorny skate,57,56,56,cap at Lmax
+SL48766,201,Thorny skate,57,56,56,cap at Lmax
+AM60412,201,Thorny skate,59,56,56,cap at Lmax
+J22,300,Longhorn sculpin,42,37,37,cap at Lmax
+SC56443,300,Longhorn sculpin,52,37,37,cap at Lmax
+J418,302,Arctic staghorn sculpin,49,27,27,cap at Lmax
+A81,304,Moustache sculpin,17.5,17,17,cap at Lmax
+C3866,314,Spatulate sculpin,17,14,14,cap at Lmax
+SL39754,314,Spatulate sculpin,14.4,14,14,cap at Lmax
+SC55083,340,Alligatorfish,21,19,19,cap at Lmax
+SL47717,610,Northern sand lance,26.6,24,24,cap at Lmax
+C854,626,Fourline snakeblenny,26,24,24,cap at Lmax
 EM55072,880,Atlantic hookear sculpin,47,4.7,9,unit mm->cm
 EM59822,880,Atlantic hookear sculpin,52,5.2,9,unit mm->cm
 EM55074,880,Atlantic hookear sculpin,47,4.7,9,unit mm->cm
-SC58526,64,Capelin,19,18,18,cap a Lmax
-C854,626,Fourline snakeblenny,26,24,24,cap a Lmax
-J22,300,Longhorn sculpin,42,37,37,cap a Lmax
-SC56443,300,Longhorn sculpin,52,37,37,cap a Lmax
-A81,304,Moustache sculpin,17.5,17,17,cap a Lmax
-SL47717,610,Northern sand lance,26.6,24,24,cap a Lmax
-JR39615,63,Rainbow smelt,165,16.5,25,unit mm->cm
-C3866,314,Spatulate sculpin,17,14,14,cap a Lmax
-SL39754,314,Spatulate sculpin,14.4,14,14,cap a Lmax
-SL49476,201,Thorny skate,57,56,56,cap a Lmax
-SL49648,201,Thorny skate,56.1,56,56,cap a Lmax
-SB49649,201,Thorny skate,59,56,56,cap a Lmax
-SL46534,201,Thorny skate,57,56,56,cap a Lmax
-SL49464,201,Thorny skate,62,56,56,cap a Lmax
-SL41519,201,Thorny skate,62,56,56,cap a Lmax
-SC58220,201,Thorny skate,58,56,56,cap a Lmax
-SL49710,201,Thorny skate,60,56,56,cap a Lmax
-SL49735,201,Thorny skate,57,56,56,cap a Lmax
-SL47568,201,Thorny skate,58.5,56,56,cap a Lmax
-SB49561,201,Thorny skate,57,56,56,cap a Lmax
-SL49631,201,Thorny skate,60,56,56,cap a Lmax
-SL42037,201,Thorny skate,57,56,56,cap a Lmax
-SL47495,201,Thorny skate,61.4,56,56,cap a Lmax
-AM58343,201,Thorny skate,59,56,56,cap a Lmax
-SL49560,201,Thorny skate,62,56,56,cap a Lmax
-SL49562,201,Thorny skate,59,56,56,cap a Lmax
-SL42447,201,Thorny skate,57,56,56,cap a Lmax
-SB47771,201,Thorny skate,56.5,56,56,cap a Lmax
-SL42276,201,Thorny skate,62,56,56,cap a Lmax
-SC57165,201,Thorny skate,61,56,56,cap a Lmax
-SL47600,201,Thorny skate,61.3,56,56,cap a Lmax
-J116,201,Thorny skate,57,56,56,cap a Lmax
-SL48766,201,Thorny skate,57,56,56,cap a Lmax
-AM60412,201,Thorny skate,59,56,56,cap a Lmax
-SL43244,12,White hake,88,75,75,cap a Lmax
-M110,143,Windowpane flounder,81,64,64,cap a Lmax
-C2254,43,Winter flounder,48,47,47,cap a Lmax
-C2300,43,Winter flounder,227,22.7,47,unit mm->cm

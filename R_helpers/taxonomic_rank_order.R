@@ -23,4 +23,3 @@ ranknfile <- c("superdomain", "domain", "subdomain",
                "morphovar","phagovar","serovar","chemoform","forma_specialis",
                "cultivar","strain","other","unranked")
 
-#ranknfile <- rev(ranknfile)

@@ -1,11 +1,11 @@
 # =============================================================================
-# Build_spatial_layers.R - GENERATES THE THREE "new_*" SPATIAL LAYERS
+# Build_spatial_layers.R - BUILDS THE THREE "new_*" SPATIAL LAYERS
 # -----------------------------------------------------------------------------
-# Self-contained: starts from the source shapefiles and writes
+# Starts from the source shapefiles and writes
 #   data/Spatial_data/new_ecoregions_final.shp   (col. EcoZone, 6 zones)
 #   data/Spatial_data/new_regions_v2_final.shp   (col. Zone,    2nd proposal)
-#   data/Spatial_data/new_gulf_final.shp         (col. Area,    THE 4 manuscript
-#                                                 ecoregions - CORRECTED build)
+#   data/Spatial_data/new_gulf_final.shp         (col. Area,    the 4 manuscript
+#                                                 ecoregions)
 #
 # Sources (relative to the project root):
 #   data/Spatial_data/EAR_map/EAR_map.shp        ecological regions (EAR)
@@ -13,19 +13,15 @@
 #     PID 6 northumberland_strait . PID 50 baie_des_chaleurs
 #   data/Spatial_data/NAFO/nafo_2014_02.shp      NAFO unit areas (level_2 = 4TX)
 #
-# Corrections vs the original construction of new_gulf_final:
-#   1. everything is clipped to the UNION OF THE 4T UNIT AREAS
-#      (before: level_0 == 4 = all of division 4 -> 70% of Central outside 4T)
-#   2. the EAR strip 'northwest_estuary' (Gaspe north shore + estuary mouth,
-#      strata 415-416 area) is included EXPLICITLY (before: 17% of 4T had no
-#      ecoregion and its sets were silently attached to the nearest polygon)
-#   3. no S2/planar mixing: one geometry engine for the whole script
-#   4. loud checks: the script stops if an overlap or a hole appears in the
-#      surveyed area (only the unsampled upper estuary, west of -66.5, may
-#      remain uncovered)
+# Design:
+#   - every layer is clipped to the union of the 4T unit areas;
+#   - the EAR strip 'northwest_estuary' (Gaspe north shore, strata 415-416)
+#     is assigned explicitly to GASPE_TO;
+#   - one geometry engine (planar) for the whole script;
+#   - the script stops if polygons overlap or if a hole appears in the surveyed
+#     area (only the unsampled upper estuary, west of -66.5, may stay uncovered).
 #
-# After regenerating new_gulf_final.shp, rerun 4 -> 5 -> 6c (the ecoregion
-# runs), then 7/8/9. 6b (Gulf-wide) and 6d (stratum) do not depend on Area.
+# After regenerating new_gulf_final.shp, rerun 4 -> 5 -> 6c, then 7/8/9.
 # Run from the project root:  source("R_helpers/Build_spatial_layers.R")
 # =============================================================================
 
@@ -127,7 +123,7 @@ st_write(new_regions_v2_clean, file.path(SPATIAL_DIR, "new_regions_v2_final.shp"
 cat("Written:", file.path(SPATIAL_DIR, "new_regions_v2_final.shp"), "\n")
 
 # =============================================================================
-# 3. new_gulf_final.shp  (Area - THE 4 manuscript ecoregions, CORRECTED)
+# 3. new_gulf_final.shp  (Area - the 4 manuscript ecoregions)
 # =============================================================================
 clip_ear <- function(pid, name) zone_sf(EAR_sf %>% filter(PID == pid), z_4t, name, "Area")
 

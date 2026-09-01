@@ -1,50 +1,23 @@
 # =============================================================================
-# 9_Appendices.R - APPENDICES, AUDITS AND REPRODUCIBILITY
+# 9_Appendices.R - FIGURE 2, FIGURE 3, SUPPLEMENTARY FIGURES S1-S2 AND S5,
+#                  APPENDIX A TABLES AND THE RUN MANIFEST
 # -----------------------------------------------------------------------------
-# Everything a reviewer will ask for that is not a body figure or a numbered
-# table: the sampling map, the taxonomic-resolution sweep, the power and
-# coverage audits, the partition crosswalk, and a manifest recording what
-# produced the outputs.
+# Run after 6b, 6c and 6d. Reads the saved results (read_all_runs) and
+# dat_classed. File names follow the manuscript numbering.
 #
-# WHAT THIS SCRIPT PRODUCES
-# -----------------------------------------------------------------------------
-#   Fig2_sampling_map            Manuscript Figure 2. Stomachs analysed per
-#                                stratum and survey year, with ecoregion
-#                                outlines. Answers "where and when were the
-#                                data collected" before any result is shown.
-#
-#   Fig3_resolution_sweep        Manuscript Figure 3. Number of distinct prey
-#                                categories retained as the aggregation
-#                                threshold x rises from 10 to 1000, plus the
-#                                family frequencies across the same sweep. The
-#                                second panel is the robustness claim: the
-#                                signal varies smoothly, so no single resolution
-#                                drives the result.
-#
-#   FigS7_flagged_units          Which spatial units fall below the reliability
-#                                thresholds, and what the composites look like
-#                                with and without them. The sensitivity check
-#                                behind "restricting to better-sampled strata
-#                                left the composites essentially unchanged".
-#
-#   TableA1_set_depth            Trawl sets per cell by level. The binding
-#                                constraint on every test in the framework.
-#
-#   TableA2_power_vs_effect      Effect sizes (BC, R2) next to detection rates,
-#                                by level. Separates "smaller effects at finer
-#                                grain" from "less power at finer grain".
-#
-#   TableA3_partition_crosswalk  Which strata straddle an ecoregion boundary.
-#                                Ecoregion and stratum are alternative
-#                                partitions, not a nested hierarchy, and this
-#                                is the table that documents it.
-#
-#   TableA4_untestable           Why cells could not be classified, by level.
-#
-#   manifest.txt                 Session info, package versions, file
-#                                inventory with sizes and timestamps, and the
-#                                analytical parameters read back from the
-#                                results. Attach to the data archive.
+#   Output_Figures/
+#     Fig2_sets_ecoregions         trawl sets by year and pooled, four ecoregions
+#     Fig3a_prey_categories        prey categories by aggregation threshold
+#     Fig3b_sweep_families         family frequencies across the sweep
+#   Output_Appendices/
+#     FigS1_sampling_by_year       stomachs per year and ecoregion
+#     FigS2_sampling_by_stratum    stomachs per stratum and year
+#     FigS5_lowN_sensitivity       composites with / without sparse units
+#     TableA0 prey categories per threshold   TableA1 sets per cell
+#     TableA2 effect size vs detection        TableA3 stratum / ecoregion crosswalk
+#     TableA4 unclassifiable cells            TableA5 spread across resolutions
+#     TableA6 low-n sensitivity               TableA7 identification depth by period
+#     manifest.txt                            session, parameters, file inventory
 # =============================================================================
 
 rm(list = ls())
@@ -54,19 +27,20 @@ suppressPackageStartupMessages({
   library(stringr); library(sf); library(forcats)
 })
 
-PREY_FAMILY <- "_1"          # prey-grouping family used for the manuscript
-source("R_helpers/Config_Mappings.R")   # builds RDA_DIRS from PREY_FAMILY
+PREY_FAMILY <- "_1"
+source("R_helpers/Config_Mappings.R")
 
 DATA_PATH   <- "data/dat_classed.rda"
 STRATA_PATH <- "strata_rv_gulf.rds"
+ECO_PATH    <- "data/Spatial_data/new_gulf_final.shp"
 MAP_XLIM    <- c(-66.2, -60.0)
 MAP_YLIM    <- c(45.5, 49.2)
+CRS_MAP     <- "+proj=lcc +lat_1=46 +lat_2=49 +lat_0=47 +lon_0=-63 +datum=WGS84 +units=m"
 N_FLAG      <- 5
 
 save_app <- function(p, stem, w, h, dpi = 300) save_fig(p, stem, w, h, dpi, dir = DIR_APPEND)
 
 emit_app <- function(df, stem, caption) {
-  # Contrast codes never reach the appendix files: relabel to periods.
   if ("contrast" %in% names(df)) df <- dplyr::mutate(df, contrast = contrast_label(contrast))
   write_csv(df, file.path(DIR_APPEND, paste0(stem, ".csv")))
   cat("\n\n===== ", caption, " =====\n", sep = "")
@@ -85,8 +59,6 @@ have_raw <- file.exists(DATA_PATH)
 if (have_raw) {
   e <- new.env(); load(DATA_PATH, envir = e)
   raw <- get(ls(e)[1], envir = e)
-  # dat_classed may still carry an sf geometry column; dropping it keeps the
-  # distinct() and count() calls below from doing spatial work they don't need.
   if (inherits(raw, "sf")) raw <- sf::st_drop_geometry(raw)
   raw <- as.data.frame(raw)
   cat("Raw data: ", nrow(raw), " prey records.\n", sep = "")
@@ -97,12 +69,60 @@ if (have_raw) {
 }
 
 # =============================================================================
-# 2. FIGURE 2 - SAMPLING
+# 2. FIGURE 2 - TRAWL SETS BY YEAR IN THE FOUR ECOREGIONS (metric projection)
 # =============================================================================
-# Stomachs, not prey records: one record per prey item would over-weight
-# stomachs holding many taxa.
+if (have_raw && file.exists(ECO_PATH) && all(c("longitude", "latitude") %in% names(raw))) {
+  cat("\nFigure 2: trawl sets and ecoregions\n")
+
+  eco <- st_make_valid(st_read(ECO_PATH, quiet = TRUE)) %>% mutate(Area = area_label(Area))
+  sets_xy <- raw %>%
+    filter(year %in% c(2004:2006, 2018:2019), !is.na(longitude), !is.na(latitude)) %>%
+    distinct(year, vessel.code, set, longitude, latitude, Area) %>%
+    mutate(Area = area_label(Area))
+  panels <- c(sort(unique(as.character(sets_xy$year))), "All years")
+  pts <- bind_rows(sets_xy %>% mutate(panel = as.character(year)),
+                   sets_xy %>% mutate(panel = "All years")) %>%
+    mutate(panel = factor(panel, levels = panels)) %>%
+    st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+
+  land <- NULL
+  if (requireNamespace("rnaturalearth", quietly = TRUE)) {
+    land <- tryCatch(rnaturalearth::ne_states(country = c("canada", "united states of america"),
+                                              returnclass = "sf"),
+                     error = function(e) tryCatch(
+                       rnaturalearth::ne_countries(scale = "medium", returnclass = "sf"),
+                       error = function(e2) NULL))
+  }
+  bb <- st_bbox(st_transform(
+    st_as_sfc(st_bbox(c(xmin = MAP_XLIM[1], xmax = MAP_XLIM[2],
+                        ymin = MAP_YLIM[1], ymax = MAP_YLIM[2]), crs = st_crs(4326))),
+    CRS_MAP))
+
+  p2 <- ggplot()
+  if (!is.null(land)) p2 <- p2 + geom_sf(data = land, fill = "grey90", colour = "grey70", linewidth = 0.2)
+  p2 <- p2 +
+    geom_sf(data = eco, aes(fill = Area), alpha = 0.25, colour = "grey30", linewidth = 0.3) +
+    geom_sf(data = pts, aes(colour = Area), size = 0.6, alpha = 0.75, show.legend = FALSE) +
+    facet_wrap(~panel, ncol = 3) +
+    scale_fill_brewer(palette = "Set2", name = NULL) +
+    scale_colour_brewer(palette = "Set2") +
+    coord_sf(crs = CRS_MAP, xlim = bb[c("xmin", "xmax")], ylim = bb[c("ymin", "ymax")],
+             expand = FALSE) +
+    labs(title = "Trawl sets with analysed stomachs, by survey year and pooled",
+         x = NULL, y = NULL) +
+    theme_diag(base_size = 10) +
+    theme(axis.text = element_text(size = 6), panel.grid = element_line(colour = "grey93"))
+  if (requireNamespace("ggspatial", quietly = TRUE))
+    p2 <- p2 + ggspatial::annotation_scale(location = "br", width_hint = 0.25, text_cex = 0.6)
+
+  save_fig(p2, "Fig2_sets_ecoregions", width = 11, height = 7.6, dir = DIR_FIGURES)
+}
+
+# =============================================================================
+# 2b. FIGURES S1-S2 - SAMPLING (stomachs, not prey records)
+# =============================================================================
 if (have_raw) {
-  cat("\nFigure 2: sampling\n")
+  cat("\nFigures S1-S2: sampling\n")
 
   samp <- raw %>%
     filter(year %in% c(2004, 2005, 2006, 2018, 2019)) %>%
@@ -117,14 +137,13 @@ if (have_raw) {
     geom_text(aes(label = n), position = position_stack(vjust = 0.5),
               size = 2.6, colour = "white", fontface = "bold") +
     scale_fill_brewer(palette = "Set2", name = NULL) +
-    labs(title = "A. Stomachs analysed per year and ecoregion",
+    labs(title = "Stomachs analysed per year and ecoregion",
          x = NULL, y = "Stomachs") +
     theme_diag()
 
-  save_app(pA, "Fig2a_sampling_by_year", 8, 4.6)
+  save_app(pA, "FigS1_sampling_by_year", 8, 4.6)
 
-  # Panel B: the same on the map, if the geometry is available.
-  strata_sf <- load_strata(STRATA_PATH)   # gulf.spatial shapefile, else the .rds
+  strata_sf <- load_strata(STRATA_PATH)
   if (!is.null(strata_sf)) {
     strata_sf <- st_make_valid(strata_sf)
     if (is.na(st_crs(strata_sf))) st_crs(strata_sf) <- 4326
@@ -143,22 +162,19 @@ if (have_raw) {
       scale_fill_viridis_c(option = "rocket", direction = -1, trans = "sqrt",
                            name = "Stomachs") +
       coord_sf(xlim = MAP_XLIM, ylim = MAP_YLIM, expand = FALSE) +
-      labs(title = "B. Stomachs analysed per stratum and survey year") +
+      labs(title = "Stomachs analysed per stratum and survey year") +
       theme_diag(base_size = 10) +
       theme(axis.title = element_blank(), axis.text = element_text(size = 5.5),
             strip.text = element_text(face = "bold"),
             panel.grid = element_line(colour = "grey93"))
 
-    save_app(pB, "Fig2b_sampling_map", 14, 4.2, dpi = 200)
+    save_app(pB, "FigS2_sampling_by_stratum", 14, 4.2, dpi = 200)
   }
 }
 
 # =============================================================================
-# 3. FIGURE 3 - TAXONOMIC RESOLUTION SWEEP
+# 3. FIGURE 3 - TAXONOMIC RESOLUTION SWEEP (A: categories, B: families)
 # =============================================================================
-# Panel A counts the prey categories that survive each aggregation threshold.
-# Panel B carries the robustness claim: the family frequencies move smoothly
-# with x, so the reported means are not an artefact of one resolution.
 cat("\nFigure 3: resolution sweep\n")
 
 if (have_raw) {
@@ -179,7 +195,7 @@ if (have_raw) {
            x = "Threshold x (stomachs)", y = "Distinct prey categories") +
       theme_diag()
 
-    save_app(p3a, "Fig3a_prey_categories", 8, 4.4)
+    save_fig(p3a, "Fig3a_prey_categories", 8, 4.4, dir = DIR_FIGURES)
     emit_app(ncat %>% select(-col), "TableA0_prey_categories",
              "Prey categories retained at each aggregation threshold.")
   } else {
@@ -212,7 +228,7 @@ p3b <- ggplot(sweep_fam, aes(x_threshold, pct, colour = family)) +
   theme_diag() +
   theme(strip.text = element_text(size = 8))
 
-save_app(p3b, "Fig3b_sweep_families", 13, 5.6)
+save_fig(p3b, "Fig3b_sweep_families", 13, 5.6, dir = DIR_FIGURES)
 
 # Spread across the sweep: the uncertainty quoted as error bars in the body.
 sweep_spread <- sweep_fam %>%
@@ -290,12 +306,8 @@ emit_app(tableA4, "TableA4_untestable",
          "Cells that could not be classified, and which signal was missing.")
 
 # =============================================================================
-# 5. PARTITION CROSSWALK
+# 5. PARTITION CROSSWALK (strata split across ecoregions)
 # =============================================================================
-# Ecoregions are assigned per stomach by a spatial join; strata are the survey
-# polygons. The two geometries do not coincide, so some strata are split across
-# ecoregions and the two levels are alternative partitions rather than a nested
-# hierarchy. This table is what the Methods should cite on that point.
 if (have_raw && all(c("Area", "stratum") %in% names(raw))) {
   cat("\nPartition crosswalk\n")
 
@@ -329,23 +341,16 @@ if (have_raw && all(c("Area", "stratum") %in% names(raw))) {
 }
 
 # =============================================================================
-# 6. FIGURE S7 - SENSITIVITY TO LOW-SAMPLE UNITS (three scales, with intervals)
+# 6. FIGURE S5 - SENSITIVITY TO LOW-SAMPLE UNITS (three scales, with intervals)
 # =============================================================================
-# The across-unit composites are recomputed with and without the units built
-# on fewer than N_FLAG predator x size-class cells. If the two versions agree,
-# the spatial signal does not rest on the sparse units. Gulf-wide (a single
-# unit, never filtered) is shown as the reference column.
-#
-# Uncertainty: the composite is computed WITHIN each taxonomic resolution
-# (mean over the retained units), then summarised ACROSS resolutions, exactly
-# like Figs 5, 7 and 8. The interval is either
-#   S7_BAND = "q95" : empirical 2.5-97.5 % interval across resolutions
-#   S7_BAND = "sd"  : mean +/- SD across resolutions (same band as Fig 5)
-# Resolutions are not independent samples, so this is a sensitivity envelope,
-# not a parametric confidence interval - the caption should say so.
-cat("\nFigure S7: low-sample sensitivity\n")
+# Across-unit composites with and without the units built on fewer than N_FLAG
+# predator x size-class cells; Gulf-wide (single unit) is the reference column.
+# Composite computed within each resolution, then summarised across resolutions:
+#   S5_BAND = "q95"  empirical 2.5-97.5 % interval across resolutions
+#   S5_BAND = "sd"   mean +/- SD across resolutions
+cat("\nFigure S5: low-sample sensitivity\n")
 
-S7_BAND <- "q95"
+S5_BAND <- "q95"
 
 res_s7 <- res_all %>%
   mutate(spatial_unit = if_else(level == "all_gulf", "Gulf-wide", spatial_unit))
@@ -380,8 +385,8 @@ sens <- comp_by_x %>%
             q_lo = unname(quantile(pct, 0.025)), q_hi = unname(quantile(pct, 0.975)),
             n_res = n_distinct(x_threshold), n_units_kept = min(n_units_kept),
             .groups = "drop") %>%
-  mutate(lo = if (S7_BAND == "sd") pmax(pct_mean - pct_sd, 0) else q_lo,
-         hi = if (S7_BAND == "sd") pmin(pct_mean + pct_sd, 100) else q_hi,
+  mutate(lo = if (S5_BAND == "sd") pmax(pct_mean - pct_sd, 0) else q_lo,
+         hi = if (S5_BAND == "sd") pmin(pct_mean + pct_sd, 100) else q_hi,
          level    = factor(level, levels = SPATIAL_LEVELS_ORD),
          subset   = factor(subset, levels = c("All units", sub_lab)),
          family   = factor(family, levels = FAMILY_LEVELS),
@@ -389,7 +394,7 @@ sens <- comp_by_x %>%
          # numeric x with a small offset by subset so the intervals do not overlap
          x = as.integer(contrast) + if_else(subset == "All units", -0.07, 0.07))
 
-band_lab <- if (S7_BAND == "sd") "mean +/- SD across taxonomic resolutions" else
+band_lab <- if (S5_BAND == "sd") "mean +/- SD across taxonomic resolutions" else
   "95 % interval (2.5-97.5 %) across taxonomic resolutions"
 
 pS7 <- ggplot(sens, aes(x = x, y = pct_mean, colour = family,
@@ -414,7 +419,7 @@ pS7 <- ggplot(sens, aes(x = x, y = pct_mean, colour = family,
   theme_diag() +
   theme(legend.position = "top")
 
-save_app(pS7, "FigS7_flagged_units", 13, 6.5)
+save_app(pS7, "FigS5_lowN_sensitivity", 13, 6.5)
 
 emit_app(
   sens %>%
@@ -428,9 +433,86 @@ emit_app(
          band_lab, "."))
 
 # =============================================================================
-# 7. MANIFEST
+# 7. TABLE A7 - DEPTH OF PREY IDENTIFICATION BY PERIOD
 # =============================================================================
-# Written last so it records everything the run produced. Attach to the archive.
+# From tax_level_lowest (lowest recorded rank of each prey item): % of items
+# whose lowest rank is each rank (all items), and cumulative % identified to
+# that rank or finer, computed over the items carrying a taxonomic rank
+# (life-stage prey categories excluded from that denominator).
+if (!is.null(raw) && "tax_level_lowest" %in% names(raw)) {
+  cat("\nTable A7: identification depth by period\n")
+
+  e2 <- new.env(); sys.source("R_helpers/taxonomic_rank_order.R", envir = e2)
+  rank_order <- get("ranknfile", envir = e2)
+
+  # Sub-, super- and infra-ranks are counted with their parent rank.
+  parent_rank <- function(r) {
+    r <- tolower(as.character(r))
+    out <- rep(NA_character_, length(r))
+    for (p in c("phylum", "class", "order", "family", "genus", "species")) {
+      hit <- grepl(paste0("^(super|sub|infra|parv|mega|giga|magn|grand)?", p, "$"), r)
+      out[hit & is.na(out)] <- p
+    }
+    out
+  }
+
+  id <- raw %>%
+    mutate(period = case_when(year %in% 2004:2006 ~ "2004-2006",
+                              year %in% 2018:2019 ~ "2018-2019",
+                              TRUE ~ NA_character_)) %>%
+    filter(!is.na(period), !is.na(tax_level_lowest)) %>%
+    transmute(period,
+              rank_raw = tolower(as.character(tax_level_lowest)),
+              rank     = coalesce(parent_rank(tax_level_lowest), "life-stage prey category"),
+              depth    = match(rank_raw, rank_order))    # position in the full rank list
+
+  rank_lv <- c("phylum", "class", "order", "family", "genus", "species",
+               "life-stage prey category")
+  i_of <- function(p) match(p, rank_order)
+
+  at_rank <- id %>%
+    count(period, rank, name = "n") %>%
+    group_by(period) %>%
+    mutate(pct_at = round(100 * n / sum(n), 1)) %>%
+    ungroup() %>%
+    select(-n)
+
+  reach <- id %>%
+    filter(!is.na(depth)) %>%
+    group_by(period) %>%
+    summarise(n_items = n(),
+              class   = round(100 * mean(depth >= i_of("class"),   na.rm = TRUE), 1),
+              order   = round(100 * mean(depth >= i_of("order"),   na.rm = TRUE), 1),
+              family  = round(100 * mean(depth >= i_of("family"),  na.rm = TRUE), 1),
+              genus   = round(100 * mean(depth >= i_of("genus"),   na.rm = TRUE), 1),
+              species = round(100 * mean(depth >= i_of("species"), na.rm = TRUE), 1),
+              .groups = "drop") %>%
+    pivot_longer(c(class, order, family, genus, species),
+                 names_to = "rank", values_to = "pct_at_or_finer")
+
+  tabA7 <- expand_grid(rank = rank_lv, period = unique(id$period)) %>%
+    left_join(at_rank, by = c("period", "rank")) %>%
+    left_join(reach %>% select(period, rank, pct_at_or_finer), by = c("period", "rank")) %>%
+    mutate(pct_at = coalesce(pct_at, 0)) %>%
+    pivot_wider(names_from = period, values_from = c(pct_at, pct_at_or_finer),
+                names_glue = "{.value}_{period}") %>%
+    mutate(rank = factor(rank, levels = rank_lv)) %>%
+    arrange(rank)
+
+  n_items <- id %>% count(period, name = "n_items")
+  cat("Prey items: ", paste(n_items$period, n_items$n_items, collapse = " | "), "\n", sep = "")
+
+  emit_app(tabA7, "TableA7_identification_depth",
+           paste0("Depth of prey identification by period (% of prey items whose lowest ",
+                  "recorded rank is each rank, and % identified to that rank or finer); n = ",
+                  paste(n_items$n_items, collapse = " / "), " items"))
+} else {
+  message("tax_level_lowest not in dat_classed: Table A7 skipped.")
+}
+
+# =============================================================================
+# 8. MANIFEST
+# =============================================================================
 cat("\nManifest\n")
 
 manifest <- file.path(DIR_APPEND, "manifest.txt")
@@ -466,7 +548,7 @@ wl("  Prey-grouping family: ",
 wl("  Result folders: ", paste(RDA_DIRS, collapse = ", "))
 wl("")
 wl("OUTPUT FILES")
-for (d in c(DIR_FIGURES, DIR_TABLES, DIR_APPEND, DIR_DRIVERS)) {
+for (d in c(DIR_FIGURES, DIR_TABLES, DIR_APPEND)) {
   if (!dir.exists(d)) next
   fs <- list.files(d, full.names = TRUE)
   if (!length(fs)) next
@@ -484,3 +566,4 @@ close(con)
 
 cat("  -> manifest.txt\n")
 cat("\nAppendices written to ", normalizePath(DIR_APPEND), "\n", sep = "")
+

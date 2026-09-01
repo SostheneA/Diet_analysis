@@ -1,0 +1,58 @@
+d_eco,d_str,n,pct_within_eco
+Emerging Shift,Stable Diet,174,71.3
+Emerging Shift,Emerging Shift,29,11.9
+Emerging Shift,Ghost Shift,23,9.4
+Emerging Shift,Niche Compression/Expansion,11,4.5
+Emerging Shift,Major Shift,4,1.6
+Emerging Shift,Internal Rebalancing,3,1.2
+Ghost Shift,Ghost Shift,1189,45
+Ghost Shift,Stable Diet,692,26.2
+Ghost Shift,Emerging Shift,259,9.8
+Ghost Shift,Partial Diet Shift,230,8.7
+Ghost Shift,Structural Shift,104,3.9
+Ghost Shift,Niche Compression/Expansion,77,2.9
+Ghost Shift,Major Shift,60,2.3
+Ghost Shift,Internal Rebalancing,25,0.9
+Ghost Shift,Niche Restructuring,9,0.3
+Internal Rebalancing,Internal Rebalancing,40,47.1
+Internal Rebalancing,Stable Diet,31,36.5
+Internal Rebalancing,Ghost Shift,6,7.1
+Internal Rebalancing,Niche Compression/Expansion,4,4.7
+Internal Rebalancing,Structural Shift,3,3.5
+Internal Rebalancing,Partial Diet Shift,1,1.2
+Major Shift,Ghost Shift,327,53.1
+Major Shift,Stable Diet,93,15.1
+Major Shift,Structural Shift,83,13.5
+Major Shift,Emerging Shift,36,5.8
+Major Shift,Major Shift,33,5.4
+Major Shift,Partial Diet Shift,25,4.1
+Major Shift,Niche Compression/Expansion,16,2.6
+Major Shift,Niche Restructuring,2,0.3
+Major Shift,Internal Rebalancing,1,0.2
+Niche Compression/Expansion,Stable Diet,33,100
+Niche Restructuring,Stable Diet,10,55.6
+Niche Restructuring,Internal Rebalancing,4,22.2
+Niche Restructuring,Niche Compression/Expansion,4,22.2
+Partial Diet Shift,Ghost Shift,455,60.3
+Partial Diet Shift,Partial Diet Shift,113,15
+Partial Diet Shift,Stable Diet,82,10.9
+Partial Diet Shift,Internal Rebalancing,34,4.5
+Partial Diet Shift,Emerging Shift,19,2.5
+Partial Diet Shift,Niche Restructuring,17,2.3
+Partial Diet Shift,Major Shift,16,2.1
+Partial Diet Shift,Niche Compression/Expansion,10,1.3
+Partial Diet Shift,Structural Shift,8,1.1
+Stable Diet,Stable Diet,759,73.5
+Stable Diet,Internal Rebalancing,151,14.6
+Stable Diet,Niche Compression/Expansion,44,4.3
+Stable Diet,Ghost Shift,40,3.9
+Stable Diet,Emerging Shift,32,3.1
+Stable Diet,Partial Diet Shift,6,0.6
+Structural Shift,Ghost Shift,351,37.4
+Structural Shift,Stable Diet,325,34.6
+Structural Shift,Structural Shift,106,11.3
+Structural Shift,Emerging Shift,46,4.9
+Structural Shift,Major Shift,45,4.8
+Structural Shift,Partial Diet Shift,44,4.7
+Structural Shift,Internal Rebalancing,19,2
+Structural Shift,Niche Compression/Expansion,2,0.2

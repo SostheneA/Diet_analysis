@@ -1,65 +1,34 @@
 #------------------------------------------------------------------------------#
-# objectives : assigning prey_catagory and/or taxonomic hierarchy to preys
+# 2_prey_to_taxon.R - PREY CATEGORIES AND TAXONOMIC HIERARCHY (WoRMS)
 #
-# author : Sosthene Akia / LL
+# Input  : data/diet_corr.RData (from 1_diet_corrections.R)
+#          R_helpers/taxonomic_rank_order.R
+# Output : data/prey_taxon_data.rda (species_prey_id: prey with a WoRMS
+#          classification; species_prey_noid: prey left unclassified)
 #
-# Input :
-#   - data/diet_corr from 1_diet_corrections.R
-#   - R/taxonomic_rank_order.R", similar to source("R/helpers/taxonomy_levels.R")
-#
-# Output :
-#  - species_prey_id, and species_prey_noid in /data/prey_taxon_data.rda
-#
-#
-#
-# TODO (assignment):
-# Better grouping of preys or significant grouping for preys
-# 40 mains predators (based on more than 100 stomachs threshold)
-#
-# Main prey or stomach elements groups
-#   A - garbage (parasites, plants or old algae groups, land insects)
-#   B - well identified preys
-#   C - unidentified preys
-#
-#  Target date : February 20th 2026.
-#  Adds to TODO
-#  - functional groups (not possible in the allocated time),
-#  - define empty,
-#  - what to remove before analysis
-#  - corrections to diet_raw
-#  - larvae, plantae/chromista problem, big vs small item
-#
+# Prey records are first sorted into broad categories (identified prey,
+# egg/larvae, digested, parasite, plantae/chromista, empty), then the
+# identified ones are matched to WoRMS by AphiaID (gulf::species.names) or,
+# failing that, by latin name, and their full hierarchy is retrieved.
 #------------------------------------------------------------------------------#
 
 rm(list = ls())
-gc()
 
-
-# 1. Environment & Data Loading ------------------------------------------------
-#------------------------------------------------------------------------------#
 project_path <- here::here()
 
-## a) load libraries and helpers -----------------------------------------------
 library(data.table)
 library(taxize)
 library(worrms)
 library(gulf)
 library(here)
 
-# Probably similar to source("R/helpers/taxonomy_levels.R")
 source(paste0(project_path, "/R_helpers/taxonomic_rank_order.R"))
-
-# data - run 1_diet_corrections.R to obtain this
 load(paste0(project_path, "/data/diet_corr.RData"))
 setDT(diet_corr)
-## c) Create a species_prey file  ----------------------------------------------
 
-### ii) ---
-
-# A CORRIGER CHEZ LYSANDRE
+# 1. One row per prey name, with its sampling footprint -------------------------
 species_prey <- diet_corr[,
                           .(
-                            #  n = .N, # no need of this see below for exploration
                             n_prey_count_per_prey = sum(number_of_prey, na.rm = TRUE),
                             n_stomach_per_prey = uniqueN(stomach_id, na.rm = TRUE),
                             n_predator_per_prey = uniqueN(predator_species_latin_name, na.rm = TRUE),
@@ -72,53 +41,6 @@ species_prey <- diet_corr[,
                             prey_species_latin_name
                           )
 ]
-
-
-### i) exploration to know if my n n_... ok ----
-#species_prey2 <- diet_corr[
-#  ,
-#  .(
-#    n = .N,
-#    n_prey_count_per_prey = sum(number_of_prey, na.rm = TRUE),
-#    n_stomach_per_prey = uniqueN(stomach_id, na.rm = TRUE),
-#    n_predator_per_prey = uniqueN(predator_species_latin_name, na.rm = TRUE)
-#  ),
-#  by = .(
-#    cruise_number,
-#    cruise_year,
-#    set,
-#    stomach_id,
-#    predator_species_common_name,
-#    code = prey_species_code,
-#    prey_species_common_name,
-#    prey_species_latin_name
-#  )
-#]
-#
-#species_prey3 <- diet_corr[
-#  ,
-#  .(
-#    n = .N,
-#    n_prey_count_per_prey = sum(number_of_prey, na.rm = TRUE),
-#    n_stomach_per_prey = uniqueN(stomach_id, na.rm = TRUE),
-#    n_predator_per_prey = uniqueN(predator_species_latin_name, na.rm = TRUE)
-#  ),
-#  by = .(
-#    #cruise_number,
-#    #cruise_year,
-#    #set,
-#    stomach_id,
-#    predator_species_common_name,
-#    code = prey_species_code,
-#    prey_species_common_name,
-#    prey_species_latin_name
-#  )
-#]
-
-#rm(species_prey2, species_prey3)
-
-
-
 
 
 # 2. Broad Categorization & Manual Aphia Overrides -----------------------------
@@ -143,7 +65,7 @@ Organic_list <- c("Mucus",
                "Unid. species",
                "Unidentified",
                "no prey information",
-               "Odobenidae (f.)" # error ?? walrus in "Hemitripterus americanus" stomach unless it's genetic
+               "Odobenidae (f.)"   # walrus code in a sea raven stomach: not a prey
 )
 
 Unid_fish_list <- c("Unid fish and remains",
@@ -154,18 +76,10 @@ Unid_fish_list <- c("Unid fish and remains",
 
 Unid_invert_list <- c("Unid. marine invertebrata",
               "Ctenophora,coelenterata,porifera",
-              #"Hyalellidae (f.)", # ?? see comment in diet file, one observation (Amphipoda (Order), but it has a problem in WoRMS with it.)
-              "Protochordata sp.", # could be tunicata or something else, one observation
+              "Protochordata sp.",
               "Zooplankton",
               "Invertebrate"
               )
-
-Mixed_prey_list <- c(#"Clupeidae/osmeridae (f.)",
-                    #"Euphausiacea/mysidacea o.",
-                    #"Protobranchia/heteroconchia", # Bivalvia
-                     #"Ctenophora,coelenterata,porifera"#, # old grouping Ctenophora/Cnidaria/Porifera Phylum
-                    # "Psoluse/thyone" # Dendrochirotida
-                    ) # just one stay here for now, the other are now classified, see below
 
 Eggs_larvae_list <- list("Eggs - invertebrate" = c("Invertebrate", "egg"),
                          "Eggs - Invertebrate" = c("Invertebrate", "egg"),
@@ -216,8 +130,7 @@ Algae_list <- c("Seaweed/Algae/Kelp unidentified",
                 "Brown rockweed unidentified",
                 "Red seaweed unidentified",
                 "Eel grass"
-                ) #c("Obsolete") - for latin name, Kingdom: Plantae, Chromista
-
+                )
 
 
 ## b) apply the logic to the dataframe --------------------------------------------
@@ -228,7 +141,6 @@ map_latin <- setNames(vapply(Eggs_larvae_list, `[`, character(1L), 1L),
 map_stage <- setNames(vapply(Eggs_larvae_list, `[`, character(1L), 2L),
                       names(Eggs_larvae_list))
 
-# Update only matching rows
 setDT(species_prey)
 species_prey[prey_species_latin_name %in% names(Eggs_larvae_list),
              `:=`(
@@ -247,20 +159,17 @@ species_prey[prey_species_latin_name %in% Unid_fish_list,
 ### prey category -----
 species_prey[, prey_category := fcase(
   prey_species_latin_name %in% Not_list, "empty",
-  prey_species_latin_name %in% Inorganic_list, "digested",# "scale_shell_debris",
+  prey_species_latin_name %in% Inorganic_list, "digested",
   prey_species_latin_name %in% Organic_list, "digested",
-  # prey_species_latin_name %in% Unid_fish_list, "Teleostei",
   prey_species_latin_name %in% Unid_invert_list, "digested",
   (!is.na(life_stage)), "egg_larvae",
   (!is.na(life_stage) & is.na(prey_species_latin_name)), "digested",
-  prey_species_latin_name %in% Rest_list, "digested",# "scale_shell_debris",
+  prey_species_latin_name %in% Rest_list, "digested",
   prey_species_latin_name %in% Parasite_list, "parasite",
-  # prey_species_latin_name %in% Mixed_prey_list, "Mixed_Prey",
   default = "identified_prey_species"
 )]
 
 
-# just to be sure but it's an error if it's match something.
 species_prey[is.na(prey_species_latin_name) & is.na(prey_species_common_name),
           `:=`(
             prey_category  = "empty")
@@ -272,14 +181,12 @@ species_prey$prey_category <- ifelse(species_prey$prey_species_common_name %in% 
                                      species_prey$prey_category)
 
 
-
-
 ## c) apply manual aphia_id overrides for some groups -----------------------------
 all.sp <- as.data.table(gulf::species.names)
 all.sp[, aphia_id_origin := aphia_id]
 
-### i) where necessary, add aphia ID from Andrew code -----------------------------
-all.sp[code == 290, aphia_id_origin := 126417] # Clupeidae/Osmeridae -> Teleostei 293496 or as François 126417 (Clupea harengus)
+### i) aphia ID for the survey's composite codes ---------------------------------
+all.sp[code == 290, aphia_id_origin := 126417] # Clupeidae/Osmeridae -> Clupea harengus
 all.sp[code == 2699, aphia_id_origin := 1086] # Euphausiacea/Mysida -> Eumalacostraca
 all.sp[code == 2902, aphia_id_origin := 1080] # copepoda small -> Copepoda
 all.sp[code == 2901, aphia_id_origin := 1080] # copepoda large -> Copepoda
@@ -305,7 +212,6 @@ species_prey[, prey_size_cat := fifelse(code %in% c(3102, 2902), "small", prey_s
 species_prey[, prey_size_cat := fifelse(code %in% c(3101, 2901), "large", prey_size_cat)]
 
 
-
 # 3. Taxonomic Lookup (WoRMS via AphiaID) -------------------------------------
 #------------------------------------------------------------------------------#
 ## find those that have aphia_id -------------------------
@@ -313,14 +219,13 @@ aphia_id_origins  <- unique(species_prey[aphia_id_origin > 0, aphia_id_origin])
 
 ## look if all aphia_ids are valid.----------------------------
 
-# The worrm:: function don't work with long vector
-# we have to create batches
+# worrms accepts short vectors only: query in batches of 50.
 aphia_id_origins_batches <- split(aphia_id_origins, ceiling(seq_along(aphia_id_origins) / 50))
 
 
 aphia_ids_verified_list <- lapply(aphia_id_origins_batches, function(batche) {
   tryCatch({
-    Sys.sleep(0.2) # small pause for the server to think if we had too much data to send
+    Sys.sleep(0.2)
     return(wm_record(id = batche))
   }, error = function(e) {
     warning("Error on this batch of ids : ", paste(head(batche), collapse=", "))
@@ -334,8 +239,6 @@ aphia_ids_verified_df[, valid_AphiaID := fifelse(is.na(valid_AphiaID), parentNam
 aphia_id_origins_verified <- unique(aphia_ids_verified_df$valid_AphiaID)
 
 
-
-
 ## a) Batch retrieve classification aphia_id, WoRMS----------------------------------
 if(!exists("class_list_prey_w")){
 class_list_prey_w <- taxize::classification(aphia_id_origins_verified, db = "worms", return_id = TRUE)
@@ -344,9 +247,6 @@ class_tbl_prey  <- rbindlist(class_list_prey_w[!is.na(class_list_prey_w)],
                              fill = TRUE, idcol = "aphia_id")
 
 ### i) Hierarchy processing ----------------------------------------------------
-
-#rank_levels <- tolower(ranknfile)
-
 class_tbl_prey[, rank := tolower(rank)]
 class_tbl_prey[rank == "phylum (division)", rank := "phylum"]
 class_tbl_prey[rank == "subphylum (subdivision)", rank := "subphylum"]
@@ -373,7 +273,6 @@ class_tbl_prey <- merge(
 )
 
 
-
 ### iii) merge WoRMS aphia_id and hierarchy -------------------------------------
 species_prey_aphia <- merge(
   x = species_prey,
@@ -382,13 +281,9 @@ species_prey_aphia <- merge(
   all.y = TRUE
 )
 
-#species_prey_aphia <- species_prey_aphia[aphia_id_origin %in% aphia_id_origins,]
-aphia_id_origins_rest <- setdiff(aphia_id_origins,  unique(class_tbl_prey$aphia_id_origin))
-aphia_id_origins_rest
-#species_prey_aphiax <- species_prey_aphia[, .(.N), by = "aphia_id_origin"]
-
-
-
+aphia_id_origins_rest <- setdiff(aphia_id_origins, unique(class_tbl_prey$aphia_id_origin))
+if (length(aphia_id_origins_rest)) message("AphiaIDs without classification: ",
+                                           paste(aphia_id_origins_rest, collapse = ", "))
 
 
 ## b) Batch retrieve classification latin names, WoRMS --------------------------
@@ -400,13 +295,11 @@ latin_names  <- unique(species_prey[is.na(aphia_id_origin) &
                                               prey_species_latin_name])
 
 
-# The worrm:: function don't work with long vector
-# we have to create batches
 latin_names_batches <- split(latin_names, ceiling(seq_along(latin_names) / 50))
 
 latin_names_verified_list <- lapply(latin_names_batches, function(batche) {
   tryCatch({
-    Sys.sleep(0.2) # small pause for the server to think if we had too much data to send
+    Sys.sleep(0.2)
     return(wm_records_names(name = batche))
   }, error = function(e) {
     warning("Error on this batch of names : ", paste(head(batche), collapse=", "))
@@ -418,7 +311,6 @@ latin_names_verified_df <- dplyr::bind_rows(latin_names_verified_list)
 setDT(latin_names_verified_df)
 latin_names_verified_df[, valid_AphiaID := fifelse(is.na(valid_AphiaID), parentNameUsageID, valid_AphiaID)]
 latin_names_id_verified <- unique(latin_names_verified_df$valid_AphiaID)
-
 
 
 if(!exists("class_list_prey_w_latin")){
@@ -433,9 +325,6 @@ class_tbl_prey2  <- rbindlist(class_list_prey_w_latin[!is.na(class_list_prey_w_l
 
 
 ### i) Hierarchy processing ----------------------------------------------------
-
-#rank_levels <- tolower(ranknfile)
-
 class_tbl_prey2[, rank := tolower(rank)]
 class_tbl_prey2[rank == "phylum (division)", rank := "phylum"]
 class_tbl_prey2[rank == "subphylum (subdivision)", rank := "subphylum"]
@@ -463,8 +352,7 @@ class_tbl_prey2 <- merge(
 )
 
 
-### ii) merge WoRMS aphia_id and hierarchy -------------------------------------------
-# A CORRIGER CHEZ LYSANDRE
+### iii) merge WoRMS aphia_id and hierarchy ------------------------------------
 species_prey_latin <- merge(
   x = subset(species_prey, is.na(aphia_id_origin)),
   y = class_tbl_prey2,
@@ -473,25 +361,20 @@ species_prey_latin <- merge(
 )
 
 
-latin_names_rest <- setdiff(latin_names,  unique(class_tbl_prey2$prey_species_latin_name))
-latin_names_rest
+latin_names_rest <- setdiff(latin_names, unique(class_tbl_prey2$prey_species_latin_name))
+if (length(latin_names_rest)) message("Latin names without classification: ",
+                                      paste(latin_names_rest, collapse = ", "))
 
 
 # 4) Merge identified preys together "Id", and find the remain ones "NoId" -----
-species_prey_id <- rbind(species_prey_aphia, species_prey_latin, fill = T)
-#species_prey_id <- unique(species_prey_id)
+species_prey_id <- rbind(species_prey_aphia, species_prey_latin, fill = TRUE)
 
 species_prey_noid_list <- setdiff(unique(species_prey$prey_species_latin_name), unique(species_prey_id$prey_species_latin_name))
 species_prey_noid <- species_prey[species_prey$prey_species_latin_name %in% species_prey_noid_list,]
-#species_prey_noid <- unique(species_prey_noid)
 
-length(unique(species_prey_id$verified_name))
-length(unique(species_prey_noid$prey_category))
+cat("Classified prey names: ", uniqueN(species_prey_id$verified_name),
+    " | unclassified: ", nrow(species_prey_noid), "\n", sep = "")
 
-
-# 5) Final export---------------------------------------------------------------
-#NoIdentify_tobe_classify <- copy(species_prey_noid)
-#Identify_tobe_group <- copy(species_prey_id)
-
+# 5) Export --------------------------------------------------------------------
 save(species_prey_id, species_prey_noid, file = paste0(project_path, "/data/prey_taxon_data.rda"))
 
