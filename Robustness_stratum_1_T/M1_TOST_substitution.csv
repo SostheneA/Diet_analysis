@@ -1,0 +1,11 @@
+contrast,contrast_type,mode,n_substitution,pct_equiv_H,pct_equiv_Bs,pct_equiv_both
+P1a,within,biomass,920,0,13.478260869565217,0
+P1a,within,occurrence,1689,0,0.2368265245707519,0
+P1b,within,biomass,1360,0,16.911764705882355,0
+P1b,within,occurrence,1923,0,0.20800832033281333,0
+P2,within,biomass,115,0,0,0
+P2,within,occurrence,372,0,0,0
+PTb,between,biomass,2129,0,13.621418506341005,0
+PTb,between,occurrence,3792,0.3428270042194093,0.3691983122362869,0
+PTa,between,biomass,8693,0.2185666628321638,30.7373748993443,0.2185666628321638
+PTa,between,occurrence,11571,0.12963443090484833,1.4086941491660185,0

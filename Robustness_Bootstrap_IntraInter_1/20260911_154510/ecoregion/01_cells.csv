@@ -1,0 +1,114 @@
+"species","size_class","spatial_unit","cell_id"
+"Alewife","adult","Magdalen Shallows",1
+"Alewife","adult","Northumberland",2
+"Alewife","juvenile","Magdalen Shallows",3
+"Alewife","juvenile","Northumberland",4
+"Alligatorfish","adult","Chaleur Bay",5
+"Alligatorfish","adult","Magdalen Shallows",6
+"Alligatorfish","adult","Northumberland",7
+"Alligatorfish","juvenile","Magdalen Shallows",8
+"American plaice","adult","Central",9
+"American plaice","adult","Chaleur Bay",10
+"American plaice","adult","Magdalen Shallows",11
+"American plaice","juvenile","Central",12
+"American plaice","juvenile","Chaleur Bay",13
+"American plaice","juvenile","Magdalen Shallows",14
+"American plaice","juvenile","Northumberland",15
+"Arctic alligatorfish","one_class","Magdalen Shallows",16
+"Arctic hookear sculpin","one_class","Magdalen Shallows",17
+"Arctic staghorn sculpin","adult","Chaleur Bay",18
+"Arctic staghorn sculpin","adult","Magdalen Shallows",19
+"Atlantic cod","adult","Central",20
+"Atlantic cod","adult","Magdalen Shallows",21
+"Atlantic cod","juvenile","Central",22
+"Atlantic cod","juvenile","Chaleur Bay",23
+"Atlantic cod","juvenile","Magdalen Shallows",24
+"Atlantic cod","juvenile","Northumberland",25
+"Atlantic herring","adult","Magdalen Shallows",26
+"Atlantic herring","adult","Northumberland",27
+"Atlantic herring","juvenile","Magdalen Shallows",28
+"Atlantic herring","juvenile","Northumberland",29
+"Atlantic hookear sculpin","one_class","Central",30
+"Atlantic hookear sculpin","one_class","Magdalen Shallows",31
+"Atlantic mackerel","adult","Magdalen Shallows",32
+"Atlantic mackerel","juvenile","Magdalen Shallows",33
+"Atlantic mackerel","juvenile","Northumberland",34
+"Atlantic poacher","one_class","Chaleur Bay",35
+"Atlantic poacher","one_class","Magdalen Shallows",36
+"Atlantic spiny lumpsucker","one_class","Magdalen Shallows",37
+"Capelin","adult","Magdalen Shallows",38
+"Capelin","juvenile","Central",39
+"Capelin","juvenile","Chaleur Bay",40
+"Capelin","juvenile","Magdalen Shallows",41
+"Daubed shanny","adult","Chaleur Bay",42
+"Daubed shanny","adult","Magdalen Shallows",43
+"Daubed shanny","juvenile","Chaleur Bay",44
+"Daubed shanny","juvenile","Magdalen Shallows",45
+"Dusky snailfish","one_class","Chaleur Bay",46
+"Dusky snailfish","one_class","Magdalen Shallows",47
+"Fourbeard rockling","juvenile","Central",48
+"Fourbeard rockling","juvenile","Chaleur Bay",49
+"Fourbeard rockling","juvenile","Magdalen Shallows",50
+"Fourline snakeblenny","one_class","Magdalen Shallows",51
+"Greenland cod","juvenile","Magdalen Shallows",52
+"Greenland halibut","adult","Central",53
+"Greenland halibut","adult","Magdalen Shallows",54
+"Greenland halibut","juvenile","Central",55
+"Greenland halibut","juvenile","Chaleur Bay",56
+"Greenland halibut","juvenile","Magdalen Shallows",57
+"Laval's eelpout","one_class","Magdalen Shallows",58
+"Longhorn sculpin","adult","Magdalen Shallows",59
+"Longhorn sculpin","adult","Northumberland",60
+"Longhorn sculpin","juvenile","Magdalen Shallows",61
+"Longhorn sculpin","juvenile","Northumberland",62
+"Marlin-spike grenadier","one_class","Central",63
+"Moustache sculpin","one_class","Central",64
+"Moustache sculpin","one_class","Chaleur Bay",65
+"Moustache sculpin","one_class","Magdalen Shallows",66
+"Northern sand lance","one_class","Magdalen Shallows",67
+"Rainbow smelt","adult","Magdalen Shallows",68
+"Rainbow smelt","adult","Northumberland",69
+"Redfish unidentified","adult","Central",70
+"Redfish unidentified","adult","Magdalen Shallows",71
+"Redfish unidentified","juvenile","Central",72
+"Redfish unidentified","juvenile","Magdalen Shallows",73
+"Sea raven","one_class","Magdalen Shallows",74
+"Sea raven","one_class","Northumberland",75
+"Shorthorn sculpin","adult","Chaleur Bay",76
+"Shorthorn sculpin","adult","Magdalen Shallows",77
+"Shorthorn sculpin","juvenile","Magdalen Shallows",78
+"Smooth skate","juvenile","Central",79
+"Smooth skate","juvenile","Magdalen Shallows",80
+"Snakeblenny","adult","Magdalen Shallows",81
+"Snakeblenny","adult","Northumberland",82
+"Snakeblenny","juvenile","Magdalen Shallows",83
+"Spatulate sculpin","one_class","Chaleur Bay",84
+"Spatulate sculpin","one_class","Magdalen Shallows",85
+"Stout eelblenny","one_class","Chaleur Bay",86
+"Stout eelblenny","one_class","Magdalen Shallows",87
+"Thorny skate","adult","Central",88
+"Thorny skate","juvenile","Central",89
+"Thorny skate","juvenile","Magdalen Shallows",90
+"Three-spined stickleback","adult","Magdalen Shallows",91
+"Three-spined stickleback","adult","Northumberland",92
+"Three-spined stickleback","juvenile","Northumberland",93
+"Vahl's eelpout","one_class","Magdalen Shallows",94
+"White hake","adult","Central",95
+"White hake","adult","Magdalen Shallows",96
+"White hake","juvenile","Central",97
+"White hake","juvenile","Magdalen Shallows",98
+"White hake","juvenile","Northumberland",99
+"Windowpane flounder","adult","Northumberland",100
+"Windowpane flounder","juvenile","Northumberland",101
+"Winter flounder","adult","Magdalen Shallows",102
+"Winter flounder","adult","Northumberland",103
+"Winter flounder","juvenile","Magdalen Shallows",104
+"Winter flounder","juvenile","Northumberland",105
+"Witch flounder","adult","Central",106
+"Witch flounder","adult","Magdalen Shallows",107
+"Witch flounder","juvenile","Central",108
+"Witch flounder","juvenile","Magdalen Shallows",109
+"Yellowtail flounder","adult","Magdalen Shallows",110
+"Yellowtail flounder","adult","Northumberland",111
+"Yellowtail flounder","juvenile","Magdalen Shallows",112
+"Yellowtail flounder","juvenile","Northumberland",113

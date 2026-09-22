@@ -1,0 +1,1283 @@
+contrast,mode,cell,n_thresholds,modal_family,support,n_families
+P1a,biomass,Alligatorfish|adult|419,100,Stability,1,1
+P1a,biomass,Alligatorfish|adult|422,100,Substitution,0.67,2
+P1a,biomass,Alligatorfish|adult|431,100,Stability,1,1
+P1a,biomass,Alligatorfish|adult|433,100,Functional change,1,1
+P1a,biomass,Alligatorfish|adult|434,100,Reorganisation,1,1
+P1a,biomass,American plaice|adult|416,100,Functional change,0.99,2
+P1a,biomass,American plaice|adult|422,100,Stability,1,1
+P1a,biomass,American plaice|adult|423,100,Stability,1,1
+P1a,biomass,American plaice|adult|429,100,Stability,0.76,2
+P1a,biomass,American plaice|adult|431,100,Stability,0.92,2
+P1a,biomass,American plaice|adult|433,100,Stability,1,1
+P1a,biomass,American plaice|adult|434,100,Stability,0.52,2
+P1a,biomass,American plaice|adult|436,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|416,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|417,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|418,100,Functional change,1,1
+P1a,biomass,American plaice|juvenile|422,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|423,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|424,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|426,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|427,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|429,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|431,100,Substitution,0.86,2
+P1a,biomass,American plaice|juvenile|433,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|434,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|436,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|437,100,Stability,1,1
+P1a,biomass,Arctic alligatorfish|one_class|423,100,Reorganisation,1,1
+P1a,biomass,Arctic alligatorfish|one_class|424,100,Functional change,1,1
+P1a,biomass,Arctic staghorn sculpin|adult|419,100,Stability,1,1
+P1a,biomass,Arctic staghorn sculpin|adult|423,100,Stability,1,1
+P1a,biomass,Arctic staghorn sculpin|adult|427,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|420,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|422,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|431,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|434,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|436,100,Substitution,1,1
+P1a,biomass,Atlantic cod|juvenile|422,100,Stability,1,1
+P1a,biomass,Atlantic cod|juvenile|429,100,Stability,1,1
+P1a,biomass,Atlantic cod|juvenile|434,100,Stability,1,1
+P1a,biomass,Atlantic cod|juvenile|436,100,Stability,1,1
+P1a,biomass,Atlantic herring|adult|403,100,Stability,1,1
+P1a,biomass,Atlantic herring|adult|431,100,Functional change,1,1
+P1a,biomass,Atlantic herring|adult|433,100,Functional change,1,1
+P1a,biomass,Atlantic herring|adult|434,100,Functional change,1,1
+P1a,biomass,Atlantic herring|juvenile|433,100,Stability,1,1
+P1a,biomass,Atlantic hookear sculpin|one_class|422,100,Stability,1,1
+P1a,biomass,Atlantic hookear sculpin|one_class|423,100,Functional change,1,1
+P1a,biomass,Atlantic hookear sculpin|one_class|429,100,Stability,1,1
+P1a,biomass,Atlantic hookear sculpin|one_class|431,100,Stability,1,1
+P1a,biomass,Atlantic poacher|one_class|416,100,Substitution,0.54,2
+P1a,biomass,Atlantic poacher|one_class|417,100,Stability,1,1
+P1a,biomass,Atlantic poacher|one_class|423,100,Substitution,1,1
+P1a,biomass,Atlantic poacher|one_class|429,100,Substitution,1,1
+P1a,biomass,Atlantic spiny lumpsucker|one_class|423,100,Stability,1,1
+P1a,biomass,Atlantic spiny lumpsucker|one_class|429,100,Stability,1,1
+P1a,biomass,Capelin|juvenile|415,100,Stability,1,1
+P1a,biomass,Capelin|juvenile|416,100,Functional change,0.85,2
+P1a,biomass,Capelin|juvenile|418,100,Stability,1,1
+P1a,biomass,Capelin|juvenile|422,100,Functional change,0.64,2
+P1a,biomass,Capelin|juvenile|423,100,Functional change,0.64,2
+P1a,biomass,Capelin|juvenile|424,100,Stability,0.64,2
+P1a,biomass,Daubed shanny|adult|433,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|417,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|422,100,Functional change,1,1
+P1a,biomass,Daubed shanny|juvenile|423,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|424,100,Stability,0.67,2
+P1a,biomass,Daubed shanny|juvenile|429,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|433,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|434,100,Functional change,1,1
+P1a,biomass,Dusky snailfish|one_class|423,100,Stability,1,1
+P1a,biomass,Fourbeard rockling|juvenile|415,100,Stability,1,1
+P1a,biomass,Fourline snakeblenny|one_class|416,100,Functional change,1,1
+P1a,biomass,Fourline snakeblenny|one_class|422,100,Stability,1,1
+P1a,biomass,Fourline snakeblenny|one_class|423,100,Stability,1,1
+P1a,biomass,Fourline snakeblenny|one_class|429,100,Stability,1,1
+P1a,biomass,Fourline snakeblenny|one_class|431,100,Stability,1,1
+P1a,biomass,Greenland cod|juvenile|429,100,Stability,1,1
+P1a,biomass,Greenland halibut|adult|415,100,Stability,1,1
+P1a,biomass,Greenland halibut|adult|425,100,Stability,1,1
+P1a,biomass,Greenland halibut|juvenile|415,100,Stability,1,1
+P1a,biomass,Greenland halibut|juvenile|416,100,Stability,1,1
+P1a,biomass,Laval's eelpout|one_class|422,100,Stability,1,1
+P1a,biomass,Laval's eelpout|one_class|423,100,Stability,1,1
+P1a,biomass,Laval's eelpout|one_class|429,100,Stability,1,1
+P1a,biomass,Laval's eelpout|one_class|431,100,Functional change,0.37,4
+P1a,biomass,Laval's eelpout|one_class|434,100,Stability,0.88,2
+P1a,biomass,Longhorn sculpin|adult|422,100,Stability,0.85,2
+P1a,biomass,Longhorn sculpin|adult|429,100,Stability,1,1
+P1a,biomass,Longhorn sculpin|adult|433,100,Stability,1,1
+P1a,biomass,Longhorn sculpin|adult|435,100,Functional change,0.62,2
+P1a,biomass,Longhorn sculpin|juvenile|403,100,Stability,0.87,2
+P1a,biomass,Longhorn sculpin|juvenile|422,100,Stability,0.94,2
+P1a,biomass,Longhorn sculpin|juvenile|433,100,Stability,1,1
+P1a,biomass,Marlin-spike grenadier|one_class|425,100,Stability,1,1
+P1a,biomass,Marlin-spike grenadier|one_class|439,100,Functional change,0.64,2
+P1a,biomass,Moustache sculpin|one_class|416,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|422,100,Reorganisation,1,1
+P1a,biomass,Moustache sculpin|one_class|423,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|424,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|427,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|429,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|431,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|434,100,Stability,0.97,2
+P1a,biomass,Rainbow smelt|adult|432,100,Stability,1,1
+P1a,biomass,Redfish unidentified|adult|439,100,Stability,1,1
+P1a,biomass,Sea raven|one_class|435,100,Stability,1,1
+P1a,biomass,Shorthorn sculpin|adult|419,100,Stability,1,1
+P1a,biomass,Shorthorn sculpin|adult|429,100,Stability,1,1
+P1a,biomass,Smooth skate|juvenile|415,100,Stability,1,1
+P1a,biomass,Snakeblenny|adult|416,100,Stability,1,1
+P1a,biomass,Snakeblenny|adult|433,100,Stability,1,1
+P1a,biomass,Spatulate sculpin|one_class|423,100,Substitution,1,1
+P1a,biomass,Spatulate sculpin|one_class|424,100,Functional change,1,1
+P1a,biomass,Spatulate sculpin|one_class|427,100,Stability,1,1
+P1a,biomass,Stout eelblenny|one_class|418,100,Stability,1,1
+P1a,biomass,Stout eelblenny|one_class|423,100,Stability,1,1
+P1a,biomass,Thorny skate|juvenile|415,100,Functional change,1,1
+P1a,biomass,Thorny skate|juvenile|416,100,Stability,0.9,2
+P1a,biomass,Thorny skate|juvenile|436,100,Stability,1,1
+P1a,biomass,Thorny skate|juvenile|437,100,Stability,0.8,2
+P1a,biomass,White hake|adult|403,100,Functional change,0.85,2
+P1a,biomass,White hake|adult|425,100,Stability,1,1
+P1a,biomass,White hake|adult|437,100,Stability,0.51,2
+P1a,biomass,White hake|adult|439,100,Functional change,0.86,2
+P1a,biomass,White hake|juvenile|433,100,Reorganisation,0.93,2
+P1a,biomass,Winter flounder|adult|420,100,Stability,1,1
+P1a,biomass,Winter flounder|adult|433,100,Stability,1,1
+P1a,biomass,Winter flounder|adult|435,100,Substitution,0.91,2
+P1a,biomass,Winter flounder|juvenile|420,100,Stability,1,1
+P1a,biomass,Winter flounder|juvenile|421,100,Stability,1,1
+P1a,biomass,Winter flounder|juvenile|432,100,Stability,1,1
+P1a,biomass,Winter flounder|juvenile|433,100,Stability,1,1
+P1a,biomass,Witch flounder|adult|415,100,Reorganisation,0.53,2
+P1a,biomass,Witch flounder|adult|425,100,Stability,1,1
+P1a,biomass,Witch flounder|adult|437,100,Stability,1,1
+P1a,biomass,Witch flounder|juvenile|415,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|adult|403,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|adult|420,100,Stability,0.62,2
+P1a,biomass,Yellowtail flounder|adult|429,100,Substitution,0.54,4
+P1a,biomass,Yellowtail flounder|adult|436,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|juvenile|403,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|juvenile|420,100,Functional change,0.93,2
+P1a,biomass,Yellowtail flounder|juvenile|421,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|juvenile|422,100,Reorganisation,1,1
+P1a,biomass,Yellowtail flounder|juvenile|429,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|juvenile|434,100,Functional change,0.98,2
+P1a,biomass,Yellowtail flounder|juvenile|435,100,Stability,1,1
+P1a,biomass,Yellowtail flounder|juvenile|436,100,Stability,1,1
+P1a,occurrence,Alligatorfish|adult|419,100,Stability,1,1
+P1a,occurrence,Alligatorfish|adult|422,100,Substitution,1,1
+P1a,occurrence,Alligatorfish|adult|431,100,Stability,1,1
+P1a,occurrence,Alligatorfish|adult|433,100,Stability,1,1
+P1a,occurrence,Alligatorfish|adult|434,100,Reorganisation,1,1
+P1a,occurrence,American plaice|adult|416,100,Stability,0.93,3
+P1a,occurrence,American plaice|adult|422,100,Stability,1,1
+P1a,occurrence,American plaice|adult|423,100,Stability,1,1
+P1a,occurrence,American plaice|adult|429,100,Stability,1,1
+P1a,occurrence,American plaice|adult|431,100,Stability,1,1
+P1a,occurrence,American plaice|adult|433,100,Stability,1,1
+P1a,occurrence,American plaice|adult|434,100,Stability,1,1
+P1a,occurrence,American plaice|adult|436,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|416,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|417,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|418,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|422,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|423,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|424,100,Substitution,0.97,2
+P1a,occurrence,American plaice|juvenile|426,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|427,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|429,100,Functional change,1,1
+P1a,occurrence,American plaice|juvenile|431,100,Substitution,1,1
+P1a,occurrence,American plaice|juvenile|433,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|434,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|436,100,Stability,0.95,2
+P1a,occurrence,American plaice|juvenile|437,100,Stability,1,1
+P1a,occurrence,Arctic alligatorfish|one_class|423,100,Substitution,1,1
+P1a,occurrence,Arctic alligatorfish|one_class|424,100,Functional change,1,1
+P1a,occurrence,Arctic staghorn sculpin|adult|419,100,Stability,1,1
+P1a,occurrence,Arctic staghorn sculpin|adult|423,100,Stability,1,1
+P1a,occurrence,Arctic staghorn sculpin|adult|427,100,Stability,1,1
+P1a,occurrence,Atlantic cod|adult|420,100,Stability,1,1
+P1a,occurrence,Atlantic cod|adult|422,100,Stability,0.71,2
+P1a,occurrence,Atlantic cod|adult|431,100,Stability,1,1
+P1a,occurrence,Atlantic cod|adult|434,100,Stability,0.7,3
+P1a,occurrence,Atlantic cod|adult|436,100,Substitution,0.97,2
+P1a,occurrence,Atlantic cod|juvenile|422,100,Stability,1,1
+P1a,occurrence,Atlantic cod|juvenile|429,100,Stability,1,1
+P1a,occurrence,Atlantic cod|juvenile|434,100,Stability,1,1
+P1a,occurrence,Atlantic cod|juvenile|436,100,Stability,1,1
+P1a,occurrence,Atlantic herring|adult|403,100,Stability,1,1
+P1a,occurrence,Atlantic herring|adult|431,100,Stability,1,1
+P1a,occurrence,Atlantic herring|adult|433,100,Functional change,0.52,2
+P1a,occurrence,Atlantic herring|adult|434,100,Functional change,1,1
+P1a,occurrence,Atlantic herring|juvenile|433,100,Stability,1,1
+P1a,occurrence,Atlantic hookear sculpin|one_class|422,100,Stability,1,1
+P1a,occurrence,Atlantic hookear sculpin|one_class|423,100,Reorganisation,0.66,2
+P1a,occurrence,Atlantic hookear sculpin|one_class|429,100,Stability,1,1
+P1a,occurrence,Atlantic hookear sculpin|one_class|431,100,Stability,1,1
+P1a,occurrence,Atlantic poacher|one_class|416,100,Stability,1,1
+P1a,occurrence,Atlantic poacher|one_class|417,100,Stability,1,1
+P1a,occurrence,Atlantic poacher|one_class|423,100,Substitution,1,1
+P1a,occurrence,Atlantic poacher|one_class|429,100,Stability,1,1
+P1a,occurrence,Atlantic spiny lumpsucker|one_class|423,100,Substitution,1,1
+P1a,occurrence,Atlantic spiny lumpsucker|one_class|429,100,Substitution,1,1
+P1a,occurrence,Capelin|juvenile|415,100,Functional change,0.64,2
+P1a,occurrence,Capelin|juvenile|416,100,Functional change,0.64,2
+P1a,occurrence,Capelin|juvenile|418,100,Stability,1,1
+P1a,occurrence,Capelin|juvenile|422,100,Functional change,0.64,2
+P1a,occurrence,Capelin|juvenile|423,100,Stability,0.64,2
+P1a,occurrence,Capelin|juvenile|424,100,Stability,0.64,2
+P1a,occurrence,Daubed shanny|adult|433,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|417,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|422,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|423,100,Functional change,0.75,2
+P1a,occurrence,Daubed shanny|juvenile|424,100,Functional change,1,1
+P1a,occurrence,Daubed shanny|juvenile|429,100,Substitution,0.91,2
+P1a,occurrence,Daubed shanny|juvenile|433,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|434,100,Functional change,1,1
+P1a,occurrence,Dusky snailfish|one_class|423,100,Substitution,0.71,2
+P1a,occurrence,Fourbeard rockling|juvenile|415,100,Stability,1,1
+P1a,occurrence,Fourline snakeblenny|one_class|416,100,Stability,1,1
+P1a,occurrence,Fourline snakeblenny|one_class|422,100,Stability,1,1
+P1a,occurrence,Fourline snakeblenny|one_class|423,100,Substitution,0.58,2
+P1a,occurrence,Fourline snakeblenny|one_class|429,100,Stability,1,1
+P1a,occurrence,Fourline snakeblenny|one_class|431,100,Stability,1,1
+P1a,occurrence,Greenland cod|juvenile|429,100,Stability,1,1
+P1a,occurrence,Greenland halibut|adult|415,100,Stability,1,1
+P1a,occurrence,Greenland halibut|adult|425,100,Stability,1,1
+P1a,occurrence,Greenland halibut|juvenile|415,100,Stability,1,1
+P1a,occurrence,Greenland halibut|juvenile|416,100,Stability,1,1
+P1a,occurrence,Laval's eelpout|one_class|422,100,Stability,1,1
+P1a,occurrence,Laval's eelpout|one_class|423,100,Stability,1,1
+P1a,occurrence,Laval's eelpout|one_class|429,100,Stability,1,1
+P1a,occurrence,Laval's eelpout|one_class|431,100,Reorganisation,1,1
+P1a,occurrence,Laval's eelpout|one_class|434,100,Stability,1,1
+P1a,occurrence,Longhorn sculpin|adult|422,100,Substitution,1,1
+P1a,occurrence,Longhorn sculpin|adult|429,100,Stability,1,1
+P1a,occurrence,Longhorn sculpin|adult|433,100,Functional change,0.75,2
+P1a,occurrence,Longhorn sculpin|adult|435,100,Functional change,0.62,2
+P1a,occurrence,Longhorn sculpin|juvenile|403,100,Stability,1,1
+P1a,occurrence,Longhorn sculpin|juvenile|422,100,Stability,0.85,2
+P1a,occurrence,Longhorn sculpin|juvenile|433,100,Functional change,1,1
+P1a,occurrence,Marlin-spike grenadier|one_class|425,100,Substitution,0.64,2
+P1a,occurrence,Marlin-spike grenadier|one_class|439,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|416,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|422,100,Functional change,0.99,2
+P1a,occurrence,Moustache sculpin|one_class|423,100,Stability,0.94,2
+P1a,occurrence,Moustache sculpin|one_class|424,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|427,100,Stability,0.64,2
+P1a,occurrence,Moustache sculpin|one_class|429,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|431,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|434,100,Substitution,0.98,2
+P1a,occurrence,Rainbow smelt|adult|432,100,Stability,1,1
+P1a,occurrence,Redfish unidentified|adult|439,100,Stability,1,1
+P1a,occurrence,Sea raven|one_class|435,100,Stability,1,1
+P1a,occurrence,Shorthorn sculpin|adult|419,100,Stability,1,1
+P1a,occurrence,Shorthorn sculpin|adult|429,100,Stability,1,1
+P1a,occurrence,Smooth skate|juvenile|415,100,Stability,1,1
+P1a,occurrence,Snakeblenny|adult|416,100,Stability,1,1
+P1a,occurrence,Snakeblenny|adult|433,100,Stability,1,1
+P1a,occurrence,Spatulate sculpin|one_class|423,100,Substitution,1,1
+P1a,occurrence,Spatulate sculpin|one_class|424,100,Functional change,0.64,2
+P1a,occurrence,Spatulate sculpin|one_class|427,100,Functional change,0.79,2
+P1a,occurrence,Stout eelblenny|one_class|418,100,Stability,0.99,2
+P1a,occurrence,Stout eelblenny|one_class|423,100,Stability,1,1
+P1a,occurrence,Thorny skate|juvenile|415,100,Stability,1,1
+P1a,occurrence,Thorny skate|juvenile|416,100,Substitution,1,1
+P1a,occurrence,Thorny skate|juvenile|436,100,Stability,1,1
+P1a,occurrence,Thorny skate|juvenile|437,100,Stability,1,1
+P1a,occurrence,White hake|adult|403,100,Stability,0.62,2
+P1a,occurrence,White hake|adult|425,100,Stability,1,1
+P1a,occurrence,White hake|adult|437,100,Stability,1,1
+P1a,occurrence,White hake|adult|439,100,Stability,1,1
+P1a,occurrence,White hake|juvenile|433,100,Stability,0.57,2
+P1a,occurrence,Winter flounder|adult|420,100,Stability,1,1
+P1a,occurrence,Winter flounder|adult|433,100,Stability,1,1
+P1a,occurrence,Winter flounder|adult|435,100,Substitution,0.91,2
+P1a,occurrence,Winter flounder|juvenile|420,100,Stability,1,1
+P1a,occurrence,Winter flounder|juvenile|421,100,Stability,1,1
+P1a,occurrence,Winter flounder|juvenile|432,100,Stability,1,1
+P1a,occurrence,Winter flounder|juvenile|433,100,Stability,0.77,2
+P1a,occurrence,Witch flounder|adult|415,100,Stability,1,1
+P1a,occurrence,Witch flounder|adult|425,100,Stability,1,1
+P1a,occurrence,Witch flounder|adult|437,100,Stability,1,1
+P1a,occurrence,Witch flounder|juvenile|415,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|adult|403,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|adult|420,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|adult|429,100,Functional change,0.83,2
+P1a,occurrence,Yellowtail flounder|adult|436,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|403,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|420,100,Stability,0.57,2
+P1a,occurrence,Yellowtail flounder|juvenile|421,100,Functional change,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|422,100,Reorganisation,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|429,100,Reorganisation,0.92,2
+P1a,occurrence,Yellowtail flounder|juvenile|434,100,Stability,0.71,2
+P1a,occurrence,Yellowtail flounder|juvenile|435,100,Stability,0.65,2
+P1a,occurrence,Yellowtail flounder|juvenile|436,100,Functional change,1,1
+P1b,biomass,Alligatorfish|adult|419,100,Stability,1,1
+P1b,biomass,Alligatorfish|adult|422,100,Substitution,0.67,2
+P1b,biomass,Alligatorfish|adult|431,100,Stability,1,1
+P1b,biomass,Alligatorfish|adult|433,100,Functional change,1,1
+P1b,biomass,Alligatorfish|adult|434,100,Reorganisation,1,1
+P1b,biomass,American plaice|adult|416,100,Functional change,0.99,2
+P1b,biomass,American plaice|adult|422,100,Stability,1,1
+P1b,biomass,American plaice|adult|423,100,Stability,1,1
+P1b,biomass,American plaice|adult|429,100,Stability,0.76,2
+P1b,biomass,American plaice|adult|431,100,Stability,0.92,2
+P1b,biomass,American plaice|adult|433,100,Stability,1,1
+P1b,biomass,American plaice|adult|434,100,Stability,0.52,2
+P1b,biomass,American plaice|adult|436,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|416,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|417,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|418,100,Functional change,1,1
+P1b,biomass,American plaice|juvenile|422,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|423,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|424,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|426,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|427,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|429,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|431,100,Substitution,0.86,2
+P1b,biomass,American plaice|juvenile|433,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|434,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|436,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|437,100,Stability,1,1
+P1b,biomass,Arctic alligatorfish|one_class|423,100,Substitution,1,1
+P1b,biomass,Arctic alligatorfish|one_class|424,100,Functional change,1,1
+P1b,biomass,Arctic hookear sculpin|one_class|423,100,Stability,1,1
+P1b,biomass,Arctic staghorn sculpin|adult|419,100,Stability,1,1
+P1b,biomass,Arctic staghorn sculpin|adult|423,100,Stability,1,1
+P1b,biomass,Arctic staghorn sculpin|adult|427,100,Stability,0.82,2
+P1b,biomass,Atlantic cod|adult|420,100,Stability,1,1
+P1b,biomass,Atlantic cod|adult|422,100,Stability,0.67,2
+P1b,biomass,Atlantic cod|adult|423,100,Substitution,1,1
+P1b,biomass,Atlantic cod|adult|429,100,Stability,0.87,2
+P1b,biomass,Atlantic cod|adult|431,100,Stability,1,1
+P1b,biomass,Atlantic cod|adult|434,100,Stability,0.92,2
+P1b,biomass,Atlantic cod|adult|436,100,Substitution,1,1
+P1b,biomass,Atlantic cod|adult|437,100,Stability,1,1
+P1b,biomass,Atlantic cod|juvenile|416,100,Stability,1,1
+P1b,biomass,Atlantic cod|juvenile|420,100,Stability,1,1
+P1b,biomass,Atlantic cod|juvenile|422,100,Functional change,0.75,2
+P1b,biomass,Atlantic cod|juvenile|429,100,Stability,1,1
+P1b,biomass,Atlantic cod|juvenile|434,100,Stability,1,1
+P1b,biomass,Atlantic cod|juvenile|436,100,Stability,1,1
+P1b,biomass,Atlantic herring|adult|403,100,Stability,1,1
+P1b,biomass,Atlantic herring|adult|431,100,Functional change,1,1
+P1b,biomass,Atlantic herring|adult|433,100,Functional change,1,1
+P1b,biomass,Atlantic herring|adult|434,100,Functional change,1,1
+P1b,biomass,Atlantic herring|juvenile|433,100,Stability,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|422,100,Stability,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|423,100,Functional change,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|429,100,Stability,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|431,100,Stability,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|437,100,Stability,1,1
+P1b,biomass,Atlantic poacher|one_class|416,100,Substitution,0.52,2
+P1b,biomass,Atlantic poacher|one_class|417,100,Stability,1,1
+P1b,biomass,Atlantic poacher|one_class|422,100,Stability,1,1
+P1b,biomass,Atlantic poacher|one_class|423,100,Substitution,1,1
+P1b,biomass,Atlantic poacher|one_class|429,100,Substitution,1,1
+P1b,biomass,Atlantic spiny lumpsucker|one_class|423,100,Stability,1,1
+P1b,biomass,Atlantic spiny lumpsucker|one_class|429,100,Substitution,0.69,2
+P1b,biomass,Capelin|juvenile|415,100,Stability,1,1
+P1b,biomass,Capelin|juvenile|416,100,Functional change,0.86,2
+P1b,biomass,Capelin|juvenile|418,100,Stability,1,1
+P1b,biomass,Capelin|juvenile|422,100,Functional change,0.76,2
+P1b,biomass,Capelin|juvenile|423,100,Functional change,0.64,2
+P1b,biomass,Capelin|juvenile|424,100,Stability,0.64,2
+P1b,biomass,Daubed shanny|adult|433,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|417,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|422,100,Functional change,1,1
+P1b,biomass,Daubed shanny|juvenile|423,100,Substitution,1,1
+P1b,biomass,Daubed shanny|juvenile|424,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|429,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|433,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|434,100,Functional change,1,1
+P1b,biomass,Dusky snailfish|one_class|423,100,Stability,1,1
+P1b,biomass,Fourbeard rockling|juvenile|415,100,Stability,1,1
+P1b,biomass,Fourline snakeblenny|one_class|416,100,Functional change,1,1
+P1b,biomass,Fourline snakeblenny|one_class|422,100,Stability,1,1
+P1b,biomass,Fourline snakeblenny|one_class|423,100,Stability,1,1
+P1b,biomass,Fourline snakeblenny|one_class|429,100,Stability,1,1
+P1b,biomass,Fourline snakeblenny|one_class|431,100,Stability,1,1
+P1b,biomass,Greenland cod|juvenile|429,100,Stability,1,1
+P1b,biomass,Greenland halibut|adult|415,100,Stability,1,1
+P1b,biomass,Greenland halibut|adult|425,100,Stability,1,1
+P1b,biomass,Greenland halibut|juvenile|415,100,Stability,1,1
+P1b,biomass,Greenland halibut|juvenile|416,100,Stability,1,1
+P1b,biomass,Laval's eelpout|one_class|422,100,Stability,1,1
+P1b,biomass,Laval's eelpout|one_class|423,100,Stability,1,1
+P1b,biomass,Laval's eelpout|one_class|429,100,Stability,1,1
+P1b,biomass,Laval's eelpout|one_class|431,100,Functional change,0.39,4
+P1b,biomass,Laval's eelpout|one_class|434,100,Stability,0.86,2
+P1b,biomass,Longhorn sculpin|adult|422,100,Stability,0.85,2
+P1b,biomass,Longhorn sculpin|adult|429,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|adult|433,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|adult|435,100,Functional change,0.62,2
+P1b,biomass,Longhorn sculpin|juvenile|403,100,Stability,0.87,2
+P1b,biomass,Longhorn sculpin|juvenile|422,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|juvenile|433,100,Stability,1,1
+P1b,biomass,Marlin-spike grenadier|one_class|415,100,Stability,1,1
+P1b,biomass,Marlin-spike grenadier|one_class|425,100,Stability,1,1
+P1b,biomass,Marlin-spike grenadier|one_class|439,100,Functional change,1,1
+P1b,biomass,Moustache sculpin|one_class|416,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|422,100,Reorganisation,1,1
+P1b,biomass,Moustache sculpin|one_class|423,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|424,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|427,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|429,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|431,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|434,100,Stability,0.97,2
+P1b,biomass,Rainbow smelt|adult|432,100,Stability,1,1
+P1b,biomass,Redfish unidentified|adult|439,100,Stability,0.73,2
+P1b,biomass,Sea raven|one_class|435,100,Stability,1,1
+P1b,biomass,Shorthorn sculpin|adult|419,100,Stability,1,1
+P1b,biomass,Shorthorn sculpin|adult|429,100,Stability,1,1
+P1b,biomass,Smooth skate|juvenile|415,100,Stability,1,1
+P1b,biomass,Smooth skate|juvenile|437,100,Stability,0.84,2
+P1b,biomass,Snakeblenny|adult|416,100,Stability,1,1
+P1b,biomass,Snakeblenny|adult|433,100,Stability,1,1
+P1b,biomass,Spatulate sculpin|one_class|423,100,Substitution,1,1
+P1b,biomass,Spatulate sculpin|one_class|424,100,Functional change,1,1
+P1b,biomass,Spatulate sculpin|one_class|427,100,Stability,1,1
+P1b,biomass,Spatulate sculpin|one_class|429,100,Substitution,1,1
+P1b,biomass,Stout eelblenny|one_class|418,100,Stability,1,1
+P1b,biomass,Stout eelblenny|one_class|423,100,Stability,1,1
+P1b,biomass,Thorny skate|juvenile|415,100,Functional change,1,1
+P1b,biomass,Thorny skate|juvenile|416,100,Stability,1,1
+P1b,biomass,Thorny skate|juvenile|425,100,Functional change,0.75,2
+P1b,biomass,Thorny skate|juvenile|434,100,Stability,1,1
+P1b,biomass,Thorny skate|juvenile|436,100,Stability,1,1
+P1b,biomass,Thorny skate|juvenile|437,100,Stability,1,1
+P1b,biomass,Thorny skate|juvenile|438,100,Stability,1,1
+P1b,biomass,White hake|adult|403,100,Stability,1,1
+P1b,biomass,White hake|adult|425,100,Stability,1,1
+P1b,biomass,White hake|adult|437,100,Functional change,0.95,2
+P1b,biomass,White hake|adult|439,100,Stability,1,1
+P1b,biomass,White hake|juvenile|433,100,Reorganisation,0.93,2
+P1b,biomass,White hake|juvenile|437,100,Substitution,0.62,2
+P1b,biomass,Winter flounder|adult|420,100,Stability,1,1
+P1b,biomass,Winter flounder|adult|433,100,Stability,1,1
+P1b,biomass,Winter flounder|adult|435,100,Substitution,0.91,2
+P1b,biomass,Winter flounder|juvenile|420,100,Stability,1,1
+P1b,biomass,Winter flounder|juvenile|421,100,Stability,1,1
+P1b,biomass,Winter flounder|juvenile|432,100,Stability,1,1
+P1b,biomass,Winter flounder|juvenile|433,100,Stability,1,1
+P1b,biomass,Witch flounder|adult|415,100,Reorganisation,1,1
+P1b,biomass,Witch flounder|adult|425,100,Stability,1,1
+P1b,biomass,Witch flounder|adult|437,100,Stability,1,1
+P1b,biomass,Witch flounder|adult|439,100,Stability,1,1
+P1b,biomass,Witch flounder|juvenile|415,100,Stability,1,1
+P1b,biomass,Witch flounder|juvenile|425,100,Reorganisation,0.93,2
+P1b,biomass,Yellowtail flounder|adult|403,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|adult|420,100,Stability,0.62,2
+P1b,biomass,Yellowtail flounder|adult|429,100,Functional change,0.89,3
+P1b,biomass,Yellowtail flounder|adult|436,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|403,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|420,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|421,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|422,100,Reorganisation,1,1
+P1b,biomass,Yellowtail flounder|juvenile|423,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|429,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|431,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|434,100,Functional change,0.97,2
+P1b,biomass,Yellowtail flounder|juvenile|435,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|juvenile|436,100,Stability,1,1
+P1b,occurrence,Alligatorfish|adult|419,100,Stability,1,1
+P1b,occurrence,Alligatorfish|adult|422,100,Substitution,1,1
+P1b,occurrence,Alligatorfish|adult|431,100,Stability,1,1
+P1b,occurrence,Alligatorfish|adult|433,100,Stability,1,1
+P1b,occurrence,Alligatorfish|adult|434,100,Reorganisation,1,1
+P1b,occurrence,American plaice|adult|416,100,Stability,0.93,3
+P1b,occurrence,American plaice|adult|422,100,Stability,1,1
+P1b,occurrence,American plaice|adult|423,100,Stability,1,1
+P1b,occurrence,American plaice|adult|429,100,Stability,1,1
+P1b,occurrence,American plaice|adult|431,100,Stability,1,1
+P1b,occurrence,American plaice|adult|433,100,Stability,1,1
+P1b,occurrence,American plaice|adult|434,100,Stability,1,1
+P1b,occurrence,American plaice|adult|436,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|416,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|417,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|418,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|422,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|423,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|424,100,Substitution,0.97,2
+P1b,occurrence,American plaice|juvenile|426,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|427,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|429,100,Functional change,1,1
+P1b,occurrence,American plaice|juvenile|431,100,Substitution,1,1
+P1b,occurrence,American plaice|juvenile|433,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|434,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|436,100,Stability,0.95,2
+P1b,occurrence,American plaice|juvenile|437,100,Stability,1,1
+P1b,occurrence,Arctic alligatorfish|one_class|423,100,Substitution,1,1
+P1b,occurrence,Arctic alligatorfish|one_class|424,100,Functional change,1,1
+P1b,occurrence,Arctic hookear sculpin|one_class|423,100,Stability,1,1
+P1b,occurrence,Arctic staghorn sculpin|adult|419,100,Stability,1,1
+P1b,occurrence,Arctic staghorn sculpin|adult|423,100,Stability,1,1
+P1b,occurrence,Arctic staghorn sculpin|adult|427,100,Stability,1,1
+P1b,occurrence,Atlantic cod|adult|420,100,Stability,1,1
+P1b,occurrence,Atlantic cod|adult|422,100,Functional change,0.51,2
+P1b,occurrence,Atlantic cod|adult|423,100,Substitution,1,1
+P1b,occurrence,Atlantic cod|adult|429,100,Stability,1,1
+P1b,occurrence,Atlantic cod|adult|431,100,Stability,1,1
+P1b,occurrence,Atlantic cod|adult|434,100,Stability,0.82,2
+P1b,occurrence,Atlantic cod|adult|436,100,Substitution,0.93,2
+P1b,occurrence,Atlantic cod|adult|437,100,Functional change,0.7,2
+P1b,occurrence,Atlantic cod|juvenile|416,100,Stability,1,1
+P1b,occurrence,Atlantic cod|juvenile|420,100,Stability,1,1
+P1b,occurrence,Atlantic cod|juvenile|422,100,Stability,1,1
+P1b,occurrence,Atlantic cod|juvenile|429,100,Stability,1,1
+P1b,occurrence,Atlantic cod|juvenile|434,100,Functional change,1,1
+P1b,occurrence,Atlantic cod|juvenile|436,100,Stability,1,1
+P1b,occurrence,Atlantic herring|adult|403,100,Stability,1,1
+P1b,occurrence,Atlantic herring|adult|431,100,Stability,1,1
+P1b,occurrence,Atlantic herring|adult|433,100,Functional change,0.52,2
+P1b,occurrence,Atlantic herring|adult|434,100,Functional change,1,1
+P1b,occurrence,Atlantic herring|juvenile|433,100,Stability,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|422,100,Stability,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|423,100,Functional change,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|429,100,Stability,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|431,100,Stability,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|437,100,Stability,1,1
+P1b,occurrence,Atlantic poacher|one_class|416,100,Stability,1,1
+P1b,occurrence,Atlantic poacher|one_class|417,100,Stability,1,1
+P1b,occurrence,Atlantic poacher|one_class|422,100,Functional change,1,1
+P1b,occurrence,Atlantic poacher|one_class|423,100,Substitution,1,1
+P1b,occurrence,Atlantic poacher|one_class|429,100,Stability,1,1
+P1b,occurrence,Atlantic spiny lumpsucker|one_class|423,100,Substitution,1,1
+P1b,occurrence,Atlantic spiny lumpsucker|one_class|429,100,Substitution,1,1
+P1b,occurrence,Capelin|juvenile|415,100,Functional change,0.64,2
+P1b,occurrence,Capelin|juvenile|416,100,Functional change,0.64,2
+P1b,occurrence,Capelin|juvenile|418,100,Stability,1,1
+P1b,occurrence,Capelin|juvenile|422,100,Stability,0.76,2
+P1b,occurrence,Capelin|juvenile|423,100,Stability,0.64,2
+P1b,occurrence,Capelin|juvenile|424,100,Stability,0.64,2
+P1b,occurrence,Daubed shanny|adult|433,100,Stability,1,1
+P1b,occurrence,Daubed shanny|juvenile|417,100,Stability,1,1
+P1b,occurrence,Daubed shanny|juvenile|422,100,Stability,1,1
+P1b,occurrence,Daubed shanny|juvenile|423,100,Reorganisation,1,1
+P1b,occurrence,Daubed shanny|juvenile|424,100,Functional change,1,1
+P1b,occurrence,Daubed shanny|juvenile|429,100,Substitution,1,1
+P1b,occurrence,Daubed shanny|juvenile|433,100,Stability,1,1
+P1b,occurrence,Daubed shanny|juvenile|434,100,Functional change,1,1
+P1b,occurrence,Dusky snailfish|one_class|423,100,Substitution,0.73,2
+P1b,occurrence,Fourbeard rockling|juvenile|415,100,Substitution,0.58,2
+P1b,occurrence,Fourline snakeblenny|one_class|416,100,Stability,1,1
+P1b,occurrence,Fourline snakeblenny|one_class|422,100,Stability,1,1
+P1b,occurrence,Fourline snakeblenny|one_class|423,100,Stability,0.51,2
+P1b,occurrence,Fourline snakeblenny|one_class|429,100,Stability,1,1
+P1b,occurrence,Fourline snakeblenny|one_class|431,100,Stability,1,1
+P1b,occurrence,Greenland cod|juvenile|429,100,Stability,1,1
+P1b,occurrence,Greenland halibut|adult|415,100,Stability,1,1
+P1b,occurrence,Greenland halibut|adult|425,100,Stability,1,1
+P1b,occurrence,Greenland halibut|juvenile|415,100,Stability,1,1
+P1b,occurrence,Greenland halibut|juvenile|416,100,Stability,0.92,2
+P1b,occurrence,Laval's eelpout|one_class|422,100,Stability,1,1
+P1b,occurrence,Laval's eelpout|one_class|423,100,Stability,1,1
+P1b,occurrence,Laval's eelpout|one_class|429,100,Stability,1,1
+P1b,occurrence,Laval's eelpout|one_class|431,100,Reorganisation,1,1
+P1b,occurrence,Laval's eelpout|one_class|434,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|adult|422,100,Substitution,1,1
+P1b,occurrence,Longhorn sculpin|adult|429,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|adult|433,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|adult|435,100,Functional change,0.62,2
+P1b,occurrence,Longhorn sculpin|juvenile|403,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|juvenile|422,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|juvenile|433,100,Functional change,1,1
+P1b,occurrence,Marlin-spike grenadier|one_class|415,100,Stability,1,1
+P1b,occurrence,Marlin-spike grenadier|one_class|425,100,Reorganisation,1,1
+P1b,occurrence,Marlin-spike grenadier|one_class|439,100,Stability,0.64,2
+P1b,occurrence,Moustache sculpin|one_class|416,100,Stability,1,1
+P1b,occurrence,Moustache sculpin|one_class|422,100,Functional change,1,1
+P1b,occurrence,Moustache sculpin|one_class|423,100,Stability,0.92,2
+P1b,occurrence,Moustache sculpin|one_class|424,100,Stability,1,1
+P1b,occurrence,Moustache sculpin|one_class|427,100,Stability,0.64,2
+P1b,occurrence,Moustache sculpin|one_class|429,100,Stability,1,1
+P1b,occurrence,Moustache sculpin|one_class|431,100,Stability,1,1
+P1b,occurrence,Moustache sculpin|one_class|434,100,Substitution,1,1
+P1b,occurrence,Rainbow smelt|adult|432,100,Stability,1,1
+P1b,occurrence,Redfish unidentified|adult|439,100,Substitution,0.99,2
+P1b,occurrence,Sea raven|one_class|435,100,Stability,1,1
+P1b,occurrence,Shorthorn sculpin|adult|419,100,Stability,1,1
+P1b,occurrence,Shorthorn sculpin|adult|429,100,Stability,1,1
+P1b,occurrence,Smooth skate|juvenile|415,100,Stability,1,1
+P1b,occurrence,Smooth skate|juvenile|437,100,Stability,1,1
+P1b,occurrence,Snakeblenny|adult|416,100,Stability,1,1
+P1b,occurrence,Snakeblenny|adult|433,100,Stability,1,1
+P1b,occurrence,Spatulate sculpin|one_class|423,100,Substitution,1,1
+P1b,occurrence,Spatulate sculpin|one_class|424,100,Functional change,0.64,2
+P1b,occurrence,Spatulate sculpin|one_class|427,100,Stability,1,1
+P1b,occurrence,Spatulate sculpin|one_class|429,100,Stability,1,1
+P1b,occurrence,Stout eelblenny|one_class|418,100,Stability,1,1
+P1b,occurrence,Stout eelblenny|one_class|423,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|415,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|416,100,Substitution,1,1
+P1b,occurrence,Thorny skate|juvenile|425,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|434,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|436,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|437,100,Reorganisation,0.73,2
+P1b,occurrence,Thorny skate|juvenile|438,100,Stability,1,1
+P1b,occurrence,White hake|adult|403,100,Functional change,0.84,3
+P1b,occurrence,White hake|adult|425,100,Stability,1,1
+P1b,occurrence,White hake|adult|437,100,Stability,1,1
+P1b,occurrence,White hake|adult|439,100,Stability,1,1
+P1b,occurrence,White hake|juvenile|433,100,Stability,0.55,2
+P1b,occurrence,White hake|juvenile|437,100,Functional change,0.57,2
+P1b,occurrence,Winter flounder|adult|420,100,Stability,1,1
+P1b,occurrence,Winter flounder|adult|433,100,Stability,1,1
+P1b,occurrence,Winter flounder|adult|435,100,Substitution,0.91,2
+P1b,occurrence,Winter flounder|juvenile|420,100,Stability,1,1
+P1b,occurrence,Winter flounder|juvenile|421,100,Stability,1,1
+P1b,occurrence,Winter flounder|juvenile|432,100,Stability,1,1
+P1b,occurrence,Winter flounder|juvenile|433,100,Stability,0.77,2
+P1b,occurrence,Witch flounder|adult|415,100,Stability,1,1
+P1b,occurrence,Witch flounder|adult|425,100,Stability,1,1
+P1b,occurrence,Witch flounder|adult|437,100,Stability,1,1
+P1b,occurrence,Witch flounder|adult|439,100,Stability,1,1
+P1b,occurrence,Witch flounder|juvenile|415,100,Stability,1,1
+P1b,occurrence,Witch flounder|juvenile|425,100,Stability,0.94,2
+P1b,occurrence,Yellowtail flounder|adult|403,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|adult|420,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|adult|429,100,Stability,0.9,2
+P1b,occurrence,Yellowtail flounder|adult|436,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|403,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|420,100,Stability,0.62,2
+P1b,occurrence,Yellowtail flounder|juvenile|421,100,Functional change,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|422,100,Reorganisation,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|423,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|429,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|431,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|434,100,Stability,0.71,2
+P1b,occurrence,Yellowtail flounder|juvenile|435,100,Stability,0.65,2
+P1b,occurrence,Yellowtail flounder|juvenile|436,100,Functional change,1,1
+P2,biomass,Alewife|adult|420,100,Stability,1,1
+P2,biomass,Alewife|juvenile|432,100,Stability,1,1
+P2,biomass,Alligatorfish|adult|431,100,Stability,1,1
+P2,biomass,Alligatorfish|adult|436,100,Reorganisation,0.7,2
+P2,biomass,American plaice|juvenile|416,100,Stability,1,1
+P2,biomass,American plaice|juvenile|423,100,Stability,0.6,2
+P2,biomass,American plaice|juvenile|424,100,Stability,0.89,2
+P2,biomass,American plaice|juvenile|431,100,Stability,1,1
+P2,biomass,American plaice|juvenile|433,100,Stability,1,1
+P2,biomass,American plaice|juvenile|434,100,Functional change,0.95,2
+P2,biomass,American plaice|juvenile|436,100,Stability,1,1
+P2,biomass,Arctic staghorn sculpin|adult|431,100,Stability,1,1
+P2,biomass,Arctic staghorn sculpin|adult|436,100,Stability,1,1
+P2,biomass,Atlantic cod|adult|416,100,Stability,1,1
+P2,biomass,Atlantic cod|juvenile|429,100,Functional change,1,1
+P2,biomass,Atlantic cod|juvenile|431,100,Stability,0.99,2
+P2,biomass,Atlantic cod|juvenile|435,100,Functional change,1,1
+P2,biomass,Atlantic cod|juvenile|436,100,Stability,1,1
+P2,biomass,Atlantic herring|juvenile|433,100,Stability,1,1
+P2,biomass,Capelin|juvenile|416,100,Functional change,1,1
+P2,biomass,Capelin|juvenile|423,100,Functional change,0.64,2
+P2,biomass,Capelin|juvenile|434,100,Stability,1,1
+P2,biomass,Daubed shanny|juvenile|422,100,Stability,1,1
+P2,biomass,Dusky snailfish|one_class|418,100,Stability,1,1
+P2,biomass,Dusky snailfish|one_class|422,100,Functional change,0.87,3
+P2,biomass,Dusky snailfish|one_class|423,100,Functional change,1,1
+P2,biomass,Greenland halibut|juvenile|416,100,Stability,1,1
+P2,biomass,Laval's eelpout|one_class|431,100,Stability,0.51,2
+P2,biomass,Marlin-spike grenadier|one_class|425,100,Stability,1,1
+P2,biomass,Moustache sculpin|one_class|431,100,Stability,1,1
+P2,biomass,Northern sand lance|one_class|423,100,Stability,0.98,2
+P2,biomass,Rainbow smelt|adult|432,100,Stability,1,1
+P2,biomass,Redfish unidentified|adult|425,100,Stability,1,1
+P2,biomass,Shorthorn sculpin|adult|431,100,Functional change,0.61,2
+P2,biomass,Spatulate sculpin|one_class|423,100,Stability,0.66,2
+P2,biomass,Thorny skate|juvenile|415,100,Functional change,1,1
+P2,biomass,Thorny skate|juvenile|438,100,Functional change,1,1
+P2,biomass,White hake|adult|415,100,Stability,1,1
+P2,biomass,White hake|adult|439,100,Stability,1,1
+P2,biomass,White hake|juvenile|437,100,Stability,1,1
+P2,biomass,Winter flounder|adult|435,100,Stability,1,1
+P2,biomass,Winter flounder|juvenile|420,100,Stability,0.79,3
+P2,biomass,Winter flounder|juvenile|432,100,Stability,1,1
+P2,biomass,Witch flounder|adult|415,100,Stability,1,1
+P2,biomass,Yellowtail flounder|juvenile|428,100,Functional change,0.86,2
+P2,biomass,Yellowtail flounder|juvenile|431,100,Functional change,0.62,2
+P2,biomass,Yellowtail flounder|juvenile|435,100,Stability,0.84,2
+P2,biomass,Yellowtail flounder|juvenile|436,100,Stability,0.76,2
+P2,occurrence,Alewife|adult|420,100,Stability,1,1
+P2,occurrence,Alewife|juvenile|432,100,Stability,1,1
+P2,occurrence,Alligatorfish|adult|431,100,Stability,1,1
+P2,occurrence,Alligatorfish|adult|436,100,Stability,1,1
+P2,occurrence,American plaice|juvenile|416,100,Stability,1,1
+P2,occurrence,American plaice|juvenile|423,100,Stability,0.76,2
+P2,occurrence,American plaice|juvenile|424,100,Stability,0.87,2
+P2,occurrence,American plaice|juvenile|431,100,Stability,1,1
+P2,occurrence,American plaice|juvenile|433,100,Functional change,1,1
+P2,occurrence,American plaice|juvenile|434,100,Stability,1,1
+P2,occurrence,American plaice|juvenile|436,100,Stability,1,1
+P2,occurrence,Arctic staghorn sculpin|adult|431,100,Stability,1,1
+P2,occurrence,Arctic staghorn sculpin|adult|436,100,Stability,1,1
+P2,occurrence,Atlantic cod|adult|416,100,Stability,1,1
+P2,occurrence,Atlantic cod|juvenile|429,100,Stability,1,1
+P2,occurrence,Atlantic cod|juvenile|431,100,Substitution,0.53,4
+P2,occurrence,Atlantic cod|juvenile|435,100,Stability,1,1
+P2,occurrence,Atlantic cod|juvenile|436,100,Stability,1,1
+P2,occurrence,Atlantic herring|juvenile|433,100,Substitution,0.71,2
+P2,occurrence,Capelin|juvenile|416,100,Stability,0.75,2
+P2,occurrence,Capelin|juvenile|423,100,Stability,0.71,2
+P2,occurrence,Capelin|juvenile|434,100,Stability,1,1
+P2,occurrence,Daubed shanny|juvenile|422,100,Stability,1,1
+P2,occurrence,Dusky snailfish|one_class|418,100,Stability,1,1
+P2,occurrence,Dusky snailfish|one_class|422,100,Stability,1,1
+P2,occurrence,Dusky snailfish|one_class|423,100,Functional change,0.53,2
+P2,occurrence,Greenland halibut|juvenile|416,100,Functional change,1,1
+P2,occurrence,Laval's eelpout|one_class|431,100,Stability,1,1
+P2,occurrence,Marlin-spike grenadier|one_class|425,100,Stability,0.7,2
+P2,occurrence,Moustache sculpin|one_class|431,100,Stability,1,1
+P2,occurrence,Northern sand lance|one_class|423,100,Stability,1,1
+P2,occurrence,Rainbow smelt|adult|432,100,Stability,1,1
+P2,occurrence,Redfish unidentified|adult|425,100,Stability,1,1
+P2,occurrence,Shorthorn sculpin|adult|431,100,Stability,1,1
+P2,occurrence,Spatulate sculpin|one_class|423,100,Substitution,0.64,3
+P2,occurrence,Thorny skate|juvenile|415,100,Substitution,0.86,2
+P2,occurrence,Thorny skate|juvenile|438,100,Stability,0.87,2
+P2,occurrence,White hake|adult|415,100,Stability,0.62,2
+P2,occurrence,White hake|adult|439,100,Stability,1,1
+P2,occurrence,White hake|juvenile|437,100,Stability,1,1
+P2,occurrence,Winter flounder|adult|435,100,Stability,1,1
+P2,occurrence,Winter flounder|juvenile|420,100,Functional change,0.65,2
+P2,occurrence,Winter flounder|juvenile|432,100,Stability,1,1
+P2,occurrence,Witch flounder|adult|415,100,Stability,0.86,2
+P2,occurrence,Yellowtail flounder|juvenile|428,100,Stability,1,1
+P2,occurrence,Yellowtail flounder|juvenile|431,100,Stability,1,1
+P2,occurrence,Yellowtail flounder|juvenile|435,100,Reorganisation,1,1
+P2,occurrence,Yellowtail flounder|juvenile|436,100,Stability,0.83,2
+PTb,biomass,Alligatorfish|adult|422,100,Substitution,1,1
+PTb,biomass,Alligatorfish|adult|431,100,Substitution,1,1
+PTb,biomass,American plaice|adult|416,100,Substitution,0.6,2
+PTb,biomass,American plaice|juvenile|416,100,Stability,0.62,2
+PTb,biomass,American plaice|juvenile|417,100,Stability,1,1
+PTb,biomass,American plaice|juvenile|418,100,Stability,0.85,2
+PTb,biomass,American plaice|juvenile|423,100,Substitution,1,1
+PTb,biomass,American plaice|juvenile|424,100,Reorganisation,1,1
+PTb,biomass,American plaice|juvenile|427,100,Substitution,0.53,2
+PTb,biomass,American plaice|juvenile|429,100,Substitution,1,1
+PTb,biomass,American plaice|juvenile|431,100,Reorganisation,0.79,2
+PTb,biomass,American plaice|juvenile|433,100,Stability,0.99,2
+PTb,biomass,American plaice|juvenile|434,100,Reorganisation,0.81,3
+PTb,biomass,American plaice|juvenile|436,100,Substitution,1,1
+PTb,biomass,American plaice|juvenile|437,100,Stability,0.52,2
+PTb,biomass,American plaice|juvenile|438,100,Stability,1,1
+PTb,biomass,Arctic alligatorfish|one_class|423,100,Reorganisation,1,1
+PTb,biomass,Arctic alligatorfish|one_class|424,100,Substitution,0.99,2
+PTb,biomass,Atlantic cod|adult|416,100,Substitution,0.65,2
+PTb,biomass,Atlantic cod|adult|437,100,Stability,1,1
+PTb,biomass,Atlantic cod|adult|438,100,Functional change,1,1
+PTb,biomass,Atlantic cod|juvenile|416,100,Stability,1,1
+PTb,biomass,Atlantic cod|juvenile|420,100,Stability,1,1
+PTb,biomass,Atlantic cod|juvenile|422,100,Reorganisation,0.53,2
+PTb,biomass,Atlantic cod|juvenile|423,100,Substitution,1,1
+PTb,biomass,Atlantic cod|juvenile|424,100,Stability,1,1
+PTb,biomass,Atlantic cod|juvenile|427,100,Stability,0.99,2
+PTb,biomass,Atlantic cod|juvenile|429,100,Reorganisation,1,1
+PTb,biomass,Atlantic cod|juvenile|431,100,Substitution,1,1
+PTb,biomass,Atlantic cod|juvenile|435,100,Stability,1,1
+PTb,biomass,Atlantic cod|juvenile|436,100,Stability,0.87,2
+PTb,biomass,Atlantic herring|adult|433,100,Substitution,1,1
+PTb,biomass,Atlantic herring|juvenile|433,100,Stability,1,1
+PTb,biomass,Capelin|juvenile|416,100,Functional change,0.78,2
+PTb,biomass,Capelin|juvenile|423,100,Functional change,1,1
+PTb,biomass,Capelin|juvenile|424,100,Stability,1,1
+PTb,biomass,Daubed shanny|juvenile|422,100,Functional change,1,1
+PTb,biomass,Daubed shanny|juvenile|424,100,Reorganisation,0.95,2
+PTb,biomass,Daubed shanny|juvenile|433,100,Stability,1,1
+PTb,biomass,Dusky snailfish|one_class|422,100,Substitution,1,1
+PTb,biomass,Dusky snailfish|one_class|423,100,Reorganisation,1,1
+PTb,biomass,Dusky snailfish|one_class|427,100,Stability,1,1
+PTb,biomass,Fourbeard rockling|juvenile|415,100,Functional change,1,1
+PTb,biomass,Fourline snakeblenny|one_class|424,100,Stability,1,1
+PTb,biomass,Greenland halibut|adult|415,100,Functional change,0.99,2
+PTb,biomass,Greenland halibut|adult|425,100,Functional change,1,1
+PTb,biomass,Greenland halibut|juvenile|416,100,Stability,0.5,2
+PTb,biomass,Laval's eelpout|one_class|429,100,Substitution,0.87,2
+PTb,biomass,Laval's eelpout|one_class|431,100,Substitution,0.53,2
+PTb,biomass,Marlin-spike grenadier|one_class|415,100,Stability,1,1
+PTb,biomass,Marlin-spike grenadier|one_class|425,100,Stability,0.82,2
+PTb,biomass,Marlin-spike grenadier|one_class|439,100,Stability,1,1
+PTb,biomass,Moustache sculpin|one_class|431,100,Substitution,1,1
+PTb,biomass,Rainbow smelt|adult|421,100,Stability,1,1
+PTb,biomass,Rainbow smelt|adult|432,100,Stability,1,1
+PTb,biomass,Redfish unidentified|adult|439,100,Stability,1,1
+PTb,biomass,Snakeblenny|adult|433,100,Stability,1,1
+PTb,biomass,Spatulate sculpin|one_class|423,100,Substitution,1,1
+PTb,biomass,Spatulate sculpin|one_class|424,100,Substitution,0.57,2
+PTb,biomass,Thorny skate|juvenile|415,100,Reorganisation,1,1
+PTb,biomass,Thorny skate|juvenile|416,100,Reorganisation,1,1
+PTb,biomass,Thorny skate|juvenile|437,100,Substitution,1,1
+PTb,biomass,Thorny skate|juvenile|438,100,Stability,0.57,2
+PTb,biomass,White hake|adult|439,100,Stability,0.62,2
+PTb,biomass,White hake|juvenile|437,100,Stability,1,1
+PTb,biomass,Winter flounder|adult|435,100,Stability,1,1
+PTb,biomass,Winter flounder|juvenile|420,100,Stability,1,1
+PTb,biomass,Winter flounder|juvenile|432,100,Stability,1,1
+PTb,biomass,Winter flounder|juvenile|433,100,Stability,1,1
+PTb,biomass,Witch flounder|adult|415,100,Stability,1,1
+PTb,biomass,Witch flounder|adult|416,100,Stability,1,1
+PTb,biomass,Witch flounder|adult|439,100,Stability,0.95,2
+PTb,biomass,Yellowtail flounder|adult|429,100,Substitution,1,1
+PTb,biomass,Yellowtail flounder|juvenile|428,100,Stability,0.83,2
+PTb,biomass,Yellowtail flounder|juvenile|429,100,Substitution,0.68,2
+PTb,biomass,Yellowtail flounder|juvenile|431,100,Substitution,0.76,2
+PTb,biomass,Yellowtail flounder|juvenile|435,100,Stability,1,1
+PTb,biomass,Yellowtail flounder|juvenile|436,100,Substitution,1,1
+PTb,occurrence,Alligatorfish|adult|422,100,Substitution,1,1
+PTb,occurrence,Alligatorfish|adult|431,100,Substitution,1,1
+PTb,occurrence,American plaice|adult|416,100,Substitution,0.91,2
+PTb,occurrence,American plaice|juvenile|416,100,Stability,1,1
+PTb,occurrence,American plaice|juvenile|417,100,Stability,0.82,2
+PTb,occurrence,American plaice|juvenile|418,100,Stability,1,1
+PTb,occurrence,American plaice|juvenile|423,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|424,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|427,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|429,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|431,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|433,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|434,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|436,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|437,100,Functional change,0.65,3
+PTb,occurrence,American plaice|juvenile|438,100,Stability,1,1
+PTb,occurrence,Arctic alligatorfish|one_class|423,100,Reorganisation,1,1
+PTb,occurrence,Arctic alligatorfish|one_class|424,100,Substitution,1,1
+PTb,occurrence,Atlantic cod|adult|416,100,Substitution,1,1
+PTb,occurrence,Atlantic cod|adult|437,100,Reorganisation,0.62,2
+PTb,occurrence,Atlantic cod|adult|438,100,Stability,1,1
+PTb,occurrence,Atlantic cod|juvenile|416,100,Substitution,1,1
+PTb,occurrence,Atlantic cod|juvenile|420,100,Stability,1,1
+PTb,occurrence,Atlantic cod|juvenile|422,100,Reorganisation,1,1
+PTb,occurrence,Atlantic cod|juvenile|423,100,Reorganisation,1,1
+PTb,occurrence,Atlantic cod|juvenile|424,100,Stability,0.78,2
+PTb,occurrence,Atlantic cod|juvenile|427,100,Functional change,0.57,2
+PTb,occurrence,Atlantic cod|juvenile|429,100,Reorganisation,1,1
+PTb,occurrence,Atlantic cod|juvenile|431,100,Substitution,1,1
+PTb,occurrence,Atlantic cod|juvenile|435,100,Stability,1,1
+PTb,occurrence,Atlantic cod|juvenile|436,100,Substitution,0.6,3
+PTb,occurrence,Atlantic herring|adult|433,100,Substitution,0.56,3
+PTb,occurrence,Atlantic herring|juvenile|433,100,Stability,0.96,2
+PTb,occurrence,Capelin|juvenile|416,100,Stability,0.78,2
+PTb,occurrence,Capelin|juvenile|423,100,Stability,1,1
+PTb,occurrence,Capelin|juvenile|424,100,Reorganisation,1,1
+PTb,occurrence,Daubed shanny|juvenile|422,100,Stability,1,1
+PTb,occurrence,Daubed shanny|juvenile|424,100,Reorganisation,1,1
+PTb,occurrence,Daubed shanny|juvenile|433,100,Substitution,1,1
+PTb,occurrence,Dusky snailfish|one_class|422,100,Substitution,1,1
+PTb,occurrence,Dusky snailfish|one_class|423,100,Substitution,0.55,2
+PTb,occurrence,Dusky snailfish|one_class|427,100,Stability,1,1
+PTb,occurrence,Fourbeard rockling|juvenile|415,100,Substitution,1,1
+PTb,occurrence,Fourline snakeblenny|one_class|424,100,Stability,1,1
+PTb,occurrence,Greenland halibut|adult|415,100,Stability,1,1
+PTb,occurrence,Greenland halibut|adult|425,100,Stability,1,1
+PTb,occurrence,Greenland halibut|juvenile|416,100,Substitution,1,1
+PTb,occurrence,Laval's eelpout|one_class|429,100,Substitution,0.87,2
+PTb,occurrence,Laval's eelpout|one_class|431,100,Substitution,0.95,2
+PTb,occurrence,Marlin-spike grenadier|one_class|415,100,Stability,1,1
+PTb,occurrence,Marlin-spike grenadier|one_class|425,100,Substitution,1,1
+PTb,occurrence,Marlin-spike grenadier|one_class|439,100,Reorganisation,1,1
+PTb,occurrence,Moustache sculpin|one_class|431,100,Substitution,1,1
+PTb,occurrence,Rainbow smelt|adult|421,100,Stability,0.7,2
+PTb,occurrence,Rainbow smelt|adult|432,100,Stability,1,1
+PTb,occurrence,Redfish unidentified|adult|439,100,Stability,1,1
+PTb,occurrence,Snakeblenny|adult|433,100,Substitution,1,1
+PTb,occurrence,Spatulate sculpin|one_class|423,100,Substitution,1,1
+PTb,occurrence,Spatulate sculpin|one_class|424,100,Substitution,1,1
+PTb,occurrence,Thorny skate|juvenile|415,100,Substitution,0.82,2
+PTb,occurrence,Thorny skate|juvenile|416,100,Reorganisation,0.53,2
+PTb,occurrence,Thorny skate|juvenile|437,100,Substitution,1,1
+PTb,occurrence,Thorny skate|juvenile|438,100,Stability,1,1
+PTb,occurrence,White hake|adult|439,100,Stability,0.61,2
+PTb,occurrence,White hake|juvenile|437,100,Substitution,0.49,3
+PTb,occurrence,Winter flounder|adult|435,100,Stability,1,1
+PTb,occurrence,Winter flounder|juvenile|420,100,Stability,0.82,2
+PTb,occurrence,Winter flounder|juvenile|432,100,Stability,1,1
+PTb,occurrence,Winter flounder|juvenile|433,100,Stability,1,1
+PTb,occurrence,Witch flounder|adult|415,100,Substitution,1,1
+PTb,occurrence,Witch flounder|adult|416,100,Stability,1,1
+PTb,occurrence,Witch flounder|adult|439,100,Stability,1,1
+PTb,occurrence,Yellowtail flounder|adult|429,100,Substitution,1,1
+PTb,occurrence,Yellowtail flounder|juvenile|428,100,Stability,1,1
+PTb,occurrence,Yellowtail flounder|juvenile|429,100,Substitution,1,1
+PTb,occurrence,Yellowtail flounder|juvenile|431,100,Substitution,1,1
+PTb,occurrence,Yellowtail flounder|juvenile|435,100,Substitution,1,1
+PTb,occurrence,Yellowtail flounder|juvenile|436,100,Substitution,0.84,2
+PTa,biomass,Alewife|adult|420,100,Substitution,1,1
+PTa,biomass,Alewife|adult|432,100,Reorganisation,0.99,2
+PTa,biomass,Alewife|adult|433,100,Substitution,1,1
+PTa,biomass,Alewife|juvenile|402,100,Stability,1,1
+PTa,biomass,Alewife|juvenile|403,100,Substitution,1,1
+PTa,biomass,Alewife|juvenile|432,100,Stability,1,1
+PTa,biomass,Alewife|juvenile|433,100,Stability,1,1
+PTa,biomass,Alligatorfish|adult|422,100,Substitution,1,1
+PTa,biomass,Alligatorfish|adult|427,100,Substitution,0.75,2
+PTa,biomass,Alligatorfish|adult|429,100,Substitution,1,1
+PTa,biomass,Alligatorfish|adult|431,100,Substitution,1,1
+PTa,biomass,Alligatorfish|adult|434,100,Substitution,1,1
+PTa,biomass,American plaice|adult|416,100,Substitution,1,1
+PTa,biomass,American plaice|adult|418,100,Stability,1,1
+PTa,biomass,American plaice|adult|423,100,Substitution,0.6,3
+PTa,biomass,American plaice|adult|429,100,Functional change,0.76,2
+PTa,biomass,American plaice|adult|431,100,Stability,1,1
+PTa,biomass,American plaice|adult|433,100,Functional change,1,1
+PTa,biomass,American plaice|adult|434,100,Stability,1,1
+PTa,biomass,American plaice|juvenile|416,100,Functional change,0.51,4
+PTa,biomass,American plaice|juvenile|417,100,Stability,1,1
+PTa,biomass,American plaice|juvenile|418,100,Functional change,0.85,3
+PTa,biomass,American plaice|juvenile|422,100,Reorganisation,0.93,2
+PTa,biomass,American plaice|juvenile|423,100,Substitution,0.69,2
+PTa,biomass,American plaice|juvenile|424,100,Substitution,1,1
+PTa,biomass,American plaice|juvenile|426,100,Substitution,0.67,2
+PTa,biomass,American plaice|juvenile|427,100,Substitution,1,1
+PTa,biomass,American plaice|juvenile|428,100,Stability,0.82,3
+PTa,biomass,American plaice|juvenile|429,100,Substitution,1,1
+PTa,biomass,American plaice|juvenile|431,100,Reorganisation,1,1
+PTa,biomass,American plaice|juvenile|433,100,Reorganisation,0.82,2
+PTa,biomass,American plaice|juvenile|434,100,Substitution,0.95,2
+PTa,biomass,American plaice|juvenile|435,100,Stability,1,1
+PTa,biomass,American plaice|juvenile|436,100,Substitution,1,1
+PTa,biomass,American plaice|juvenile|437,100,Reorganisation,0.97,2
+PTa,biomass,American plaice|juvenile|438,100,Stability,1,1
+PTa,biomass,American plaice|juvenile|439,100,Stability,1,1
+PTa,biomass,Arctic alligatorfish|one_class|423,100,Reorganisation,1,1
+PTa,biomass,Arctic alligatorfish|one_class|424,100,Substitution,1,1
+PTa,biomass,Arctic hookear sculpin|one_class|423,100,Substitution,1,1
+PTa,biomass,Arctic staghorn sculpin|adult|422,100,Stability,1,1
+PTa,biomass,Arctic staghorn sculpin|adult|423,100,Functional change,0.7,2
+PTa,biomass,Arctic staghorn sculpin|adult|431,100,Substitution,0.69,2
+PTa,biomass,Arctic staghorn sculpin|adult|436,100,Substitution,0.95,2
+PTa,biomass,Atlantic cod|adult|416,100,Substitution,1,1
+PTa,biomass,Atlantic cod|adult|431,100,Stability,0.57,2
+PTa,biomass,Atlantic cod|adult|437,100,Stability,1,1
+PTa,biomass,Atlantic cod|adult|438,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|416,100,Substitution,0.58,2
+PTa,biomass,Atlantic cod|juvenile|420,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|422,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|423,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|424,100,Stability,1,1
+PTa,biomass,Atlantic cod|juvenile|427,100,Stability,1,1
+PTa,biomass,Atlantic cod|juvenile|429,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|431,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|433,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|434,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|435,100,Stability,0.73,2
+PTa,biomass,Atlantic cod|juvenile|436,100,Reorganisation,0.57,2
+PTa,biomass,Atlantic herring|adult|433,100,Reorganisation,1,1
+PTa,biomass,Atlantic herring|juvenile|420,100,Stability,1,1
+PTa,biomass,Atlantic herring|juvenile|432,100,Stability,1,1
+PTa,biomass,Atlantic herring|juvenile|433,100,Stability,1,1
+PTa,biomass,Atlantic hookear sculpin|one_class|424,100,Stability,0.97,2
+PTa,biomass,Atlantic mackerel|juvenile|402,100,Stability,1,1
+PTa,biomass,Atlantic poacher|one_class|416,100,Reorganisation,1,1
+PTa,biomass,Atlantic poacher|one_class|418,100,Substitution,1,1
+PTa,biomass,Atlantic poacher|one_class|422,100,Reorganisation,0.76,2
+PTa,biomass,Atlantic poacher|one_class|423,100,Substitution,1,1
+PTa,biomass,Atlantic poacher|one_class|434,100,Substitution,0.53,2
+PTa,biomass,Atlantic spiny lumpsucker|one_class|423,100,Substitution,0.94,2
+PTa,biomass,Atlantic spiny lumpsucker|one_class|424,100,Stability,1,1
+PTa,biomass,Atlantic spiny lumpsucker|one_class|431,100,Stability,1,1
+PTa,biomass,Capelin|juvenile|416,100,Stability,0.69,2
+PTa,biomass,Capelin|juvenile|422,100,Substitution,1,1
+PTa,biomass,Capelin|juvenile|423,100,Functional change,0.69,2
+PTa,biomass,Capelin|juvenile|424,100,Stability,0.69,2
+PTa,biomass,Capelin|juvenile|434,100,Substitution,1,1
+PTa,biomass,Daubed shanny|adult|422,100,Stability,1,1
+PTa,biomass,Daubed shanny|adult|423,100,Substitution,1,1
+PTa,biomass,Daubed shanny|juvenile|416,100,Stability,0.77,2
+PTa,biomass,Daubed shanny|juvenile|418,100,Substitution,1,1
+PTa,biomass,Daubed shanny|juvenile|422,100,Reorganisation,0.77,2
+PTa,biomass,Daubed shanny|juvenile|423,100,Substitution,1,1
+PTa,biomass,Daubed shanny|juvenile|424,100,Substitution,1,1
+PTa,biomass,Daubed shanny|juvenile|431,100,Substitution,0.54,2
+PTa,biomass,Daubed shanny|juvenile|433,100,Substitution,1,1
+PTa,biomass,Daubed shanny|juvenile|434,100,Substitution,1,1
+PTa,biomass,Dusky snailfish|one_class|417,100,Substitution,0.79,2
+PTa,biomass,Dusky snailfish|one_class|418,100,Substitution,0.62,2
+PTa,biomass,Dusky snailfish|one_class|422,100,Substitution,1,1
+PTa,biomass,Dusky snailfish|one_class|423,100,Substitution,0.85,2
+PTa,biomass,Dusky snailfish|one_class|424,100,Substitution,0.57,3
+PTa,biomass,Dusky snailfish|one_class|427,100,Substitution,1,1
+PTa,biomass,Dusky snailfish|one_class|429,100,Stability,1,1
+PTa,biomass,Dusky snailfish|one_class|431,100,Substitution,1,1
+PTa,biomass,Fourbeard rockling|juvenile|415,100,Stability,1,1
+PTa,biomass,Fourbeard rockling|juvenile|416,100,Stability,1,1
+PTa,biomass,Fourline snakeblenny|one_class|423,100,Reorganisation,0.7,2
+PTa,biomass,Fourline snakeblenny|one_class|424,100,Stability,1,1
+PTa,biomass,Fourline snakeblenny|one_class|429,100,Stability,1,1
+PTa,biomass,Fourline snakeblenny|one_class|431,100,Substitution,0.76,2
+PTa,biomass,Greenland cod|juvenile|431,100,Stability,1,1
+PTa,biomass,Greenland halibut|adult|415,100,Functional change,0.92,2
+PTa,biomass,Greenland halibut|adult|416,100,Stability,0.6,2
+PTa,biomass,Greenland halibut|adult|425,100,Functional change,1,1
+PTa,biomass,Greenland halibut|juvenile|415,100,Stability,1,1
+PTa,biomass,Greenland halibut|juvenile|416,100,Functional change,0.95,2
+PTa,biomass,Greenland halibut|juvenile|418,100,Functional change,1,1
+PTa,biomass,Greenland halibut|juvenile|425,100,Substitution,1,1
+PTa,biomass,Laval's eelpout|one_class|423,100,Reorganisation,1,1
+PTa,biomass,Laval's eelpout|one_class|424,100,Substitution,0.73,2
+PTa,biomass,Laval's eelpout|one_class|429,100,Substitution,0.87,2
+PTa,biomass,Laval's eelpout|one_class|431,100,Substitution,1,1
+PTa,biomass,Longhorn sculpin|adult|401,100,Reorganisation,0.9,2
+PTa,biomass,Longhorn sculpin|adult|403,100,Stability,1,1
+PTa,biomass,Longhorn sculpin|adult|435,100,Stability,0.97,2
+PTa,biomass,Longhorn sculpin|juvenile|432,100,Stability,1,1
+PTa,biomass,Longhorn sculpin|juvenile|433,100,Stability,1,1
+PTa,biomass,Longhorn sculpin|juvenile|435,100,Substitution,0.96,2
+PTa,biomass,Marlin-spike grenadier|one_class|415,100,Stability,0.87,2
+PTa,biomass,Marlin-spike grenadier|one_class|425,100,Functional change,0.64,2
+PTa,biomass,Marlin-spike grenadier|one_class|439,100,Substitution,0.66,2
+PTa,biomass,Moustache sculpin|one_class|422,100,Substitution,1,1
+PTa,biomass,Moustache sculpin|one_class|423,100,Reorganisation,1,1
+PTa,biomass,Moustache sculpin|one_class|427,100,Reorganisation,0.56,3
+PTa,biomass,Moustache sculpin|one_class|429,100,Substitution,1,1
+PTa,biomass,Moustache sculpin|one_class|431,100,Substitution,1,1
+PTa,biomass,Moustache sculpin|one_class|436,100,Substitution,1,1
+PTa,biomass,Rainbow smelt|adult|402,100,Stability,1,1
+PTa,biomass,Rainbow smelt|adult|403,100,Stability,0.78,2
+PTa,biomass,Rainbow smelt|adult|420,100,Substitution,1,1
+PTa,biomass,Rainbow smelt|adult|421,100,Stability,0.86,2
+PTa,biomass,Rainbow smelt|adult|432,100,Substitution,0.8,2
+PTa,biomass,Redfish unidentified|adult|415,100,Stability,1,1
+PTa,biomass,Redfish unidentified|adult|425,100,Substitution,0.9,2
+PTa,biomass,Redfish unidentified|adult|439,100,Substitution,0.93,2
+PTa,biomass,Sea raven|one_class|436,100,Stability,0.99,2
+PTa,biomass,Shorthorn sculpin|adult|429,100,Functional change,0.61,2
+PTa,biomass,Shorthorn sculpin|adult|431,100,Stability,0.59,2
+PTa,biomass,Smooth skate|juvenile|438,100,Substitution,1,1
+PTa,biomass,Snakeblenny|adult|433,100,Substitution,0.83,2
+PTa,biomass,Spatulate sculpin|one_class|423,100,Reorganisation,0.95,2
+PTa,biomass,Spatulate sculpin|one_class|424,100,Reorganisation,1,1
+PTa,biomass,Spatulate sculpin|one_class|427,100,Reorganisation,0.7,2
+PTa,biomass,Spatulate sculpin|one_class|429,100,Substitution,1,1
+PTa,biomass,Spatulate sculpin|one_class|431,100,Substitution,0.76,2
+PTa,biomass,Stout eelblenny|one_class|418,100,Substitution,1,1
+PTa,biomass,Stout eelblenny|one_class|419,100,Stability,1,1
+PTa,biomass,Stout eelblenny|one_class|422,100,Functional change,0.46,3
+PTa,biomass,Thorny skate|juvenile|415,100,Substitution,1,1
+PTa,biomass,Thorny skate|juvenile|416,100,Substitution,1,1
+PTa,biomass,Thorny skate|juvenile|426,100,Substitution,0.69,2
+PTa,biomass,Thorny skate|juvenile|436,100,Substitution,0.53,2
+PTa,biomass,Thorny skate|juvenile|437,100,Substitution,1,1
+PTa,biomass,Thorny skate|juvenile|438,100,Substitution,1,1
+PTa,biomass,Thorny skate|juvenile|439,100,Stability,1,1
+PTa,biomass,Three-spined stickleback|adult|432,100,Stability,1,1
+PTa,biomass,White hake|adult|415,100,Reorganisation,0.62,2
+PTa,biomass,White hake|adult|425,100,Reorganisation,0.62,2
+PTa,biomass,White hake|adult|437,100,Functional change,0.89,3
+PTa,biomass,White hake|adult|439,100,Substitution,0.62,2
+PTa,biomass,White hake|juvenile|403,100,Substitution,0.99,2
+PTa,biomass,White hake|juvenile|415,100,Functional change,1,1
+PTa,biomass,White hake|juvenile|432,100,Stability,1,1
+PTa,biomass,White hake|juvenile|433,100,Stability,1,1
+PTa,biomass,White hake|juvenile|437,100,Stability,0.74,2
+PTa,biomass,Windowpane flounder|juvenile|402,100,Functional change,1,1
+PTa,biomass,Windowpane flounder|juvenile|432,100,Stability,0.9,2
+PTa,biomass,Winter flounder|adult|420,100,Stability,1,1
+PTa,biomass,Winter flounder|adult|433,100,Stability,0.81,2
+PTa,biomass,Winter flounder|adult|435,100,Stability,1,1
+PTa,biomass,Winter flounder|juvenile|402,100,Stability,1,1
+PTa,biomass,Winter flounder|juvenile|403,100,Functional change,0.89,2
+PTa,biomass,Winter flounder|juvenile|420,100,Stability,1,1
+PTa,biomass,Winter flounder|juvenile|421,100,Functional change,0.62,2
+PTa,biomass,Winter flounder|juvenile|432,100,Substitution,0.75,2
+PTa,biomass,Winter flounder|juvenile|433,100,Stability,1,1
+PTa,biomass,Winter flounder|juvenile|435,100,Stability,1,1
+PTa,biomass,Witch flounder|adult|415,100,Stability,1,1
+PTa,biomass,Witch flounder|adult|416,100,Stability,1,1
+PTa,biomass,Witch flounder|adult|425,100,Stability,1,1
+PTa,biomass,Witch flounder|adult|437,100,Substitution,1,1
+PTa,biomass,Witch flounder|adult|439,100,Stability,1,1
+PTa,biomass,Witch flounder|juvenile|437,100,Substitution,0.76,2
+PTa,biomass,Yellowtail flounder|adult|403,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|adult|429,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|juvenile|403,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|juvenile|420,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|juvenile|421,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|juvenile|423,100,Reorganisation,0.53,2
+PTa,biomass,Yellowtail flounder|juvenile|428,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|juvenile|429,100,Substitution,0.81,2
+PTa,biomass,Yellowtail flounder|juvenile|431,100,Substitution,0.76,2
+PTa,biomass,Yellowtail flounder|juvenile|434,100,Reorganisation,0.7,2
+PTa,biomass,Yellowtail flounder|juvenile|435,100,Substitution,0.99,2
+PTa,biomass,Yellowtail flounder|juvenile|436,100,Substitution,0.96,2
+PTa,occurrence,Alewife|adult|420,100,Substitution,0.97,2
+PTa,occurrence,Alewife|adult|432,100,Substitution,0.99,2
+PTa,occurrence,Alewife|adult|433,100,Substitution,1,1
+PTa,occurrence,Alewife|juvenile|402,100,Functional change,1,1
+PTa,occurrence,Alewife|juvenile|403,100,Substitution,1,1
+PTa,occurrence,Alewife|juvenile|432,100,Stability,0.69,2
+PTa,occurrence,Alewife|juvenile|433,100,Stability,1,1
+PTa,occurrence,Alligatorfish|adult|422,100,Substitution,1,1
+PTa,occurrence,Alligatorfish|adult|427,100,Substitution,0.75,2
+PTa,occurrence,Alligatorfish|adult|429,100,Substitution,1,1
+PTa,occurrence,Alligatorfish|adult|431,100,Substitution,1,1
+PTa,occurrence,Alligatorfish|adult|434,100,Substitution,1,1
+PTa,occurrence,American plaice|adult|416,100,Substitution,1,1
+PTa,occurrence,American plaice|adult|418,100,Stability,1,1
+PTa,occurrence,American plaice|adult|423,100,Substitution,1,1
+PTa,occurrence,American plaice|adult|429,100,Functional change,0.62,2
+PTa,occurrence,American plaice|adult|431,100,Stability,1,1
+PTa,occurrence,American plaice|adult|433,100,Functional change,1,1
+PTa,occurrence,American plaice|adult|434,100,Stability,1,1
+PTa,occurrence,American plaice|juvenile|416,100,Functional change,0.78,2
+PTa,occurrence,American plaice|juvenile|417,100,Stability,0.78,2
+PTa,occurrence,American plaice|juvenile|418,100,Substitution,1,1
+PTa,occurrence,American plaice|juvenile|422,100,Substitution,0.76,2
+PTa,occurrence,American plaice|juvenile|423,100,Substitution,0.7,2
+PTa,occurrence,American plaice|juvenile|424,100,Reorganisation,0.53,2
+PTa,occurrence,American plaice|juvenile|426,100,Substitution,0.98,2
+PTa,occurrence,American plaice|juvenile|427,100,Substitution,1,1
+PTa,occurrence,American plaice|juvenile|428,100,Substitution,0.96,2
+PTa,occurrence,American plaice|juvenile|429,100,Substitution,1,1
+PTa,occurrence,American plaice|juvenile|431,100,Substitution,0.71,2
+PTa,occurrence,American plaice|juvenile|433,100,Substitution,1,1
+PTa,occurrence,American plaice|juvenile|434,100,Substitution,0.7,2
+PTa,occurrence,American plaice|juvenile|435,100,Stability,1,1
+PTa,occurrence,American plaice|juvenile|436,100,Reorganisation,1,1
+PTa,occurrence,American plaice|juvenile|437,100,Substitution,0.52,2
+PTa,occurrence,American plaice|juvenile|438,100,Substitution,0.93,2
+PTa,occurrence,American plaice|juvenile|439,100,Stability,1,1
+PTa,occurrence,Arctic alligatorfish|one_class|423,100,Reorganisation,1,1
+PTa,occurrence,Arctic alligatorfish|one_class|424,100,Substitution,1,1
+PTa,occurrence,Arctic hookear sculpin|one_class|423,100,Substitution,1,1
+PTa,occurrence,Arctic staghorn sculpin|adult|422,100,Substitution,1,1
+PTa,occurrence,Arctic staghorn sculpin|adult|423,100,Reorganisation,0.69,3
+PTa,occurrence,Arctic staghorn sculpin|adult|431,100,Substitution,1,1
+PTa,occurrence,Arctic staghorn sculpin|adult|436,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|adult|416,100,Substitution,0.87,2
+PTa,occurrence,Atlantic cod|adult|431,100,Substitution,0.96,2
+PTa,occurrence,Atlantic cod|adult|437,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|adult|438,100,Substitution,0.93,2
+PTa,occurrence,Atlantic cod|juvenile|416,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|420,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|422,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|juvenile|423,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|424,100,Stability,1,1
+PTa,occurrence,Atlantic cod|juvenile|427,100,Stability,0.74,2
+PTa,occurrence,Atlantic cod|juvenile|429,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|juvenile|431,100,Reorganisation,0.56,2
+PTa,occurrence,Atlantic cod|juvenile|433,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|434,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|juvenile|435,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|436,100,Substitution,1,1
+PTa,occurrence,Atlantic herring|adult|433,100,Substitution,1,1
+PTa,occurrence,Atlantic herring|juvenile|420,100,Stability,1,1
+PTa,occurrence,Atlantic herring|juvenile|432,100,Stability,1,1
+PTa,occurrence,Atlantic herring|juvenile|433,100,Stability,0.93,2
+PTa,occurrence,Atlantic hookear sculpin|one_class|424,100,Stability,0.96,2
+PTa,occurrence,Atlantic mackerel|juvenile|402,100,Stability,1,1
+PTa,occurrence,Atlantic poacher|one_class|416,100,Substitution,1,1
+PTa,occurrence,Atlantic poacher|one_class|418,100,Substitution,1,1
+PTa,occurrence,Atlantic poacher|one_class|422,100,Substitution,1,1
+PTa,occurrence,Atlantic poacher|one_class|423,100,Substitution,1,1
+PTa,occurrence,Atlantic poacher|one_class|434,100,Reorganisation,0.52,2
+PTa,occurrence,Atlantic spiny lumpsucker|one_class|423,100,Reorganisation,1,1
+PTa,occurrence,Atlantic spiny lumpsucker|one_class|424,100,Substitution,0.86,2
+PTa,occurrence,Atlantic spiny lumpsucker|one_class|431,100,Stability,1,1
+PTa,occurrence,Capelin|juvenile|416,100,Stability,0.64,2
+PTa,occurrence,Capelin|juvenile|422,100,Substitution,0.99,2
+PTa,occurrence,Capelin|juvenile|423,100,Reorganisation,0.95,2
+PTa,occurrence,Capelin|juvenile|424,100,Reorganisation,0.64,3
+PTa,occurrence,Capelin|juvenile|434,100,Reorganisation,0.79,3
+PTa,occurrence,Daubed shanny|adult|422,100,Stability,0.71,2
+PTa,occurrence,Daubed shanny|adult|423,100,Reorganisation,1,1
+PTa,occurrence,Daubed shanny|juvenile|416,100,Functional change,0.8,2
+PTa,occurrence,Daubed shanny|juvenile|418,100,Substitution,1,1
+PTa,occurrence,Daubed shanny|juvenile|422,100,Substitution,0.7,2
+PTa,occurrence,Daubed shanny|juvenile|423,100,Substitution,1,1
+PTa,occurrence,Daubed shanny|juvenile|424,100,Reorganisation,1,1
+PTa,occurrence,Daubed shanny|juvenile|431,100,Substitution,1,1
+PTa,occurrence,Daubed shanny|juvenile|433,100,Substitution,0.7,2
+PTa,occurrence,Daubed shanny|juvenile|434,100,Substitution,1,1
+PTa,occurrence,Dusky snailfish|one_class|417,100,Substitution,0.87,2
+PTa,occurrence,Dusky snailfish|one_class|418,100,Reorganisation,0.68,2
+PTa,occurrence,Dusky snailfish|one_class|422,100,Substitution,1,1
+PTa,occurrence,Dusky snailfish|one_class|423,100,Reorganisation,0.7,2
+PTa,occurrence,Dusky snailfish|one_class|424,100,Substitution,0.87,2
+PTa,occurrence,Dusky snailfish|one_class|427,100,Substitution,0.99,2
+PTa,occurrence,Dusky snailfish|one_class|429,100,Substitution,1,1
+PTa,occurrence,Dusky snailfish|one_class|431,100,Substitution,1,1
+PTa,occurrence,Fourbeard rockling|juvenile|415,100,Substitution,1,1
+PTa,occurrence,Fourbeard rockling|juvenile|416,100,Functional change,1,1
+PTa,occurrence,Fourline snakeblenny|one_class|423,100,Substitution,0.86,2
+PTa,occurrence,Fourline snakeblenny|one_class|424,100,Stability,1,1
+PTa,occurrence,Fourline snakeblenny|one_class|429,100,Stability,0.97,2
+PTa,occurrence,Fourline snakeblenny|one_class|431,100,Substitution,1,1
+PTa,occurrence,Greenland cod|juvenile|431,100,Substitution,0.81,2
+PTa,occurrence,Greenland halibut|adult|415,100,Reorganisation,0.98,2
+PTa,occurrence,Greenland halibut|adult|416,100,Functional change,0.79,3
+PTa,occurrence,Greenland halibut|adult|425,100,Functional change,1,1
+PTa,occurrence,Greenland halibut|juvenile|415,100,Stability,1,1
+PTa,occurrence,Greenland halibut|juvenile|416,100,Substitution,0.82,2
+PTa,occurrence,Greenland halibut|juvenile|418,100,Stability,0.62,2
+PTa,occurrence,Greenland halibut|juvenile|425,100,Stability,1,1
+PTa,occurrence,Laval's eelpout|one_class|423,100,Reorganisation,1,1
+PTa,occurrence,Laval's eelpout|one_class|424,100,Substitution,1,1
+PTa,occurrence,Laval's eelpout|one_class|429,100,Substitution,0.53,2
+PTa,occurrence,Laval's eelpout|one_class|431,100,Substitution,1,1
+PTa,occurrence,Longhorn sculpin|adult|401,100,Substitution,1,1
+PTa,occurrence,Longhorn sculpin|adult|403,100,Stability,1,1
+PTa,occurrence,Longhorn sculpin|adult|435,100,Stability,0.97,2
+PTa,occurrence,Longhorn sculpin|juvenile|432,100,Substitution,1,1
+PTa,occurrence,Longhorn sculpin|juvenile|433,100,Stability,1,1
+PTa,occurrence,Longhorn sculpin|juvenile|435,100,Substitution,1,1
+PTa,occurrence,Marlin-spike grenadier|one_class|415,100,Reorganisation,0.98,2
+PTa,occurrence,Marlin-spike grenadier|one_class|425,100,Substitution,0.78,2
+PTa,occurrence,Marlin-spike grenadier|one_class|439,100,Substitution,0.81,2
+PTa,occurrence,Moustache sculpin|one_class|422,100,Substitution,1,1
+PTa,occurrence,Moustache sculpin|one_class|423,100,Reorganisation,0.53,2
+PTa,occurrence,Moustache sculpin|one_class|427,100,Substitution,1,1
+PTa,occurrence,Moustache sculpin|one_class|429,100,Substitution,1,1
+PTa,occurrence,Moustache sculpin|one_class|431,100,Substitution,0.85,2
+PTa,occurrence,Moustache sculpin|one_class|436,100,Substitution,1,1
+PTa,occurrence,Rainbow smelt|adult|402,100,Stability,1,1
+PTa,occurrence,Rainbow smelt|adult|403,100,Stability,0.76,2
+PTa,occurrence,Rainbow smelt|adult|420,100,Substitution,1,1
+PTa,occurrence,Rainbow smelt|adult|421,100,Substitution,0.51,4
+PTa,occurrence,Rainbow smelt|adult|432,100,Substitution,1,1
+PTa,occurrence,Redfish unidentified|adult|415,100,Substitution,0.63,2
+PTa,occurrence,Redfish unidentified|adult|425,100,Substitution,0.72,2
+PTa,occurrence,Redfish unidentified|adult|439,100,Functional change,0.5,3
+PTa,occurrence,Sea raven|one_class|436,100,Stability,0.99,2
+PTa,occurrence,Shorthorn sculpin|adult|429,100,Functional change,0.61,4
+PTa,occurrence,Shorthorn sculpin|adult|431,100,Substitution,1,1
+PTa,occurrence,Smooth skate|juvenile|438,100,Substitution,1,1
+PTa,occurrence,Snakeblenny|adult|433,100,Substitution,1,1
+PTa,occurrence,Spatulate sculpin|one_class|423,100,Substitution,0.7,2
+PTa,occurrence,Spatulate sculpin|one_class|424,100,Substitution,1,1
+PTa,occurrence,Spatulate sculpin|one_class|427,100,Substitution,1,1
+PTa,occurrence,Spatulate sculpin|one_class|429,100,Reorganisation,0.7,2
+PTa,occurrence,Spatulate sculpin|one_class|431,100,Substitution,0.7,2
+PTa,occurrence,Stout eelblenny|one_class|418,100,Substitution,1,1
+PTa,occurrence,Stout eelblenny|one_class|419,100,Stability,1,1
+PTa,occurrence,Stout eelblenny|one_class|422,100,Substitution,1,1
+PTa,occurrence,Thorny skate|juvenile|415,100,Substitution,1,1
+PTa,occurrence,Thorny skate|juvenile|416,100,Reorganisation,0.53,2
+PTa,occurrence,Thorny skate|juvenile|426,100,Substitution,1,1
+PTa,occurrence,Thorny skate|juvenile|436,100,Substitution,0.61,2
+PTa,occurrence,Thorny skate|juvenile|437,100,Substitution,1,1
+PTa,occurrence,Thorny skate|juvenile|438,100,Substitution,0.7,2
+PTa,occurrence,Thorny skate|juvenile|439,100,Substitution,1,1
+PTa,occurrence,Three-spined stickleback|adult|432,100,Stability,0.98,2
+PTa,occurrence,White hake|adult|415,100,Reorganisation,1,1
+PTa,occurrence,White hake|adult|425,100,Substitution,0.72,2
+PTa,occurrence,White hake|adult|437,100,Substitution,1,1
+PTa,occurrence,White hake|adult|439,100,Substitution,0.97,2
+PTa,occurrence,White hake|juvenile|403,100,Substitution,0.81,3
+PTa,occurrence,White hake|juvenile|415,100,Stability,1,1
+PTa,occurrence,White hake|juvenile|432,100,Stability,1,1
+PTa,occurrence,White hake|juvenile|433,100,Stability,1,1
+PTa,occurrence,White hake|juvenile|437,100,Substitution,0.87,2
+PTa,occurrence,Windowpane flounder|juvenile|402,100,Functional change,1,1
+PTa,occurrence,Windowpane flounder|juvenile|432,100,Substitution,0.54,2
+PTa,occurrence,Winter flounder|adult|420,100,Stability,0.52,3
+PTa,occurrence,Winter flounder|adult|433,100,Stability,0.81,2
+PTa,occurrence,Winter flounder|adult|435,100,Stability,1,1
+PTa,occurrence,Winter flounder|juvenile|402,100,Stability,1,1
+PTa,occurrence,Winter flounder|juvenile|403,100,Substitution,0.94,2
+PTa,occurrence,Winter flounder|juvenile|420,100,Stability,0.87,2
+PTa,occurrence,Winter flounder|juvenile|421,100,Stability,1,1
+PTa,occurrence,Winter flounder|juvenile|432,100,Stability,0.53,2
+PTa,occurrence,Winter flounder|juvenile|433,100,Substitution,0.96,2
+PTa,occurrence,Winter flounder|juvenile|435,100,Stability,0.58,4
+PTa,occurrence,Witch flounder|adult|415,100,Substitution,0.77,2
+PTa,occurrence,Witch flounder|adult|416,100,Substitution,0.98,2
+PTa,occurrence,Witch flounder|adult|425,100,Reorganisation,1,1
+PTa,occurrence,Witch flounder|adult|437,100,Substitution,1,1
+PTa,occurrence,Witch flounder|adult|439,100,Stability,0.98,2
+PTa,occurrence,Witch flounder|juvenile|437,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|adult|403,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|adult|429,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|403,100,Substitution,0.71,2
+PTa,occurrence,Yellowtail flounder|juvenile|420,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|421,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|423,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|428,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|429,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|431,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|434,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|435,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|436,100,Substitution,0.79,2

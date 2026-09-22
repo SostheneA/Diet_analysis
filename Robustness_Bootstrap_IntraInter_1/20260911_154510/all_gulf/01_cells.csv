@@ -1,0 +1,62 @@
+"species","size_class","spatial_unit","cell_id"
+"Alewife","adult","Gulf",1
+"Alewife","juvenile","Gulf",2
+"Alligatorfish","adult","Gulf",3
+"Alligatorfish","juvenile","Gulf",4
+"American plaice","adult","Gulf",5
+"American plaice","juvenile","Gulf",6
+"Arctic alligatorfish","one_class","Gulf",7
+"Arctic hookear sculpin","one_class","Gulf",8
+"Arctic staghorn sculpin","adult","Gulf",9
+"Atlantic cod","adult","Gulf",10
+"Atlantic cod","juvenile","Gulf",11
+"Atlantic herring","adult","Gulf",12
+"Atlantic herring","juvenile","Gulf",13
+"Atlantic hookear sculpin","one_class","Gulf",14
+"Atlantic mackerel","adult","Gulf",15
+"Atlantic mackerel","juvenile","Gulf",16
+"Atlantic poacher","one_class","Gulf",17
+"Atlantic spiny lumpsucker","one_class","Gulf",18
+"Capelin","adult","Gulf",19
+"Capelin","juvenile","Gulf",20
+"Daubed shanny","adult","Gulf",21
+"Daubed shanny","juvenile","Gulf",22
+"Dusky snailfish","one_class","Gulf",23
+"Fourbeard rockling","juvenile","Gulf",24
+"Fourline snakeblenny","one_class","Gulf",25
+"Greenland cod","juvenile","Gulf",26
+"Greenland halibut","adult","Gulf",27
+"Greenland halibut","juvenile","Gulf",28
+"Laval's eelpout","one_class","Gulf",29
+"Longhorn sculpin","adult","Gulf",30
+"Longhorn sculpin","juvenile","Gulf",31
+"Marlin-spike grenadier","one_class","Gulf",32
+"Moustache sculpin","one_class","Gulf",33
+"Northern sand lance","one_class","Gulf",34
+"Rainbow smelt","adult","Gulf",35
+"Rainbow smelt","juvenile","Gulf",36
+"Redfish unidentified","adult","Gulf",37
+"Redfish unidentified","juvenile","Gulf",38
+"Sea raven","one_class","Gulf",39
+"Shorthorn sculpin","adult","Gulf",40
+"Shorthorn sculpin","juvenile","Gulf",41
+"Smooth skate","juvenile","Gulf",42
+"Snakeblenny","adult","Gulf",43
+"Snakeblenny","juvenile","Gulf",44
+"Spatulate sculpin","one_class","Gulf",45
+"Stout eelblenny","one_class","Gulf",46
+"Thorny skate","adult","Gulf",47
+"Thorny skate","juvenile","Gulf",48
+"Three-spined stickleback","adult","Gulf",49
+"Three-spined stickleback","juvenile","Gulf",50
+"Vahl's eelpout","one_class","Gulf",51
+"White hake","adult","Gulf",52
+"White hake","juvenile","Gulf",53
+"Windowpane flounder","adult","Gulf",54
+"Windowpane flounder","juvenile","Gulf",55
+"Winter flounder","adult","Gulf",56
+"Winter flounder","juvenile","Gulf",57
+"Witch flounder","adult","Gulf",58
+"Witch flounder","juvenile","Gulf",59
+"Yellowtail flounder","adult","Gulf",60
+"Yellowtail flounder","juvenile","Gulf",61

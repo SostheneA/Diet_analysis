@@ -1,0 +1,961 @@
+"scope","spatial_unit","scenario","contrast_type","mode","t","family","pct"
+"level_average","ALL","P1a","within","biomass",1,"Stability",78.6759515846452
+"level_average","ALL","P1b","within","biomass",2,"Stability",80.2586305782998
+"level_average","ALL","P2","within","biomass",3,"Stability",68.8355263157906
+"level_average","ALL","PTa","between","biomass",4,"Stability",37.4423164888853
+"level_average","ALL","PTb","between","biomass",5,"Stability",56.0273268398274
+"level_average","ALL","P1a","within","occurrence",6,"Stability",77.8206535010867
+"level_average","ALL","P1b","within","occurrence",7,"Stability",77.6598739699834
+"level_average","ALL","P2","within","occurrence",8,"Stability",82.0929824561418
+"level_average","ALL","PTa","between","occurrence",9,"Stability",24.8139070291849
+"level_average","ALL","PTb","between","occurrence",10,"Stability",48.6206168831173
+"spatial_unit","401","PTa","between","biomass",11,"Stability",10
+"spatial_unit","401","PTa","between","occurrence",12,"Stability",0
+"spatial_unit","402","PTa","between","biomass",13,"Stability",79.9999999999998
+"spatial_unit","402","PTa","between","occurrence",14,"Stability",60.0000000000001
+"spatial_unit","403","P1a","within","biomass",15,"Stability",80.3999999999998
+"spatial_unit","403","P1b","within","biomass",16,"Stability",97.4
+"spatial_unit","403","PTa","between","biomass",17,"Stability",27.1428571428571
+"spatial_unit","403","P1a","within","occurrence",18,"Stability",92.3999999999999
+"spatial_unit","403","P1b","within","occurrence",19,"Stability",80.7999999999998
+"spatial_unit","403","PTa","between","occurrence",20,"Stability",30.2857142857143
+"spatial_unit","415","P1a","within","biomass",21,"Stability",75
+"spatial_unit","415","P1b","within","biomass",22,"Stability",77.7777777777777
+"spatial_unit","415","P2","within","biomass",23,"Stability",66.6666666666666
+"spatial_unit","415","PTa","between","biomass",24,"Stability",54.1111111111112
+"spatial_unit","415","PTb","between","biomass",25,"Stability",39.9999999999999
+"spatial_unit","415","P1a","within","occurrence",26,"Stability",87.5
+"spatial_unit","415","P1b","within","occurrence",27,"Stability",82.4444444444443
+"spatial_unit","415","P2","within","occurrence",28,"Stability",54
+"spatial_unit","415","PTa","between","occurrence",29,"Stability",26.3333333333333
+"spatial_unit","415","PTb","between","occurrence",30,"Stability",43.6
+"spatial_unit","416","P1a","within","biomass",31,"Stability",59.5555555555556
+"spatial_unit","416","P1b","within","biomass",32,"Stability",64.8000000000001
+"spatial_unit","416","P2","within","biomass",33,"Stability",75
+"spatial_unit","416","PTa","between","biomass",34,"Stability",40.6666666666666
+"spatial_unit","416","PTb","between","biomass",35,"Stability",48.375
+"spatial_unit","416","P1a","within","occurrence",36,"Stability",76.9999999999999
+"spatial_unit","416","P1b","within","occurrence",37,"Stability",78.4999999999999
+"spatial_unit","416","P2","within","occurrence",38,"Stability",68.75
+"spatial_unit","416","PTa","between","occurrence",39,"Stability",7.91666666666667
+"spatial_unit","416","PTb","between","occurrence",40,"Stability",35.875
+"spatial_unit","417","P1a","within","biomass",41,"Stability",100
+"spatial_unit","417","P1b","within","biomass",42,"Stability",100
+"spatial_unit","417","PTa","between","biomass",43,"Stability",60.5
+"spatial_unit","417","PTb","between","biomass",44,"Stability",100
+"spatial_unit","417","P1a","within","occurrence",45,"Stability",100
+"spatial_unit","417","P1b","within","occurrence",46,"Stability",100
+"spatial_unit","417","PTa","between","occurrence",47,"Stability",45.5
+"spatial_unit","417","PTb","between","occurrence",48,"Stability",82
+"spatial_unit","418","P1a","within","biomass",49,"Stability",66.6666666666666
+"spatial_unit","418","P1b","within","biomass",50,"Stability",66.6666666666666
+"spatial_unit","418","P2","within","biomass",51,"Stability",100
+"spatial_unit","418","PTa","between","biomass",52,"Stability",14.8571428571428
+"spatial_unit","418","PTb","between","biomass",53,"Stability",85
+"spatial_unit","418","P1a","within","occurrence",54,"Stability",99.6666666666667
+"spatial_unit","418","P1b","within","occurrence",55,"Stability",100
+"spatial_unit","418","P2","within","occurrence",56,"Stability",100
+"spatial_unit","418","PTa","between","occurrence",57,"Stability",23.1428571428571
+"spatial_unit","418","PTb","between","occurrence",58,"Stability",100
+"spatial_unit","419","P1a","within","biomass",59,"Stability",100
+"spatial_unit","419","P1b","within","biomass",60,"Stability",100
+"spatial_unit","419","PTa","between","biomass",61,"Stability",100
+"spatial_unit","419","P1a","within","occurrence",62,"Stability",100
+"spatial_unit","419","P1b","within","occurrence",63,"Stability",100
+"spatial_unit","419","PTa","between","occurrence",64,"Stability",100
+"spatial_unit","420","P1a","within","biomass",65,"Stability",73.8
+"spatial_unit","420","P1b","within","biomass",66,"Stability",93.6666666666666
+"spatial_unit","420","P2","within","biomass",67,"Stability",89.5
+"spatial_unit","420","PTa","between","biomass",68,"Stability",42.8571428571429
+"spatial_unit","420","PTb","between","biomass",69,"Stability",100
+"spatial_unit","420","P1a","within","occurrence",70,"Stability",91.3999999999999
+"spatial_unit","420","P1b","within","occurrence",71,"Stability",93.6666666666666
+"spatial_unit","420","P2","within","occurrence",72,"Stability",50
+"spatial_unit","420","PTa","between","occurrence",73,"Stability",34.5714285714285
+"spatial_unit","420","PTb","between","occurrence",74,"Stability",91
+"spatial_unit","421","P1a","within","biomass",75,"Stability",100
+"spatial_unit","421","P1b","within","biomass",76,"Stability",100
+"spatial_unit","421","PTa","between","biomass",77,"Stability",41.3333333333334
+"spatial_unit","421","PTb","between","biomass",78,"Stability",100
+"spatial_unit","421","P1a","within","occurrence",79,"Stability",50
+"spatial_unit","421","P1b","within","occurrence",80,"Stability",50
+"spatial_unit","421","PTa","between","occurrence",81,"Stability",41.6666666666667
+"spatial_unit","421","PTb","between","occurrence",82,"Stability",70
+"spatial_unit","422","P1a","within","biomass",83,"Stability",65.1428571428572
+"spatial_unit","422","P1b","within","biomass",84,"Stability",60.6666666666667
+"spatial_unit","422","P2","within","biomass",85,"Stability",55.5
+"spatial_unit","422","PTa","between","biomass",86,"Stability",21.1818181818182
+"spatial_unit","422","PTb","between","biomass",87,"Stability",0
+"spatial_unit","422","P1a","within","occurrence",88,"Stability",61.1428571428573
+"spatial_unit","422","P1b","within","occurrence",89,"Stability",61.6666666666666
+"spatial_unit","422","P2","within","occurrence",90,"Stability",100
+"spatial_unit","422","PTa","between","occurrence",91,"Stability",6.54545454545454
+"spatial_unit","422","PTb","between","occurrence",92,"Stability",25
+"spatial_unit","423","P1a","within","biomass",93,"Stability",66.6666666666666
+"spatial_unit","423","P1b","within","biomass",94,"Stability",61.1111111111112
+"spatial_unit","423","P2","within","biomass",95,"Stability",44.8
+"spatial_unit","423","PTa","between","biomass",96,"Stability",2.23529411764706
+"spatial_unit","423","PTb","between","biomass",97,"Stability",0
+"spatial_unit","423","P1a","within","occurrence",98,"Stability",48.6
+"spatial_unit","423","P1b","within","occurrence",99,"Stability",51.888888888889
+"spatial_unit","423","P2","within","occurrence",100,"Stability",59.9999999999999
+"spatial_unit","423","PTa","between","occurrence",101,"Stability",0
+"spatial_unit","423","PTb","between","occurrence",102,"Stability",16.6666666666666
+"spatial_unit","424","P1a","within","biomass",103,"Stability",55.1666666666666
+"spatial_unit","424","P1b","within","biomass",104,"Stability",60.6666666666666
+"spatial_unit","424","P2","within","biomass",105,"Stability",89
+"spatial_unit","424","PTa","between","biomass",106,"Stability",46.0909090909091
+"spatial_unit","424","PTb","between","biomass",107,"Stability",49.1428571428571
+"spatial_unit","424","P1a","within","occurrence",108,"Stability",33.8333333333333
+"spatial_unit","424","P1b","within","occurrence",109,"Stability",33.8333333333333
+"spatial_unit","424","P2","within","occurrence",110,"Stability",87
+"spatial_unit","424","PTa","between","occurrence",111,"Stability",29.7272727272727
+"spatial_unit","424","PTb","between","occurrence",112,"Stability",25.4285714285714
+"spatial_unit","425","P1a","within","biomass",113,"Stability",100
+"spatial_unit","425","P1b","within","biomass",114,"Stability",70.8333333333332
+"spatial_unit","425","P2","within","biomass",115,"Stability",100
+"spatial_unit","425","PTa","between","biomass",116,"Stability",16.6666666666666
+"spatial_unit","425","PTb","between","biomass",117,"Stability",41
+"spatial_unit","425","P1a","within","occurrence",118,"Stability",75
+"spatial_unit","425","P1b","within","occurrence",119,"Stability",82.3333333333333
+"spatial_unit","425","P2","within","occurrence",120,"Stability",85
+"spatial_unit","425","PTa","between","occurrence",121,"Stability",16.6666666666666
+"spatial_unit","425","PTb","between","occurrence",122,"Stability",50
+"spatial_unit","426","P1a","within","biomass",123,"Stability",100
+"spatial_unit","426","P1b","within","biomass",124,"Stability",100
+"spatial_unit","426","PTa","between","biomass",125,"Stability",16.5
+"spatial_unit","426","P1a","within","occurrence",126,"Stability",100
+"spatial_unit","426","P1b","within","occurrence",127,"Stability",100
+"spatial_unit","426","PTa","between","occurrence",128,"Stability",1
+"spatial_unit","427","P1a","within","biomass",129,"Stability",100
+"spatial_unit","427","P1b","within","biomass",130,"Stability",95.5
+"spatial_unit","427","PTa","between","biomass",131,"Stability",25.8333333333334
+"spatial_unit","427","PTb","between","biomass",132,"Stability",66.3333333333333
+"spatial_unit","427","P1a","within","occurrence",133,"Stability",71.25
+"spatial_unit","427","P1b","within","occurrence",134,"Stability",91
+"spatial_unit","427","PTa","between","occurrence",135,"Stability",16.6666666666666
+"spatial_unit","427","PTb","between","occurrence",136,"Stability",47.6666666666666
+"spatial_unit","428","P2","within","biomass",137,"Stability",14
+"spatial_unit","428","PTa","between","biomass",138,"Stability",41
+"spatial_unit","428","PTb","between","biomass",139,"Stability",83
+"spatial_unit","428","P2","within","occurrence",140,"Stability",100
+"spatial_unit","428","PTa","between","occurrence",141,"Stability",0
+"spatial_unit","428","PTb","between","occurrence",142,"Stability",100
+"spatial_unit","429","P1a","within","biomass",143,"Stability",87.1999999999999
+"spatial_unit","429","P1b","within","biomass",144,"Stability",76.7058823529412
+"spatial_unit","429","P2","within","biomass",145,"Stability",0
+"spatial_unit","429","PTa","between","biomass",146,"Stability",21.9166666666667
+"spatial_unit","429","PTb","between","biomass",147,"Stability",0
+"spatial_unit","429","P1a","within","occurrence",148,"Stability",68.3999999999999
+"spatial_unit","429","P1b","within","occurrence",149,"Stability",81.764705882353
+"spatial_unit","429","P2","within","occurrence",150,"Stability",100
+"spatial_unit","429","PTa","between","occurrence",151,"Stability",12.9166666666667
+"spatial_unit","429","PTb","between","occurrence",152,"Stability",0
+"spatial_unit","431","P1a","within","biomass",153,"Stability",69.1111111111111
+"spatial_unit","431","P1b","within","biomass",154,"Stability",72.4
+"spatial_unit","431","P2","within","biomass",155,"Stability",78.375
+"spatial_unit","431","PTa","between","biomass",156,"Stability",28.875
+"spatial_unit","431","PTb","between","biomass",157,"Stability",0
+"spatial_unit","431","P1a","within","occurrence",158,"Stability",77.7777777777777
+"spatial_unit","431","P1b","within","occurrence",159,"Stability",79.9999999999998
+"spatial_unit","431","P2","within","occurrence",160,"Stability",90.25
+"spatial_unit","431","PTa","between","occurrence",161,"Stability",13.9375
+"spatial_unit","431","PTb","between","occurrence",162,"Stability",0
+"spatial_unit","432","P1a","within","biomass",163,"Stability",100
+"spatial_unit","432","P1b","within","biomass",164,"Stability",100
+"spatial_unit","432","P2","within","biomass",165,"Stability",100
+"spatial_unit","432","PTa","between","biomass",166,"Stability",70.5555555555555
+"spatial_unit","432","PTb","between","biomass",167,"Stability",100
+"spatial_unit","432","P1a","within","occurrence",168,"Stability",100
+"spatial_unit","432","P1b","within","occurrence",169,"Stability",100
+"spatial_unit","432","P2","within","occurrence",170,"Stability",100
+"spatial_unit","432","PTa","between","occurrence",171,"Stability",51.8888888888889
+"spatial_unit","432","PTb","between","occurrence",172,"Stability",100
+"spatial_unit","433","P1a","within","biomass",173,"Stability",76.9230769230769
+"spatial_unit","433","P1b","within","biomass",174,"Stability",76.9230769230769
+"spatial_unit","433","P2","within","biomass",175,"Stability",100
+"spatial_unit","433","PTa","between","biomass",176,"Stability",45.9999999999999
+"spatial_unit","433","PTb","between","biomass",177,"Stability",83.1666666666666
+"spatial_unit","433","P1a","within","occurrence",178,"Stability",77.4615384615385
+"spatial_unit","433","P1b","within","occurrence",179,"Stability",83.0769230769229
+"spatial_unit","433","P2","within","occurrence",180,"Stability",14.5
+"spatial_unit","433","PTa","between","occurrence",181,"Stability",36.7692307692307
+"spatial_unit","433","PTb","between","occurrence",182,"Stability",32.8333333333333
+"spatial_unit","434","P1a","within","biomass",183,"Stability",53.7000000000001
+"spatial_unit","434","P1b","within","biomass",184,"Stability",56.9999999999999
+"spatial_unit","434","P2","within","biomass",185,"Stability",52.5
+"spatial_unit","434","PTa","between","biomass",186,"Stability",12.5
+"spatial_unit","434","PTb","between","biomass",187,"Stability",3
+"spatial_unit","434","P1a","within","occurrence",188,"Stability",54.3000000000001
+"spatial_unit","434","P1b","within","occurrence",189,"Stability",50.2727272727273
+"spatial_unit","434","P2","within","occurrence",190,"Stability",100
+"spatial_unit","434","PTa","between","occurrence",191,"Stability",12.5
+"spatial_unit","434","PTb","between","occurrence",192,"Stability",0
+"spatial_unit","435","P1a","within","biomass",193,"Stability",61.75
+"spatial_unit","435","P1b","within","biomass",194,"Stability",61.75
+"spatial_unit","435","P2","within","biomass",195,"Stability",61.3333333333333
+"spatial_unit","435","PTa","between","biomass",196,"Stability",67.8571428571429
+"spatial_unit","435","PTb","between","biomass",197,"Stability",100
+"spatial_unit","435","P1a","within","occurrence",198,"Stability",53
+"spatial_unit","435","P1b","within","occurrence",199,"Stability",53
+"spatial_unit","435","P2","within","occurrence",200,"Stability",66.6666666666666
+"spatial_unit","435","PTa","between","occurrence",201,"Stability",50.7142857142857
+"spatial_unit","435","PTb","between","occurrence",202,"Stability",66.6666666666666
+"spatial_unit","436","P1a","within","biomass",203,"Stability",85.7142857142857
+"spatial_unit","436","P1b","within","biomass",204,"Stability",85.7142857142857
+"spatial_unit","436","P2","within","biomass",205,"Stability",81.1999999999998
+"spatial_unit","436","PTa","between","biomass",206,"Stability",14.8571428571428
+"spatial_unit","436","PTb","between","biomass",207,"Stability",29
+"spatial_unit","436","P1a","within","occurrence",208,"Stability",71.1428571428571
+"spatial_unit","436","P1b","within","occurrence",209,"Stability",71.7142857142857
+"spatial_unit","436","P2","within","occurrence",210,"Stability",96.6
+"spatial_unit","436","PTa","between","occurrence",211,"Stability",14.1428571428571
+"spatial_unit","436","PTb","between","occurrence",212,"Stability",4.66666666666667
+"spatial_unit","437","P1a","within","biomass",213,"Stability",82.75
+"spatial_unit","437","P1b","within","biomass",214,"Stability",78.375
+"spatial_unit","437","P2","within","biomass",215,"Stability",100
+"spatial_unit","437","PTa","between","biomass",216,"Stability",25.5714285714286
+"spatial_unit","437","PTb","between","biomass",217,"Stability",63
+"spatial_unit","437","P1a","within","occurrence",218,"Stability",100
+"spatial_unit","437","P1b","within","occurrence",219,"Stability",71.625
+"spatial_unit","437","P2","within","occurrence",220,"Stability",100
+"spatial_unit","437","PTa","between","occurrence",221,"Stability",0
+"spatial_unit","437","PTb","between","occurrence",222,"Stability",13
+"spatial_unit","438","P1b","within","biomass",223,"Stability",100
+"spatial_unit","438","P2","within","biomass",224,"Stability",0
+"spatial_unit","438","PTa","between","biomass",225,"Stability",25
+"spatial_unit","438","PTb","between","biomass",226,"Stability",52.3333333333333
+"spatial_unit","438","P1b","within","occurrence",227,"Stability",100
+"spatial_unit","438","P2","within","occurrence",228,"Stability",87
+"spatial_unit","438","PTa","between","occurrence",229,"Stability",1.75
+"spatial_unit","438","PTb","between","occurrence",230,"Stability",100
+"spatial_unit","439","P1a","within","biomass",231,"Stability",50
+"spatial_unit","439","P1b","within","biomass",232,"Stability",68.25
+"spatial_unit","439","P2","within","biomass",233,"Stability",100
+"spatial_unit","439","PTa","between","biomass",234,"Stability",56.8333333333333
+"spatial_unit","439","PTb","between","biomass",235,"Stability",89.25
+"spatial_unit","439","P1a","within","occurrence",236,"Stability",100
+"spatial_unit","439","P1b","within","occurrence",237,"Stability",66.25
+"spatial_unit","439","P2","within","occurrence",238,"Stability",100
+"spatial_unit","439","PTa","between","occurrence",239,"Stability",35.3333333333333
+"spatial_unit","439","PTb","between","occurrence",240,"Stability",65.25
+"level_average","ALL","P1a","within","biomass",1,"Substitution",4.52991718426499
+"level_average","ALL","P1b","within","biomass",2,"Substitution",5.21781558583033
+"level_average","ALL","P2","within","biomass",3,"Substitution",1.62017543859649
+"level_average","ALL","PTa","between","biomass",4,"Substitution",41.0572373493128
+"level_average","ALL","PTb","between","biomass",5,"Substitution",20.0928030303032
+"level_average","ALL","P1a","within","occurrence",6,"Substitution",7.53735998301213
+"level_average","ALL","P1b","within","occurrence",7,"Substitution",7.70824839648375
+"level_average","ALL","P2","within","occurrence",8,"Substitution",6.1425438596491
+"level_average","ALL","PTa","between","occurrence",9,"Substitution",59.180519810014
+"level_average","ALL","PTb","between","occurrence",10,"Substitution",39.850757575758
+"spatial_unit","401","PTa","between","biomass",11,"Substitution",0
+"spatial_unit","401","PTa","between","occurrence",12,"Substitution",100
+"spatial_unit","402","PTa","between","biomass",13,"Substitution",0
+"spatial_unit","402","PTa","between","occurrence",14,"Substitution",0
+"spatial_unit","403","P1a","within","biomass",15,"Substitution",0
+"spatial_unit","403","P1b","within","biomass",16,"Substitution",0
+"spatial_unit","403","PTa","between","biomass",17,"Substitution",60.1428571428571
+"spatial_unit","403","P1a","within","occurrence",18,"Substitution",0
+"spatial_unit","403","P1b","within","occurrence",19,"Substitution",0
+"spatial_unit","403","PTa","between","occurrence",20,"Substitution",67.1428571428572
+"spatial_unit","415","P1a","within","biomass",21,"Substitution",0
+"spatial_unit","415","P1b","within","biomass",22,"Substitution",0
+"spatial_unit","415","P2","within","biomass",23,"Substitution",0
+"spatial_unit","415","PTa","between","biomass",24,"Substitution",16.7777777777777
+"spatial_unit","415","PTb","between","biomass",25,"Substitution",0
+"spatial_unit","415","P1a","within","occurrence",26,"Substitution",0
+"spatial_unit","415","P1b","within","occurrence",27,"Substitution",6.44444444444444
+"spatial_unit","415","P2","within","occurrence",28,"Substitution",33.3333333333333
+"spatial_unit","415","PTa","between","occurrence",29,"Substitution",37.7777777777778
+"spatial_unit","415","PTb","between","occurrence",30,"Substitution",56.4
+"spatial_unit","416","P1a","within","biomass",31,"Substitution",7.1111111111111
+"spatial_unit","416","P1b","within","biomass",32,"Substitution",5.2
+"spatial_unit","416","P2","within","biomass",33,"Substitution",0
+"spatial_unit","416","PTa","between","biomass",34,"Substitution",34.5833333333333
+"spatial_unit","416","PTb","between","biomass",35,"Substitution",21.875
+"spatial_unit","416","P1a","within","occurrence",36,"Substitution",11.3333333333333
+"spatial_unit","416","P1b","within","occurrence",37,"Substitution",11
+"spatial_unit","416","P2","within","occurrence",38,"Substitution",6.25
+"spatial_unit","416","PTa","between","occurrence",39,"Substitution",54.1666666666667
+"spatial_unit","416","PTb","between","occurrence",40,"Substitution",57.5
+"spatial_unit","417","P1a","within","biomass",41,"Substitution",0
+"spatial_unit","417","P1b","within","biomass",42,"Substitution",0
+"spatial_unit","417","PTa","between","biomass",43,"Substitution",39.5
+"spatial_unit","417","PTb","between","biomass",44,"Substitution",0
+"spatial_unit","417","P1a","within","occurrence",45,"Substitution",0
+"spatial_unit","417","P1b","within","occurrence",46,"Substitution",0
+"spatial_unit","417","PTa","between","occurrence",47,"Substitution",54.5
+"spatial_unit","417","PTb","between","occurrence",48,"Substitution",18
+"spatial_unit","418","P1a","within","biomass",49,"Substitution",0
+"spatial_unit","418","P1b","within","biomass",50,"Substitution",0
+"spatial_unit","418","P2","within","biomass",51,"Substitution",0
+"spatial_unit","418","PTa","between","biomass",52,"Substitution",51.7142857142856
+"spatial_unit","418","PTb","between","biomass",53,"Substitution",0
+"spatial_unit","418","P1a","within","occurrence",54,"Substitution",0.333333333333333
+"spatial_unit","418","P1b","within","occurrence",55,"Substitution",0
+"spatial_unit","418","P2","within","occurrence",56,"Substitution",0
+"spatial_unit","418","PTa","between","occurrence",57,"Substitution",61.7142857142857
+"spatial_unit","418","PTb","between","occurrence",58,"Substitution",0
+"spatial_unit","419","P1a","within","biomass",59,"Substitution",0
+"spatial_unit","419","P1b","within","biomass",60,"Substitution",0
+"spatial_unit","419","PTa","between","biomass",61,"Substitution",0
+"spatial_unit","419","P1a","within","occurrence",62,"Substitution",0
+"spatial_unit","419","P1b","within","occurrence",63,"Substitution",0
+"spatial_unit","419","PTa","between","occurrence",64,"Substitution",0
+"spatial_unit","420","P1a","within","biomass",65,"Substitution",0
+"spatial_unit","420","P1b","within","biomass",66,"Substitution",0
+"spatial_unit","420","P2","within","biomass",67,"Substitution",1
+"spatial_unit","420","PTa","between","biomass",68,"Substitution",57.1428571428571
+"spatial_unit","420","PTb","between","biomass",69,"Substitution",0
+"spatial_unit","420","P1a","within","occurrence",70,"Substitution",0
+"spatial_unit","420","P1b","within","occurrence",71,"Substitution",0
+"spatial_unit","420","P2","within","occurrence",72,"Substitution",0
+"spatial_unit","420","PTa","between","occurrence",73,"Substitution",58.5714285714285
+"spatial_unit","420","PTb","between","occurrence",74,"Substitution",9
+"spatial_unit","421","P1a","within","biomass",75,"Substitution",0
+"spatial_unit","421","P1b","within","biomass",76,"Substitution",0
+"spatial_unit","421","PTa","between","biomass",77,"Substitution",38
+"spatial_unit","421","PTb","between","biomass",78,"Substitution",0
+"spatial_unit","421","P1a","within","occurrence",79,"Substitution",0
+"spatial_unit","421","P1b","within","occurrence",80,"Substitution",0
+"spatial_unit","421","PTa","between","occurrence",81,"Substitution",50.3333333333333
+"spatial_unit","421","PTb","between","occurrence",82,"Substitution",0
+"spatial_unit","422","P1a","within","biomass",83,"Substitution",6.28571428571429
+"spatial_unit","422","P1b","within","biomass",84,"Substitution",5.46666666666667
+"spatial_unit","422","P2","within","biomass",85,"Substitution",0
+"spatial_unit","422","PTa","between","biomass",86,"Substitution",39.1818181818182
+"spatial_unit","422","PTb","between","biomass",87,"Substitution",50
+"spatial_unit","422","P1a","within","occurrence",88,"Substitution",14.2857142857143
+"spatial_unit","422","P1b","within","occurrence",89,"Substitution",14.9333333333333
+"spatial_unit","422","P2","within","occurrence",90,"Substitution",0
+"spatial_unit","422","PTa","between","occurrence",91,"Substitution",79.4545454545454
+"spatial_unit","422","PTb","between","occurrence",92,"Substitution",50
+"spatial_unit","423","P1a","within","biomass",93,"Substitution",13.3333333333333
+"spatial_unit","423","P1b","within","biomass",94,"Substitution",27.7777777777778
+"spatial_unit","423","P2","within","biomass",95,"Substitution",7.2
+"spatial_unit","423","PTa","between","biomass",96,"Substitution",52.3529411764707
+"spatial_unit","423","PTb","between","biomass",97,"Substitution",50
+"spatial_unit","423","P1a","within","occurrence",98,"Substitution",38.0666666666666
+"spatial_unit","423","P1b","within","occurrence",99,"Substitution",37
+"spatial_unit","423","P2","within","occurrence",100,"Substitution",18.6
+"spatial_unit","423","PTa","between","occurrence",101,"Substitution",54.8823529411765
+"spatial_unit","423","PTb","between","occurrence",102,"Substitution",42.5
+"spatial_unit","424","P1a","within","biomass",103,"Substitution",11.5
+"spatial_unit","424","P1b","within","biomass",104,"Substitution",6
+"spatial_unit","424","P2","within","biomass",105,"Substitution",11
+"spatial_unit","424","PTa","between","biomass",106,"Substitution",42.1818181818182
+"spatial_unit","424","PTb","between","biomass",107,"Substitution",23
+"spatial_unit","424","P1a","within","occurrence",108,"Substitution",16.1666666666666
+"spatial_unit","424","P1b","within","occurrence",109,"Substitution",16.1666666666666
+"spatial_unit","424","P2","within","occurrence",110,"Substitution",13
+"spatial_unit","424","PTa","between","occurrence",111,"Substitution",50.5454545454546
+"spatial_unit","424","PTb","between","occurrence",112,"Substitution",46
+"spatial_unit","425","P1a","within","biomass",113,"Substitution",0
+"spatial_unit","425","P1b","within","biomass",114,"Substitution",1.16666666666667
+"spatial_unit","425","P2","within","biomass",115,"Substitution",0
+"spatial_unit","425","PTa","between","biomass",116,"Substitution",38
+"spatial_unit","425","PTb","between","biomass",117,"Substitution",9
+"spatial_unit","425","P1a","within","occurrence",118,"Substitution",16
+"spatial_unit","425","P1b","within","occurrence",119,"Substitution",1
+"spatial_unit","425","P2","within","occurrence",120,"Substitution",0
+"spatial_unit","425","PTa","between","occurrence",121,"Substitution",37
+"spatial_unit","425","PTb","between","occurrence",122,"Substitution",50
+"spatial_unit","426","P1a","within","biomass",123,"Substitution",0
+"spatial_unit","426","P1b","within","biomass",124,"Substitution",0
+"spatial_unit","426","PTa","between","biomass",125,"Substitution",68
+"spatial_unit","426","P1a","within","occurrence",126,"Substitution",0
+"spatial_unit","426","P1b","within","occurrence",127,"Substitution",0
+"spatial_unit","426","PTa","between","occurrence",128,"Substitution",99
+"spatial_unit","427","P1a","within","biomass",129,"Substitution",0
+"spatial_unit","427","P1b","within","biomass",130,"Substitution",0
+"spatial_unit","427","PTa","between","biomass",131,"Substitution",50.8333333333333
+"spatial_unit","427","PTb","between","biomass",132,"Substitution",17.6666666666667
+"spatial_unit","427","P1a","within","occurrence",133,"Substitution",0
+"spatial_unit","427","P1b","within","occurrence",134,"Substitution",0
+"spatial_unit","427","PTa","between","occurrence",135,"Substitution",79
+"spatial_unit","427","PTb","between","occurrence",136,"Substitution",33.3333333333333
+"spatial_unit","428","P2","within","biomass",137,"Substitution",0
+"spatial_unit","428","PTa","between","biomass",138,"Substitution",57
+"spatial_unit","428","PTb","between","biomass",139,"Substitution",0
+"spatial_unit","428","P2","within","occurrence",140,"Substitution",0
+"spatial_unit","428","PTa","between","occurrence",141,"Substitution",98
+"spatial_unit","428","PTb","between","occurrence",142,"Substitution",0
+"spatial_unit","429","P1a","within","biomass",143,"Substitution",11.8666666666667
+"spatial_unit","429","P1b","within","biomass",144,"Substitution",17.235294117647
+"spatial_unit","429","P2","within","biomass",145,"Substitution",0
+"spatial_unit","429","PTa","between","biomass",146,"Substitution",64
+"spatial_unit","429","PTb","between","biomass",147,"Substitution",70.9999999999999
+"spatial_unit","429","P1a","within","occurrence",148,"Substitution",12.7333333333333
+"spatial_unit","429","P1b","within","occurrence",149,"Substitution",11.7647058823529
+"spatial_unit","429","P2","within","occurrence",150,"Substitution",0
+"spatial_unit","429","PTa","between","occurrence",151,"Substitution",57.5
+"spatial_unit","429","PTb","between","occurrence",152,"Substitution",77.3999999999998
+"spatial_unit","431","P1a","within","biomass",153,"Substitution",10.5555555555555
+"spatial_unit","431","P1b","within","biomass",154,"Substitution",9.29999999999998
+"spatial_unit","431","P2","within","biomass",155,"Substitution",6.25
+"spatial_unit","431","PTa","between","biomass",156,"Substitution",58.4375
+"spatial_unit","431","PTb","between","biomass",157,"Substitution",75.0000000000001
+"spatial_unit","431","P1a","within","occurrence",158,"Substitution",11.1111111111111
+"spatial_unit","431","P1b","within","occurrence",159,"Substitution",9.99999999999998
+"spatial_unit","431","P2","within","occurrence",160,"Substitution",6.625
+"spatial_unit","431","PTa","between","occurrence",161,"Substitution",77.9375
+"spatial_unit","431","PTb","between","occurrence",162,"Substitution",99.1666666666667
+"spatial_unit","432","P1a","within","biomass",163,"Substitution",0
+"spatial_unit","432","P1b","within","biomass",164,"Substitution",0
+"spatial_unit","432","P2","within","biomass",165,"Substitution",0
+"spatial_unit","432","PTa","between","biomass",166,"Substitution",18.3333333333333
+"spatial_unit","432","PTb","between","biomass",167,"Substitution",0
+"spatial_unit","432","P1a","within","occurrence",168,"Substitution",0
+"spatial_unit","432","P1b","within","occurrence",169,"Substitution",0
+"spatial_unit","432","P2","within","occurrence",170,"Substitution",0
+"spatial_unit","432","PTa","between","occurrence",171,"Substitution",48.1111111111111
+"spatial_unit","432","PTb","between","occurrence",172,"Substitution",0
+"spatial_unit","433","P1a","within","biomass",173,"Substitution",0
+"spatial_unit","433","P1b","within","biomass",174,"Substitution",0
+"spatial_unit","433","P2","within","biomass",175,"Substitution",0
+"spatial_unit","433","PTa","between","biomass",176,"Substitution",30.9230769230769
+"spatial_unit","433","PTb","between","biomass",177,"Substitution",16.8333333333333
+"spatial_unit","433","P1a","within","occurrence",178,"Substitution",3.30769230769231
+"spatial_unit","433","P1b","within","occurrence",179,"Substitution",3.46153846153846
+"spatial_unit","433","P2","within","occurrence",180,"Substitution",35.5
+"spatial_unit","433","PTa","between","occurrence",181,"Substitution",53.2307692307693
+"spatial_unit","433","PTb","between","occurrence",182,"Substitution",60
+"spatial_unit","434","P1a","within","biomass",183,"Substitution",1.5
+"spatial_unit","434","P1b","within","biomass",184,"Substitution",1.54545454545455
+"spatial_unit","434","P2","within","biomass",185,"Substitution",0
+"spatial_unit","434","PTa","between","biomass",186,"Substitution",59.75
+"spatial_unit","434","PTb","between","biomass",187,"Substitution",16
+"spatial_unit","434","P1a","within","occurrence",188,"Substitution",12.7
+"spatial_unit","434","P1b","within","occurrence",189,"Substitution",11.7272727272728
+"spatial_unit","434","P2","within","occurrence",190,"Substitution",0
+"spatial_unit","434","PTa","between","occurrence",191,"Substitution",54.625
+"spatial_unit","434","PTb","between","occurrence",192,"Substitution",100
+"spatial_unit","435","P1a","within","biomass",193,"Substitution",22.75
+"spatial_unit","435","P1b","within","biomass",194,"Substitution",22.75
+"spatial_unit","435","P2","within","biomass",195,"Substitution",5.33333333333333
+"spatial_unit","435","PTa","between","biomass",196,"Substitution",32.1428571428571
+"spatial_unit","435","PTb","between","biomass",197,"Substitution",0
+"spatial_unit","435","P1a","within","occurrence",198,"Substitution",22.75
+"spatial_unit","435","P1b","within","occurrence",199,"Substitution",22.75
+"spatial_unit","435","P2","within","occurrence",200,"Substitution",0
+"spatial_unit","435","PTa","between","occurrence",201,"Substitution",48.7142857142858
+"spatial_unit","435","PTb","between","occurrence",202,"Substitution",33.3333333333333
+"spatial_unit","436","P1a","within","biomass",203,"Substitution",14.2857142857143
+"spatial_unit","436","P1b","within","biomass",204,"Substitution",14.2857142857143
+"spatial_unit","436","P2","within","biomass",205,"Substitution",0
+"spatial_unit","436","PTa","between","biomass",206,"Substitution",69.5714285714285
+"spatial_unit","436","PTb","between","biomass",207,"Substitution",66.6666666666666
+"spatial_unit","436","P1a","within","occurrence",208,"Substitution",14.5714285714286
+"spatial_unit","436","P1b","within","occurrence",209,"Substitution",14
+"spatial_unit","436","P2","within","occurrence",210,"Substitution",3.4
+"spatial_unit","436","PTa","between","occurrence",211,"Substitution",63
+"spatial_unit","436","PTb","between","occurrence",212,"Substitution",81.3333333333334
+"spatial_unit","437","P1a","within","biomass",213,"Substitution",5
+"spatial_unit","437","P1b","within","biomass",214,"Substitution",7.75
+"spatial_unit","437","P2","within","biomass",215,"Substitution",0
+"spatial_unit","437","PTa","between","biomass",216,"Substitution",43.1428571428571
+"spatial_unit","437","PTb","between","biomass",217,"Substitution",25
+"spatial_unit","437","P1a","within","occurrence",218,"Substitution",0
+"spatial_unit","437","P1b","within","occurrence",219,"Substitution",0
+"spatial_unit","437","P2","within","occurrence",220,"Substitution",0
+"spatial_unit","437","PTa","between","occurrence",221,"Substitution",76.9999999999998
+"spatial_unit","437","PTb","between","occurrence",222,"Substitution",53
+"spatial_unit","438","P1b","within","biomass",223,"Substitution",0
+"spatial_unit","438","P2","within","biomass",224,"Substitution",0
+"spatial_unit","438","PTa","between","biomass",225,"Substitution",50
+"spatial_unit","438","PTb","between","biomass",226,"Substitution",0
+"spatial_unit","438","P1b","within","occurrence",227,"Substitution",0
+"spatial_unit","438","P2","within","occurrence",228,"Substitution",0
+"spatial_unit","438","PTa","between","occurrence",229,"Substitution",89
+"spatial_unit","438","PTb","between","occurrence",230,"Substitution",0
+"spatial_unit","439","P1a","within","biomass",231,"Substitution",0
+"spatial_unit","439","P1b","within","biomass",232,"Substitution",6.75
+"spatial_unit","439","P2","within","biomass",233,"Substitution",0
+"spatial_unit","439","PTa","between","biomass",234,"Substitution",36.8333333333333
+"spatial_unit","439","PTb","between","biomass",235,"Substitution",0
+"spatial_unit","439","P1a","within","occurrence",236,"Substitution",0
+"spatial_unit","439","P1b","within","occurrence",237,"Substitution",24.75
+"spatial_unit","439","P2","within","occurrence",238,"Substitution",0
+"spatial_unit","439","PTa","between","occurrence",239,"Substitution",46.6666666666667
+"spatial_unit","439","PTb","between","occurrence",240,"Substitution",9.75
+"level_average","ALL","P1a","within","biomass",1,"Functional change",14.3461896798852
+"level_average","ALL","P1b","within","biomass",2,"Functional change",11.8060225653977
+"level_average","ALL","P2","within","biomass",3,"Functional change",28.3758771929828
+"level_average","ALL","PTa","between","biomass",4,"Functional change",7.20922728929265
+"level_average","ALL","PTb","between","biomass",5,"Functional change",11.6045454545456
+"level_average","ALL","P1a","within","occurrence",6,"Functional change",11.7005786484047
+"level_average","ALL","P1b","within","occurrence",7,"Functional change",11.5650110510406
+"level_average","ALL","P2","within","occurrence",8,"Functional change",8.7469298245614
+"level_average","ALL","PTa","between","occurrence",9,"Functional change",4.7981191526943
+"level_average","ALL","PTb","between","occurrence",10,"Functional change",3.06818181818182
+"spatial_unit","401","PTa","between","biomass",11,"Functional change",0
+"spatial_unit","401","PTa","between","occurrence",12,"Functional change",0
+"spatial_unit","402","PTa","between","biomass",13,"Functional change",20
+"spatial_unit","402","PTa","between","occurrence",14,"Functional change",39.9999999999999
+"spatial_unit","403","P1a","within","biomass",15,"Functional change",19.6
+"spatial_unit","403","P1b","within","biomass",16,"Functional change",2.6
+"spatial_unit","403","PTa","between","biomass",17,"Functional change",12.7142857142857
+"spatial_unit","403","P1a","within","occurrence",18,"Functional change",7.6
+"spatial_unit","403","P1b","within","occurrence",19,"Functional change",16.8
+"spatial_unit","403","PTa","between","occurrence",20,"Functional change",0
+"spatial_unit","415","P1a","within","biomass",21,"Functional change",18.375
+"spatial_unit","415","P1b","within","biomass",22,"Functional change",11.1111111111111
+"spatial_unit","415","P2","within","biomass",23,"Functional change",33.3333333333333
+"spatial_unit","415","PTa","between","biomass",24,"Functional change",21.3333333333333
+"spatial_unit","415","PTb","between","biomass",25,"Functional change",39.7999999999999
+"spatial_unit","415","P1a","within","occurrence",26,"Functional change",8
+"spatial_unit","415","P1b","within","occurrence",27,"Functional change",7.1111111111111
+"spatial_unit","415","P2","within","occurrence",28,"Functional change",12.6666666666667
+"spatial_unit","415","PTa","between","occurrence",29,"Functional change",0.444444444444444
+"spatial_unit","415","PTb","between","occurrence",30,"Functional change",0
+"spatial_unit","416","P1a","within","biomass",31,"Functional change",31.5555555555555
+"spatial_unit","416","P1b","within","biomass",32,"Functional change",28.5
+"spatial_unit","416","P2","within","biomass",33,"Functional change",25
+"spatial_unit","416","PTa","between","biomass",34,"Functional change",15.5
+"spatial_unit","416","PTb","between","biomass",35,"Functional change",14.5
+"spatial_unit","416","P1a","within","occurrence",36,"Functional change",7.1111111111111
+"spatial_unit","416","P1b","within","occurrence",37,"Functional change",6.39999999999999
+"spatial_unit","416","P2","within","occurrence",38,"Functional change",25
+"spatial_unit","416","PTa","between","occurrence",39,"Functional change",28.0833333333333
+"spatial_unit","416","PTb","between","occurrence",40,"Functional change",0
+"spatial_unit","417","P1a","within","biomass",41,"Functional change",0
+"spatial_unit","417","P1b","within","biomass",42,"Functional change",0
+"spatial_unit","417","PTa","between","biomass",43,"Functional change",0
+"spatial_unit","417","PTb","between","biomass",44,"Functional change",0
+"spatial_unit","417","P1a","within","occurrence",45,"Functional change",0
+"spatial_unit","417","P1b","within","occurrence",46,"Functional change",0
+"spatial_unit","417","PTa","between","occurrence",47,"Functional change",0
+"spatial_unit","417","PTb","between","occurrence",48,"Functional change",0
+"spatial_unit","418","P1a","within","biomass",49,"Functional change",33.3333333333333
+"spatial_unit","418","P1b","within","biomass",50,"Functional change",33.3333333333333
+"spatial_unit","418","P2","within","biomass",51,"Functional change",0
+"spatial_unit","418","PTa","between","biomass",52,"Functional change",26.4285714285714
+"spatial_unit","418","PTb","between","biomass",53,"Functional change",15
+"spatial_unit","418","P1a","within","occurrence",54,"Functional change",0
+"spatial_unit","418","P1b","within","occurrence",55,"Functional change",0
+"spatial_unit","418","P2","within","occurrence",56,"Functional change",0
+"spatial_unit","418","PTa","between","occurrence",57,"Functional change",5.42857142857143
+"spatial_unit","418","PTb","between","occurrence",58,"Functional change",0
+"spatial_unit","419","P1a","within","biomass",59,"Functional change",0
+"spatial_unit","419","P1b","within","biomass",60,"Functional change",0
+"spatial_unit","419","PTa","between","biomass",61,"Functional change",0
+"spatial_unit","419","P1a","within","occurrence",62,"Functional change",0
+"spatial_unit","419","P1b","within","occurrence",63,"Functional change",0
+"spatial_unit","419","PTa","between","occurrence",64,"Functional change",0
+"spatial_unit","420","P1a","within","biomass",65,"Functional change",26.2
+"spatial_unit","420","P1b","within","biomass",66,"Functional change",6.33333333333334
+"spatial_unit","420","P2","within","biomass",67,"Functional change",9.5
+"spatial_unit","420","PTa","between","biomass",68,"Functional change",0
+"spatial_unit","420","PTb","between","biomass",69,"Functional change",0
+"spatial_unit","420","P1a","within","occurrence",70,"Functional change",8.6
+"spatial_unit","420","P1b","within","occurrence",71,"Functional change",6.33333333333334
+"spatial_unit","420","P2","within","occurrence",72,"Functional change",32.5
+"spatial_unit","420","PTa","between","occurrence",73,"Functional change",1.42857142857143
+"spatial_unit","420","PTb","between","occurrence",74,"Functional change",0
+"spatial_unit","421","P1a","within","biomass",75,"Functional change",0
+"spatial_unit","421","P1b","within","biomass",76,"Functional change",0
+"spatial_unit","421","PTa","between","biomass",77,"Functional change",20.6666666666667
+"spatial_unit","421","PTb","between","biomass",78,"Functional change",0
+"spatial_unit","421","P1a","within","occurrence",79,"Functional change",50
+"spatial_unit","421","P1b","within","occurrence",80,"Functional change",50
+"spatial_unit","421","PTa","between","occurrence",81,"Functional change",6
+"spatial_unit","421","PTb","between","occurrence",82,"Functional change",30
+"spatial_unit","422","P1a","within","biomass",83,"Functional change",11.7142857142857
+"spatial_unit","422","P1b","within","biomass",84,"Functional change",18.9333333333333
+"spatial_unit","422","P2","within","biomass",85,"Functional change",43.5
+"spatial_unit","422","PTa","between","biomass",86,"Functional change",6.27272727272727
+"spatial_unit","422","PTb","between","biomass",87,"Functional change",36.75
+"spatial_unit","422","P1a","within","occurrence",88,"Functional change",14.7857142857143
+"spatial_unit","422","P1b","within","occurrence",89,"Functional change",16.7333333333333
+"spatial_unit","422","P2","within","occurrence",90,"Functional change",0
+"spatial_unit","422","PTa","between","occurrence",91,"Functional change",0
+"spatial_unit","422","PTb","between","occurrence",92,"Functional change",0
+"spatial_unit","423","P1a","within","biomass",93,"Functional change",10.9333333333333
+"spatial_unit","423","P1b","within","biomass",94,"Functional change",9.11111111111109
+"spatial_unit","423","P2","within","biomass",95,"Functional change",40.8
+"spatial_unit","423","PTa","between","biomass",96,"Functional change",8.17647058823528
+"spatial_unit","423","PTb","between","biomass",97,"Functional change",16.6666666666666
+"spatial_unit","423","P1a","within","occurrence",98,"Functional change",7.26666666666666
+"spatial_unit","423","P1b","within","occurrence",99,"Functional change",5.55555555555554
+"spatial_unit","423","P2","within","occurrence",100,"Functional change",15.4
+"spatial_unit","423","PTa","between","occurrence",101,"Functional change",0.352941176470588
+"spatial_unit","423","PTb","between","occurrence",102,"Functional change",0
+"spatial_unit","424","P1a","within","biomass",103,"Functional change",33.3333333333333
+"spatial_unit","424","P1b","within","biomass",104,"Functional change",33.3333333333333
+"spatial_unit","424","P2","within","biomass",105,"Functional change",0
+"spatial_unit","424","PTa","between","biomass",106,"Functional change",0
+"spatial_unit","424","PTb","between","biomass",107,"Functional change",0
+"spatial_unit","424","P1a","within","occurrence",108,"Functional change",44
+"spatial_unit","424","P1b","within","occurrence",109,"Functional change",44
+"spatial_unit","424","P2","within","occurrence",110,"Functional change",0
+"spatial_unit","424","PTa","between","occurrence",111,"Functional change",0
+"spatial_unit","424","PTb","between","occurrence",112,"Functional change",0
+"spatial_unit","425","P1a","within","biomass",113,"Functional change",0
+"spatial_unit","425","P1b","within","biomass",114,"Functional change",12.5
+"spatial_unit","425","P2","within","biomass",115,"Functional change",0
+"spatial_unit","425","PTa","between","biomass",116,"Functional change",27.3333333333333
+"spatial_unit","425","PTb","between","biomass",117,"Functional change",50
+"spatial_unit","425","P1a","within","occurrence",118,"Functional change",0
+"spatial_unit","425","P1b","within","occurrence",119,"Functional change",0
+"spatial_unit","425","P2","within","occurrence",120,"Functional change",15
+"spatial_unit","425","PTa","between","occurrence",121,"Functional change",16.6666666666666
+"spatial_unit","425","PTb","between","occurrence",122,"Functional change",0
+"spatial_unit","426","P1a","within","biomass",123,"Functional change",0
+"spatial_unit","426","P1b","within","biomass",124,"Functional change",0
+"spatial_unit","426","PTa","between","biomass",125,"Functional change",0
+"spatial_unit","426","P1a","within","occurrence",126,"Functional change",0
+"spatial_unit","426","P1b","within","occurrence",127,"Functional change",0
+"spatial_unit","426","PTa","between","occurrence",128,"Functional change",0
+"spatial_unit","427","P1a","within","biomass",129,"Functional change",0
+"spatial_unit","427","P1b","within","biomass",130,"Functional change",4.5
+"spatial_unit","427","PTa","between","biomass",131,"Functional change",2.33333333333333
+"spatial_unit","427","PTb","between","biomass",132,"Functional change",0.333333333333333
+"spatial_unit","427","P1a","within","occurrence",133,"Functional change",28.75
+"spatial_unit","427","P1b","within","occurrence",134,"Functional change",9
+"spatial_unit","427","PTa","between","occurrence",135,"Functional change",4.33333333333333
+"spatial_unit","427","PTb","between","occurrence",136,"Functional change",19
+"spatial_unit","428","P2","within","biomass",137,"Functional change",86
+"spatial_unit","428","PTa","between","biomass",138,"Functional change",0
+"spatial_unit","428","PTb","between","biomass",139,"Functional change",17
+"spatial_unit","428","P2","within","occurrence",140,"Functional change",0
+"spatial_unit","428","PTa","between","occurrence",141,"Functional change",0
+"spatial_unit","428","PTb","between","occurrence",142,"Functional change",0
+"spatial_unit","429","P1a","within","biomass",143,"Functional change",0.533333333333333
+"spatial_unit","429","P1b","within","biomass",144,"Functional change",5.99999999999999
+"spatial_unit","429","P2","within","biomass",145,"Functional change",100
+"spatial_unit","429","PTa","between","biomass",146,"Functional change",11.4166666666667
+"spatial_unit","429","PTb","between","biomass",147,"Functional change",0
+"spatial_unit","429","P1a","within","occurrence",148,"Functional change",12.7333333333333
+"spatial_unit","429","P1b","within","occurrence",149,"Functional change",6.47058823529411
+"spatial_unit","429","P2","within","occurrence",150,"Functional change",0
+"spatial_unit","429","PTa","between","occurrence",151,"Functional change",10.25
+"spatial_unit","429","PTb","between","occurrence",152,"Functional change",0
+"spatial_unit","431","P1a","within","biomass",153,"Functional change",16.1111111111111
+"spatial_unit","431","P1b","within","biomass",154,"Functional change",14.7
+"spatial_unit","431","P2","within","biomass",155,"Functional change",15.375
+"spatial_unit","431","PTa","between","biomass",156,"Functional change",0
+"spatial_unit","431","PTb","between","biomass",157,"Functional change",0
+"spatial_unit","431","P1a","within","occurrence",158,"Functional change",0
+"spatial_unit","431","P1b","within","occurrence",159,"Functional change",0
+"spatial_unit","431","P2","within","occurrence",160,"Functional change",2.625
+"spatial_unit","431","PTa","between","occurrence",161,"Functional change",0
+"spatial_unit","431","PTb","between","occurrence",162,"Functional change",0
+"spatial_unit","432","P1a","within","biomass",163,"Functional change",0
+"spatial_unit","432","P1b","within","biomass",164,"Functional change",0
+"spatial_unit","432","P2","within","biomass",165,"Functional change",0
+"spatial_unit","432","PTa","between","biomass",166,"Functional change",0.111111111111111
+"spatial_unit","432","PTb","between","biomass",167,"Functional change",0
+"spatial_unit","432","P1a","within","occurrence",168,"Functional change",0
+"spatial_unit","432","P1b","within","occurrence",169,"Functional change",0
+"spatial_unit","432","P2","within","occurrence",170,"Functional change",0
+"spatial_unit","432","PTa","between","occurrence",171,"Functional change",0
+"spatial_unit","432","PTb","between","occurrence",172,"Functional change",0
+"spatial_unit","433","P1a","within","biomass",173,"Functional change",15.9230769230769
+"spatial_unit","433","P1b","within","biomass",174,"Functional change",15.9230769230769
+"spatial_unit","433","P2","within","biomass",175,"Functional change",0
+"spatial_unit","433","PTa","between","biomass",176,"Functional change",9.07692307692307
+"spatial_unit","433","PTb","between","biomass",177,"Functional change",0
+"spatial_unit","433","P1a","within","occurrence",178,"Functional change",19.2307692307692
+"spatial_unit","433","P1b","within","occurrence",179,"Functional change",13.4615384615385
+"spatial_unit","433","P2","within","occurrence",180,"Functional change",50
+"spatial_unit","433","PTa","between","occurrence",181,"Functional change",7.69230769230768
+"spatial_unit","433","PTb","between","occurrence",182,"Functional change",0
+"spatial_unit","434","P1a","within","biomass",183,"Functional change",34.6
+"spatial_unit","434","P1b","within","biomass",184,"Functional change",32.0909090909091
+"spatial_unit","434","P2","within","biomass",185,"Functional change",47.5
+"spatial_unit","434","PTa","between","biomass",186,"Functional change",0
+"spatial_unit","434","PTb","between","biomass",187,"Functional change",0
+"spatial_unit","434","P1a","within","occurrence",188,"Functional change",22.5
+"spatial_unit","434","P1b","within","occurrence",189,"Functional change",28.9090909090909
+"spatial_unit","434","P2","within","occurrence",190,"Functional change",0
+"spatial_unit","434","PTa","between","occurrence",191,"Functional change",0.25
+"spatial_unit","434","PTb","between","occurrence",192,"Functional change",0
+"spatial_unit","435","P1a","within","biomass",193,"Functional change",15.5
+"spatial_unit","435","P1b","within","biomass",194,"Functional change",15.5
+"spatial_unit","435","P2","within","biomass",195,"Functional change",33.3333333333333
+"spatial_unit","435","PTa","between","biomass",196,"Functional change",0
+"spatial_unit","435","PTb","between","biomass",197,"Functional change",0
+"spatial_unit","435","P1a","within","occurrence",198,"Functional change",24.25
+"spatial_unit","435","P1b","within","occurrence",199,"Functional change",24.25
+"spatial_unit","435","P2","within","occurrence",200,"Functional change",0
+"spatial_unit","435","PTa","between","occurrence",201,"Functional change",0.285714285714286
+"spatial_unit","435","PTb","between","occurrence",202,"Functional change",0
+"spatial_unit","436","P1a","within","biomass",203,"Functional change",0
+"spatial_unit","436","P1b","within","biomass",204,"Functional change",0
+"spatial_unit","436","P2","within","biomass",205,"Functional change",4.8
+"spatial_unit","436","PTa","between","biomass",206,"Functional change",0.142857142857143
+"spatial_unit","436","PTb","between","biomass",207,"Functional change",4.33333333333333
+"spatial_unit","436","P1a","within","occurrence",208,"Functional change",14.2857142857143
+"spatial_unit","436","P1b","within","occurrence",209,"Functional change",14.2857142857143
+"spatial_unit","436","P2","within","occurrence",210,"Functional change",0
+"spatial_unit","436","PTa","between","occurrence",211,"Functional change",0
+"spatial_unit","436","PTb","between","occurrence",212,"Functional change",0
+"spatial_unit","437","P1a","within","biomass",213,"Functional change",12.25
+"spatial_unit","437","P1b","within","biomass",214,"Functional change",13.875
+"spatial_unit","437","P2","within","biomass",215,"Functional change",0
+"spatial_unit","437","PTa","between","biomass",216,"Functional change",13.1428571428571
+"spatial_unit","437","PTb","between","biomass",217,"Functional change",12
+"spatial_unit","437","P1a","within","occurrence",218,"Functional change",0
+"spatial_unit","437","P1b","within","occurrence",219,"Functional change",19.25
+"spatial_unit","437","P2","within","occurrence",220,"Functional change",0
+"spatial_unit","437","PTa","between","occurrence",221,"Functional change",0
+"spatial_unit","437","PTb","between","occurrence",222,"Functional change",18.5
+"spatial_unit","438","P1b","within","biomass",223,"Functional change",0
+"spatial_unit","438","P2","within","biomass",224,"Functional change",100
+"spatial_unit","438","PTa","between","biomass",225,"Functional change",0
+"spatial_unit","438","PTb","between","biomass",226,"Functional change",47.6666666666666
+"spatial_unit","438","P1b","within","occurrence",227,"Functional change",0
+"spatial_unit","438","P2","within","occurrence",228,"Functional change",13
+"spatial_unit","438","PTa","between","occurrence",229,"Functional change",0
+"spatial_unit","438","PTb","between","occurrence",230,"Functional change",0
+"spatial_unit","439","P1a","within","biomass",231,"Functional change",50
+"spatial_unit","439","P1b","within","biomass",232,"Functional change",25
+"spatial_unit","439","P2","within","biomass",233,"Functional change",0
+"spatial_unit","439","PTa","between","biomass",234,"Functional change",0
+"spatial_unit","439","PTb","between","biomass",235,"Functional change",1.25
+"spatial_unit","439","P1a","within","occurrence",236,"Functional change",0
+"spatial_unit","439","P1b","within","occurrence",237,"Functional change",9
+"spatial_unit","439","P2","within","occurrence",238,"Functional change",0
+"spatial_unit","439","PTa","between","occurrence",239,"Functional change",8.33333333333334
+"spatial_unit","439","PTb","between","occurrence",240,"Functional change",0
+"level_average","ALL","P1a","within","biomass",1,"Reorganisation",2.44794155120242
+"level_average","ALL","P1b","within","biomass",2,"Reorganisation",2.71753127047246
+"level_average","ALL","P2","within","biomass",3,"Reorganisation",1.16842105263158
+"level_average","ALL","PTa","between","biomass",4,"Reorganisation",14.2912188725098
+"level_average","ALL","PTb","between","biomass",5,"Reorganisation",12.2753246753248
+"level_average","ALL","P1a","within","occurrence",6,"Reorganisation",2.94140786749482
+"level_average","ALL","P1b","within","occurrence",7,"Reorganisation",3.06686658249161
+"level_average","ALL","P2","within","occurrence",8,"Reorganisation",3.01754385964913
+"level_average","ALL","PTa","between","occurrence",9,"Reorganisation",11.2074540081076
+"level_average","ALL","PTb","between","occurrence",10,"Reorganisation",8.46044372294379
+"spatial_unit","401","PTa","between","biomass",11,"Reorganisation",90
+"spatial_unit","401","PTa","between","occurrence",12,"Reorganisation",0
+"spatial_unit","402","PTa","between","biomass",13,"Reorganisation",0
+"spatial_unit","402","PTa","between","occurrence",14,"Reorganisation",0
+"spatial_unit","403","P1a","within","biomass",15,"Reorganisation",0
+"spatial_unit","403","P1b","within","biomass",16,"Reorganisation",0
+"spatial_unit","403","PTa","between","biomass",17,"Reorganisation",0
+"spatial_unit","403","P1a","within","occurrence",18,"Reorganisation",0
+"spatial_unit","403","P1b","within","occurrence",19,"Reorganisation",2.4
+"spatial_unit","403","PTa","between","occurrence",20,"Reorganisation",2.57142857142857
+"spatial_unit","415","P1a","within","biomass",21,"Reorganisation",6.625
+"spatial_unit","415","P1b","within","biomass",22,"Reorganisation",11.1111111111111
+"spatial_unit","415","P2","within","biomass",23,"Reorganisation",0
+"spatial_unit","415","PTa","between","biomass",24,"Reorganisation",7.77777777777777
+"spatial_unit","415","PTb","between","biomass",25,"Reorganisation",20.2
+"spatial_unit","415","P1a","within","occurrence",26,"Reorganisation",4.5
+"spatial_unit","415","P1b","within","occurrence",27,"Reorganisation",4
+"spatial_unit","415","P2","within","occurrence",28,"Reorganisation",0
+"spatial_unit","415","PTa","between","occurrence",29,"Reorganisation",35.4444444444444
+"spatial_unit","415","PTb","between","occurrence",30,"Reorganisation",0
+"spatial_unit","416","P1a","within","biomass",31,"Reorganisation",1.77777777777778
+"spatial_unit","416","P1b","within","biomass",32,"Reorganisation",1.5
+"spatial_unit","416","P2","within","biomass",33,"Reorganisation",0
+"spatial_unit","416","PTa","between","biomass",34,"Reorganisation",9.25
+"spatial_unit","416","PTb","between","biomass",35,"Reorganisation",15.25
+"spatial_unit","416","P1a","within","occurrence",36,"Reorganisation",4.55555555555555
+"spatial_unit","416","P1b","within","occurrence",37,"Reorganisation",4.1
+"spatial_unit","416","P2","within","occurrence",38,"Reorganisation",0
+"spatial_unit","416","PTa","between","occurrence",39,"Reorganisation",9.83333333333332
+"spatial_unit","416","PTb","between","occurrence",40,"Reorganisation",6.625
+"spatial_unit","417","P1a","within","biomass",41,"Reorganisation",0
+"spatial_unit","417","P1b","within","biomass",42,"Reorganisation",0
+"spatial_unit","417","PTa","between","biomass",43,"Reorganisation",0
+"spatial_unit","417","PTb","between","biomass",44,"Reorganisation",0
+"spatial_unit","417","P1a","within","occurrence",45,"Reorganisation",0
+"spatial_unit","417","P1b","within","occurrence",46,"Reorganisation",0
+"spatial_unit","417","PTa","between","occurrence",47,"Reorganisation",0
+"spatial_unit","417","PTb","between","occurrence",48,"Reorganisation",0
+"spatial_unit","418","P1a","within","biomass",49,"Reorganisation",0
+"spatial_unit","418","P1b","within","biomass",50,"Reorganisation",0
+"spatial_unit","418","P2","within","biomass",51,"Reorganisation",0
+"spatial_unit","418","PTa","between","biomass",52,"Reorganisation",7.00000000000001
+"spatial_unit","418","PTb","between","biomass",53,"Reorganisation",0
+"spatial_unit","418","P1a","within","occurrence",54,"Reorganisation",0
+"spatial_unit","418","P1b","within","occurrence",55,"Reorganisation",0
+"spatial_unit","418","P2","within","occurrence",56,"Reorganisation",0
+"spatial_unit","418","PTa","between","occurrence",57,"Reorganisation",9.71428571428572
+"spatial_unit","418","PTb","between","occurrence",58,"Reorganisation",0
+"spatial_unit","419","P1a","within","biomass",59,"Reorganisation",0
+"spatial_unit","419","P1b","within","biomass",60,"Reorganisation",0
+"spatial_unit","419","PTa","between","biomass",61,"Reorganisation",0
+"spatial_unit","419","P1a","within","occurrence",62,"Reorganisation",0
+"spatial_unit","419","P1b","within","occurrence",63,"Reorganisation",0
+"spatial_unit","419","PTa","between","occurrence",64,"Reorganisation",0
+"spatial_unit","420","P1a","within","biomass",65,"Reorganisation",0
+"spatial_unit","420","P1b","within","biomass",66,"Reorganisation",0
+"spatial_unit","420","P2","within","biomass",67,"Reorganisation",0
+"spatial_unit","420","PTa","between","biomass",68,"Reorganisation",0
+"spatial_unit","420","PTb","between","biomass",69,"Reorganisation",0
+"spatial_unit","420","P1a","within","occurrence",70,"Reorganisation",0
+"spatial_unit","420","P1b","within","occurrence",71,"Reorganisation",0
+"spatial_unit","420","P2","within","occurrence",72,"Reorganisation",17.5
+"spatial_unit","420","PTa","between","occurrence",73,"Reorganisation",5.42857142857143
+"spatial_unit","420","PTb","between","occurrence",74,"Reorganisation",0
+"spatial_unit","421","P1a","within","biomass",75,"Reorganisation",0
+"spatial_unit","421","P1b","within","biomass",76,"Reorganisation",0
+"spatial_unit","421","PTa","between","biomass",77,"Reorganisation",0
+"spatial_unit","421","PTb","between","biomass",78,"Reorganisation",0
+"spatial_unit","421","P1a","within","occurrence",79,"Reorganisation",0
+"spatial_unit","421","P1b","within","occurrence",80,"Reorganisation",0
+"spatial_unit","421","PTa","between","occurrence",81,"Reorganisation",2
+"spatial_unit","421","PTb","between","occurrence",82,"Reorganisation",0
+"spatial_unit","422","P1a","within","biomass",83,"Reorganisation",16.8571428571428
+"spatial_unit","422","P1b","within","biomass",84,"Reorganisation",14.9333333333333
+"spatial_unit","422","P2","within","biomass",85,"Reorganisation",1
+"spatial_unit","422","PTa","between","biomass",86,"Reorganisation",33.3636363636364
+"spatial_unit","422","PTb","between","biomass",87,"Reorganisation",13.25
+"spatial_unit","422","P1a","within","occurrence",88,"Reorganisation",9.78571428571427
+"spatial_unit","422","P1b","within","occurrence",89,"Reorganisation",6.66666666666666
+"spatial_unit","422","P2","within","occurrence",90,"Reorganisation",0
+"spatial_unit","422","PTa","between","occurrence",91,"Reorganisation",14.0000000000001
+"spatial_unit","422","PTb","between","occurrence",92,"Reorganisation",25
+"spatial_unit","423","P1a","within","biomass",93,"Reorganisation",9.06666666666665
+"spatial_unit","423","P1b","within","biomass",94,"Reorganisation",2
+"spatial_unit","423","P2","within","biomass",95,"Reorganisation",7.2
+"spatial_unit","423","PTa","between","biomass",96,"Reorganisation",37.235294117647
+"spatial_unit","423","PTb","between","biomass",97,"Reorganisation",33.3333333333333
+"spatial_unit","423","P1a","within","occurrence",98,"Reorganisation",6.06666666666667
+"spatial_unit","423","P1b","within","occurrence",99,"Reorganisation",5.55555555555554
+"spatial_unit","423","P2","within","occurrence",100,"Reorganisation",6
+"spatial_unit","423","PTa","between","occurrence",101,"Reorganisation",44.7647058823529
+"spatial_unit","423","PTb","between","occurrence",102,"Reorganisation",40.8333333333334
+"spatial_unit","424","P1a","within","biomass",103,"Reorganisation",0
+"spatial_unit","424","P1b","within","biomass",104,"Reorganisation",0
+"spatial_unit","424","P2","within","biomass",105,"Reorganisation",0
+"spatial_unit","424","PTa","between","biomass",106,"Reorganisation",11.7272727272728
+"spatial_unit","424","PTb","between","biomass",107,"Reorganisation",27.8571428571428
+"spatial_unit","424","P1a","within","occurrence",108,"Reorganisation",6
+"spatial_unit","424","P1b","within","occurrence",109,"Reorganisation",6
+"spatial_unit","424","P2","within","occurrence",110,"Reorganisation",0
+"spatial_unit","424","PTa","between","occurrence",111,"Reorganisation",19.7272727272728
+"spatial_unit","424","PTb","between","occurrence",112,"Reorganisation",28.5714285714285
+"spatial_unit","425","P1a","within","biomass",113,"Reorganisation",0
+"spatial_unit","425","P1b","within","biomass",114,"Reorganisation",15.5
+"spatial_unit","425","P2","within","biomass",115,"Reorganisation",0
+"spatial_unit","425","PTa","between","biomass",116,"Reorganisation",18
+"spatial_unit","425","PTb","between","biomass",117,"Reorganisation",0
+"spatial_unit","425","P1a","within","occurrence",118,"Reorganisation",9
+"spatial_unit","425","P1b","within","occurrence",119,"Reorganisation",16.6666666666666
+"spatial_unit","425","P2","within","occurrence",120,"Reorganisation",0
+"spatial_unit","425","PTa","between","occurrence",121,"Reorganisation",29.6666666666667
+"spatial_unit","425","PTb","between","occurrence",122,"Reorganisation",0
+"spatial_unit","426","P1a","within","biomass",123,"Reorganisation",0
+"spatial_unit","426","P1b","within","biomass",124,"Reorganisation",0
+"spatial_unit","426","PTa","between","biomass",125,"Reorganisation",15.5
+"spatial_unit","426","P1a","within","occurrence",126,"Reorganisation",0
+"spatial_unit","426","P1b","within","occurrence",127,"Reorganisation",0
+"spatial_unit","426","PTa","between","occurrence",128,"Reorganisation",0
+"spatial_unit","427","P1a","within","biomass",129,"Reorganisation",0
+"spatial_unit","427","P1b","within","biomass",130,"Reorganisation",0
+"spatial_unit","427","PTa","between","biomass",131,"Reorganisation",21
+"spatial_unit","427","PTb","between","biomass",132,"Reorganisation",15.6666666666667
+"spatial_unit","427","P1a","within","occurrence",133,"Reorganisation",0
+"spatial_unit","427","P1b","within","occurrence",134,"Reorganisation",0
+"spatial_unit","427","PTa","between","occurrence",135,"Reorganisation",0
+"spatial_unit","427","PTb","between","occurrence",136,"Reorganisation",0
+"spatial_unit","428","P2","within","biomass",137,"Reorganisation",0
+"spatial_unit","428","PTa","between","biomass",138,"Reorganisation",2
+"spatial_unit","428","PTb","between","biomass",139,"Reorganisation",0
+"spatial_unit","428","P2","within","occurrence",140,"Reorganisation",0
+"spatial_unit","428","PTa","between","occurrence",141,"Reorganisation",2
+"spatial_unit","428","PTb","between","occurrence",142,"Reorganisation",0
+"spatial_unit","429","P1a","within","biomass",143,"Reorganisation",0.4
+"spatial_unit","429","P1b","within","biomass",144,"Reorganisation",0.0588235294117647
+"spatial_unit","429","P2","within","biomass",145,"Reorganisation",0
+"spatial_unit","429","PTa","between","biomass",146,"Reorganisation",2.66666666666667
+"spatial_unit","429","PTb","between","biomass",147,"Reorganisation",29
+"spatial_unit","429","P1a","within","occurrence",148,"Reorganisation",6.13333333333333
+"spatial_unit","429","P1b","within","occurrence",149,"Reorganisation",0
+"spatial_unit","429","P2","within","occurrence",150,"Reorganisation",0
+"spatial_unit","429","PTa","between","occurrence",151,"Reorganisation",19.3333333333333
+"spatial_unit","429","PTb","between","occurrence",152,"Reorganisation",22.6
+"spatial_unit","431","P1a","within","biomass",153,"Reorganisation",4.22222222222222
+"spatial_unit","431","P1b","within","biomass",154,"Reorganisation",3.6
+"spatial_unit","431","P2","within","biomass",155,"Reorganisation",0
+"spatial_unit","431","PTa","between","biomass",156,"Reorganisation",12.6875
+"spatial_unit","431","PTb","between","biomass",157,"Reorganisation",25
+"spatial_unit","431","P1a","within","occurrence",158,"Reorganisation",11.1111111111111
+"spatial_unit","431","P1b","within","occurrence",159,"Reorganisation",9.99999999999998
+"spatial_unit","431","P2","within","occurrence",160,"Reorganisation",0.5
+"spatial_unit","431","PTa","between","occurrence",161,"Reorganisation",8.125
+"spatial_unit","431","PTb","between","occurrence",162,"Reorganisation",0.833333333333333
+"spatial_unit","432","P1a","within","biomass",163,"Reorganisation",0
+"spatial_unit","432","P1b","within","biomass",164,"Reorganisation",0
+"spatial_unit","432","P2","within","biomass",165,"Reorganisation",0
+"spatial_unit","432","PTa","between","biomass",166,"Reorganisation",11
+"spatial_unit","432","PTb","between","biomass",167,"Reorganisation",0
+"spatial_unit","432","P1a","within","occurrence",168,"Reorganisation",0
+"spatial_unit","432","P1b","within","occurrence",169,"Reorganisation",0
+"spatial_unit","432","P2","within","occurrence",170,"Reorganisation",0
+"spatial_unit","432","PTa","between","occurrence",171,"Reorganisation",0
+"spatial_unit","432","PTb","between","occurrence",172,"Reorganisation",0
+"spatial_unit","433","P1a","within","biomass",173,"Reorganisation",7.15384615384615
+"spatial_unit","433","P1b","within","biomass",174,"Reorganisation",7.15384615384615
+"spatial_unit","433","P2","within","biomass",175,"Reorganisation",0
+"spatial_unit","433","PTa","between","biomass",176,"Reorganisation",14
+"spatial_unit","433","PTb","between","biomass",177,"Reorganisation",0
+"spatial_unit","433","P1a","within","occurrence",178,"Reorganisation",0
+"spatial_unit","433","P1b","within","occurrence",179,"Reorganisation",0
+"spatial_unit","433","P2","within","occurrence",180,"Reorganisation",0
+"spatial_unit","433","PTa","between","occurrence",181,"Reorganisation",2.30769230769231
+"spatial_unit","433","PTb","between","occurrence",182,"Reorganisation",7.16666666666667
+"spatial_unit","434","P1a","within","biomass",183,"Reorganisation",10.2
+"spatial_unit","434","P1b","within","biomass",184,"Reorganisation",9.36363636363637
+"spatial_unit","434","P2","within","biomass",185,"Reorganisation",0
+"spatial_unit","434","PTa","between","biomass",186,"Reorganisation",27.75
+"spatial_unit","434","PTb","between","biomass",187,"Reorganisation",81
+"spatial_unit","434","P1a","within","occurrence",188,"Reorganisation",10.5
+"spatial_unit","434","P1b","within","occurrence",189,"Reorganisation",9.0909090909091
+"spatial_unit","434","P2","within","occurrence",190,"Reorganisation",0
+"spatial_unit","434","PTa","between","occurrence",191,"Reorganisation",32.625
+"spatial_unit","434","PTb","between","occurrence",192,"Reorganisation",0
+"spatial_unit","435","P1a","within","biomass",193,"Reorganisation",0
+"spatial_unit","435","P1b","within","biomass",194,"Reorganisation",0
+"spatial_unit","435","P2","within","biomass",195,"Reorganisation",0
+"spatial_unit","435","PTa","between","biomass",196,"Reorganisation",0
+"spatial_unit","435","PTb","between","biomass",197,"Reorganisation",0
+"spatial_unit","435","P1a","within","occurrence",198,"Reorganisation",0
+"spatial_unit","435","P1b","within","occurrence",199,"Reorganisation",0
+"spatial_unit","435","P2","within","occurrence",200,"Reorganisation",33.3333333333333
+"spatial_unit","435","PTa","between","occurrence",201,"Reorganisation",0.285714285714286
+"spatial_unit","435","PTb","between","occurrence",202,"Reorganisation",0
+"spatial_unit","436","P1a","within","biomass",203,"Reorganisation",0
+"spatial_unit","436","P1b","within","biomass",204,"Reorganisation",0
+"spatial_unit","436","P2","within","biomass",205,"Reorganisation",14
+"spatial_unit","436","PTa","between","biomass",206,"Reorganisation",15.4285714285714
+"spatial_unit","436","PTb","between","biomass",207,"Reorganisation",0
+"spatial_unit","436","P1a","within","occurrence",208,"Reorganisation",0
+"spatial_unit","436","P1b","within","occurrence",209,"Reorganisation",0
+"spatial_unit","436","P2","within","occurrence",210,"Reorganisation",0
+"spatial_unit","436","PTa","between","occurrence",211,"Reorganisation",22.8571428571428
+"spatial_unit","436","PTb","between","occurrence",212,"Reorganisation",14
+"spatial_unit","437","P1a","within","biomass",213,"Reorganisation",0
+"spatial_unit","437","P1b","within","biomass",214,"Reorganisation",0
+"spatial_unit","437","P2","within","biomass",215,"Reorganisation",0
+"spatial_unit","437","PTa","between","biomass",216,"Reorganisation",18.1428571428571
+"spatial_unit","437","PTb","between","biomass",217,"Reorganisation",0
+"spatial_unit","437","P1a","within","occurrence",218,"Reorganisation",0
+"spatial_unit","437","P1b","within","occurrence",219,"Reorganisation",9.125
+"spatial_unit","437","P2","within","occurrence",220,"Reorganisation",0
+"spatial_unit","437","PTa","between","occurrence",221,"Reorganisation",23
+"spatial_unit","437","PTb","between","occurrence",222,"Reorganisation",15.5
+"spatial_unit","438","P1b","within","biomass",223,"Reorganisation",0
+"spatial_unit","438","P2","within","biomass",224,"Reorganisation",0
+"spatial_unit","438","PTa","between","biomass",225,"Reorganisation",25
+"spatial_unit","438","PTb","between","biomass",226,"Reorganisation",0
+"spatial_unit","438","P1b","within","occurrence",227,"Reorganisation",0
+"spatial_unit","438","P2","within","occurrence",228,"Reorganisation",0
+"spatial_unit","438","PTa","between","occurrence",229,"Reorganisation",9.25
+"spatial_unit","438","PTb","between","occurrence",230,"Reorganisation",0
+"spatial_unit","439","P1a","within","biomass",231,"Reorganisation",0
+"spatial_unit","439","P1b","within","biomass",232,"Reorganisation",0
+"spatial_unit","439","P2","within","biomass",233,"Reorganisation",0
+"spatial_unit","439","PTa","between","biomass",234,"Reorganisation",6.33333333333334
+"spatial_unit","439","PTb","between","biomass",235,"Reorganisation",9.5
+"spatial_unit","439","P1a","within","occurrence",236,"Reorganisation",0
+"spatial_unit","439","P1b","within","occurrence",237,"Reorganisation",0
+"spatial_unit","439","P2","within","occurrence",238,"Reorganisation",0
+"spatial_unit","439","PTa","between","occurrence",239,"Reorganisation",9.66666666666666
+"spatial_unit","439","PTb","between","occurrence",240,"Reorganisation",25

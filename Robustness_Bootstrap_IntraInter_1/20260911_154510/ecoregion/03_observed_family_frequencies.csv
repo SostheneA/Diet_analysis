@@ -1,0 +1,201 @@
+"scope","spatial_unit","scenario","contrast_type","mode","t","family","pct"
+"level_average","ALL","P1a","within","biomass",1,"Stability",65.893732492997
+"level_average","ALL","P1b","within","biomass",2,"Stability",69.452906162465
+"level_average","ALL","P2","within","biomass",3,"Stability",69.5229166666667
+"level_average","ALL","PTa","between","biomass",4,"Stability",24.6275961318897
+"level_average","ALL","PTb","between","biomass",5,"Stability",34.538961038961
+"level_average","ALL","P1a","within","occurrence",6,"Stability",70.6884191176469
+"level_average","ALL","P1b","within","occurrence",7,"Stability",69.7640056022409
+"level_average","ALL","P2","within","occurrence",8,"Stability",77.9583333333333
+"level_average","ALL","PTa","between","occurrence",9,"Stability",16.9466515142664
+"level_average","ALL","PTb","between","occurrence",10,"Stability",28.2613636363637
+"spatial_unit","Central","P1a","within","biomass",11,"Stability",75.7058823529413
+"spatial_unit","Central","P1b","within","biomass",12,"Stability",81.8333333333334
+"spatial_unit","Central","P2","within","biomass",13,"Stability",66.5
+"spatial_unit","Central","PTa","between","biomass",14,"Stability",13.3529411764706
+"spatial_unit","Central","PTb","between","biomass",15,"Stability",21.4285714285714
+"spatial_unit","Central","P1a","within","occurrence",16,"Stability",86.941176470588
+"spatial_unit","Central","P1b","within","occurrence",17,"Stability",83.5
+"spatial_unit","Central","P2","within","occurrence",18,"Stability",84.625
+"spatial_unit","Central","PTa","between","occurrence",19,"Stability",19.8235294117647
+"spatial_unit","Central","PTb","between","occurrence",20,"Stability",28.4285714285714
+"spatial_unit","Chaleur Bay","P1a","within","biomass",21,"Stability",62.4166666666665
+"spatial_unit","Chaleur Bay","P1b","within","biomass",22,"Stability",65.5833333333333
+"spatial_unit","Chaleur Bay","P2","within","biomass",23,"Stability",100
+"spatial_unit","Chaleur Bay","PTa","between","biomass",24,"Stability",9.0909090909091
+"spatial_unit","Chaleur Bay","PTb","between","biomass",25,"Stability",33
+"spatial_unit","Chaleur Bay","P1a","within","occurrence",26,"Stability",66.6666666666666
+"spatial_unit","Chaleur Bay","P1b","within","occurrence",27,"Stability",66.6666666666666
+"spatial_unit","Chaleur Bay","P2","within","occurrence",28,"Stability",98.5
+"spatial_unit","Chaleur Bay","PTa","between","occurrence",29,"Stability",21.6363636363637
+"spatial_unit","Chaleur Bay","PTb","between","occurrence",30,"Stability",25.5714285714286
+"spatial_unit","Magdalen Shallows","P1a","within","biomass",31,"Stability",48.6666666666666
+"spatial_unit","Magdalen Shallows","P1b","within","biomass",32,"Stability",51.8235294117648
+"spatial_unit","Magdalen Shallows","P2","within","biomass",33,"Stability",53.6749999999999
+"spatial_unit","Magdalen Shallows","PTa","between","biomass",34,"Stability",13.6981132075472
+"spatial_unit","Magdalen Shallows","PTb","between","biomass",35,"Stability",20.2727272727273
+"spatial_unit","Magdalen Shallows","P1a","within","occurrence",36,"Stability",49.6458333333333
+"spatial_unit","Magdalen Shallows","P1b","within","occurrence",37,"Stability",48.9607843137256
+"spatial_unit","Magdalen Shallows","P2","within","occurrence",38,"Stability",68.8750000000001
+"spatial_unit","Magdalen Shallows","PTa","between","occurrence",39,"Stability",6.90566037735849
+"spatial_unit","Magdalen Shallows","PTb","between","occurrence",40,"Stability",13.0454545454546
+"spatial_unit","Northumberland","P1a","within","biomass",41,"Stability",76.7857142857143
+"spatial_unit","Northumberland","P1b","within","biomass",42,"Stability",78.5714285714286
+"spatial_unit","Northumberland","P2","within","biomass",43,"Stability",57.9166666666666
+"spatial_unit","Northumberland","PTa","between","biomass",44,"Stability",62.3684210526315
+"spatial_unit","Northumberland","PTb","between","biomass",45,"Stability",63.4545454545453
+"spatial_unit","Northumberland","P1a","within","occurrence",46,"Stability",79.5
+"spatial_unit","Northumberland","P1b","within","occurrence",47,"Stability",79.9285714285714
+"spatial_unit","Northumberland","P2","within","occurrence",48,"Stability",59.8333333333333
+"spatial_unit","Northumberland","PTa","between","occurrence",49,"Stability",19.4210526315789
+"spatial_unit","Northumberland","PTb","between","occurrence",50,"Stability",45.9999999999999
+"level_average","ALL","P1a","within","biomass",1,"Substitution",9.2640931372549
+"level_average","ALL","P1b","within","biomass",2,"Substitution",7.95098039215684
+"level_average","ALL","P2","within","biomass",3,"Substitution",9.61041666666668
+"level_average","ALL","PTa","between","biomass",4,"Substitution",41.7117994891376
+"level_average","ALL","PTb","between","biomass",5,"Substitution",30.354707792208
+"level_average","ALL","P1a","within","occurrence",6,"Substitution",11.9005602240896
+"level_average","ALL","P1b","within","occurrence",7,"Substitution",13.3244631185808
+"level_average","ALL","P2","within","occurrence",8,"Substitution",9.38750000000001
+"level_average","ALL","PTa","between","occurrence",9,"Substitution",53.9345079098716
+"level_average","ALL","PTb","between","occurrence",10,"Substitution",48.6728896103895
+"spatial_unit","Central","P1a","within","biomass",11,"Substitution",2.76470588235294
+"spatial_unit","Central","P1b","within","biomass",12,"Substitution",0
+"spatial_unit","Central","P2","within","biomass",13,"Substitution",5.25
+"spatial_unit","Central","PTa","between","biomass",14,"Substitution",50.9411764705883
+"spatial_unit","Central","PTb","between","biomass",15,"Substitution",40.1428571428571
+"spatial_unit","Central","P1a","within","occurrence",16,"Substitution",3.41176470588235
+"spatial_unit","Central","P1b","within","occurrence",17,"Substitution",5.38888888888888
+"spatial_unit","Central","P2","within","occurrence",18,"Substitution",0.25
+"spatial_unit","Central","PTa","between","occurrence",19,"Substitution",47.1176470588235
+"spatial_unit","Central","PTb","between","occurrence",20,"Substitution",29.7857142857143
+"spatial_unit","Chaleur Bay","P1a","within","biomass",21,"Substitution",8.33333333333332
+"spatial_unit","Chaleur Bay","P1b","within","biomass",22,"Substitution",8.33333333333332
+"spatial_unit","Chaleur Bay","P2","within","biomass",23,"Substitution",0
+"spatial_unit","Chaleur Bay","PTa","between","biomass",24,"Substitution",42.7272727272727
+"spatial_unit","Chaleur Bay","PTb","between","biomass",25,"Substitution",29.5714285714285
+"spatial_unit","Chaleur Bay","P1a","within","occurrence",26,"Substitution",8.33333333333332
+"spatial_unit","Chaleur Bay","P1b","within","occurrence",27,"Substitution",8.33333333333332
+"spatial_unit","Chaleur Bay","P2","within","occurrence",28,"Substitution",1.5
+"spatial_unit","Chaleur Bay","PTa","between","occurrence",29,"Substitution",68.4545454545453
+"spatial_unit","Chaleur Bay","PTb","between","occurrence",30,"Substitution",53.4285714285716
+"spatial_unit","Magdalen Shallows","P1a","within","biomass",31,"Substitution",25.9583333333333
+"spatial_unit","Magdalen Shallows","P1b","within","biomass",32,"Substitution",23.4705882352941
+"spatial_unit","Magdalen Shallows","P2","within","biomass",33,"Substitution",12.275
+"spatial_unit","Magdalen Shallows","PTa","between","biomass",34,"Substitution",50.5471698113208
+"spatial_unit","Magdalen Shallows","PTb","between","biomass",35,"Substitution",42.4318181818182
+"spatial_unit","Magdalen Shallows","P1a","within","occurrence",36,"Substitution",22.5
+"spatial_unit","Magdalen Shallows","P1b","within","occurrence",37,"Substitution",26.6470588235294
+"spatial_unit","Magdalen Shallows","P2","within","occurrence",38,"Substitution",12.8
+"spatial_unit","Magdalen Shallows","PTa","between","occurrence",39,"Substitution",49.1132075471697
+"spatial_unit","Magdalen Shallows","PTb","between","occurrence",40,"Substitution",57.4772727272728
+"spatial_unit","Northumberland","P1a","within","biomass",41,"Substitution",0
+"spatial_unit","Northumberland","P1b","within","biomass",42,"Substitution",0
+"spatial_unit","Northumberland","P2","within","biomass",43,"Substitution",20.9166666666667
+"spatial_unit","Northumberland","PTa","between","biomass",44,"Substitution",22.6315789473684
+"spatial_unit","Northumberland","PTb","between","biomass",45,"Substitution",9.27272727272728
+"spatial_unit","Northumberland","P1a","within","occurrence",46,"Substitution",13.3571428571428
+"spatial_unit","Northumberland","P1b","within","occurrence",47,"Substitution",12.9285714285714
+"spatial_unit","Northumberland","P2","within","occurrence",48,"Substitution",23
+"spatial_unit","Northumberland","PTa","between","occurrence",49,"Substitution",51.0526315789474
+"spatial_unit","Northumberland","PTb","between","occurrence",50,"Substitution",54.0000000000001
+"level_average","ALL","P1a","within","biomass",1,"Functional change",20.2012429971989
+"level_average","ALL","P1b","within","biomass",2,"Functional change",18.735002334267
+"level_average","ALL","P2","within","biomass",3,"Functional change",17.6604166666666
+"level_average","ALL","PTa","between","biomass",4,"Functional change",9.56488139175506
+"level_average","ALL","PTb","between","biomass",5,"Functional change",18.262987012987
+"level_average","ALL","P1a","within","occurrence",6,"Functional change",8.84147408963586
+"level_average","ALL","P1b","within","occurrence",7,"Functional change",9.97852474323065
+"level_average","ALL","P2","within","occurrence",8,"Functional change",7.24999999999999
+"level_average","ALL","PTa","between","occurrence",9,"Functional change",5.01090096596551
+"level_average","ALL","PTb","between","occurrence",10,"Functional change",3.25162337662338
+"spatial_unit","Central","P1a","within","biomass",11,"Functional change",15.8823529411764
+"spatial_unit","Central","P1b","within","biomass",12,"Functional change",15.3888888888889
+"spatial_unit","Central","P2","within","biomass",13,"Functional change",23.375
+"spatial_unit","Central","PTa","between","biomass",14,"Functional change",5.17647058823528
+"spatial_unit","Central","PTb","between","biomass",15,"Functional change",20.4285714285714
+"spatial_unit","Central","P1a","within","occurrence",16,"Functional change",3.76470588235293
+"spatial_unit","Central","P1b","within","occurrence",17,"Functional change",5.55555555555554
+"spatial_unit","Central","P2","within","occurrence",18,"Functional change",6.5
+"spatial_unit","Central","PTa","between","occurrence",19,"Functional change",0
+"spatial_unit","Central","PTb","between","occurrence",20,"Functional change",7.14285714285714
+"spatial_unit","Chaleur Bay","P1a","within","biomass",21,"Functional change",21
+"spatial_unit","Chaleur Bay","P1b","within","biomass",22,"Functional change",17.75
+"spatial_unit","Chaleur Bay","P2","within","biomass",23,"Functional change",0
+"spatial_unit","Chaleur Bay","PTa","between","biomass",24,"Functional change",23.2727272727273
+"spatial_unit","Chaleur Bay","PTb","between","biomass",25,"Functional change",22.7142857142857
+"spatial_unit","Chaleur Bay","P1a","within","occurrence",26,"Functional change",16.6666666666666
+"spatial_unit","Chaleur Bay","P1b","within","occurrence",27,"Functional change",16.6666666666666
+"spatial_unit","Chaleur Bay","P2","within","occurrence",28,"Functional change",0
+"spatial_unit","Chaleur Bay","PTa","between","occurrence",29,"Functional change",0.818181818181818
+"spatial_unit","Chaleur Bay","PTb","between","occurrence",30,"Functional change",0
+"spatial_unit","Magdalen Shallows","P1a","within","biomass",31,"Functional change",20.7083333333334
+"spatial_unit","Magdalen Shallows","P1b","within","biomass",32,"Functional change",20.3725490196078
+"spatial_unit","Magdalen Shallows","P2","within","biomass",33,"Functional change",26.1
+"spatial_unit","Magdalen Shallows","PTa","between","biomass",34,"Functional change",5.54716981132076
+"spatial_unit","Magdalen Shallows","PTb","between","biomass",35,"Functional change",7.27272727272727
+"spatial_unit","Magdalen Shallows","P1a","within","occurrence",36,"Functional change",7.79166666666666
+"spatial_unit","Magdalen Shallows","P1b","within","occurrence",37,"Functional change",10.5490196078431
+"spatial_unit","Magdalen Shallows","P2","within","occurrence",38,"Functional change",9.25
+"spatial_unit","Magdalen Shallows","PTa","between","occurrence",39,"Functional change",2.9622641509434
+"spatial_unit","Magdalen Shallows","PTb","between","occurrence",40,"Functional change",5.86363636363637
+"spatial_unit","Northumberland","P1a","within","biomass",41,"Functional change",23.2142857142857
+"spatial_unit","Northumberland","P1b","within","biomass",42,"Functional change",21.4285714285714
+"spatial_unit","Northumberland","P2","within","biomass",43,"Functional change",21.1666666666667
+"spatial_unit","Northumberland","PTa","between","biomass",44,"Functional change",4.26315789473684
+"spatial_unit","Northumberland","PTb","between","biomass",45,"Functional change",22.6363636363637
+"spatial_unit","Northumberland","P1a","within","occurrence",46,"Functional change",7.14285714285714
+"spatial_unit","Northumberland","P1b","within","occurrence",47,"Functional change",7.14285714285714
+"spatial_unit","Northumberland","P2","within","occurrence",48,"Functional change",13.25
+"spatial_unit","Northumberland","PTa","between","occurrence",49,"Functional change",16.2631578947369
+"spatial_unit","Northumberland","PTb","between","occurrence",50,"Functional change",0
+"level_average","ALL","P1a","within","biomass",1,"Reorganisation",4.64093137254901
+"level_average","ALL","P1b","within","biomass",2,"Reorganisation",3.86111111111111
+"level_average","ALL","P2","within","biomass",3,"Reorganisation",3.20625
+"level_average","ALL","PTa","between","biomass",4,"Reorganisation",24.095722987218
+"level_average","ALL","PTb","between","biomass",5,"Reorganisation",16.8433441558442
+"level_average","ALL","P1a","within","occurrence",6,"Reorganisation",8.56954656862744
+"level_average","ALL","P1b","within","occurrence",7,"Reorganisation",6.93300653594771
+"level_average","ALL","P2","within","occurrence",8,"Reorganisation",5.40416666666667
+"level_average","ALL","PTa","between","occurrence",9,"Reorganisation",24.1079396098966
+"level_average","ALL","PTb","between","occurrence",10,"Reorganisation",19.8141233766234
+"spatial_unit","Central","P1a","within","biomass",11,"Reorganisation",5.64705882352941
+"spatial_unit","Central","P1b","within","biomass",12,"Reorganisation",2.77777777777778
+"spatial_unit","Central","P2","within","biomass",13,"Reorganisation",4.875
+"spatial_unit","Central","PTa","between","biomass",14,"Reorganisation",30.5294117647058
+"spatial_unit","Central","PTb","between","biomass",15,"Reorganisation",18
+"spatial_unit","Central","P1a","within","occurrence",16,"Reorganisation",5.88235294117646
+"spatial_unit","Central","P1b","within","occurrence",17,"Reorganisation",5.55555555555554
+"spatial_unit","Central","P2","within","occurrence",18,"Reorganisation",8.625
+"spatial_unit","Central","PTa","between","occurrence",19,"Reorganisation",33.0588235294117
+"spatial_unit","Central","PTb","between","occurrence",20,"Reorganisation",34.6428571428572
+"spatial_unit","Chaleur Bay","P1a","within","biomass",21,"Reorganisation",8.24999999999999
+"spatial_unit","Chaleur Bay","P1b","within","biomass",22,"Reorganisation",8.33333333333332
+"spatial_unit","Chaleur Bay","P2","within","biomass",23,"Reorganisation",0
+"spatial_unit","Chaleur Bay","PTa","between","biomass",24,"Reorganisation",24.909090909091
+"spatial_unit","Chaleur Bay","PTb","between","biomass",25,"Reorganisation",14.7142857142857
+"spatial_unit","Chaleur Bay","P1a","within","occurrence",26,"Reorganisation",8.33333333333332
+"spatial_unit","Chaleur Bay","P1b","within","occurrence",27,"Reorganisation",8.33333333333332
+"spatial_unit","Chaleur Bay","P2","within","occurrence",28,"Reorganisation",0
+"spatial_unit","Chaleur Bay","PTa","between","occurrence",29,"Reorganisation",9.0909090909091
+"spatial_unit","Chaleur Bay","PTb","between","occurrence",30,"Reorganisation",21
+"spatial_unit","Magdalen Shallows","P1a","within","biomass",31,"Reorganisation",4.66666666666666
+"spatial_unit","Magdalen Shallows","P1b","within","biomass",32,"Reorganisation",4.33333333333333
+"spatial_unit","Magdalen Shallows","P2","within","biomass",33,"Reorganisation",7.95
+"spatial_unit","Magdalen Shallows","PTa","between","biomass",34,"Reorganisation",30.2075471698114
+"spatial_unit","Magdalen Shallows","PTb","between","biomass",35,"Reorganisation",30.0227272727273
+"spatial_unit","Magdalen Shallows","P1a","within","occurrence",36,"Reorganisation",20.0625
+"spatial_unit","Magdalen Shallows","P1b","within","occurrence",37,"Reorganisation",13.8431372549019
+"spatial_unit","Magdalen Shallows","P2","within","occurrence",38,"Reorganisation",9.07499999999999
+"spatial_unit","Magdalen Shallows","PTa","between","occurrence",39,"Reorganisation",41.0188679245283
+"spatial_unit","Magdalen Shallows","PTb","between","occurrence",40,"Reorganisation",23.6136363636363
+"spatial_unit","Northumberland","P1a","within","biomass",41,"Reorganisation",0
+"spatial_unit","Northumberland","P1b","within","biomass",42,"Reorganisation",0
+"spatial_unit","Northumberland","P2","within","biomass",43,"Reorganisation",0
+"spatial_unit","Northumberland","PTa","between","biomass",44,"Reorganisation",10.7368421052631
+"spatial_unit","Northumberland","PTb","between","biomass",45,"Reorganisation",4.63636363636363
+"spatial_unit","Northumberland","P1a","within","occurrence",46,"Reorganisation",0
+"spatial_unit","Northumberland","P1b","within","occurrence",47,"Reorganisation",0
+"spatial_unit","Northumberland","P2","within","occurrence",48,"Reorganisation",3.91666666666667
+"spatial_unit","Northumberland","PTa","between","occurrence",49,"Reorganisation",13.2631578947368
+"spatial_unit","Northumberland","PTb","between","occurrence",50,"Reorganisation",0

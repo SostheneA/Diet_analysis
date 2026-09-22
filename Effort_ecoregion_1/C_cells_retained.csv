@@ -1,0 +1,11 @@
+contrast,mode,cells_kept,cells_total,pct_kept
+P1a,biomass,51,91,56
+P1a,occurrence,51,91,56
+P1b,biomass,58,95,61.1
+P1b,occurrence,58,95,61.1
+P2,biomass,36,62,58.1
+P2,occurrence,36,62,58.1
+PTb,biomass,48,76,63.2
+PTb,occurrence,48,76,63.2
+PTa,biomass,68,100,68
+PTa,occurrence,68,100,68

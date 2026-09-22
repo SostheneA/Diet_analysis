@@ -1,0 +1,201 @@
+species,size,unit,n_target,n_min_available,n_sc,complete_sc,n_target_final,keep,drop_reason
+Alewife,adult,Magdalen Shallows,6,6,5,TRUE,6,TRUE,NA
+Alewife,adult,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Alewife,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,juvenile,Northumberland,5,5,5,TRUE,5,TRUE,NA
+Alligatorfish,adult,Central,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,Magdalen Shallows,24,24,5,TRUE,24,TRUE,NA
+Alligatorfish,adult,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,juvenile,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,Chaleur Bay,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,juvenile,Magdalen Shallows,10,10,5,TRUE,10,TRUE,NA
+Alligatorfish,juvenile,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,Central,3,3,5,TRUE,3,TRUE,NA
+American plaice,adult,Chaleur Bay,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,Magdalen Shallows,22,22,5,TRUE,22,TRUE,NA
+American plaice,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,Central,3,3,5,TRUE,3,TRUE,NA
+American plaice,juvenile,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,Magdalen Shallows,51,51,5,TRUE,51,TRUE,NA
+American plaice,juvenile,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Arctic alligatorfish,one_class,Chaleur Bay,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic hookear sculpin,one_class,Chaleur Bay,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,Magdalen Shallows,6,6,5,TRUE,6,TRUE,NA
+Arctic staghorn sculpin,adult,Central,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,Magdalen Shallows,14,14,5,TRUE,14,TRUE,NA
+Arctic staghorn sculpin,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,juvenile,Northumberland,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,Central,3,3,5,TRUE,3,TRUE,NA
+Atlantic cod,adult,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,Magdalen Shallows,15,15,5,TRUE,15,TRUE,NA
+Atlantic cod,adult,Northumberland,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,juvenile,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,Magdalen Shallows,26,26,5,TRUE,26,TRUE,NA
+Atlantic cod,juvenile,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic herring,adult,Central,5,5,3,FALSE,5,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,Magdalen Shallows,16,16,5,TRUE,16,TRUE,NA
+Atlantic herring,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,Central,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,Magdalen Shallows,5,5,5,TRUE,5,TRUE,NA
+Atlantic herring,juvenile,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Atlantic hookear sculpin,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,Magdalen Shallows,4,4,5,TRUE,4,TRUE,NA
+Atlantic hookear sculpin,one_class,Northumberland,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic mackerel,adult,Northumberland,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,Chaleur Bay,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,Magdalen Shallows,4,4,5,TRUE,4,TRUE,NA
+Atlantic mackerel,juvenile,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,Magdalen Shallows,12,12,5,TRUE,12,TRUE,NA
+Atlantic spiny lumpsucker,one_class,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,Magdalen Shallows,10,10,5,TRUE,10,TRUE,NA
+Capelin,adult,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,Magdalen Shallows,3,3,5,TRUE,3,TRUE,NA
+Capelin,juvenile,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,Magdalen Shallows,27,27,5,TRUE,27,TRUE,NA
+Capelin,juvenile,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,Magdalen Shallows,8,8,5,TRUE,8,TRUE,NA
+Daubed shanny,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,Magdalen Shallows,20,20,5,TRUE,20,TRUE,NA
+Daubed shanny,juvenile,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,Central,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,Chaleur Bay,3,3,5,TRUE,3,TRUE,NA
+Dusky snailfish,one_class,Magdalen Shallows,26,26,5,TRUE,26,TRUE,NA
+Dusky snailfish,one_class,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,adult,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,adult,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,Central,3,3,5,TRUE,3,TRUE,NA
+Fourbeard rockling,juvenile,Chaleur Bay,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Fourbeard rockling,juvenile,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Fourbeard rockling,juvenile,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,Chaleur Bay,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,Magdalen Shallows,13,13,5,TRUE,13,TRUE,NA
+Fourline snakeblenny,one_class,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland cod,adult,Magdalen Shallows,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,Magdalen Shallows,3,3,5,TRUE,3,TRUE,NA
+Greenland cod,juvenile,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,Central,3,3,5,TRUE,3,TRUE,NA
+Greenland halibut,adult,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,Central,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,Chaleur Bay,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,Magdalen Shallows,9,9,5,TRUE,9,TRUE,NA
+Laval's eelpout,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,Chaleur Bay,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Laval's eelpout,one_class,Magdalen Shallows,11,11,5,TRUE,11,TRUE,NA
+Longhorn sculpin,adult,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,Magdalen Shallows,12,12,5,TRUE,12,TRUE,NA
+Longhorn sculpin,adult,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Longhorn sculpin,juvenile,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,Magdalen Shallows,9,9,5,TRUE,9,TRUE,NA
+Longhorn sculpin,juvenile,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Marlin-spike grenadier,one_class,Central,8,8,5,TRUE,8,TRUE,NA
+Marlin-spike grenadier,one_class,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Moustache sculpin,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,Magdalen Shallows,19,19,5,TRUE,19,TRUE,NA
+Moustache sculpin,one_class,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Northern sand lance,one_class,Central,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Northern sand lance,one_class,Northumberland,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,Chaleur Bay,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,Magdalen Shallows,3,3,5,TRUE,3,TRUE,NA
+Rainbow smelt,adult,Northumberland,6,6,5,TRUE,6,TRUE,NA
+Rainbow smelt,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,juvenile,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,Central,3,3,5,TRUE,3,TRUE,NA
+Redfish unidentified,adult,Magdalen Shallows,3,3,5,TRUE,3,TRUE,NA
+Redfish unidentified,juvenile,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,Magdalen Shallows,3,3,5,TRUE,3,TRUE,NA
+Sea raven,one_class,Chaleur Bay,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,Magdalen Shallows,5,5,5,TRUE,5,TRUE,NA
+Sea raven,one_class,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,Chaleur Bay,5,5,4,FALSE,5,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,Magdalen Shallows,10,10,5,TRUE,10,TRUE,NA
+Shorthorn sculpin,adult,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Smooth skate,adult,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,adult,Magdalen Shallows,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,Central,4,4,5,TRUE,4,TRUE,NA
+Smooth skate,juvenile,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Snakeblenny,adult,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,Magdalen Shallows,4,4,5,TRUE,4,TRUE,NA
+Snakeblenny,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,juvenile,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,Chaleur Bay,4,4,4,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,Magdalen Shallows,12,12,5,TRUE,12,TRUE,NA
+Spatulate sculpin,one_class,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Stout eelblenny,one_class,Central,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,Chaleur Bay,3,3,5,TRUE,3,TRUE,NA
+Stout eelblenny,one_class,Magdalen Shallows,4,4,5,TRUE,4,TRUE,NA
+Stout eelblenny,one_class,Northumberland,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,adult,Magdalen Shallows,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,Northumberland,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,Central,6,6,5,TRUE,6,TRUE,NA
+Thorny skate,juvenile,Magdalen Shallows,12,12,5,TRUE,12,TRUE,NA
+Three-spined stickleback,adult,Central,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,Chaleur Bay,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,adult,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Three-spined stickleback,juvenile,Central,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,Chaleur Bay,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Vahl's eelpout,one_class,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Vahl's eelpout,one_class,Chaleur Bay,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,Magdalen Shallows,6,6,5,TRUE,6,TRUE,NA
+White hake,adult,Central,7,7,5,TRUE,7,TRUE,NA
+White hake,adult,Chaleur Bay,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+White hake,adult,Magdalen Shallows,4,4,5,TRUE,4,TRUE,NA
+White hake,adult,Northumberland,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,Central,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+White hake,juvenile,Chaleur Bay,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,Magdalen Shallows,8,8,5,TRUE,8,TRUE,NA
+White hake,juvenile,Northumberland,4,4,5,TRUE,4,TRUE,NA
+Windowpane flounder,adult,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,adult,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Windowpane flounder,juvenile,Magdalen Shallows,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,juvenile,Northumberland,3,3,5,TRUE,3,TRUE,NA
+Winter flounder,adult,Chaleur Bay,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,Magdalen Shallows,10,10,5,TRUE,10,TRUE,NA
+Winter flounder,adult,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,juvenile,Central,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,Chaleur Bay,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,Magdalen Shallows,10,10,5,TRUE,10,TRUE,NA
+Winter flounder,juvenile,Northumberland,6,6,5,TRUE,6,TRUE,NA
+Witch flounder,adult,Central,9,9,5,TRUE,9,TRUE,NA
+Witch flounder,adult,Magdalen Shallows,8,8,5,TRUE,8,TRUE,NA
+Witch flounder,juvenile,Central,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Witch flounder,juvenile,Magdalen Shallows,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,adult,Central,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,Chaleur Bay,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,Magdalen Shallows,7,7,5,TRUE,7,TRUE,NA
+Yellowtail flounder,adult,Northumberland,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,Central,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,Chaleur Bay,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,Magdalen Shallows,28,28,5,TRUE,28,TRUE,NA
+Yellowtail flounder,juvenile,Northumberland,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits

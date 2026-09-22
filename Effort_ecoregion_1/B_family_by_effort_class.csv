@@ -1,0 +1,212 @@
+contrast,contrast_type,mode,n_bin,family,n,pct,n_tot
+P1a,within,biomass,"[2,4)",Functional change,149,21.285714285714285,700
+P1a,within,biomass,"[2,4)",Reorganisation,51,7.285714285714286,700
+P1a,within,biomass,"[2,4)",Stability,500,71.42857142857143,700
+P1a,within,biomass,"[4,6)",Functional change,451,19.608695652173914,2300
+P1a,within,biomass,"[4,6)",Stability,1813,78.82608695652173,2300
+P1a,within,biomass,"[4,6)",Substitution,36,1.565217391304348,2300
+P1a,within,biomass,"[6,9)",Functional change,458,30.533333333333335,1500
+P1a,within,biomass,"[6,9)",Reorganisation,99,6.6,1500
+P1a,within,biomass,"[6,9)",Stability,838,55.86666666666667,1500
+P1a,within,biomass,"[6,9)",Substitution,105,7,1500
+P1a,within,biomass,"[9,14)",Functional change,321,18.88235294117647,1700
+P1a,within,biomass,"[9,14)",Reorganisation,45,2.6470588235294117,1700
+P1a,within,biomass,"[9,14)",Stability,1177,69.23529411764706,1700
+P1a,within,biomass,"[9,14)",Substitution,157,9.235294117647058,1700
+P1a,within,biomass,"[14,25)",Functional change,200,15.384615384615385,1300
+P1a,within,biomass,"[14,25)",Reorganisation,100,7.6923076923076925,1300
+P1a,within,biomass,"[14,25)",Stability,620,47.69230769230769,1300
+P1a,within,biomass,"[14,25)",Substitution,380,29.23076923076923,1300
+P1a,within,biomass,"[25,Inf)",Functional change,262,16.375,1600
+P1a,within,biomass,"[25,Inf)",Reorganisation,124,7.75,1600
+P1a,within,biomass,"[25,Inf)",Stability,499,31.1875,1600
+P1a,within,biomass,"[25,Inf)",Substitution,715,44.6875,1600
+P1a,within,occurrence,"[2,4)",Functional change,138,19.714285714285715,700
+P1a,within,occurrence,"[2,4)",Stability,514,73.42857142857143,700
+P1a,within,occurrence,"[2,4)",Substitution,48,6.857142857142857,700
+P1a,within,occurrence,"[4,6)",Functional change,182,7.913043478260869,2300
+P1a,within,occurrence,"[4,6)",Stability,2071,90.04347826086956,2300
+P1a,within,occurrence,"[4,6)",Substitution,47,2.0434782608695654,2300
+P1a,within,occurrence,"[6,9)",Functional change,106,7.066666666666666,1500
+P1a,within,occurrence,"[6,9)",Reorganisation,200,13.333333333333334,1500
+P1a,within,occurrence,"[6,9)",Stability,894,59.6,1500
+P1a,within,occurrence,"[6,9)",Substitution,300,20,1500
+P1a,within,occurrence,"[9,14)",Functional change,159,9.352941176470589,1700
+P1a,within,occurrence,"[9,14)",Reorganisation,100,5.882352941176471,1700
+P1a,within,occurrence,"[9,14)",Stability,1355,79.70588235294117,1700
+P1a,within,occurrence,"[9,14)",Substitution,86,5.0588235294117645,1700
+P1a,within,occurrence,"[14,25)",Functional change,79,6.076923076923077,1300
+P1a,within,occurrence,"[14,25)",Reorganisation,286,22,1300
+P1a,within,occurrence,"[14,25)",Stability,536,41.23076923076923,1300
+P1a,within,occurrence,"[14,25)",Substitution,399,30.692307692307693,1300
+P1a,within,occurrence,"[25,Inf)",Functional change,74,4.625,1600
+P1a,within,occurrence,"[25,Inf)",Reorganisation,577,36.0625,1600
+P1a,within,occurrence,"[25,Inf)",Stability,404,25.25,1600
+P1a,within,occurrence,"[25,Inf)",Substitution,545,34.0625,1600
+P1b,within,biomass,"[2,4)",Functional change,112,14,800
+P1b,within,biomass,"[2,4)",Reorganisation,50,6.25,800
+P1b,within,biomass,"[2,4)",Stability,638,79.75,800
+P1b,within,biomass,"[4,6)",Functional change,391,18.61904761904762,2100
+P1b,within,biomass,"[4,6)",Stability,1573,74.9047619047619,2100
+P1b,within,biomass,"[4,6)",Substitution,136,6.476190476190476,2100
+P1b,within,biomass,"[6,9)",Functional change,604,33.55555555555556,1800
+P1b,within,biomass,"[6,9)",Reorganisation,100,5.555555555555555,1800
+P1b,within,biomass,"[6,9)",Stability,1095,60.833333333333336,1800
+P1b,within,biomass,"[6,9)",Substitution,1,0.05555555555555555,1800
+P1b,within,biomass,"[9,14)",Functional change,230,14.375,1600
+P1b,within,biomass,"[9,14)",Stability,1365,85.3125,1600
+P1b,within,biomass,"[9,14)",Substitution,5,0.3125,1600
+P1b,within,biomass,"[14,25)",Functional change,197,14.071428571428571,1400
+P1b,within,biomass,"[14,25)",Reorganisation,53,3.7857142857142856,1400
+P1b,within,biomass,"[14,25)",Stability,601,42.92857142857143,1400
+P1b,within,biomass,"[14,25)",Substitution,549,39.214285714285715,1400
+P1b,within,biomass,"[25,Inf)",Functional change,295,16.38888888888889,1800
+P1b,within,biomass,"[25,Inf)",Reorganisation,168,9.333333333333334,1800
+P1b,within,biomass,"[25,Inf)",Stability,731,40.611111111111114,1800
+P1b,within,biomass,"[25,Inf)",Substitution,606,33.666666666666664,1800
+P1b,within,occurrence,"[2,4)",Functional change,138,17.25,800
+P1b,within,occurrence,"[2,4)",Stability,620,77.5,800
+P1b,within,occurrence,"[2,4)",Substitution,42,5.25,800
+P1b,within,occurrence,"[4,6)",Functional change,348,16.571428571428573,2100
+P1b,within,occurrence,"[4,6)",Stability,1741,82.9047619047619,2100
+P1b,within,occurrence,"[4,6)",Substitution,11,0.5238095238095238,2100
+P1b,within,occurrence,"[6,9)",Functional change,86,4.777777777777778,1800
+P1b,within,occurrence,"[6,9)",Reorganisation,200,11.11111111111111,1800
+P1b,within,occurrence,"[6,9)",Stability,1214,67.44444444444444,1800
+P1b,within,occurrence,"[6,9)",Substitution,300,16.666666666666668,1800
+P1b,within,occurrence,"[9,14)",Functional change,198,12.375,1600
+P1b,within,occurrence,"[9,14)",Reorganisation,100,6.25,1600
+P1b,within,occurrence,"[9,14)",Stability,1169,73.0625,1600
+P1b,within,occurrence,"[9,14)",Substitution,133,8.3125,1600
+P1b,within,occurrence,"[14,25)",Reorganisation,186,13.285714285714286,1400
+P1b,within,occurrence,"[14,25)",Stability,690,49.285714285714285,1400
+P1b,within,occurrence,"[14,25)",Substitution,524,37.42857142857143,1400
+P1b,within,occurrence,"[25,Inf)",Functional change,168,9.333333333333334,1800
+P1b,within,occurrence,"[25,Inf)",Reorganisation,420,23.333333333333332,1800
+P1b,within,occurrence,"[25,Inf)",Stability,485,26.944444444444443,1800
+P1b,within,occurrence,"[25,Inf)",Substitution,727,40.388888888888886,1800
+P2,within,biomass,"[2,4)",Functional change,154,12.833333333333334,1200
+P2,within,biomass,"[2,4)",Stability,1004,83.66666666666667,1200
+P2,within,biomass,"[2,4)",Substitution,42,3.5,1200
+P2,within,biomass,"[4,6)",Functional change,437,39.72727272727273,1100
+P2,within,biomass,"[4,6)",Reorganisation,40,3.6363636363636362,1100
+P2,within,biomass,"[4,6)",Stability,532,48.36363636363637,1100
+P2,within,biomass,"[4,6)",Substitution,91,8.272727272727273,1100
+P2,within,biomass,"[6,9)",Functional change,378,31.5,1200
+P2,within,biomass,"[6,9)",Reorganisation,54,4.5,1200
+P2,within,biomass,"[6,9)",Stability,527,43.916666666666664,1200
+P2,within,biomass,"[6,9)",Substitution,241,20.083333333333332,1200
+P2,within,biomass,"[9,14)",Functional change,292,19.466666666666665,1500
+P2,within,biomass,"[9,14)",Reorganisation,146,9.733333333333333,1500
+P2,within,biomass,"[9,14)",Stability,869,57.93333333333333,1500
+P2,within,biomass,"[9,14)",Substitution,193,12.866666666666667,1500
+P2,within,biomass,"[14,25)",Functional change,132,18.857142857142858,700
+P2,within,biomass,"[14,25)",Reorganisation,38,5.428571428571429,700
+P2,within,biomass,"[14,25)",Stability,521,74.42857142857143,700
+P2,within,biomass,"[14,25)",Substitution,9,1.2857142857142858,700
+P2,within,biomass,"[25,Inf)",Functional change,92,18.4,500
+P2,within,biomass,"[25,Inf)",Reorganisation,79,15.8,500
+P2,within,biomass,"[25,Inf)",Stability,121,24.2,500
+P2,within,biomass,"[25,Inf)",Substitution,208,41.6,500
+P2,within,occurrence,"[2,4)",Functional change,106,8.833333333333334,1200
+P2,within,occurrence,"[2,4)",Stability,1091,90.91666666666667,1200
+P2,within,occurrence,"[2,4)",Substitution,3,0.25,1200
+P2,within,occurrence,"[4,6)",Functional change,114,10.363636363636363,1100
+P2,within,occurrence,"[4,6)",Stability,800,72.72727272727273,1100
+P2,within,occurrence,"[4,6)",Substitution,186,16.90909090909091,1100
+P2,within,occurrence,"[6,9)",Functional change,230,19.166666666666668,1200
+P2,within,occurrence,"[6,9)",Reorganisation,116,9.666666666666666,1200
+P2,within,occurrence,"[6,9)",Stability,652,54.333333333333336,1200
+P2,within,occurrence,"[6,9)",Substitution,202,16.833333333333332,1200
+P2,within,occurrence,"[9,14)",Functional change,70,4.666666666666667,1500
+P2,within,occurrence,"[9,14)",Stability,1170,78,1500
+P2,within,occurrence,"[9,14)",Substitution,260,17.333333333333332,1500
+P2,within,occurrence,"[14,25)",Functional change,37,5.285714285714286,700
+P2,within,occurrence,"[14,25)",Reorganisation,74,10.571428571428571,700
+P2,within,occurrence,"[14,25)",Stability,541,77.28571428571429,700
+P2,within,occurrence,"[14,25)",Substitution,48,6.857142857142857,700
+P2,within,occurrence,"[25,Inf)",Functional change,24,4.8,500
+P2,within,occurrence,"[25,Inf)",Reorganisation,289,57.8,500
+P2,within,occurrence,"[25,Inf)",Stability,93,18.6,500
+P2,within,occurrence,"[25,Inf)",Substitution,94,18.8,500
+PTb,between,biomass,"[2,4)",Functional change,359,35.9,1000
+PTb,between,biomass,"[2,4)",Reorganisation,203,20.3,1000
+PTb,between,biomass,"[2,4)",Stability,312,31.2,1000
+PTb,between,biomass,"[2,4)",Substitution,126,12.6,1000
+PTb,between,biomass,"[4,6)",Functional change,239,13.277777777777779,1800
+PTb,between,biomass,"[4,6)",Reorganisation,217,12.055555555555555,1800
+PTb,between,biomass,"[4,6)",Stability,889,49.388888888888886,1800
+PTb,between,biomass,"[4,6)",Substitution,455,25.27777777777778,1800
+PTb,between,biomass,"[6,9)",Functional change,296,22.76923076923077,1300
+PTb,between,biomass,"[6,9)",Reorganisation,95,7.3076923076923075,1300
+PTb,between,biomass,"[6,9)",Stability,477,36.69230769230769,1300
+PTb,between,biomass,"[6,9)",Substitution,432,33.23076923076923,1300
+PTb,between,biomass,"[9,14)",Functional change,120,5.454545454545454,2200
+PTb,between,biomass,"[9,14)",Reorganisation,643,29.227272727272727,2200
+PTb,between,biomass,"[9,14)",Stability,365,16.59090909090909,2200
+PTb,between,biomass,"[9,14)",Substitution,1072,48.72727272727273,2200
+PTb,between,biomass,"[14,25)",Reorganisation,245,35,700
+PTb,between,biomass,"[14,25)",Substitution,455,65,700
+PTb,between,biomass,"[25,Inf)",Reorganisation,324,54,600
+PTb,between,biomass,"[25,Inf)",Stability,78,13,600
+PTb,between,biomass,"[25,Inf)",Substitution,198,33,600
+PTb,between,occurrence,"[2,4)",Reorganisation,100,10,1000
+PTb,between,occurrence,"[2,4)",Stability,498,49.8,1000
+PTb,between,occurrence,"[2,4)",Substitution,402,40.2,1000
+PTb,between,occurrence,"[4,6)",Functional change,86,4.777777777777778,1800
+PTb,between,occurrence,"[4,6)",Reorganisation,147,8.166666666666666,1800
+PTb,between,occurrence,"[4,6)",Stability,657,36.5,1800
+PTb,between,occurrence,"[4,6)",Substitution,910,50.55555555555556,1800
+PTb,between,occurrence,"[6,9)",Functional change,196,15.076923076923077,1300
+PTb,between,occurrence,"[6,9)",Reorganisation,147,11.307692307692308,1300
+PTb,between,occurrence,"[6,9)",Stability,404,31.076923076923077,1300
+PTb,between,occurrence,"[6,9)",Substitution,553,42.53846153846154,1300
+PTb,between,occurrence,"[9,14)",Functional change,12,0.5454545454545454,2200
+PTb,between,occurrence,"[9,14)",Reorganisation,679,30.863636363636363,2200
+PTb,between,occurrence,"[9,14)",Stability,93,4.2272727272727275,2200
+PTb,between,occurrence,"[9,14)",Substitution,1416,64.36363636363636,2200
+PTb,between,occurrence,"[14,25)",Reorganisation,279,39.857142857142854,700
+PTb,between,occurrence,"[14,25)",Substitution,421,60.142857142857146,700
+PTb,between,occurrence,"[25,Inf)",Functional change,64,10.666666666666666,600
+PTb,between,occurrence,"[25,Inf)",Reorganisation,319,53.166666666666664,600
+PTb,between,occurrence,"[25,Inf)",Stability,5,0.8333333333333334,600
+PTb,between,occurrence,"[25,Inf)",Substitution,212,35.333333333333336,600
+PTa,between,biomass,"[2,4)",Reorganisation,100,25,400
+PTa,between,biomass,"[2,4)",Stability,27,6.75,400
+PTa,between,biomass,"[2,4)",Substitution,273,68.25,400
+PTa,between,biomass,"[4,6)",Functional change,248,19.076923076923077,1300
+PTa,between,biomass,"[4,6)",Reorganisation,155,11.923076923076923,1300
+PTa,between,biomass,"[4,6)",Stability,440,33.84615384615385,1300
+PTa,between,biomass,"[4,6)",Substitution,457,35.15384615384615,1300
+PTa,between,biomass,"[6,9)",Functional change,124,5.166666666666667,2400
+PTa,between,biomass,"[6,9)",Reorganisation,496,20.666666666666668,2400
+PTa,between,biomass,"[6,9)",Stability,884,36.833333333333336,2400
+PTa,between,biomass,"[6,9)",Substitution,896,37.333333333333336,2400
+PTa,between,biomass,"[9,14)",Functional change,347,19.27777777777778,1800
+PTa,between,biomass,"[9,14)",Reorganisation,246,13.666666666666666,1800
+PTa,between,biomass,"[9,14)",Stability,502,27.88888888888889,1800
+PTa,between,biomass,"[9,14)",Substitution,705,39.166666666666664,1800
+PTa,between,biomass,"[14,25)",Reorganisation,516,24.571428571428573,2100
+PTa,between,biomass,"[14,25)",Stability,263,12.523809523809524,2100
+PTa,between,biomass,"[14,25)",Substitution,1321,62.904761904761905,2100
+PTa,between,biomass,"[25,Inf)",Reorganisation,1085,54.25,2000
+PTa,between,biomass,"[25,Inf)",Stability,122,6.1,2000
+PTa,between,biomass,"[25,Inf)",Substitution,793,39.65,2000
+PTa,between,occurrence,"[2,4)",Substitution,400,100,400
+PTa,between,occurrence,"[4,6)",Functional change,247,19,1300
+PTa,between,occurrence,"[4,6)",Reorganisation,175,13.461538461538462,1300
+PTa,between,occurrence,"[4,6)",Stability,302,23.23076923076923,1300
+PTa,between,occurrence,"[4,6)",Substitution,576,44.30769230769231,1300
+PTa,between,occurrence,"[6,9)",Functional change,192,8,2400
+PTa,between,occurrence,"[6,9)",Reorganisation,303,12.625,2400
+PTa,between,occurrence,"[6,9)",Stability,540,22.5,2400
+PTa,between,occurrence,"[6,9)",Substitution,1365,56.875,2400
+PTa,between,occurrence,"[9,14)",Functional change,36,2,1800
+PTa,between,occurrence,"[9,14)",Reorganisation,398,22.11111111111111,1800
+PTa,between,occurrence,"[9,14)",Stability,372,20.666666666666668,1800
+PTa,between,occurrence,"[9,14)",Substitution,994,55.22222222222222,1800
+PTa,between,occurrence,"[14,25)",Reorganisation,1076,51.23809523809524,2100
+PTa,between,occurrence,"[14,25)",Stability,96,4.571428571428571,2100
+PTa,between,occurrence,"[14,25)",Substitution,928,44.19047619047619,2100
+PTa,between,occurrence,"[25,Inf)",Reorganisation,1136,56.8,2000
+PTa,between,occurrence,"[25,Inf)",Substitution,864,43.2,2000

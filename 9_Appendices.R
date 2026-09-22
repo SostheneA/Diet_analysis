@@ -188,7 +188,10 @@ if (have_raw) {
 # =============================================================================
 # 3. FIGURE 3 - TAXONOMIC RESOLUTION SWEEP (A: categories, B: families)
 # =============================================================================
-cat("\nFigure 3: resolution sweep\n")
+# =============================================================================
+# 3. FIGURE 3A - PREY CATEGORIES RETAINED (Bar plot & refined axes)
+# =============================================================================
+cat("\nFigure 3A: prey categories bar plot\n")
 
 if (have_raw) {
   prey_cols <- grep(paste0("^prey_category_\\d+", PREY_FAMILY, "$"), names(raw), value = TRUE)
@@ -200,15 +203,28 @@ if (have_raw) {
                      numeric(1))
     ) %>% arrange(x_threshold)
 
-    p3a <- ggplot(ncat, aes(x_threshold, n_cat)) +
-      geom_line(linewidth = 0.8, colour = "#2F4A5A") +
-      geom_point(size = 1.3, colour = "#2F4A5A") +
+    # Graphique en barres avec des échelles plus lisibles (pas de 25 pour y, 100 pour x)
+    p3a <- ggplot(ncat, aes(x = x_threshold, y = n_cat)) +
+      geom_col(fill = "#2F4A5A", width = 7, alpha = 0.85) + # geom_col pour un diagramme en barres
+      scale_x_continuous(
+        breaks = seq(0, 1000, by = 50),   # Graduations tous les 100 sur l'axe X
+        limits = c(-10, 1020)
+      ) +
+      scale_y_continuous(
+        breaks = seq(0, 200, by = 10),     # Graduations tous les 25 sur l'axe Y (plus lisible que 50)
+        limits = c(0, 190)
+      ) +
       labs(title = "A. Prey categories retained by aggregation threshold",
            subtitle = "Each record is kept at its finest level, or walked up the taxonomic tree until the node reaches x stomachs",
            x = "Threshold x (stomachs)", y = "Distinct prey categories") +
-      theme_diag()
+      theme_diag() +
+      theme(
+        axis.text.x = element_text(size = 9),
+        axis.text.y = element_text(size = 9),
+        panel.grid.minor = element_blank()
+      )
 
-    save_fig(p3a, "Fig3a_prey_categories", 8, 4.4, dir = DIR_FIGURES)
+    save_fig(p3a, "Fig3a_prey_categories", 9, 5, dir = DIR_FIGURES)
     emit_app(ncat %>% select(-col), "TableA0_prey_categories",
              "Prey categories retained at each aggregation threshold.")
   } else {
@@ -242,6 +258,76 @@ p3b <- ggplot(sweep_fam, aes(x_threshold, pct, colour = family)) +
   theme(strip.text = element_text(size = 8))
 
 save_fig(p3b, "Fig3b_sweep_families", 13, 5.6, dir = DIR_FIGURES)
+
+
+
+# =============================================================================
+# FIGURE 3b - SWEEP FAMILIES: ECOREGIONS
+# =============================================================================
+cat("\nFigure 3b: taxonomic resolution sweep - Ecoregions\n")
+
+sweep_eco <- res_all %>%
+  filter(level == "ecoregion", diagnostic %in% DIAG_LEVELS, contrast != "2006 vs 2018") %>%
+  count(spatial_unit, currency, contrast, x_threshold, diagnostic, name = "n") %>%
+  group_by(spatial_unit, currency, contrast, x_threshold) %>%
+  mutate(pct_unit = 100 * n / sum(n)) %>%
+  ungroup() %>%
+  mutate(family = family_of(diagnostic)) %>%
+  filter(!is.na(family)) %>%
+  group_by(spatial_unit, currency, contrast, x_threshold, family) %>%
+  summarise(pct_unit = sum(pct_unit), .groups = "drop") %>%
+  group_by(currency, contrast, x_threshold, family) %>%
+  summarise(pct = mean(pct_unit), .groups = "drop")
+
+p3b_eco <- ggplot(sweep_eco, aes(x_threshold, pct, colour = family)) +
+  geom_line(linewidth = 0.6) +
+  facet_grid(currency ~ contrast,
+             labeller = labeller(currency = CURRENCY_LAB, contrast = CONTRAST_LAB_1L)) +
+  scale_colour_manual(values = FAMILY_PAL, name = NULL) +
+  scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25)) +
+  labs(title = "Sensitivity of diagnostic composition to taxonomic resolution — Ecoregions",
+       subtitle = "Family frequencies across the full sweep (mean across ecoregions)",
+       x = "Threshold x (stomachs)", y = "Frequency (%)") +
+  theme_diag() +
+  theme(strip.text = element_text(size = 8), legend.position = "top")
+
+save_fig(p3b_eco, "Fig3b_sweep_families_ecoregion", 13, 5.6, dir = DIR_FIGURES)
+
+
+
+# =============================================================================
+# FIGURE 3b - SWEEP FAMILIES: SURVEY STRATA
+# =============================================================================
+cat("\nFigure 3b: taxonomic resolution sweep - Survey Strata\n")
+
+sweep_strata <- res_all %>%
+  filter(level == "stratum", diagnostic %in% DIAG_LEVELS, contrast != "2006 vs 2018") %>%
+  count(spatial_unit, currency, contrast, x_threshold, diagnostic, name = "n") %>%
+  group_by(spatial_unit, currency, contrast, x_threshold) %>%
+  mutate(pct_unit = 100 * n / sum(n)) %>%
+  ungroup() %>%
+  mutate(family = family_of(diagnostic)) %>%
+  filter(!is.na(family)) %>%
+  group_by(spatial_unit, currency, contrast, x_threshold, family) %>%
+  summarise(pct_unit = sum(pct_unit), .groups = "drop") %>%
+  group_by(currency, contrast, x_threshold, family) %>%
+  summarise(pct = mean(pct_unit), .groups = "drop")
+
+p3b_strata <- ggplot(sweep_strata, aes(x_threshold, pct, colour = family)) +
+  geom_line(linewidth = 0.6) +
+  facet_grid(currency ~ contrast,
+             labeller = labeller(currency = CURRENCY_LAB, contrast = CONTRAST_LAB_1L)) +
+  scale_colour_manual(values = FAMILY_PAL, name = NULL) +
+  scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 25)) +
+  labs(title = "Sensitivity of diagnostic composition to taxonomic resolution — Survey Strata",
+       subtitle = "Family frequencies across the full sweep (mean across strata)",
+       x = "Threshold x (stomachs)", y = "Frequency (%)") +
+  theme_diag() +
+  theme(strip.text = element_text(size = 8), legend.position = "top")
+
+save_fig(p3b_strata, "Fig3b_sweep_families_stratum", 13, 5.6, dir = DIR_FIGURES)
+
+
 
 # Spread across the sweep: the uncertainty quoted as error bars in the body.
 sweep_spread <- sweep_fam %>%

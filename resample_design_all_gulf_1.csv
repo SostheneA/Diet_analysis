@@ -1,0 +1,66 @@
+species,size,unit,n_target,n_min_available,n_sc,complete_sc,n_target_final,keep,drop_reason
+Alewife,adult,All Gulf,10,10,5,TRUE,10,TRUE,NA
+Alewife,juvenile,All Gulf,8,8,5,TRUE,8,TRUE,NA
+Alligatorfish,adult,All Gulf,28,28,5,TRUE,28,TRUE,NA
+Alligatorfish,juvenile,All Gulf,16,16,5,TRUE,16,TRUE,NA
+American plaice,adult,All Gulf,28,28,5,TRUE,28,TRUE,NA
+American plaice,juvenile,All Gulf,58,58,5,TRUE,58,TRUE,NA
+Arctic alligatorfish,one_class,All Gulf,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic hookear sculpin,one_class,All Gulf,6,6,5,TRUE,6,TRUE,NA
+Arctic staghorn sculpin,adult,All Gulf,16,16,5,TRUE,16,TRUE,NA
+Arctic staghorn sculpin,juvenile,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,All Gulf,20,20,5,TRUE,20,TRUE,NA
+Atlantic cod,juvenile,All Gulf,27,27,5,TRUE,27,TRUE,NA
+Atlantic herring,adult,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,All Gulf,8,8,5,TRUE,8,TRUE,NA
+Atlantic hookear sculpin,one_class,All Gulf,9,9,5,TRUE,9,TRUE,NA
+Atlantic mackerel,adult,All Gulf,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic mackerel,juvenile,All Gulf,6,6,5,TRUE,6,TRUE,NA
+Atlantic poacher,one_class,All Gulf,14,14,5,TRUE,14,TRUE,NA
+Atlantic spiny lumpsucker,one_class,All Gulf,10,10,5,TRUE,10,TRUE,NA
+Capelin,adult,All Gulf,3,3,5,TRUE,3,TRUE,NA
+Capelin,juvenile,All Gulf,30,30,5,TRUE,30,TRUE,NA
+Daubed shanny,adult,All Gulf,9,9,5,TRUE,9,TRUE,NA
+Daubed shanny,juvenile,All Gulf,21,21,5,TRUE,21,TRUE,NA
+Dusky snailfish,one_class,All Gulf,30,30,5,TRUE,30,TRUE,NA
+Fourbeard rockling,adult,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,All Gulf,11,11,5,TRUE,11,TRUE,NA
+Fourline snakeblenny,one_class,All Gulf,14,14,5,TRUE,14,TRUE,NA
+Greenland cod,adult,All Gulf,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,All Gulf,3,3,5,TRUE,3,TRUE,NA
+Greenland halibut,adult,All Gulf,5,5,5,TRUE,5,TRUE,NA
+Greenland halibut,juvenile,All Gulf,18,18,5,TRUE,18,TRUE,NA
+Laval's eelpout,one_class,All Gulf,13,13,5,TRUE,13,TRUE,NA
+Longhorn sculpin,adult,All Gulf,12,12,5,TRUE,12,TRUE,NA
+Longhorn sculpin,juvenile,All Gulf,14,14,5,TRUE,14,TRUE,NA
+Marlin-spike grenadier,one_class,All Gulf,8,8,5,TRUE,8,TRUE,NA
+Moustache sculpin,one_class,All Gulf,23,23,5,TRUE,23,TRUE,NA
+Northern sand lance,one_class,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,All Gulf,13,13,5,TRUE,13,TRUE,NA
+Rainbow smelt,juvenile,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,All Gulf,8,8,5,TRUE,8,TRUE,NA
+Redfish unidentified,juvenile,All Gulf,3,3,5,TRUE,3,TRUE,NA
+Sea raven,one_class,All Gulf,7,7,5,TRUE,7,TRUE,NA
+Shorthorn sculpin,adult,All Gulf,10,10,5,TRUE,10,TRUE,NA
+Shorthorn sculpin,juvenile,All Gulf,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Smooth skate,adult,All Gulf,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,All Gulf,6,6,5,TRUE,6,TRUE,NA
+Snakeblenny,adult,All Gulf,6,6,5,TRUE,6,TRUE,NA
+Snakeblenny,juvenile,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,All Gulf,13,13,5,TRUE,13,TRUE,NA
+Stout eelblenny,one_class,All Gulf,7,7,5,TRUE,7,TRUE,NA
+Thorny skate,adult,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,juvenile,All Gulf,18,18,5,TRUE,18,TRUE,NA
+Three-spined stickleback,adult,All Gulf,4,4,5,TRUE,4,TRUE,NA
+Three-spined stickleback,juvenile,All Gulf,3,3,5,TRUE,3,TRUE,NA
+Vahl's eelpout,one_class,All Gulf,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+White hake,adult,All Gulf,11,11,5,TRUE,11,TRUE,NA
+White hake,juvenile,All Gulf,18,18,5,TRUE,18,TRUE,NA
+Windowpane flounder,adult,All Gulf,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,juvenile,All Gulf,4,4,5,TRUE,4,TRUE,NA
+Winter flounder,adult,All Gulf,12,12,5,TRUE,12,TRUE,NA
+Winter flounder,juvenile,All Gulf,21,21,5,TRUE,21,TRUE,NA
+Witch flounder,adult,All Gulf,18,18,5,TRUE,18,TRUE,NA
+Witch flounder,juvenile,All Gulf,6,6,5,TRUE,6,TRUE,NA
+Yellowtail flounder,adult,All Gulf,7,7,5,TRUE,7,TRUE,NA
+Yellowtail flounder,juvenile,All Gulf,32,32,5,TRUE,32,TRUE,NA

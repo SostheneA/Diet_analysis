@@ -72,6 +72,7 @@ message("Spatial level: ", SPATIAL_TITLE)
 # PARAMETERS (a run script may set them before sourcing this file)
 # -----------------------------------------------------------------------------
 if (!exists("PREY_FAMILY"))     PREY_FAMILY     <- "_1"     # prey-grouping family swept
+if (!exists("RUN_TAG"))         RUN_TAG         <- "_T"       # "" = run canonique ; "_T" = run d'essai
 if (!exists("N_MIN"))           N_MIN           <- 5        # min stomachs with prey per cell and period
 if (!exists("N_STRICT"))        N_STRICT        <- 25       # min stomachs per period for the reliable flag
 if (!exists("MIN_SETS"))        MIN_SETS        <- 3        # min sets per period for jackknife / Welch
@@ -289,7 +290,7 @@ check_prey_weight_column <- function(dat, wt_col = "somatic_wt_g",
   slope <- r2 <- NA_real_
   if (len_col %in% names(d)) {
     ok <- is.finite(d[[wt_col]]) & d[[wt_col]] > 0 &
-          is.finite(d[[len_col]]) & d[[len_col]] > 0
+      is.finite(d[[len_col]]) & d[[len_col]] > 0
     if (sum(ok) > 30) {
       fit <- stats::lm(log(d[[wt_col]][ok]) ~ log(d[[len_col]][ok]))
       slope <- unname(stats::coef(fit)[2]); r2 <- summary(fit)$r.squared
@@ -304,7 +305,7 @@ check_prey_weight_column <- function(dat, wt_col = "somatic_wt_g",
     if (is.na(r2))    "n/a" else round(r2, 2)))
 
   looks_predator <- (!is.na(const) && const > 0.95) ||
-                    (!is.na(slope) && !is.na(r2) && slope > 2.3 && r2 > 0.7)
+    (!is.na(slope) && !is.na(r2) && slope > 2.3 && r2 > 0.7)
   if (isTRUE(looks_predator)) {
     warning("'", wt_col, "' now behaves like a PREDATOR weight. It held the ",
             "PREY weight when this pipeline was validated, so the upstream ",
@@ -389,7 +390,7 @@ shannon_jackknife_set <- function(mat_set1, mat_set2, min_sets = MIN_SETS) {
 
 compare_index_sets <- function(v1, v2, test = BS_TEST, n_perm = R_PERM) {
   v1 <- v1[is.finite(v1)]; v2 <- v2[is.finite(v2)]
-  out <- list(mean_P1 = NA_real_, mean_P2 = NA_real_, med_P1 = NA_real_, med_P2 = NA_real_, delta = NA_real_, p = NA_real_, test = test, n1 = length(v1), n2 = length(v2))
+  out <- list(mean_P1 = NA_real_, mean_P2 = NA_real_, med_P1 = NA_real_, med_P2 = NA_real_, delta = NA_real_, p = NA_real_, t = NA_real_, df = NA_real_, se = NA_real_, test = test, n1 = length(v1), n2 = length(v2))
   if (length(v1) < 2 || length(v2) < 2) return(out)
 
   out$mean_P1 <- round(mean(v1), 3); out$mean_P2 <- round(mean(v2), 3)
@@ -402,7 +403,11 @@ compare_index_sets <- function(v1, v2, test = BS_TEST, n_perm = R_PERM) {
       if (stats::var(v1) == 0 && stats::var(v2) == 0) {
         if (isTRUE(all.equal(mean(v1), mean(v2)))) 1 else 0
       } else {
-        suppressWarnings(stats::t.test(v2, v1, var.equal = FALSE)$p.value)
+        tt <- suppressWarnings(stats::t.test(v2, v1, var.equal = FALSE))
+        out$t  <- round(unname(tt$statistic), 3)
+        out$df <- round(unname(tt$parameter), 1)
+        out$se <- round(unname(tt$stderr), 5)
+        tt$p.value
       }
     },
     wilcox = suppressWarnings(stats::wilcox.test(v1, v2, exact = FALSE)$p.value),
@@ -669,7 +674,9 @@ run_pipeline <- function(dat, mode = c("biomass", "occurrence"), period_1, perio
         H_P1 = htch$H1, H_P2 = htch$H2, H_P1_jack = htch$H1_jack, H_P2_jack = htch$H2_jack,
         delta_H = htch$delta, t_H = htch$t, df_H = htch$df, p_H = htch$p,
         Bs_P1 = Bscmp$mean_P1, Bs_P2 = Bscmp$mean_P2, Bs_med_P1 = Bscmp$med_P1, Bs_med_P2 = Bscmp$med_P2,
-        delta_Bs = Bscmp$delta, p_Bs = Bscmp$p, Bs_test = Bscmp$test, n_cat = n_cat,
+        delta_Bs = Bscmp$delta, p_Bs = Bscmp$p,
+        t_Bs = Bscmp$t, df_Bs = Bscmp$df, se_Bs = Bscmp$se,
+        Bs_test = Bscmp$test, n_cat = n_cat,
         p_comp = comp$p_comp, R2_comp = comp$R2, BC = comp$BC,
         p_disp = comp$p_disp, comp_dispersion = comp$comp_dispersion,
         TNW_P1 = gv(np1, "TNW"), TNW_P2 = gv(np2, "TNW"),
@@ -948,7 +955,7 @@ SCENARIOS <- list(
   PT = list("2004-2006" = c(2004, 2005, 2006), "2018-2019" = c(2018, 2019))
 )
 
-run_all_scenarios <- function(data_path = "data/dat_classed.rda") {
+run_all_scenarios <- function(data_path = "data/dat_classed.rda", tag = RUN_TAG) {
   load(data_path)
   diet_clean <- as.data.frame(dat_classed)
   if (!is.na(SPATIAL_SOURCE)) {
@@ -962,8 +969,8 @@ run_all_scenarios <- function(data_path = "data/dat_classed.rda") {
           distinct(stomach_id, year) %>% count(year))
   check_prey_weight_column(diet_clean)
 
-  out_dir_data  <- paste0("Sensitivity_", SPATIAL_LEVEL, PREY_FAMILY)
-  out_dir_plots <- paste0("Sensitivity_Plot_", SPATIAL_LEVEL, PREY_FAMILY)
+  out_dir_data  <- paste0("Sensitivity_", SPATIAL_LEVEL, PREY_FAMILY, tag)
+  out_dir_plots <- paste0("Sensitivity_Plot_", SPATIAL_LEVEL, PREY_FAMILY, tag)
 
   runs <- list()
   for (sc in names(SCENARIOS)) {
@@ -980,7 +987,7 @@ run_all_scenarios <- function(data_path = "data/dat_classed.rda") {
   dir.create("data/Sensitivity", recursive = TRUE, showWarnings = FALSE)
   list2env(runs, envir = environment())
   save(list = names(runs),
-       file = paste0("data/Sensitivity/all_runs_", SPATIAL_LEVEL, PREY_FAMILY, ".rda"))
+       file = paste0("data/Sensitivity/all_runs_", SPATIAL_LEVEL, PREY_FAMILY, tag, ".rda"))
   cat("\nDone: ", SPATIAL_LEVEL, PREY_FAMILY, " (", length(runs), " runs saved)\n", sep = "")
   invisible(runs)
 }

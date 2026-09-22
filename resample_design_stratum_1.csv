@@ -1,0 +1,955 @@
+species,size,unit,n_target,n_min_available,n_sc,complete_sc,n_target_final,keep,drop_reason
+Alewife,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,adult,402,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alewife,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,adult,420,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alewife,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,adult,426,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,adult,429,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,adult,432,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alewife,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,adult,437,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,juvenile,401,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,juvenile,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,juvenile,420,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alewife,juvenile,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alewife,juvenile,432,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alewife,juvenile,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,403,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,415,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,422,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,adult,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,425,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,429,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,adult,431,3,3,5,TRUE,3,TRUE,NA
+Alligatorfish,adult,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,adult,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,adult,439,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,402,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,403,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,416,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,420,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,421,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,434,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Alligatorfish,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Alligatorfish,juvenile,436,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Alligatorfish,juvenile,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,401,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,403,3,3,3,FALSE,3,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,415,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,416,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+American plaice,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,434,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,437,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,adult,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,402,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+American plaice,juvenile,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,415,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+American plaice,juvenile,416,3,3,5,TRUE,3,TRUE,NA
+American plaice,juvenile,417,3,3,5,TRUE,3,TRUE,NA
+American plaice,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,419,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,juvenile,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,422,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,juvenile,423,4,4,5,TRUE,4,TRUE,NA
+American plaice,juvenile,424,3,3,5,TRUE,3,TRUE,NA
+American plaice,juvenile,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,427,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,juvenile,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,429,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,juvenile,431,4,4,5,TRUE,4,TRUE,NA
+American plaice,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,433,3,3,5,TRUE,3,TRUE,NA
+American plaice,juvenile,434,4,4,5,TRUE,4,TRUE,NA
+American plaice,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,436,5,5,5,TRUE,5,TRUE,NA
+American plaice,juvenile,437,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+American plaice,juvenile,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+American plaice,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic alligatorfish,one_class,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic alligatorfish,one_class,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic alligatorfish,one_class,424,3,3,5,TRUE,3,TRUE,NA
+Arctic alligatorfish,one_class,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,429,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Arctic alligatorfish,one_class,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,417,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,419,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic hookear sculpin,one_class,423,3,3,5,TRUE,3,TRUE,NA
+Arctic hookear sculpin,one_class,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic hookear sculpin,one_class,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic hookear sculpin,one_class,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic hookear sculpin,one_class,437,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,416,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,420,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic staghorn sculpin,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic staghorn sculpin,adult,433,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,434,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,adult,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Arctic staghorn sculpin,adult,436,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Arctic staghorn sculpin,juvenile,421,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,juvenile,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,juvenile,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,juvenile,428,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Arctic staghorn sculpin,juvenile,435,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,401,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,418,4,4,4,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,420,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,428,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,adult,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,401,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,403,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,415,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,417,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,420,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,425,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic cod,juvenile,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,429,3,3,5,TRUE,3,TRUE,NA
+Atlantic cod,juvenile,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,434,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic cod,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,436,3,3,5,TRUE,3,TRUE,NA
+Atlantic cod,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic cod,juvenile,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,403,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,415,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,422,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,423,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,425,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,433,4,4,5,TRUE,4,TRUE,NA
+Atlantic herring,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,435,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,436,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,adult,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,403,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic herring,juvenile,415,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,420,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic herring,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,423,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,432,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic herring,juvenile,433,3,3,5,TRUE,3,TRUE,NA
+Atlantic herring,juvenile,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic herring,juvenile,435,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic herring,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,401,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,422,4,4,4,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic hookear sculpin,one_class,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,436,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,437,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic hookear sculpin,one_class,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic hookear sculpin,one_class,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,adult,401,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,402,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,adult,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,422,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,428,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,adult,432,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,419,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,420,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,422,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,423,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,428,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,429,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic mackerel,juvenile,436,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic mackerel,juvenile,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,415,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,416,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic poacher,one_class,417,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic poacher,one_class,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,419,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,420,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,423,3,3,5,TRUE,3,TRUE,NA
+Atlantic poacher,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic poacher,one_class,435,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,436,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Atlantic poacher,one_class,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Atlantic spiny lumpsucker,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Atlantic spiny lumpsucker,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Atlantic spiny lumpsucker,one_class,436,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,416,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,424,4,4,3,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,425,4,4,3,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,adult,434,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,415,5,5,4,FALSE,5,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,416,3,3,5,TRUE,3,TRUE,NA
+Capelin,juvenile,417,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Capelin,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,419,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Capelin,juvenile,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,422,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Capelin,juvenile,423,3,3,5,TRUE,3,TRUE,NA
+Capelin,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,425,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,428,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Capelin,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Capelin,juvenile,439,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,415,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,420,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,adult,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,415,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,419,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,juvenile,420,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,422,3,3,5,TRUE,3,TRUE,NA
+Daubed shanny,juvenile,423,6,6,5,TRUE,6,TRUE,NA
+Daubed shanny,juvenile,424,3,3,5,TRUE,3,TRUE,NA
+Daubed shanny,juvenile,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,427,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Daubed shanny,juvenile,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,juvenile,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,juvenile,434,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Daubed shanny,juvenile,436,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Daubed shanny,juvenile,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,415,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,417,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Dusky snailfish,one_class,418,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Dusky snailfish,one_class,419,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Dusky snailfish,one_class,420,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,421,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,423,4,4,5,TRUE,4,TRUE,NA
+Dusky snailfish,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,426,3,3,3,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,427,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Dusky snailfish,one_class,428,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,432,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Dusky snailfish,one_class,436,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Dusky snailfish,one_class,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,adult,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,adult,423,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,adult,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,adult,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,403,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,422,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,434,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourbeard rockling,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourbeard rockling,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,402,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,416,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,417,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Fourline snakeblenny,one_class,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,425,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Fourline snakeblenny,one_class,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,433,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Fourline snakeblenny,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Fourline snakeblenny,one_class,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland cod,adult,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,adult,429,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,adult,431,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,adult,433,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,401,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,402,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,403,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,416,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,417,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,420,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,422,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland cod,juvenile,427,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland cod,juvenile,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland cod,juvenile,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland cod,juvenile,436,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,415,4,4,5,TRUE,4,TRUE,NA
+Greenland halibut,adult,416,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,adult,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,425,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,adult,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,415,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,416,3,3,5,TRUE,3,TRUE,NA
+Greenland halibut,juvenile,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,418,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,juvenile,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,425,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Greenland halibut,juvenile,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,juvenile,429,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Greenland halibut,juvenile,434,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,juvenile,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Greenland halibut,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Laval's eelpout,one_class,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,422,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Laval's eelpout,one_class,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Laval's eelpout,one_class,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Laval's eelpout,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,431,3,3,5,TRUE,3,TRUE,NA
+Laval's eelpout,one_class,433,3,3,3,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Laval's eelpout,one_class,434,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Laval's eelpout,one_class,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Laval's eelpout,one_class,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,416,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,417,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,421,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Longhorn sculpin,adult,422,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,423,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,427,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,432,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,adult,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Longhorn sculpin,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,adult,435,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Longhorn sculpin,adult,436,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Longhorn sculpin,adult,438,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,417,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,424,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,427,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,431,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Longhorn sculpin,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Longhorn sculpin,juvenile,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Marlin-spike grenadier,one_class,415,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Marlin-spike grenadier,one_class,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Marlin-spike grenadier,one_class,425,3,3,5,TRUE,3,TRUE,NA
+Marlin-spike grenadier,one_class,427,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Marlin-spike grenadier,one_class,439,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Moustache sculpin,one_class,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Moustache sculpin,one_class,419,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,424,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Moustache sculpin,one_class,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,427,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Moustache sculpin,one_class,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,431,3,3,5,TRUE,3,TRUE,NA
+Moustache sculpin,one_class,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Moustache sculpin,one_class,433,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Moustache sculpin,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,436,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Moustache sculpin,one_class,437,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Moustache sculpin,one_class,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Moustache sculpin,one_class,439,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,402,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,420,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,421,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,422,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Northern sand lance,one_class,424,4,4,3,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,435,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,436,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,438,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Northern sand lance,one_class,439,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,418,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,419,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,adult,420,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Rainbow smelt,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,adult,432,3,3,5,TRUE,3,TRUE,NA
+Rainbow smelt,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,juvenile,416,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,juvenile,420,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Rainbow smelt,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Rainbow smelt,juvenile,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,adult,415,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Redfish unidentified,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,adult,427,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,adult,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,415,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,422,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,434,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Redfish unidentified,juvenile,438,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Redfish unidentified,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,403,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,419,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,429,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,432,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,433,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,434,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Sea raven,one_class,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Sea raven,one_class,439,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,418,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,419,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,421,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,423,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,adult,431,3,3,5,TRUE,3,TRUE,NA
+Shorthorn sculpin,adult,432,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,434,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,435,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,adult,436,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,juvenile,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,420,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,423,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,428,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,429,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Shorthorn sculpin,juvenile,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Shorthorn sculpin,juvenile,435,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Smooth skate,adult,415,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Smooth skate,adult,425,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,adult,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,adult,439,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Smooth skate,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Smooth skate,juvenile,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Smooth skate,juvenile,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Smooth skate,juvenile,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,435,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,436,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Smooth skate,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Smooth skate,juvenile,438,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Smooth skate,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,402,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,403,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,419,3,3,3,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,423,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,adult,433,3,3,5,TRUE,3,TRUE,NA
+Snakeblenny,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,adult,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,402,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,416,3,3,4,FALSE,3,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,423,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Snakeblenny,juvenile,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Snakeblenny,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,418,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,419,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,422,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,423,3,3,5,TRUE,3,TRUE,NA
+Spatulate sculpin,one_class,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,426,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,428,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Spatulate sculpin,one_class,435,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Spatulate sculpin,one_class,437,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,415,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Stout eelblenny,one_class,417,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Stout eelblenny,one_class,418,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Stout eelblenny,one_class,419,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Stout eelblenny,one_class,421,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Stout eelblenny,one_class,423,4,4,4,FALSE,4,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,424,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,429,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Stout eelblenny,one_class,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Stout eelblenny,one_class,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,adult,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,adult,425,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,431,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,436,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,437,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,438,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Thorny skate,adult,439,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,415,3,3,5,TRUE,3,TRUE,NA
+Thorny skate,juvenile,416,4,4,5,TRUE,4,TRUE,NA
+Thorny skate,juvenile,424,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,juvenile,426,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,juvenile,427,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Thorny skate,juvenile,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Thorny skate,juvenile,436,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Thorny skate,juvenile,437,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Thorny skate,juvenile,438,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Thorny skate,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,adult,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,adult,403,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,415,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,adult,417,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,419,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,421,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,425,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,429,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,adult,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,403,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,417,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,418,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,420,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,422,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,423,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,425,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,429,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Three-spined stickleback,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Three-spined stickleback,juvenile,439,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Vahl's eelpout,one_class,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Vahl's eelpout,one_class,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,418,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,419,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,423,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,427,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,433,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Vahl's eelpout,one_class,437,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Vahl's eelpout,one_class,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,adult,401,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,adult,415,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+White hake,adult,416,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,419,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+White hake,adult,420,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,adult,426,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,429,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+White hake,adult,432,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,433,3,3,3,FALSE,3,FALSE,cellule absente d'au moins un contraste
+White hake,adult,435,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,adult,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,adult,439,3,3,5,TRUE,3,TRUE,NA
+White hake,juvenile,401,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,juvenile,403,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+White hake,juvenile,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,juvenile,416,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,419,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,juvenile,421,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,425,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,juvenile,432,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+White hake,juvenile,433,3,3,5,TRUE,3,TRUE,NA
+White hake,juvenile,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+White hake,juvenile,435,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+White hake,juvenile,437,3,3,5,TRUE,3,TRUE,NA
+White hake,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,adult,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,adult,432,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Windowpane flounder,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,adult,436,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Windowpane flounder,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,juvenile,403,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Windowpane flounder,juvenile,421,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Windowpane flounder,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Windowpane flounder,juvenile,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,401,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,adult,402,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,419,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,421,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,adult,422,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,adult,434,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,adult,435,3,3,5,TRUE,3,TRUE,NA
+Winter flounder,adult,436,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,402,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,403,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,juvenile,415,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,418,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,419,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,420,3,3,5,TRUE,3,TRUE,NA
+Winter flounder,juvenile,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,422,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,423,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Winter flounder,juvenile,431,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,432,3,3,5,TRUE,3,TRUE,NA
+Winter flounder,juvenile,433,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,juvenile,434,2,2,2,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,435,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Winter flounder,juvenile,436,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Winter flounder,juvenile,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,415,4,4,5,TRUE,4,TRUE,NA
+Witch flounder,adult,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,adult,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,422,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,adult,425,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Witch flounder,adult,426,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,427,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,adult,435,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,436,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,adult,437,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Witch flounder,adult,438,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,adult,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,juvenile,415,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,juvenile,416,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,juvenile,417,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,424,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,425,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Witch flounder,juvenile,426,2,2,3,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,429,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,434,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,437,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Witch flounder,juvenile,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Witch flounder,juvenile,439,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,419,1,1,2,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,420,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,421,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,422,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,423,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,424,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,427,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,428,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,431,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,432,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,433,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,435,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,adult,436,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,adult,438,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,adult,439,1,1,3,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,401,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,403,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,416,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,419,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,420,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,421,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,422,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,423,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,424,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,426,1,1,4,FALSE,1,FALSE,cellule absente d'au moins un contraste
+Yellowtail flounder,juvenile,427,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,428,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,429,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,431,2,2,5,TRUE,2,FALSE,cible 2 < 3 traits
+Yellowtail flounder,juvenile,432,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,433,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,434,1,1,5,TRUE,1,FALSE,cible 1 < 3 traits
+Yellowtail flounder,juvenile,435,3,3,5,TRUE,3,TRUE,NA
+Yellowtail flounder,juvenile,436,3,3,5,TRUE,3,TRUE,NA
+Yellowtail flounder,juvenile,438,2,2,4,FALSE,2,FALSE,cellule absente d'au moins un contraste

@@ -1,0 +1,849 @@
+contrast,mode,cell,n_thresholds,modal_family,support,n_families
+P1a,biomass,Alewife|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Alewife|adult|Northumberland,100,Stability,1,1
+P1a,biomass,Alewife|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Alewife|juvenile|Northumberland,100,Stability,1,1
+P1a,biomass,Alligatorfish|adult|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Alligatorfish|adult|Magdalen Shallows,100,Reorganisation,1,1
+P1a,biomass,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,American plaice|adult|Central,100,Stability,1,1
+P1a,biomass,American plaice|adult|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,American plaice|juvenile|Central,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|Chaleur Bay,100,Functional change,1,1
+P1a,biomass,American plaice|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,American plaice|juvenile|Northumberland,100,Stability,1,1
+P1a,biomass,Arctic alligatorfish|one_class|Magdalen Shallows,100,Reorganisation,1,1
+P1a,biomass,Arctic staghorn sculpin|adult|Chaleur Bay,100,Functional change,0.51,2
+P1a,biomass,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Atlantic cod|adult|Central,100,Reorganisation,0.51,2
+P1a,biomass,Atlantic cod|adult|Magdalen Shallows,100,Substitution,0.99,2
+P1a,biomass,Atlantic cod|juvenile|Magdalen Shallows,100,Substitution,0.8,2
+P1a,biomass,Atlantic herring|adult|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Atlantic herring|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Atlantic herring|juvenile|Northumberland,100,Functional change,1,1
+P1a,biomass,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Functional change,0.97,2
+P1a,biomass,Atlantic mackerel|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Atlantic poacher|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Capelin|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Capelin|juvenile|Central,100,Stability,1,1
+P1a,biomass,Capelin|juvenile|Chaleur Bay,100,Reorganisation,0.99,2
+P1a,biomass,Capelin|juvenile|Magdalen Shallows,100,Functional change,0.64,2
+P1a,biomass,Daubed shanny|adult|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Daubed shanny|adult|Magdalen Shallows,100,Substitution,0.91,2
+P1a,biomass,Daubed shanny|juvenile|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Daubed shanny|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Dusky snailfish|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Fourbeard rockling|juvenile|Central,100,Stability,1,1
+P1a,biomass,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Greenland halibut|adult|Central,100,Stability,0.96,2
+P1a,biomass,Greenland halibut|juvenile|Central,100,Stability,1,1
+P1a,biomass,Greenland halibut|juvenile|Chaleur Bay,100,Functional change,1,1
+P1a,biomass,Greenland halibut|juvenile|Magdalen Shallows,100,Stability,0.81,2
+P1a,biomass,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Longhorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Longhorn sculpin|adult|Northumberland,100,Stability,1,1
+P1a,biomass,Longhorn sculpin|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Longhorn sculpin|juvenile|Northumberland,100,Stability,0.75,2
+P1a,biomass,Marlin-spike grenadier|one_class|Central,100,Substitution,0.47,4
+P1a,biomass,Moustache sculpin|one_class|Central,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Moustache sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Rainbow smelt|adult|Magdalen Shallows,100,Stability,0.95,2
+P1a,biomass,Rainbow smelt|adult|Northumberland,100,Stability,1,1
+P1a,biomass,Redfish unidentified|adult|Central,100,Stability,1,1
+P1a,biomass,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,0.64,2
+P1a,biomass,Sea raven|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Shorthorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Smooth skate|juvenile|Central,100,Stability,0.74,2
+P1a,biomass,Smooth skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Snakeblenny|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Snakeblenny|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Spatulate sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1a,biomass,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+P1a,biomass,Stout eelblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Thorny skate|adult|Central,100,Stability,1,1
+P1a,biomass,Thorny skate|juvenile|Central,100,Functional change,1,1
+P1a,biomass,Thorny skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Three-spined stickleback|adult|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P1a,biomass,Vahl's eelpout|one_class|Magdalen Shallows,100,Stability,0.81,2
+P1a,biomass,White hake|adult|Central,100,Stability,1,1
+P1a,biomass,White hake|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,White hake|juvenile|Central,100,Stability,1,1
+P1a,biomass,White hake|juvenile|Magdalen Shallows,100,Stability,0.87,2
+P1a,biomass,White hake|juvenile|Northumberland,100,Stability,1,1
+P1a,biomass,Windowpane flounder|juvenile|Northumberland,100,Stability,1,1
+P1a,biomass,Winter flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Winter flounder|adult|Northumberland,100,Stability,1,1
+P1a,biomass,Winter flounder|juvenile|Magdalen Shallows,100,Substitution,0.8,2
+P1a,biomass,Winter flounder|juvenile|Northumberland,100,Stability,1,1
+P1a,biomass,Witch flounder|adult|Central,100,Functional change,0.82,2
+P1a,biomass,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1a,biomass,Witch flounder|juvenile|Central,100,Stability,1,1
+P1a,biomass,Witch flounder|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1a,biomass,Yellowtail flounder|adult|Magdalen Shallows,100,Stability,0.99,2
+P1a,biomass,Yellowtail flounder|adult|Northumberland,100,Functional change,1,1
+P1a,biomass,Yellowtail flounder|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,biomass,Yellowtail flounder|juvenile|Northumberland,100,Functional change,1,1
+P1a,occurrence,Alewife|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Alewife|adult|Northumberland,100,Stability,1,1
+P1a,occurrence,Alewife|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Alewife|juvenile|Northumberland,100,Stability,0.89,2
+P1a,occurrence,Alligatorfish|adult|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Alligatorfish|adult|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,American plaice|adult|Central,100,Stability,1,1
+P1a,occurrence,American plaice|adult|Magdalen Shallows,100,Stability,0.91,2
+P1a,occurrence,American plaice|juvenile|Central,100,Stability,1,1
+P1a,occurrence,American plaice|juvenile|Chaleur Bay,100,Functional change,0.62,2
+P1a,occurrence,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.99,2
+P1a,occurrence,American plaice|juvenile|Northumberland,100,Functional change,1,1
+P1a,occurrence,Arctic alligatorfish|one_class|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Arctic staghorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,0.52,2
+P1a,occurrence,Atlantic cod|adult|Central,100,Stability,1,1
+P1a,occurrence,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Atlantic cod|juvenile|Magdalen Shallows,100,Substitution,0.74,3
+P1a,occurrence,Atlantic herring|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Atlantic herring|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+P1a,occurrence,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Atlantic mackerel|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Atlantic poacher|one_class|Magdalen Shallows,100,Reorganisation,0.64,2
+P1a,occurrence,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Capelin|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Capelin|juvenile|Central,100,Functional change,0.64,2
+P1a,occurrence,Capelin|juvenile|Chaleur Bay,100,Reorganisation,1,1
+P1a,occurrence,Capelin|juvenile|Magdalen Shallows,100,Functional change,0.64,3
+P1a,occurrence,Daubed shanny|adult|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Daubed shanny|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Daubed shanny|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Dusky snailfish|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Fourbeard rockling|juvenile|Central,100,Stability,1,1
+P1a,occurrence,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Greenland halibut|adult|Central,100,Stability,1,1
+P1a,occurrence,Greenland halibut|juvenile|Central,100,Stability,1,1
+P1a,occurrence,Greenland halibut|juvenile|Chaleur Bay,100,Stability,0.62,2
+P1a,occurrence,Greenland halibut|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Longhorn sculpin|adult|Magdalen Shallows,100,Stability,0.71,2
+P1a,occurrence,Longhorn sculpin|adult|Northumberland,100,Stability,1,1
+P1a,occurrence,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Longhorn sculpin|juvenile|Northumberland,100,Stability,1,1
+P1a,occurrence,Marlin-spike grenadier|one_class|Central,100,Reorganisation,1,1
+P1a,occurrence,Moustache sculpin|one_class|Central,100,Stability,1,1
+P1a,occurrence,Moustache sculpin|one_class|Chaleur Bay,100,Functional change,1,1
+P1a,occurrence,Moustache sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Rainbow smelt|adult|Northumberland,100,Stability,0.72,2
+P1a,occurrence,Redfish unidentified|adult|Central,100,Stability,1,1
+P1a,occurrence,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,0.64,2
+P1a,occurrence,Sea raven|one_class|Magdalen Shallows,100,Functional change,0.95,2
+P1a,occurrence,Shorthorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,0.85,2
+P1a,occurrence,Smooth skate|juvenile|Central,100,Stability,1,1
+P1a,occurrence,Smooth skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Snakeblenny|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Snakeblenny|juvenile|Magdalen Shallows,100,Functional change,0.93,2
+P1a,occurrence,Spatulate sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1a,occurrence,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1a,occurrence,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+P1a,occurrence,Stout eelblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Thorny skate|adult|Central,100,Stability,1,1
+P1a,occurrence,Thorny skate|juvenile|Central,100,Substitution,0.58,2
+P1a,occurrence,Thorny skate|juvenile|Magdalen Shallows,100,Functional change,0.64,2
+P1a,occurrence,Three-spined stickleback|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P1a,occurrence,Vahl's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,White hake|adult|Central,100,Stability,1,1
+P1a,occurrence,White hake|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,White hake|juvenile|Central,100,Stability,1,1
+P1a,occurrence,White hake|juvenile|Magdalen Shallows,100,Stability,0.87,2
+P1a,occurrence,White hake|juvenile|Northumberland,100,Substitution,1,1
+P1a,occurrence,Windowpane flounder|juvenile|Northumberland,100,Stability,0.52,2
+P1a,occurrence,Winter flounder|adult|Magdalen Shallows,100,Stability,0.96,2
+P1a,occurrence,Winter flounder|adult|Northumberland,100,Stability,1,1
+P1a,occurrence,Winter flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.86,2
+P1a,occurrence,Winter flounder|juvenile|Northumberland,100,Stability,1,1
+P1a,occurrence,Witch flounder|adult|Central,100,Stability,1,1
+P1a,occurrence,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1a,occurrence,Witch flounder|juvenile|Central,100,Stability,1,1
+P1a,occurrence,Witch flounder|juvenile|Magdalen Shallows,100,Stability,0.8,2
+P1a,occurrence,Yellowtail flounder|adult|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Yellowtail flounder|adult|Northumberland,100,Stability,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1a,occurrence,Yellowtail flounder|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Alewife|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Alewife|adult|Northumberland,100,Stability,1,1
+P1b,biomass,Alewife|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Alewife|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Alligatorfish|adult|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Alligatorfish|adult|Magdalen Shallows,100,Reorganisation,1,1
+P1b,biomass,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,American plaice|adult|Central,100,Stability,1,1
+P1b,biomass,American plaice|adult|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,American plaice|juvenile|Central,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|Chaleur Bay,100,Functional change,1,1
+P1b,biomass,American plaice|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,American plaice|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Arctic alligatorfish|one_class|Magdalen Shallows,100,Reorganisation,0.5,2
+P1b,biomass,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Arctic staghorn sculpin|adult|Chaleur Bay,100,Functional change,0.51,2
+P1b,biomass,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Stability,0.76,2
+P1b,biomass,Atlantic cod|adult|Central,100,Functional change,0.5,2
+P1b,biomass,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,0.68,2
+P1b,biomass,Atlantic cod|juvenile|Magdalen Shallows,100,Stability,0.91,2
+P1b,biomass,Atlantic herring|adult|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Atlantic herring|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Atlantic herring|juvenile|Northumberland,100,Functional change,1,1
+P1b,biomass,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Atlantic mackerel|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Atlantic poacher|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Stability,0.9,2
+P1b,biomass,Capelin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Capelin|juvenile|Central,100,Stability,1,1
+P1b,biomass,Capelin|juvenile|Chaleur Bay,100,Reorganisation,1,1
+P1b,biomass,Capelin|juvenile|Magdalen Shallows,100,Functional change,0.64,2
+P1b,biomass,Daubed shanny|adult|Chaleur Bay,100,Substitution,1,1
+P1b,biomass,Daubed shanny|adult|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Daubed shanny|juvenile|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Daubed shanny|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Dusky snailfish|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Fourbeard rockling|juvenile|Central,100,Stability,1,1
+P1b,biomass,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Greenland halibut|adult|Central,100,Stability,1,1
+P1b,biomass,Greenland halibut|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Greenland halibut|juvenile|Central,100,Stability,1,1
+P1b,biomass,Greenland halibut|juvenile|Chaleur Bay,100,Functional change,0.62,2
+P1b,biomass,Greenland halibut|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|adult|Northumberland,100,Stability,1,1
+P1b,biomass,Longhorn sculpin|juvenile|Magdalen Shallows,100,Functional change,0.97,2
+P1b,biomass,Longhorn sculpin|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Marlin-spike grenadier|one_class|Central,100,Stability,0.64,2
+P1b,biomass,Moustache sculpin|one_class|Central,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Moustache sculpin|one_class|Magdalen Shallows,100,Stability,0.95,2
+P1b,biomass,Rainbow smelt|adult|Magdalen Shallows,100,Stability,0.99,2
+P1b,biomass,Rainbow smelt|adult|Northumberland,100,Stability,1,1
+P1b,biomass,Redfish unidentified|adult|Central,100,Stability,1,1
+P1b,biomass,Redfish unidentified|adult|Magdalen Shallows,100,Functional change,0.39,3
+P1b,biomass,Redfish unidentified|juvenile|Central,100,Functional change,1,1
+P1b,biomass,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Sea raven|one_class|Magdalen Shallows,100,Stability,0.95,2
+P1b,biomass,Shorthorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Smooth skate|juvenile|Central,100,Stability,1,1
+P1b,biomass,Smooth skate|juvenile|Magdalen Shallows,100,Functional change,0.85,2
+P1b,biomass,Snakeblenny|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Snakeblenny|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Spatulate sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Stout eelblenny|one_class|Chaleur Bay,100,Stability,1,1
+P1b,biomass,Stout eelblenny|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Thorny skate|adult|Central,100,Stability,0.99,2
+P1b,biomass,Thorny skate|juvenile|Central,100,Functional change,0.9,2
+P1b,biomass,Thorny skate|juvenile|Magdalen Shallows,100,Stability,0.69,2
+P1b,biomass,Three-spined stickleback|adult|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P1b,biomass,Vahl's eelpout|one_class|Magdalen Shallows,100,Stability,0.81,2
+P1b,biomass,White hake|adult|Central,100,Stability,1,1
+P1b,biomass,White hake|adult|Magdalen Shallows,100,Stability,0.96,2
+P1b,biomass,White hake|juvenile|Central,100,Stability,1,1
+P1b,biomass,White hake|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,White hake|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Windowpane flounder|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Winter flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Winter flounder|adult|Northumberland,100,Stability,1,1
+P1b,biomass,Winter flounder|juvenile|Magdalen Shallows,100,Substitution,0.89,2
+P1b,biomass,Winter flounder|juvenile|Northumberland,100,Stability,1,1
+P1b,biomass,Witch flounder|adult|Central,100,Stability,1,1
+P1b,biomass,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Witch flounder|juvenile|Central,100,Stability,1,1
+P1b,biomass,Witch flounder|juvenile|Magdalen Shallows,100,Functional change,1,1
+P1b,biomass,Yellowtail flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1b,biomass,Yellowtail flounder|adult|Northumberland,100,Functional change,1,1
+P1b,biomass,Yellowtail flounder|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,biomass,Yellowtail flounder|juvenile|Northumberland,100,Functional change,1,1
+P1b,occurrence,Alewife|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Alewife|adult|Northumberland,100,Stability,1,1
+P1b,occurrence,Alewife|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Alewife|juvenile|Northumberland,100,Stability,0.89,2
+P1b,occurrence,Alligatorfish|adult|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Alligatorfish|adult|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,American plaice|adult|Central,100,Stability,1,1
+P1b,occurrence,American plaice|adult|Magdalen Shallows,100,Stability,0.91,2
+P1b,occurrence,American plaice|juvenile|Central,100,Stability,1,1
+P1b,occurrence,American plaice|juvenile|Chaleur Bay,100,Functional change,0.62,2
+P1b,occurrence,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.99,2
+P1b,occurrence,American plaice|juvenile|Northumberland,100,Functional change,1,1
+P1b,occurrence,Arctic alligatorfish|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Arctic staghorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Atlantic cod|adult|Central,100,Stability,1,1
+P1b,occurrence,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,0.9,2
+P1b,occurrence,Atlantic cod|juvenile|Magdalen Shallows,100,Substitution,0.81,3
+P1b,occurrence,Atlantic herring|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Atlantic herring|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+P1b,occurrence,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Atlantic mackerel|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1b,occurrence,Atlantic poacher|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Capelin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Capelin|juvenile|Central,100,Functional change,0.64,2
+P1b,occurrence,Capelin|juvenile|Chaleur Bay,100,Reorganisation,1,1
+P1b,occurrence,Capelin|juvenile|Magdalen Shallows,100,Functional change,0.64,3
+P1b,occurrence,Daubed shanny|adult|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Daubed shanny|adult|Magdalen Shallows,100,Stability,0.99,2
+P1b,occurrence,Daubed shanny|juvenile|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Daubed shanny|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1b,occurrence,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Dusky snailfish|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Fourbeard rockling|juvenile|Central,100,Stability,1,1
+P1b,occurrence,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Greenland halibut|adult|Central,100,Stability,1,1
+P1b,occurrence,Greenland halibut|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Greenland halibut|juvenile|Central,100,Stability,1,1
+P1b,occurrence,Greenland halibut|juvenile|Chaleur Bay,100,Stability,0.62,2
+P1b,occurrence,Greenland halibut|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|adult|Northumberland,100,Stability,1,1
+P1b,occurrence,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1b,occurrence,Longhorn sculpin|juvenile|Northumberland,100,Stability,1,1
+P1b,occurrence,Marlin-spike grenadier|one_class|Central,100,Reorganisation,1,1
+P1b,occurrence,Moustache sculpin|one_class|Central,100,Stability,1,1
+P1b,occurrence,Moustache sculpin|one_class|Chaleur Bay,100,Functional change,1,1
+P1b,occurrence,Moustache sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Rainbow smelt|adult|Northumberland,100,Stability,0.72,2
+P1b,occurrence,Redfish unidentified|adult|Central,100,Stability,1,1
+P1b,occurrence,Redfish unidentified|adult|Magdalen Shallows,100,Functional change,0.9,2
+P1b,occurrence,Redfish unidentified|juvenile|Central,100,Stability,1,1
+P1b,occurrence,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Sea raven|one_class|Magdalen Shallows,100,Functional change,0.98,2
+P1b,occurrence,Shorthorn sculpin|adult|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Smooth skate|juvenile|Central,100,Substitution,0.97,2
+P1b,occurrence,Smooth skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Snakeblenny|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Snakeblenny|juvenile|Magdalen Shallows,100,Stability,0.95,2
+P1b,occurrence,Spatulate sculpin|one_class|Chaleur Bay,100,Stability,1,1
+P1b,occurrence,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+P1b,occurrence,Stout eelblenny|one_class|Magdalen Shallows,100,Substitution,1,1
+P1b,occurrence,Thorny skate|adult|Central,100,Stability,1,1
+P1b,occurrence,Thorny skate|juvenile|Central,100,Stability,0.64,2
+P1b,occurrence,Thorny skate|juvenile|Magdalen Shallows,100,Functional change,0.87,2
+P1b,occurrence,Three-spined stickleback|adult|Magdalen Shallows,100,Functional change,0.96,2
+P1b,occurrence,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P1b,occurrence,Vahl's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,White hake|adult|Central,100,Stability,1,1
+P1b,occurrence,White hake|adult|Magdalen Shallows,100,Stability,0.92,2
+P1b,occurrence,White hake|juvenile|Central,100,Stability,1,1
+P1b,occurrence,White hake|juvenile|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,White hake|juvenile|Northumberland,100,Substitution,1,1
+P1b,occurrence,Windowpane flounder|juvenile|Northumberland,100,Stability,0.58,2
+P1b,occurrence,Winter flounder|adult|Magdalen Shallows,100,Stability,0.91,2
+P1b,occurrence,Winter flounder|adult|Northumberland,100,Stability,1,1
+P1b,occurrence,Winter flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.86,2
+P1b,occurrence,Winter flounder|juvenile|Northumberland,100,Stability,1,1
+P1b,occurrence,Witch flounder|adult|Central,100,Stability,1,1
+P1b,occurrence,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P1b,occurrence,Witch flounder|juvenile|Central,100,Stability,1,1
+P1b,occurrence,Witch flounder|juvenile|Magdalen Shallows,100,Functional change,0.81,2
+P1b,occurrence,Yellowtail flounder|adult|Magdalen Shallows,100,Stability,0.7,4
+P1b,occurrence,Yellowtail flounder|adult|Northumberland,100,Stability,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+P1b,occurrence,Yellowtail flounder|juvenile|Northumberland,100,Stability,1,1
+P2,biomass,Alewife|adult|Magdalen Shallows,100,Functional change,1,1
+P2,biomass,Alewife|adult|Northumberland,100,Functional change,1,1
+P2,biomass,Alewife|juvenile|Northumberland,100,Substitution,1,1
+P2,biomass,Alligatorfish|adult|Magdalen Shallows,100,Functional change,0.68,3
+P2,biomass,Alligatorfish|juvenile|Magdalen Shallows,100,Functional change,0.56,2
+P2,biomass,American plaice|adult|Central,100,Stability,0.58,2
+P2,biomass,American plaice|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,American plaice|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,biomass,American plaice|juvenile|Northumberland,100,Functional change,1,1
+P2,biomass,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Stability,0.87,2
+P2,biomass,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Stability,0.91,2
+P2,biomass,Atlantic cod|adult|Central,100,Stability,1,1
+P2,biomass,Atlantic cod|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Atlantic cod|juvenile|Magdalen Shallows,100,Substitution,0.76,3
+P2,biomass,Atlantic herring|juvenile|Magdalen Shallows,100,Functional change,0.6,2
+P2,biomass,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+P2,biomass,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Functional change,0.7,2
+P2,biomass,Atlantic mackerel|juvenile|Magdalen Shallows,100,Functional change,1,1
+P2,biomass,Atlantic poacher|one_class|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Stability,0.86,3
+P2,biomass,Capelin|juvenile|Magdalen Shallows,100,Substitution,1,1
+P2,biomass,Daubed shanny|adult|Magdalen Shallows,100,Functional change,1,1
+P2,biomass,Daubed shanny|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+P2,biomass,Dusky snailfish|one_class|Magdalen Shallows,100,Reorganisation,0.58,4
+P2,biomass,Fourbeard rockling|juvenile|Magdalen Shallows,100,Functional change,0.86,2
+P2,biomass,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,0.95,2
+P2,biomass,Greenland halibut|juvenile|Magdalen Shallows,100,Substitution,1,1
+P2,biomass,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,0.66,2
+P2,biomass,Longhorn sculpin|adult|Magdalen Shallows,100,Functional change,1,1
+P2,biomass,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,0.76,2
+P2,biomass,Longhorn sculpin|juvenile|Northumberland,100,Stability,1,1
+P2,biomass,Marlin-spike grenadier|one_class|Central,100,Stability,1,1
+P2,biomass,Moustache sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Northern sand lance|one_class|Magdalen Shallows,100,Functional change,0.64,2
+P2,biomass,Rainbow smelt|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Rainbow smelt|adult|Northumberland,100,Stability,0.65,2
+P2,biomass,Redfish unidentified|adult|Central,100,Functional change,1,1
+P2,biomass,Redfish unidentified|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Sea raven|one_class|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Smooth skate|juvenile|Central,100,Stability,0.9,2
+P2,biomass,Spatulate sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Stout eelblenny|one_class|Chaleur Bay,100,Stability,1,1
+P2,biomass,Stout eelblenny|one_class|Magdalen Shallows,100,Stability,0.89,2
+P2,biomass,Thorny skate|juvenile|Central,100,Functional change,0.61,2
+P2,biomass,Thorny skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P2,biomass,Three-spined stickleback|juvenile|Northumberland,100,Stability,1,1
+P2,biomass,White hake|adult|Central,100,Stability,1,1
+P2,biomass,White hake|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,White hake|juvenile|Magdalen Shallows,100,Substitution,0.59,2
+P2,biomass,White hake|juvenile|Northumberland,100,Substitution,0.91,2
+P2,biomass,Windowpane flounder|adult|Northumberland,100,Stability,1,1
+P2,biomass,Windowpane flounder|juvenile|Northumberland,100,Functional change,0.54,2
+P2,biomass,Winter flounder|adult|Magdalen Shallows,100,Functional change,0.52,2
+P2,biomass,Winter flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.69,3
+P2,biomass,Winter flounder|juvenile|Northumberland,100,Stability,0.75,2
+P2,biomass,Witch flounder|adult|Central,100,Stability,0.84,2
+P2,biomass,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P2,biomass,Yellowtail flounder|adult|Magdalen Shallows,100,Substitution,0.81,3
+P2,biomass,Yellowtail flounder|juvenile|Magdalen Shallows,100,Functional change,0.88,2
+P2,occurrence,Alewife|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Alewife|adult|Northumberland,100,Stability,1,1
+P2,occurrence,Alewife|juvenile|Northumberland,100,Substitution,1,1
+P2,occurrence,Alligatorfish|adult|Magdalen Shallows,100,Reorganisation,0.45,3
+P2,occurrence,Alligatorfish|juvenile|Magdalen Shallows,100,Functional change,0.7,2
+P2,occurrence,American plaice|adult|Central,100,Stability,1,1
+P2,occurrence,American plaice|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,American plaice|juvenile|Magdalen Shallows,100,Stability,0.91,2
+P2,occurrence,American plaice|juvenile|Northumberland,100,Functional change,0.52,2
+P2,occurrence,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Atlantic cod|adult|Central,100,Stability,1,1
+P2,occurrence,Atlantic cod|adult|Magdalen Shallows,100,Stability,0.47,4
+P2,occurrence,Atlantic cod|juvenile|Magdalen Shallows,100,Reorganisation,0.9,2
+P2,occurrence,Atlantic herring|juvenile|Magdalen Shallows,100,Substitution,1,1
+P2,occurrence,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+P2,occurrence,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Atlantic mackerel|juvenile|Magdalen Shallows,100,Functional change,1,1
+P2,occurrence,Atlantic poacher|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,0.62,2
+P2,occurrence,Capelin|juvenile|Magdalen Shallows,100,Reorganisation,0.7,2
+P2,occurrence,Daubed shanny|adult|Magdalen Shallows,100,Stability,0.7,2
+P2,occurrence,Daubed shanny|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Dusky snailfish|one_class|Chaleur Bay,100,Stability,0.97,2
+P2,occurrence,Dusky snailfish|one_class|Magdalen Shallows,100,Substitution,0.45,4
+P2,occurrence,Fourbeard rockling|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Fourline snakeblenny|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Greenland halibut|juvenile|Magdalen Shallows,100,Substitution,1,1
+P2,occurrence,Laval's eelpout|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Longhorn sculpin|adult|Magdalen Shallows,100,Stability,0.98,2
+P2,occurrence,Longhorn sculpin|juvenile|Magdalen Shallows,100,Stability,0.62,2
+P2,occurrence,Longhorn sculpin|juvenile|Northumberland,100,Stability,1,1
+P2,occurrence,Marlin-spike grenadier|one_class|Central,100,Stability,1,1
+P2,occurrence,Moustache sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Northern sand lance|one_class|Magdalen Shallows,100,Stability,0.64,4
+P2,occurrence,Rainbow smelt|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Rainbow smelt|adult|Northumberland,100,Substitution,1,1
+P2,occurrence,Redfish unidentified|adult|Central,100,Stability,1,1
+P2,occurrence,Redfish unidentified|adult|Magdalen Shallows,100,Stability,0.9,2
+P2,occurrence,Sea raven|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Smooth skate|juvenile|Central,100,Stability,1,1
+P2,occurrence,Spatulate sculpin|one_class|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Stout eelblenny|one_class|Chaleur Bay,100,Stability,1,1
+P2,occurrence,Stout eelblenny|one_class|Magdalen Shallows,100,Stability,0.86,2
+P2,occurrence,Thorny skate|juvenile|Central,100,Reorganisation,0.69,4
+P2,occurrence,Thorny skate|juvenile|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+P2,occurrence,Three-spined stickleback|juvenile|Northumberland,100,Stability,1,1
+P2,occurrence,White hake|adult|Central,100,Functional change,0.51,2
+P2,occurrence,White hake|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,White hake|juvenile|Magdalen Shallows,100,Stability,0.56,2
+P2,occurrence,White hake|juvenile|Northumberland,100,Substitution,0.76,2
+P2,occurrence,Windowpane flounder|adult|Northumberland,100,Stability,1,1
+P2,occurrence,Windowpane flounder|juvenile|Northumberland,100,Functional change,0.54,2
+P2,occurrence,Winter flounder|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Winter flounder|juvenile|Magdalen Shallows,100,Stability,0.86,2
+P2,occurrence,Winter flounder|juvenile|Northumberland,100,Functional change,0.53,2
+P2,occurrence,Witch flounder|adult|Central,100,Stability,1,1
+P2,occurrence,Witch flounder|adult|Magdalen Shallows,100,Stability,1,1
+P2,occurrence,Yellowtail flounder|adult|Magdalen Shallows,100,Functional change,0.95,2
+P2,occurrence,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Alewife|adult|Magdalen Shallows,100,Functional change,1,1
+PTb,biomass,Alewife|adult|Northumberland,100,Functional change,1,1
+PTb,biomass,Alewife|juvenile|Northumberland,100,Stability,1,1
+PTb,biomass,Alligatorfish|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,0.53,2
+PTb,biomass,American plaice|adult|Central,100,Stability,1,1
+PTb,biomass,American plaice|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,American plaice|juvenile|Central,100,Stability,1,1
+PTb,biomass,American plaice|juvenile|Chaleur Bay,100,Functional change,1,1
+PTb,biomass,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.62,2
+PTb,biomass,American plaice|juvenile|Northumberland,100,Stability,1,1
+PTb,biomass,Arctic alligatorfish|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Atlantic cod|adult|Central,100,Functional change,1,1
+PTb,biomass,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Atlantic cod|juvenile|Central,100,Substitution,1,1
+PTb,biomass,Atlantic cod|juvenile|Chaleur Bay,100,Reorganisation,1,1
+PTb,biomass,Atlantic cod|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Atlantic herring|adult|Magdalen Shallows,100,Substitution,0.7,2
+PTb,biomass,Atlantic herring|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+PTb,biomass,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Reorganisation,0.7,2
+PTb,biomass,Atlantic mackerel|juvenile|Magdalen Shallows,100,Functional change,1,1
+PTb,biomass,Atlantic poacher|one_class|Magdalen Shallows,100,Reorganisation,0.53,2
+PTb,biomass,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Reorganisation,0.86,2
+PTb,biomass,Capelin|juvenile|Chaleur Bay,100,Stability,1,1
+PTb,biomass,Capelin|juvenile|Magdalen Shallows,100,Stability,0.78,2
+PTb,biomass,Daubed shanny|adult|Magdalen Shallows,100,Substitution,0.7,2
+PTb,biomass,Daubed shanny|juvenile|Chaleur Bay,100,Substitution,1,1
+PTb,biomass,Daubed shanny|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Dusky snailfish|one_class|Chaleur Bay,100,Stability,1,1
+PTb,biomass,Dusky snailfish|one_class|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Fourbeard rockling|juvenile|Central,100,Stability,1,1
+PTb,biomass,Fourline snakeblenny|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Greenland halibut|adult|Central,100,Functional change,0.96,2
+PTb,biomass,Greenland halibut|juvenile|Chaleur Bay,100,Functional change,0.59,4
+PTb,biomass,Greenland halibut|juvenile|Magdalen Shallows,100,Stability,0.4,3
+PTb,biomass,Laval's eelpout|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Longhorn sculpin|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,biomass,Longhorn sculpin|juvenile|Northumberland,100,Reorganisation,0.51,2
+PTb,biomass,Marlin-spike grenadier|one_class|Central,100,Substitution,1,1
+PTb,biomass,Moustache sculpin|one_class|Magdalen Shallows,100,Reorganisation,0.54,2
+PTb,biomass,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Rainbow smelt|adult|Northumberland,100,Substitution,1,1
+PTb,biomass,Redfish unidentified|adult|Central,100,Reorganisation,1,1
+PTb,biomass,Redfish unidentified|adult|Magdalen Shallows,100,Reorganisation,0.86,2
+PTb,biomass,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,1,1
+PTb,biomass,Sea raven|one_class|Magdalen Shallows,100,Stability,1,1
+PTb,biomass,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,1,1
+PTb,biomass,Smooth skate|juvenile|Central,100,Substitution,1,1
+PTb,biomass,Smooth skate|juvenile|Magdalen Shallows,100,Stability,0.81,2
+PTb,biomass,Snakeblenny|adult|Magdalen Shallows,100,Stability,1,1
+PTb,biomass,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,0.92,2
+PTb,biomass,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+PTb,biomass,Stout eelblenny|one_class|Magdalen Shallows,100,Reorganisation,0.53,2
+PTb,biomass,Thorny skate|juvenile|Central,100,Reorganisation,1,1
+PTb,biomass,Thorny skate|juvenile|Magdalen Shallows,100,Reorganisation,0.61,2
+PTb,biomass,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+PTb,biomass,Vahl's eelpout|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,White hake|adult|Central,100,Substitution,0.62,2
+PTb,biomass,White hake|adult|Magdalen Shallows,100,Stability,0.89,2
+PTb,biomass,White hake|juvenile|Central,100,Functional change,0.9,2
+PTb,biomass,White hake|juvenile|Magdalen Shallows,100,Stability,0.77,2
+PTb,biomass,White hake|juvenile|Northumberland,100,Stability,1,1
+PTb,biomass,Windowpane flounder|juvenile|Northumberland,100,Functional change,1,1
+PTb,biomass,Winter flounder|adult|Magdalen Shallows,100,Stability,0.95,2
+PTb,biomass,Winter flounder|juvenile|Magdalen Shallows,100,Functional change,0.68,2
+PTb,biomass,Winter flounder|juvenile|Northumberland,100,Stability,0.98,2
+PTb,biomass,Witch flounder|adult|Central,100,Substitution,1,1
+PTb,biomass,Witch flounder|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,biomass,Witch flounder|juvenile|Central,100,Substitution,1,1
+PTb,biomass,Yellowtail flounder|adult|Magdalen Shallows,100,Substitution,0.81,2
+PTb,biomass,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.62,2
+PTb,biomass,Yellowtail flounder|juvenile|Northumberland,100,Stability,1,1
+PTb,occurrence,Alewife|adult|Magdalen Shallows,100,Functional change,0.96,2
+PTb,occurrence,Alewife|adult|Northumberland,100,Stability,1,1
+PTb,occurrence,Alewife|juvenile|Northumberland,100,Substitution,0.98,2
+PTb,occurrence,Alligatorfish|adult|Magdalen Shallows,100,Substitution,0.7,2
+PTb,occurrence,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,American plaice|adult|Central,100,Stability,1,1
+PTb,occurrence,American plaice|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,American plaice|juvenile|Central,100,Stability,1,1
+PTb,occurrence,American plaice|juvenile|Chaleur Bay,100,Stability,0.78,2
+PTb,occurrence,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.87,2
+PTb,occurrence,American plaice|juvenile|Northumberland,100,Stability,1,1
+PTb,occurrence,Arctic alligatorfish|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,0.87,2
+PTb,occurrence,Atlantic cod|adult|Central,100,Stability,0.98,2
+PTb,occurrence,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTb,occurrence,Atlantic cod|juvenile|Central,100,Reorganisation,0.86,2
+PTb,occurrence,Atlantic cod|juvenile|Chaleur Bay,100,Substitution,1,1
+PTb,occurrence,Atlantic cod|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,occurrence,Atlantic herring|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Atlantic herring|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Atlantic herring|juvenile|Northumberland,100,Stability,1,1
+PTb,occurrence,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Atlantic mackerel|juvenile|Magdalen Shallows,100,Stability,1,1
+PTb,occurrence,Atlantic poacher|one_class|Magdalen Shallows,100,Substitution,0.7,2
+PTb,occurrence,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Capelin|juvenile|Chaleur Bay,100,Stability,1,1
+PTb,occurrence,Capelin|juvenile|Magdalen Shallows,100,Functional change,0.64,3
+PTb,occurrence,Daubed shanny|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Daubed shanny|juvenile|Chaleur Bay,100,Substitution,1,1
+PTb,occurrence,Daubed shanny|juvenile|Magdalen Shallows,100,Substitution,0.76,2
+PTb,occurrence,Dusky snailfish|one_class|Chaleur Bay,100,Substitution,0.52,3
+PTb,occurrence,Dusky snailfish|one_class|Magdalen Shallows,100,Reorganisation,0.71,2
+PTb,occurrence,Fourbeard rockling|juvenile|Central,100,Substitution,1,1
+PTb,occurrence,Fourline snakeblenny|one_class|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Greenland halibut|adult|Central,100,Functional change,1,1
+PTb,occurrence,Greenland halibut|juvenile|Chaleur Bay,100,Reorganisation,1,1
+PTb,occurrence,Greenland halibut|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Laval's eelpout|one_class|Magdalen Shallows,100,Substitution,0.56,2
+PTb,occurrence,Longhorn sculpin|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTb,occurrence,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTb,occurrence,Longhorn sculpin|juvenile|Northumberland,100,Substitution,1,1
+PTb,occurrence,Marlin-spike grenadier|one_class|Central,100,Reorganisation,1,1
+PTb,occurrence,Moustache sculpin|one_class|Magdalen Shallows,100,Reorganisation,0.87,2
+PTb,occurrence,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Rainbow smelt|adult|Northumberland,100,Substitution,1,1
+PTb,occurrence,Redfish unidentified|adult|Central,100,Substitution,1,1
+PTb,occurrence,Redfish unidentified|adult|Magdalen Shallows,100,Functional change,0.86,2
+PTb,occurrence,Redfish unidentified|juvenile|Magdalen Shallows,100,Stability,1,1
+PTb,occurrence,Sea raven|one_class|Magdalen Shallows,100,Stability,0.95,3
+PTb,occurrence,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,0.88,2
+PTb,occurrence,Smooth skate|juvenile|Central,100,Substitution,1,1
+PTb,occurrence,Smooth skate|juvenile|Magdalen Shallows,100,Stability,1,1
+PTb,occurrence,Snakeblenny|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,0.76,2
+PTb,occurrence,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+PTb,occurrence,Stout eelblenny|one_class|Magdalen Shallows,100,Substitution,0.7,2
+PTb,occurrence,Thorny skate|juvenile|Central,100,Reorganisation,1,1
+PTb,occurrence,Thorny skate|juvenile|Magdalen Shallows,100,Substitution,0.75,2
+PTb,occurrence,Three-spined stickleback|adult|Northumberland,100,Stability,1,1
+PTb,occurrence,Vahl's eelpout|one_class|Magdalen Shallows,100,Substitution,0.95,2
+PTb,occurrence,White hake|adult|Central,100,Reorganisation,1,1
+PTb,occurrence,White hake|adult|Magdalen Shallows,100,Stability,0.72,2
+PTb,occurrence,White hake|juvenile|Central,100,Stability,1,1
+PTb,occurrence,White hake|juvenile|Magdalen Shallows,100,Substitution,0.87,2
+PTb,occurrence,White hake|juvenile|Northumberland,100,Substitution,1,1
+PTb,occurrence,Windowpane flounder|juvenile|Northumberland,100,Stability,1,1
+PTb,occurrence,Winter flounder|adult|Magdalen Shallows,100,Reorganisation,0.64,3
+PTb,occurrence,Winter flounder|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Winter flounder|juvenile|Northumberland,100,Substitution,1,1
+PTb,occurrence,Witch flounder|adult|Central,100,Reorganisation,0.99,2
+PTb,occurrence,Witch flounder|adult|Magdalen Shallows,100,Substitution,1,1
+PTb,occurrence,Witch flounder|juvenile|Central,100,Substitution,1,1
+PTb,occurrence,Yellowtail flounder|adult|Magdalen Shallows,100,Substitution,0.82,2
+PTb,occurrence,Yellowtail flounder|juvenile|Magdalen Shallows,100,Substitution,0.7,2
+PTb,occurrence,Yellowtail flounder|juvenile|Northumberland,100,Substitution,0.96,2
+PTa,biomass,Alewife|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Alewife|adult|Northumberland,100,Reorganisation,1,1
+PTa,biomass,Alewife|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Alewife|juvenile|Northumberland,100,Substitution,1,1
+PTa,biomass,Alligatorfish|adult|Chaleur Bay,100,Substitution,1,1
+PTa,biomass,Alligatorfish|adult|Magdalen Shallows,100,Substitution,0.7,2
+PTa,biomass,Alligatorfish|adult|Northumberland,100,Functional change,0.35,4
+PTa,biomass,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,American plaice|adult|Central,100,Stability,1,1
+PTa,biomass,American plaice|adult|Chaleur Bay,100,Functional change,1,1
+PTa,biomass,American plaice|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,American plaice|juvenile|Central,100,Stability,1,1
+PTa,biomass,American plaice|juvenile|Chaleur Bay,100,Functional change,0.78,2
+PTa,biomass,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.53,2
+PTa,biomass,American plaice|juvenile|Northumberland,100,Stability,1,1
+PTa,biomass,Arctic alligatorfish|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,0.95,2
+PTa,biomass,Atlantic cod|adult|Central,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|Central,100,Substitution,1,1
+PTa,biomass,Atlantic cod|juvenile|Chaleur Bay,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Atlantic cod|juvenile|Northumberland,100,Stability,1,1
+PTa,biomass,Atlantic herring|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Atlantic herring|adult|Northumberland,100,Stability,1,1
+PTa,biomass,Atlantic herring|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Atlantic herring|juvenile|Northumberland,100,Stability,0.92,2
+PTa,biomass,Atlantic hookear sculpin|one_class|Central,100,Substitution,1,1
+PTa,biomass,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,0.7,2
+PTa,biomass,Atlantic mackerel|adult|Magdalen Shallows,100,Stability,1,1
+PTa,biomass,Atlantic mackerel|juvenile|Magdalen Shallows,100,Stability,1,1
+PTa,biomass,Atlantic mackerel|juvenile|Northumberland,100,Stability,1,1
+PTa,biomass,Atlantic poacher|one_class|Chaleur Bay,100,Substitution,1,1
+PTa,biomass,Atlantic poacher|one_class|Magdalen Shallows,100,Reorganisation,0.75,2
+PTa,biomass,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Capelin|adult|Magdalen Shallows,100,Stability,0.69,2
+PTa,biomass,Capelin|juvenile|Chaleur Bay,100,Functional change,0.78,2
+PTa,biomass,Capelin|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Daubed shanny|adult|Magdalen Shallows,100,Substitution,0.76,2
+PTa,biomass,Daubed shanny|juvenile|Chaleur Bay,100,Reorganisation,1,1
+PTa,biomass,Daubed shanny|juvenile|Magdalen Shallows,100,Reorganisation,0.53,2
+PTa,biomass,Dusky snailfish|one_class|Chaleur Bay,100,Substitution,1,1
+PTa,biomass,Dusky snailfish|one_class|Magdalen Shallows,100,Reorganisation,0.68,2
+PTa,biomass,Fourbeard rockling|juvenile|Central,100,Substitution,1,1
+PTa,biomass,Fourbeard rockling|juvenile|Chaleur Bay,100,Substitution,0.7,2
+PTa,biomass,Fourbeard rockling|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Fourline snakeblenny|one_class|Magdalen Shallows,100,Reorganisation,0.51,2
+PTa,biomass,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Greenland halibut|adult|Central,100,Functional change,0.88,2
+PTa,biomass,Greenland halibut|adult|Magdalen Shallows,100,Stability,0.58,3
+PTa,biomass,Greenland halibut|juvenile|Central,100,Substitution,0.72,2
+PTa,biomass,Greenland halibut|juvenile|Chaleur Bay,100,Stability,1,1
+PTa,biomass,Greenland halibut|juvenile|Magdalen Shallows,100,Substitution,0.6,2
+PTa,biomass,Laval's eelpout|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Longhorn sculpin|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Longhorn sculpin|juvenile|Northumberland,100,Substitution,0.48,3
+PTa,biomass,Marlin-spike grenadier|one_class|Central,100,Reorganisation,0.5,2
+PTa,biomass,Moustache sculpin|one_class|Central,100,Substitution,0.73,2
+PTa,biomass,Moustache sculpin|one_class|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Northern sand lance|one_class|Magdalen Shallows,100,Functional change,1,1
+PTa,biomass,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Rainbow smelt|adult|Northumberland,100,Substitution,1,1
+PTa,biomass,Redfish unidentified|adult|Central,100,Reorganisation,1,1
+PTa,biomass,Redfish unidentified|adult|Magdalen Shallows,100,Stability,1,1
+PTa,biomass,Redfish unidentified|juvenile|Magdalen Shallows,100,Functional change,0.74,2
+PTa,biomass,Sea raven|one_class|Magdalen Shallows,100,Stability,0.99,2
+PTa,biomass,Sea raven|one_class|Northumberland,100,Stability,0.85,2
+PTa,biomass,Shorthorn sculpin|adult|Magdalen Shallows,100,Stability,0.85,2
+PTa,biomass,Shorthorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Smooth skate|juvenile|Central,100,Substitution,0.73,2
+PTa,biomass,Smooth skate|juvenile|Magdalen Shallows,100,Reorganisation,0.61,2
+PTa,biomass,Snakeblenny|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Snakeblenny|adult|Northumberland,100,Substitution,1,1
+PTa,biomass,Spatulate sculpin|one_class|Magdalen Shallows,100,Reorganisation,1,1
+PTa,biomass,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+PTa,biomass,Stout eelblenny|one_class|Magdalen Shallows,100,Reorganisation,0.53,2
+PTa,biomass,Thorny skate|juvenile|Central,100,Reorganisation,0.63,2
+PTa,biomass,Thorny skate|juvenile|Magdalen Shallows,100,Substitution,0.7,2
+PTa,biomass,Three-spined stickleback|adult|Northumberland,100,Stability,0.99,2
+PTa,biomass,Three-spined stickleback|juvenile|Northumberland,100,Stability,1,1
+PTa,biomass,Vahl's eelpout|one_class|Magdalen Shallows,100,Substitution,0.95,2
+PTa,biomass,White hake|adult|Central,100,Substitution,0.62,2
+PTa,biomass,White hake|adult|Magdalen Shallows,100,Functional change,0.85,3
+PTa,biomass,White hake|juvenile|Central,100,Reorganisation,1,1
+PTa,biomass,White hake|juvenile|Magdalen Shallows,100,Substitution,0.85,2
+PTa,biomass,White hake|juvenile|Northumberland,100,Stability,1,1
+PTa,biomass,Windowpane flounder|juvenile|Northumberland,100,Reorganisation,0.54,2
+PTa,biomass,Winter flounder|adult|Magdalen Shallows,100,Stability,0.67,2
+PTa,biomass,Winter flounder|adult|Northumberland,100,Stability,0.91,2
+PTa,biomass,Winter flounder|juvenile|Magdalen Shallows,100,Substitution,0.6,3
+PTa,biomass,Winter flounder|juvenile|Northumberland,100,Stability,0.96,2
+PTa,biomass,Witch flounder|adult|Central,100,Substitution,0.99,2
+PTa,biomass,Witch flounder|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Witch flounder|juvenile|Central,100,Substitution,1,1
+PTa,biomass,Witch flounder|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,biomass,Yellowtail flounder|adult|Magdalen Shallows,100,Reorganisation,0.95,2
+PTa,biomass,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.77,2
+PTa,biomass,Yellowtail flounder|juvenile|Northumberland,100,Stability,0.79,2
+PTa,occurrence,Alewife|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Alewife|adult|Northumberland,100,Substitution,1,1
+PTa,occurrence,Alewife|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Alewife|juvenile|Northumberland,100,Reorganisation,1,1
+PTa,occurrence,Alligatorfish|adult|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Alligatorfish|adult|Magdalen Shallows,100,Substitution,0.7,2
+PTa,occurrence,Alligatorfish|adult|Northumberland,100,Stability,0.47,3
+PTa,occurrence,Alligatorfish|juvenile|Magdalen Shallows,100,Substitution,0.99,2
+PTa,occurrence,American plaice|adult|Central,100,Stability,1,1
+PTa,occurrence,American plaice|adult|Chaleur Bay,100,Stability,0.91,2
+PTa,occurrence,American plaice|adult|Magdalen Shallows,100,Substitution,0.91,2
+PTa,occurrence,American plaice|juvenile|Central,100,Stability,1,1
+PTa,occurrence,American plaice|juvenile|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,American plaice|juvenile|Magdalen Shallows,100,Reorganisation,0.91,2
+PTa,occurrence,American plaice|juvenile|Northumberland,100,Substitution,1,1
+PTa,occurrence,Arctic alligatorfish|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Arctic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Arctic staghorn sculpin|adult|Magdalen Shallows,100,Substitution,0.95,2
+PTa,occurrence,Atlantic cod|adult|Central,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|juvenile|Central,100,Reorganisation,0.65,2
+PTa,occurrence,Atlantic cod|juvenile|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Atlantic cod|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Atlantic cod|juvenile|Northumberland,100,Substitution,1,1
+PTa,occurrence,Atlantic herring|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Atlantic herring|adult|Northumberland,100,Functional change,0.64,2
+PTa,occurrence,Atlantic herring|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Atlantic herring|juvenile|Northumberland,100,Substitution,1,1
+PTa,occurrence,Atlantic hookear sculpin|one_class|Central,100,Substitution,1,1
+PTa,occurrence,Atlantic hookear sculpin|one_class|Magdalen Shallows,100,Substitution,0.7,2
+PTa,occurrence,Atlantic mackerel|adult|Magdalen Shallows,100,Functional change,0.82,2
+PTa,occurrence,Atlantic mackerel|juvenile|Magdalen Shallows,100,Stability,0.96,2
+PTa,occurrence,Atlantic mackerel|juvenile|Northumberland,100,Functional change,1,1
+PTa,occurrence,Atlantic poacher|one_class|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Atlantic poacher|one_class|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Atlantic spiny lumpsucker|one_class|Magdalen Shallows,100,Substitution,0.86,2
+PTa,occurrence,Capelin|adult|Magdalen Shallows,100,Stability,0.69,2
+PTa,occurrence,Capelin|juvenile|Chaleur Bay,100,Stability,0.78,2
+PTa,occurrence,Capelin|juvenile|Magdalen Shallows,100,Reorganisation,0.95,2
+PTa,occurrence,Daubed shanny|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Daubed shanny|juvenile|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Daubed shanny|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Dusky snailfish|one_class|Chaleur Bay,100,Reorganisation,1,1
+PTa,occurrence,Dusky snailfish|one_class|Magdalen Shallows,100,Reorganisation,0.7,2
+PTa,occurrence,Fourbeard rockling|juvenile|Central,100,Substitution,1,1
+PTa,occurrence,Fourbeard rockling|juvenile|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Fourbeard rockling|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Fourline snakeblenny|one_class|Magdalen Shallows,100,Substitution,0.76,2
+PTa,occurrence,Greenland cod|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Greenland halibut|adult|Central,100,Reorganisation,1,1
+PTa,occurrence,Greenland halibut|adult|Magdalen Shallows,100,Reorganisation,0.61,2
+PTa,occurrence,Greenland halibut|juvenile|Central,100,Stability,1,1
+PTa,occurrence,Greenland halibut|juvenile|Chaleur Bay,100,Stability,0.69,2
+PTa,occurrence,Greenland halibut|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Laval's eelpout|one_class|Magdalen Shallows,100,Substitution,0.79,2
+PTa,occurrence,Longhorn sculpin|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Longhorn sculpin|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Longhorn sculpin|juvenile|Northumberland,100,Substitution,1,1
+PTa,occurrence,Marlin-spike grenadier|one_class|Central,100,Reorganisation,1,1
+PTa,occurrence,Moustache sculpin|one_class|Central,100,Substitution,1,1
+PTa,occurrence,Moustache sculpin|one_class|Magdalen Shallows,100,Reorganisation,0.87,2
+PTa,occurrence,Northern sand lance|one_class|Magdalen Shallows,100,Reorganisation,0.64,2
+PTa,occurrence,Rainbow smelt|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Rainbow smelt|adult|Northumberland,100,Substitution,1,1
+PTa,occurrence,Redfish unidentified|adult|Central,100,Reorganisation,1,1
+PTa,occurrence,Redfish unidentified|adult|Magdalen Shallows,100,Stability,0.78,2
+PTa,occurrence,Redfish unidentified|juvenile|Magdalen Shallows,100,Substitution,0.92,2
+PTa,occurrence,Sea raven|one_class|Magdalen Shallows,100,Stability,0.86,2
+PTa,occurrence,Sea raven|one_class|Northumberland,100,Stability,0.86,2
+PTa,occurrence,Shorthorn sculpin|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Shorthorn sculpin|juvenile|Magdalen Shallows,100,Substitution,0.89,2
+PTa,occurrence,Smooth skate|juvenile|Central,100,Substitution,1,1
+PTa,occurrence,Smooth skate|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Snakeblenny|adult|Magdalen Shallows,100,Substitution,0.53,2
+PTa,occurrence,Snakeblenny|adult|Northumberland,100,Substitution,1,1
+PTa,occurrence,Spatulate sculpin|one_class|Magdalen Shallows,100,Substitution,0.7,2
+PTa,occurrence,Stout eelblenny|one_class|Chaleur Bay,100,Substitution,1,1
+PTa,occurrence,Stout eelblenny|one_class|Magdalen Shallows,100,Reorganisation,0.87,2
+PTa,occurrence,Thorny skate|juvenile|Central,100,Reorganisation,0.97,2
+PTa,occurrence,Thorny skate|juvenile|Magdalen Shallows,100,Substitution,0.78,2
+PTa,occurrence,Three-spined stickleback|adult|Northumberland,100,Reorganisation,1,1
+PTa,occurrence,Three-spined stickleback|juvenile|Northumberland,100,Stability,1,1
+PTa,occurrence,Vahl's eelpout|one_class|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,White hake|adult|Central,100,Substitution,1,1
+PTa,occurrence,White hake|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,White hake|juvenile|Central,100,Substitution,0.63,2
+PTa,occurrence,White hake|juvenile|Magdalen Shallows,100,Substitution,0.86,2
+PTa,occurrence,White hake|juvenile|Northumberland,100,Stability,1,1
+PTa,occurrence,Windowpane flounder|juvenile|Northumberland,100,Substitution,0.51,3
+PTa,occurrence,Winter flounder|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Winter flounder|adult|Northumberland,100,Functional change,0.76,3
+PTa,occurrence,Winter flounder|juvenile|Magdalen Shallows,100,Reorganisation,0.72,2
+PTa,occurrence,Winter flounder|juvenile|Northumberland,100,Substitution,1,1
+PTa,occurrence,Witch flounder|adult|Central,100,Reorganisation,1,1
+PTa,occurrence,Witch flounder|adult|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Witch flounder|juvenile|Central,100,Substitution,1,1
+PTa,occurrence,Witch flounder|juvenile|Magdalen Shallows,100,Substitution,1,1
+PTa,occurrence,Yellowtail flounder|adult|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|Magdalen Shallows,100,Reorganisation,1,1
+PTa,occurrence,Yellowtail flounder|juvenile|Northumberland,100,Substitution,1,1

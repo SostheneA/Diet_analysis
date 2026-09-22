@@ -1,0 +1,11 @@
+"scenario","contrast_type","mode","spatial_unit","n_cells","n_thresholds"
+"P1a","within","biomass","Gulf",54,100
+"P1a","within","occurrence","Gulf",54,100
+"P1b","within","biomass","Gulf",55,100
+"P1b","within","occurrence","Gulf",55,100
+"P2","within","biomass","Gulf",51,100
+"P2","within","occurrence","Gulf",51,100
+"PTa","between","biomass","Gulf",59,100
+"PTa","between","occurrence","Gulf",59,100
+"PTb","between","biomass","Gulf",52,100
+"PTb","between","occurrence","Gulf",52,100

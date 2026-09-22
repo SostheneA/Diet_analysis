@@ -1,0 +1,5 @@
+mode,family,n_rep,pct_replicates_separated,median_gap_pp,q025_gap_pp
+biomass,Stability,10,100,34.504993486756405,23.29272182392846
+biomass,Substitution,10,100,24.15232809127351,16.471867612293146
+occurrence,Stability,10,100,41.16548463356975,28.75679548415111
+occurrence,Substitution,10,100,32.2562358276644,22.56382978723404

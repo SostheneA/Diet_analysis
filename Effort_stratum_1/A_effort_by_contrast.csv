@@ -1,0 +1,11 @@
+contrast,contrast_type,mode,n_cells,sets_P1_med,sets_P2_med,sets_min_med,sets_min_q25,sets_min_q75,sto_min_med
+P1a,within,biomass,149,5,5,4,3,5,10
+P1a,within,occurrence,149,5,5,4,3,5,10
+P1b,within,biomass,168,6,4,4,3,5,10.5
+P1b,within,occurrence,168,6,4,4,3,5,10.5
+P2,within,biomass,48,3,3,3,3,3,8
+P2,within,occurrence,48,3,3,3,3,3,8
+PTb,between,biomass,78,4.5,3,3,3,4,9
+PTb,between,occurrence,78,4.5,3,3,3,4,9
+PTa,between,biomass,198,9,5,4,4,6,10.5
+PTa,between,occurrence,198,9,5,4,4,6,10.5

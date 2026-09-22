@@ -1,0 +1,6 @@
+"scenario","contrast_type","period_1","period_2"
+"P1a","within","2004","2006"
+"P2","within","2018","2019"
+"P1b","within","2004-2005","2006"
+"PTb","between","2006","2018"
+"PTa","between","2004-2006","2018-2019"

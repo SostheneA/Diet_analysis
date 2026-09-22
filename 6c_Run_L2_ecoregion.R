@@ -17,6 +17,7 @@ N_STRICT <- 25
 MIN_SETS <- 3
 R_PERM   <- 999
 ALPHA    <- 0.05
+RUN_TAG         <- "_T"
 
 source("6a_Engine_Trophic.R")
-run_all_scenarios()
+run_all_scenarios(data_path = "data/dat_classed.rda", tag = RUN_TAG)

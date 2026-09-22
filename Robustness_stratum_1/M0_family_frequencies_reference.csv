@@ -1,0 +1,41 @@
+contrast,contrast_type,mode,family,pct_mean,sd_across_x
+P1a,within,biomass,Functional change,25.446231002412322,2.494863077131872
+P1a,within,biomass,Reorganisation,11.08727011744869,1.5623975372135293
+P1a,within,biomass,Stability,78.67595158464724,1.6002659518926061
+P1a,within,biomass,Substitution,14.700114953388763,1.205618421891672
+P1a,within,occurrence,Functional change,23.900613844844614,2.529485597355595
+P1a,within,occurrence,Reorganisation,10.37180004409171,2.2227123734997476
+P1a,within,occurrence,Stability,77.82065350108829,1.5845771498084078
+P1a,within,occurrence,Substitution,17.50486553569887,0.7248140816493274
+P1b,within,biomass,Functional change,20.381507257772814,0.9283133440298172
+P1b,within,biomass,Reorganisation,11.391134997899705,0.5172740516049211
+P1b,within,biomass,Stability,80.2586305782997,1.2320300187154263
+P1b,within,biomass,Substitution,16.701266951224934,1.3198547193159804
+P1b,within,occurrence,Functional change,21.75650338775596,2.040918250791012
+P1b,within,occurrence,Reorganisation,10.518933381433381,0.6612517396639204
+P1b,within,occurrence,Stability,77.65987396998426,2.1996178486802167
+P1b,within,occurrence,Substitution,17.02216763529598,1.1472876154619385
+P2,within,biomass,Functional change,54.21051166426166,2.101564126046273
+P2,within,biomass,Reorganisation,20.25,1.7943514064131836
+P2,within,biomass,Stability,81.62148284313724,2.2879118929897024
+P2,within,biomass,Substitution,23.46467391304348,14.20458314023967
+P2,within,occurrence,Functional change,38.82527777777778,6.63321526509478
+P2,within,occurrence,Reorganisation,33.861111111111114,5.916909702411142
+P2,within,occurrence,Stability,86.57742553892902,3.5468742452436497
+P2,within,occurrence,Substitution,33.4726430976431,10.394650667406923
+PTb,between,biomass,Functional change,37.04153439153439,8.155020447632785
+PTb,between,biomass,Reorganisation,32.72232568027211,3.1087627970384455
+PTb,between,biomass,Stability,75.097402044151,2.811478058613299
+PTb,between,biomass,Substitution,44.76969937469938,2.627070917544269
+PTb,between,occurrence,Functional change,42.243589743589745,11.494818563619928
+PTb,between,occurrence,Reorganisation,26.490323129251703,1.9457702440884233
+PTb,between,occurrence,Stability,62.07443594689338,4.14696301480064
+PTb,between,occurrence,Substitution,59.384567660397494,3.031123105603583
+PTa,between,biomass,Functional change,17.80960269634358,2.1112011986185824
+PTa,between,biomass,Reorganisation,25.29765538137176,2.3745711600413517
+PTa,between,biomass,Stability,41.14945971362288,1.1521676146631024
+PTa,between,biomass,Substitution,46.84370912016372,2.7428495973898297
+PTa,between,occurrence,Functional change,19.767496851304625,0.969152220738895
+PTa,between,occurrence,Reorganisation,23.30545513991337,2.037596792673372
+PTa,between,occurrence,Stability,33.179248438323825,2.444182209521054
+PTa,between,occurrence,Substitution,64.23849457323722,1.7483188505335447
