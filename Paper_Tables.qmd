@@ -1,5 +1,5 @@
 ---
-title: "A framework to investigate trophic reorganization in marine systems using predator stomach contents"
+title: "A diagnostic framework for assessing trophic change from predator stomach contents"
 subtitle: "Tables"
 format:
   docx: default
@@ -11,312 +11,69 @@ execute:
 
 ```{r setup}
 #| include: false
-suppressPackageStartupMessages({
-  library(dplyr); library(tidyr); library(readr); library(purrr)
-})
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
                       results = "asis")
-
-# flextable gives proper Word tables; knitr::kable is the fallback.
-USE_FT <- requireNamespace("flextable", quietly = TRUE)
-
-# Writes the table straight into the document. Explicit output (rather than
-# relying on auto-printing) is what allows several tables in one chunk.
-show_tbl <- function(d, digits = 1) {
-  d <- d %>% mutate(across(where(is.double), ~ round(.x, digits)))
-  if (USE_FT) {
-    ft <- flextable::flextable(d)
-    ft <- flextable::theme_booktabs(ft)
-    ft <- flextable::fontsize(ft, size = 9, part = "all")
-    ft <- flextable::font(ft, fontname = "Calibri", part = "all")
-    # Span the page width and wrap text inside cells, so that wide tables
-    # (long result sentences) never run off the page.
-    ft <- flextable::set_table_properties(ft, layout = "autofit", width = 1)
-    flextable::flextable_to_rmd(ft)
-  } else {
-    cat(knitr::kable(d), sep = "\n")
-  }
-  cat("\n\n")
-  invisible(NULL)
-}
-
-# Reads a result file; returns NULL rather than stopping, so a table whose
-# analysis has not been run shows a visible placeholder instead of breaking
-# the whole document.
-rd <- function(path) {
-  if (file.exists(path)) read_csv(path, show_col_types = FALSE) else NULL
-}
-absent <- function(path) {
-  cat("\n*[Missing: `", path, "` — run the corresponding analysis.]*\n\n", sep = "")
-}
-
-FAMILIES <- c("Stability", "Substitution", "Functional change", "Reorganization")
-CONTRAST_LAB <- c(P1a = "2004 vs 2006", P1b = "2004–2005 vs 2006",
-                  P2 = "2018 vs 2019", PTb = "2006 vs 2018",
-                  PTa = "2004–2006 vs 2018–2019")
-MODE_LAB  <- c(biomass = "Biomass", occurrence = "Occurrence")
-LEVEL_LAB <- c(all_gulf = "Gulf-wide", ecoregion = "Ecoregion", stratum = "Stratum")
-
-relabel <- function(d) {
-  if ("family" %in% names(d))
-    d <- d %>% mutate(family = recode(family, Reorganisation = "Reorganization"),
-                      family = factor(family, levels = FAMILIES))
-  if ("contrast" %in% names(d))
-    d <- d %>% mutate(contrast = factor(contrast, levels = names(CONTRAST_LAB),
-                                        labels = unname(CONTRAST_LAB)))
-  if ("mode" %in% names(d))
-    d <- d %>% mutate(mode = factor(mode, levels = names(MODE_LAB),
-                                    labels = unname(MODE_LAB)))
-  d
-}
-
-fmt <- function(x, d = 1) formatC(x, format = "f", digits = d)
+source("R_helpers/paper_helpers.R")
 ```
-
-# Main tables
 
 **Table 1.** Diagnostic typology. Each predator × size-class cell is scored on three tests — prey composition (C, PERMANOVA), diversity (*H*′, jackknifed Shannon) and niche breadth (*B*s, standardized Levins) — as significant (sig, *p* < 0.05) or non-significant (ns). A composition trend (0.05 ≤ *p* < 0.10) is used only when *H*′ and *B*s are both non-significant; otherwise the cell is classified on the significant signal.
 
 ```{r t1}
 tribble(
-  ~`Diagnostic state`,            ~C,            ~`H′`, ~Bs,   ~Family,
-  "Stable Diet",                  "ns (p ≥ 0.10)", "ns", "ns", "Stability",
-  "Emerging Shift",               "trend",        "ns",  "ns",  "Stability",
-  "Ghost Shift",                  "sig",          "ns",  "ns",  "Substitution",
-  "Internal Rebalancing",         "ns",           "sig", "ns",  "Functional change",
-  "Niche Compression/Expansion",  "ns",           "ns",  "sig", "Functional change",
-  "Niche Restructuring",          "ns",           "sig", "sig", "Functional change",
-  "Partial Diet Shift",           "sig",          "sig", "ns",  "Reorganization",
-  "Structural Shift",             "sig",          "ns",  "sig", "Reorganization",
-  "Major Shift",                  "sig",          "sig", "sig", "Reorganization"
+  ~`Diagnostic state`,           ~C,              ~`H′`, ~Bs,   ~Family,
+  "Stable Diet",                 "ns (p ≥ 0.10)", "ns",  "ns",  "Stability",
+  "Emerging Shift",              "trend",         "ns",  "ns",  "Stability",
+  "Ghost Shift",                 "sig",           "ns",  "ns",  "Substitution",
+  "Internal Rebalancing",        "ns",            "sig", "ns",  "Functional change",
+  "Niche Compression/Expansion", "ns",            "ns",  "sig", "Functional change",
+  "Niche Restructuring",         "ns",            "sig", "sig", "Functional change",
+  "Partial Diet Shift",          "sig",           "sig", "ns",  "Reorganization",
+  "Structural Shift",            "sig",           "ns",  "sig", "Reorganization",
+  "Major Shift",                 "sig",           "sig", "sig", "Reorganization"
 ) %>% show_tbl()
 ```
 
-**Table 2.** Number of prey categories produced by each grouping architecture at reference aggregation thresholds *x* (minimum number of stomachs). Counts are distinct category labels across all predators. The per-predator architecture is swept over 5–250 stomachs only, so higher thresholds are not defined for it.
+**Table 2.** Gulf-wide frequency (%) of the four diagnostic families by contrast and dietary currency. Values are means across the 100 prey taxonomic resolutions of the primary grouping rule, with the standard deviation across resolutions in parentheses, computed over classifiable cells.
 
 ```{r t2}
-dc_path <- "data/dat_classed.rda"
-if (!file.exists(dc_path)) {
-  absent(dc_path)
-} else {
-  e <- new.env(); load(dc_path, envir = e); dc <- get(ls(e)[1], envir = e)
-  X_REF <- c(10, 250, 440, 1000)
-  FAMS  <- c(`Pooled (_1)` = "_1", `Pooled cross-predator (_2)` = "_2",
-             `Per-predator (_PP)` = "_PP")
-  t2 <- map_dfr(names(FAMS), function(nm) {
-    vals <- map_chr(X_REF, function(x) {
-      col <- paste0("prey_category_", x, FAMS[[nm]])
-      if (col %in% names(dc)) as.character(n_distinct(na.omit(dc[[col]]))) else "—"
-    })
-    tibble(`Grouping architecture` = nm, !!!setNames(as.list(vals), paste0("x = ", X_REF)))
-  })
-  show_tbl(t2)
-}
+d <- freq_wide("all_gulf")
+if (is.null(d)) absent("Robustness_all_gulf_1_T/M0_family_frequencies_reference.csv") else show_tbl(d)
 ```
 
-# Supplementary tables — robustness of the diagnostic assignment
+**Table 3.** Frequency (%) of the four diagnostic families at the ecoregion and stratum scales, by contrast and dietary currency. Frequencies are computed within each spatial unit, with a family absent from a unit counted as zero, then averaged across units and across the 100 prey taxonomic resolutions; standard deviation across resolutions in parentheses.
 
-**Table S7.** Summary of the robustness checks. Each row states the objection addressed and the result at the Gulf-wide scale unless indicated. Values are read directly from the analysis outputs.
-
-```{r ts7}
-num <- function(d, ...) if (is.null(d)) NA_real_ else d %>% filter(...) %>% pull(1)
-
-m3  <- rd("Robustness_all_gulf_1_T/M3_CI_overlap_verdict.csv")
-m2  <- rd("Robustness_all_gulf_1_T/M2_FDR_family_frequencies.csv")
-m4  <- rd("Robustness_all_gulf_1_T/M4_alpha_trend_sensitivity.csv")
-m5  <- rd("Robustness_all_gulf_1_T/M5_stability_summary.csv")
-nfp <- rd("NullCalibration_all_gulf_1/null_false_positive_rates.csv")
-cvn <- rd("Calibrated_all_gulf_1/calibrated_vs_nominal.csv")
-csv <- rd("Calibrated_all_gulf_1/calibrated_separation_verdict.csv")
-bal <- rd("Robustness_all_gulf_1_BAL/balanced_separation_verdict.csv")
-eff <- map_dfr(names(LEVEL_LAB), function(l) {
-  d <- rd(sprintf("Effort_%s_1/C_separation_verdict.csv", l))
-  if (is.null(d)) NULL else mutate(d, level = l)
+```{r t3}
+t3 <- map_dfr(c("ecoregion", "stratum"), function(l) {
+  d <- freq_wide(l)
+  if (is.null(d)) NULL else mutate(d, Scale = LEVEL_LAB[[l]], .before = 1)
 })
-
-res <- function(ok, txt) if (isTRUE(ok)) txt else "Not run"
-
-r_boot <- res(!is.null(m3), sprintf(
-  "Stability bands separated by %s (biomass) and %s (occurrence) points",
-  fmt(m3$gap_pp[m3$mode == "biomass" & m3$family == "Stability"]),
-  fmt(m3$gap_pp[m3$mode == "occurrence" & m3$family == "Stability"])))
-
-r_fdr <- res(!is.null(m2), {
-  s <- m2 %>% filter(contrast == "PTa", family == "Substitution", mode == "biomass")
-  sprintf("Substitution %s%% → %s%% (biomass)", fmt(s$pct_raw), fmt(s$pct_bh))
-})
-
-r_alpha <- res(!is.null(m4), {
-  g <- m4 %>% filter(trend == 0.10, alpha <= 0.075, family == "Stability") %>%
-    group_by(mode, alpha, contrast_type) %>%
-    summarise(lo = min(pct_mean), hi = max(pct_mean), .groups = "drop") %>%
-    pivot_wider(names_from = contrast_type, values_from = c(lo, hi)) %>%
-    mutate(gap = lo_within - hi_between)
-  sprintf("Within and between curves never cross; smallest Stability gap %s points",
-          fmt(min(g$gap)))
-})
-
-r_null <- res(!is.null(nfp), {
-  b <- nfp[nfp$mode == "biomass", ]; o <- nfp[nfp$mode == "occurrence", ]
-  sprintf("False-positive rate: C %s / %s%%, H′ %s / %s%%, Bs %s / %s%% (biomass / occurrence)",
-          fmt(b$fpr_comp, 2), fmt(o$fpr_comp, 2), fmt(b$fpr_H, 2),
-          fmt(o$fpr_H, 2), fmt(b$fpr_Bs, 2), fmt(o$fpr_Bs, 2))
-})
-
-r_cal <- res(!is.null(cvn) && !is.null(csv), {
-  s <- cvn %>% filter(contrast == "PTa", family == "Substitution", mode == "biomass")
-  g <- csv %>% filter(family == "Stability", mode == "biomass")
-  sprintf("Substitution %s%% → %s%%; Stability gap %s → %s points (biomass)",
-          fmt(s$pct_nominal), fmt(s$pct_calibrated),
-          fmt(g$gap_nominal), fmt(g$gap_calibrated))
-})
-
-r_res <- res(!is.null(m5), {
-  s <- m5 %>% filter(contrast == "PTa")
-  sprintf("Median support %s (biomass) and %s (occurrence) across 100 resolutions",
-          fmt(s$median_support[s$mode == "biomass"], 2),
-          fmt(s$median_support[s$mode == "occurrence"], 2))
-})
-
-r_bal <- res(!is.null(bal), sprintf(
-  "Bands disjoint in %s%% of draws; median gap %s–%s points",
-  fmt(min(bal$pct_replicates_separated), 0),
-  fmt(min(bal$median_gap_pp)), fmt(max(bal$median_gap_pp))))
-
-r_eff <- res(nrow(eff) > 0, sprintf(
-  "Gaps of %s–%s points under a common-support restriction, %d scale(s)",
-  fmt(min(eff$gap_common)), fmt(max(eff$gap_common)), n_distinct(eff$level)))
-
-tribble(
-  ~Check,                          ~`Objection addressed`,                                ~Result,
-  "Bootstrap over cells",          "Too few cells to separate the bands",                 r_boot,
-  "Benjamini–Hochberg correction", "Uncorrected multiple testing",                        r_fdr,
-  "Threshold sweep (α 0.01–0.075)","Dependence on α = 0.05",                              r_alpha,
-  "Resolution stability",          "Dependence on prey aggregation",                      r_res,
-  "Permutation null",              "Unequal calibration of the three tests",              r_null,
-  "Calibrated thresholds",         "Classification driven by a liberal test",             r_cal,
-  "Equalized sampling effort",     "Decadal contrast has more trawl sets",                r_bal,
-  "Common-support restriction",    "Unequal effort, all three scales",                    r_eff
-) %>% show_tbl()
+if (!nrow(t3)) absent("Robustness_<ecoregion|stratum>_1_T/M0_family_frequencies_reference.csv") else show_tbl(t3)
 ```
 
-**Table S8.** False-positive rates of the three tests and null frequencies of the diagnostic families, under within-cell permutation of period labels (200 permutations, between-period contrast, Gulf-wide scale).
+# Supplementary tables
 
-```{r ts8}
-nfp <- rd("NullCalibration_all_gulf_1/null_false_positive_rates.csv")
-nfd <- rd("NullCalibration_all_gulf_1/null_family_distribution.csv")
-if (is.null(nfp)) absent("NullCalibration_all_gulf_1/null_false_positive_rates.csv") else {
-  nfp %>% relabel() %>%
-    transmute(Currency = mode, `Null tests` = n,
-              `Composition (%)` = fpr_comp, `Diversity H′ (%)` = fpr_H,
-              `Niche breadth Bs (%)` = fpr_Bs, `Dispersion (%)` = fpr_disp) %>%
-    show_tbl(digits = 2)
-}
-if (!is.null(nfd)) {
-  cat("\n")
-  nfd %>% relabel() %>% arrange(mode, family) %>%
-    transmute(Currency = mode, Family = family,
-              `Null mean (%)` = null_mean, `2.5%` = null_q025, `97.5%` = null_q975) %>%
-    show_tbl()
-}
+**Table S1.** Predator taxa retained in the analysis, with the length at maturity (*L*~mat~) used to separate juvenile and adult size classes (Scharf et al., 2000, and regional sources). Taxa without a published regional *L*~mat~ were analysed as a single size class.
+
+```{r ts1}
+show_pipeline("S1")
 ```
 
-**Table S9.** Significance thresholds calibrated on the permutation null: the fifth percentile of each test's null *p*-value distribution, overall and by class of sample size (the smaller of the two per-period set counts).
+**Table S2.** Predator × size-class cells classifiable in the full between-period contrast (2004–2006 vs 2018–2019), with the numbers of non-empty stomachs and trawl sets in each sampling window. Two further cells, juvenile snakeblenny and adult thorny skate, were classifiable only in within-period contrasts.
 
-```{r ts9}
-ca  <- rd("Calibrated_all_gulf_1/calibrated_alphas.csv")
-cab <- rd("Calibrated_all_gulf_1/calibrated_alphas_by_sample_size.csv")
-if (is.null(cab)) absent("Calibrated_all_gulf_1/calibrated_alphas_by_sample_size.csv") else {
-  overall <- if (is.null(ca)) NULL else
-    ca %>% transmute(mode, n_bin = "All", n = n_null, alpha_C, alpha_H, alpha_Bs)
-  bind_rows(overall, cab) %>% relabel() %>%
-    transmute(Currency = mode, `Sets per period` = n_bin, `Null tests` = n,
-              `α composition` = alpha_C, `α diversity (H′)` = alpha_H,
-              `α niche breadth (Bs)` = alpha_Bs) %>%
-    show_tbl(digits = 3)
-}
+```{r ts2}
+show_pipeline("S2")
 ```
 
-**Table S10.** Univariate effect sizes by diagnostic family, between-period contrast (2004–2006 vs 2018–2019), Gulf-wide scale. Medians and 90th percentiles across cells and prey resolutions.
+**Table S3.** Frequency (%) of the four diagnostic families within each ecoregion, by contrast and dietary currency, with the number of classifiable predator × size-class cells in each ecoregion.
 
-```{r ts10}
-m1 <- rd("Robustness_all_gulf_1_T/M1_effect_sizes_by_family.csv")
-if (is.null(m1)) absent("Robustness_all_gulf_1_T/M1_effect_sizes_by_family.csv") else {
-  m1 %>% filter(contrast == "PTa") %>% relabel() %>% arrange(mode, family) %>%
-    transmute(Currency = mode, Family = family, `Cell × resolution` = n,
-              `|ΔH′| median` = dH_med, `|ΔH′| 90th` = dH_q90,
-              `|ΔBs| median` = dBs_med, `|ΔBs| 90th` = dBs_q90,
-              `Bray–Curtis` = BC_med, `PERMANOVA R²` = R2_med) %>%
-    show_tbl(digits = 3)
-}
+```{r ts3}
+# Displayed as Table S3; the pipeline file is still named TableS4_*.
+show_pipeline("S4")
 ```
 
-**Table S11.** Sampling effort per contrast and separation of the within- and between-period bands under a restriction to the effort range common to all five contrasts. Effort is the median number of trawl sets per period across cells.
+**Table S4.** Frequency (%) of the four diagnostic families within each survey stratum, by contrast and dietary currency, with the number of classifiable predator × size-class cells in each stratum.
 
-```{r ts11}
-eff_a <- map_dfr(names(LEVEL_LAB), function(l) {
-  d <- rd(sprintf("Effort_%s_1/A_effort_by_contrast.csv", l))
-  if (is.null(d)) NULL else mutate(d, level = l)
-})
-if (!nrow(eff_a)) absent("Effort_<level>_1/A_effort_by_contrast.csv") else {
-  eff_a %>% filter(mode == "biomass") %>% relabel() %>%
-    mutate(Scale = factor(LEVEL_LAB[level], levels = LEVEL_LAB),
-           `Smaller group (IQR)` = sprintf("%s (%s–%s)", fmt(sets_min_med),
-                                           fmt(sets_min_q25), fmt(sets_min_q75))) %>%
-    arrange(Scale, contrast) %>%
-    transmute(Scale, Contrast = contrast, Cells = n_cells,
-              `Period 1` = sets_P1_med, `Period 2` = sets_P2_med,
-              `Smaller group (IQR)`) %>%
-    show_tbl()
-}
-eff_c <- map_dfr(names(LEVEL_LAB), function(l) {
-  d <- rd(sprintf("Effort_%s_1/C_separation_verdict.csv", l))
-  if (is.null(d)) NULL else mutate(d, level = l)
-})
-if (nrow(eff_c)) {
-  cat("\n")
-  eff_c %>% relabel() %>%
-    mutate(Scale = factor(LEVEL_LAB[level], levels = LEVEL_LAB)) %>%
-    arrange(Scale, mode, family) %>%
-    transmute(Scale, Currency = mode, Family = family,
-              `Gap, all cells` = gap_all, `Gap, common support` = gap_common) %>%
-    show_tbl()
-}
-```
-
-**Table S12.** Separation of the within- and between-period bands under equalized sampling effort. Proportion of independent draws in which the between-period band lies entirely outside the within-period band, and the gap between bands in percentage points.
-
-```{r ts12}
-t12 <- map_dfr(c("all_gulf", "ecoregion"), function(l) {
-  d <- rd(sprintf("Robustness_%s_1_BAL/balanced_separation_verdict.csv", l))
-  if (is.null(d)) NULL else mutate(d, level = l)
-})
-if (!nrow(t12)) absent("Robustness_<level>_1_BAL/balanced_separation_verdict.csv") else {
-  t12 %>% relabel() %>%
-    mutate(Scale = factor(LEVEL_LAB[level], levels = LEVEL_LAB)) %>%
-    arrange(Scale, mode, family) %>%
-    transmute(Scale, Currency = mode, Family = family, Draws = n_rep,
-              `Draws separated (%)` = pct_replicates_separated,
-              `Median gap` = median_gap_pp, `2.5% gap` = q025_gap_pp) %>%
-    show_tbl()
-}
-```
-
-**Table S13.** Frequency (%) of the four diagnostic families by contrast, currency and spatial scale: mean across the 100 prey resolutions, with the standard deviation across resolutions in parentheses. At the ecoregion and stratum scales, percentages are computed per spatial unit and averaged across units.
-
-```{r ts13}
-t13 <- map_dfr(names(LEVEL_LAB), function(l) {
-  d <- rd(sprintf("Robustness_%s_1_T/M0_family_frequencies_reference.csv", l))
-  if (is.null(d)) NULL else mutate(d, level = l)
-})
-if (!nrow(t13)) absent("Robustness_<level>_1_T/M0_family_frequencies_reference.csv") else {
-  t13 %>% relabel() %>%
-    mutate(Scale = factor(LEVEL_LAB[level], levels = LEVEL_LAB),
-           cell = sprintf("%s (%s)", fmt(pct_mean), fmt(sd_across_x))) %>%
-    select(Scale, Contrast = contrast, Currency = mode, family, cell) %>%
-    pivot_wider(names_from = family, values_from = cell) %>%
-    select(Scale, Contrast, Currency, any_of(FAMILIES)) %>%
-    arrange(Scale, Currency, Contrast) %>%
-    show_tbl()
-}
+```{r ts4}
+# Displayed as Table S4; the pipeline file is still named TableS5_*.
+show_pipeline("S5")
 ```

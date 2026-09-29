@@ -1,0 +1,11 @@
+Contrast,Currency,Median Bray–Curtis,Median PERMANOVA R²,Cell × resolution
+2004 vs 2006,Biomass,0.32,0.035,5400
+2004–2005 vs 2006,Biomass,0.298,0.027,5500
+2018 vs 2019,Biomass,0.413,0.046,5100
+2006 vs 2018,Biomass,0.649,0.101,5200
+2004–2006 vs 2018–2019,Biomass,0.576,0.077,5900
+2004 vs 2006,Occurrence,0.283,0.035,5400
+2004–2005 vs 2006,Occurrence,0.277,0.031,5500
+2018 vs 2019,Occurrence,0.379,0.05,5100
+2006 vs 2018,Occurrence,0.616,0.162,5200
+2004–2006 vs 2018–2019,Occurrence,0.564,0.122,5900

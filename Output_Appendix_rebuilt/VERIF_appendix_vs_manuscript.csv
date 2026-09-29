@@ -1,0 +1,22 @@
+item,manuscript,recomputed,match
+A2 BC PTa biomass,0.576,0.576,TRUE
+A2 BC PTa occurrence,0.564,0.564,TRUE
+A5 Stability PTa biomass min,5.1,5.085,TRUE
+A5 Stability PTa biomass max,13.6,13.559,TRUE
+A5 Stability PTa occurrence min,3.4,3.39,TRUE
+A5 Stability PTa occurrence max,10.2,10.169,TRUE
+A5 lowest within Stability biomass,43.6,43.636,TRUE
+A5 lowest within Stability occurrence,44.4,44.444,TRUE
+"A6 ecoregion 2018v2019 Stability biomass, all",69.5,69.523,TRUE
+"A6 ecoregion 2018v2019 Stability biomass, >=5",59.4,59.364,TRUE
+"A6 ecoregion 2018v2019 Stability occurrence, >=5",71.1,71.111,TRUE
+"A6 stratum PTa Stability biomass, >=5",35.8,35.83,TRUE
+"A6 stratum PTa Stability occurrence, >=5",24,24.003,TRUE
+B1 per-predator Stability biomass,31.7,31.717,TRUE
+B1 per-predator Stability occurrence,21.7,21.675,TRUE
+B1 primary Stability biomass (shared x),8.3,8.339,TRUE
+B1 primary Stability occurrence,4.5,4.542,TRUE
+B1 per-predator Substitution biomass,39,39.01,TRUE
+B1 per-predator Substitution occurrence,37.9,37.867,TRUE
+B1 primary Substitution biomass,48.5,48.475,TRUE
+B1 primary Substitution occurrence,44.3,44.271,TRUE

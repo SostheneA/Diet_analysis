@@ -1,5 +1,5 @@
 ---
-title: "A framework to investigate trophic reorganization in marine systems using predator stomach contents"
+title: "A diagnostic framework for assessing trophic change from predator stomach contents"
 subtitle: "Figures"
 format:
   docx:
@@ -14,110 +14,83 @@ execute:
 ```{r setup}
 #| include: false
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
-                      dpi = 300, out.width = "100%")
-DIRS <- c("Output_Figures", "Output_Appendices", "Output_Figures_extra")
-
-# Finds a figure by filename pattern across DIRS. Stops if nothing matches, and
-# warns if several files match, so that a stale copy is never picked silently.
-fig <- function(pattern) {
-  hits <- list.files(DIRS, pattern = pattern, full.names = TRUE, ignore.case = TRUE)
-  if (!length(hits)) stop("introuvable : ", pattern, call. = FALSE)
-  if (length(hits) > 1)
-    warning("plusieurs fichiers pour '", pattern, "' : ",
-            paste(basename(hits), collapse = ", "), " -- premier retenu",
-            call. = FALSE)
-  knitr::include_graphics(normalizePath(hits[1]))
-}
+                      results = "asis", dpi = 300, out.width = "100%")
+source("R_helpers/paper_helpers.R")
+# Figure numbers follow the order of first citation in the manuscript.
+# File names are those written by the pipeline and are NOT renumbered:
+# each chunk states which file it shows.
 ```
 
 ```{r f1, fig.cap="Figure 1. Study area. Bottom-trawl survey strata of the southern Gulf of St Lawrence (sGSL); numbers identify individual strata and the shading gives the depth range of each."}
-fig("^Fig1_study_area")
+fig_safe("^Fig1_study_area")          # file Fig1_
 ```
 
-```{r f2, fig.cap="Figure 2. Position of the trawl sets from which predator stomachs were analysed, by survey year and pooled over years, in the four GSLEA ecoregions."}
-fig("^Fig2_")
+```{r f2, fig.cap="Figure 2. Prey taxonomic resolution. (A) Number of prey categories retained as the aggregation threshold x (minimum number of stomachs) is swept from 10 to 1,000."}
+fig_safe("^Fig3a_")                   # file Fig3a_
 ```
 
-```{r f3, fig.cap="Figure 3. Prey taxonomic resolution. (A) Number of prey categories retained as the aggregation threshold x (minimum number of stomachs) is swept from 10 to 1,000."}
-fig("^Fig3a_")
+```{r f2b, fig.cap="Figure 2 (continued). (B) Frequency of the four diagnostic families across the full sweep, by contrast and currency. The values reported in the text are the means of these curves."}
+fig_safe("^Fig3b_")                   # file Fig3b_
 ```
 
-```{r f4, fig.cap="Figure 4. Decision tree of the diagnostic typology. Each eligible predator × size-class cell is routed by the outcome of the composition, diversity and niche-breadth tests to one of the nine states and to its family."}
-fig("^Fig4_typology_tree\\.png$")
+```{r f3, fig.cap="Figure 3. Decision tree of the diagnostic typology. Each eligible predator × size-class cell is routed by the outcomes of the composition, diversity and niche-breadth tests to one of nine states and to its family."}
+fig_safe("^Fig4_typology_tree\\.png$") # file Fig4_
 ```
 
-```{r f5, fig.cap="Figure 5. Diet regime break at the Gulf-wide scale. Frequency (%) of the four diagnostic families among the predator × size-class cells, by contrast and currency; mean and standard deviation across the 100 prey taxonomic resolutions."}
-fig("^Fig5_")
+```{r f4, fig.cap="Figure 4. Gulf-wide diagnostic families. Frequency (%) of the four families among classifiable predator × size-class cells, by contrast and currency; mean and standard deviation across the 100 prey taxonomic resolutions."}
+fig_safe("^Fig5_")                    # file Fig5_
 ```
 
-```{r f6, fig.cap="Figure 6. Diet regime break by ecoregion. Composition of the four diagnostic families within each ecoregion (columns) for each contrast, in both currencies."}
-fig("^Fig6_")
+```{r f5, fig.cap="Figure 5. Spatial distribution of the four diagnostic families across survey strata, biomass currency. Each panel maps the within-stratum family composition for one contrast."}
+fig_safe("^Fig9_")                    # file Fig9_
 ```
 
-```{r f7, fig.cap="Figure 7. Diet regime break at the ecoregion scale. Frequency (%) of the four diagnostic families for each contrast, in biomass (solid) and occurrence (dashed); means across the four ecoregions."}
-fig("^Fig7_")
-```
-
-```{r f8, fig.cap="Figure 8. Diet regime break at the stratum scale. As Figure 7, with the composites computed per survey stratum and averaged across strata."}
-fig("^Fig8_")
-```
-
-```{r f9, fig.cap="Figure 9. Spatial distribution of the four diagnostic families across survey strata, biomass currency. Each panel maps the within-stratum family composition for one contrast."}
-fig("^Fig9_")
-```
-
-```{r f10, fig.cap="Figure 10. Effect of spatial aggregation on the diagnostic composition for the between-period contrast (2004–2006 vs 2018–2019). Stratum and ecoregion values are means across units; the Gulf-wide value is a single pooled test. Bars are the standard deviation across resolutions."}
-fig("^Fig10_")
+```{r f6, fig.cap="Figure 6. Effect of spatial aggregation on the diagnostic composition for the full between-period contrast (2004–2006 vs 2018–2019). Stratum and ecoregion values are means across units; the Gulf-wide value is a single pooled test. Bars are the standard deviation across resolutions."}
+fig_safe("^Fig10_")                   # file Fig10_
 ```
 
 # Supplementary figures
 
-```{r f3b, fig.cap="Figure 3 (continued). (B) Frequency of the four diagnostic families across the full sweep, by contrast and currency. The values reported in the text are the means of these curves."}
-fig("^Fig3b_")
+```{r fs1, fig.cap="Figure S1. Position of the trawl sets from which predator stomachs were analysed, by survey year and pooled over years, in the four ecoregions."}
+fig_safe("^Fig2_")                    # file Fig2_
 ```
 
-```{r fs1, fig.cap="Figure S1. Number of stomachs analysed per survey year and ecoregion, for the predators retained in the analysis."}
-fig("^FigS1_")
+```{r fs2, fig.cap="Figure S2. Number of stomachs analysed per survey year and ecoregion, for the predators retained in the analysis."}
+fig_safe("^FigS1_")                   # file FigS1_
 ```
 
-```{r fs2, fig.cap="Figure S2. Number of stomachs analysed per survey stratum and year (colour scale on a square-root transform)."}
-fig("^FigS2_")
+```{r fs3, fig.cap="Figure S3. Number of stomachs analysed per survey stratum and year (colour scale on a square-root transform)."}
+fig_safe("^FigS2_")                   # file FigS2_
 ```
 
-```{r fs3, fig.cap="Figure S3. Diet regime break within each ecoregion. Frequency (%) of the four diagnostic families for each contrast, in biomass and occurrence, shown separately for each of the four ecoregions."}
-fig("^FigS3_")
+```{r fs4, fig.cap="Figure S4. Diagnostic families by ecoregion. Composition of the four families within each ecoregion (columns) for each contrast, in both currencies."}
+fig_safe("^Fig6_")                    # file Fig6_
 ```
 
-```{r fs4, fig.cap="Figure S4. Spatial distribution of the four diagnostic families across survey strata, occurrence currency (same layout as Figure 9)."}
-fig("^FigS4_")
+```{r fs5, fig.cap="Figure S5. Ecoregion-scale diagnostic families. Frequency (%) of the four families for each contrast, in biomass (solid) and occurrence (dashed); means across the four ecoregions."}
+fig_safe("^Fig7_")                    # file Fig7_
 ```
 
-```{r fs5, fig.cap="Figure S5. Spatial distribution of the four diagnostic families across survey strata, biomass currency, with the strata built on fewer than five predator × size-class cells masked."}
-fig("^FigS5_")
+```{r fs6, fig.cap="Figure S6. Diagnostic families within each ecoregion. Frequency (%) of the four families for each contrast, in biomass and occurrence, shown separately for each ecoregion."}
+fig_safe("^FigS3_")                   # file FigS3_
 ```
 
-```{r fs6, fig.cap="Figure S6. As Figure S5, occurrence currency."}
-fig("^FigS6_")
+```{r fs7, fig.cap="Figure S7. Stratum-scale diagnostic families. As Figure S5, with frequencies computed per survey stratum and averaged across strata."}
+fig_safe("^Fig8_")                    # file Fig8_
 ```
 
-```{r fs7, fig.cap="Figure S7. Sensitivity of the across-unit composites to sparsely sampled units, at the three spatial scales."}
-fig("^FigS7_")
+```{r fs8, fig.cap="Figure S8. Spatial distribution of the four diagnostic families across survey strata, occurrence currency (same layout as Figure 5)."}
+fig_safe("^FigS4_")                   # file FigS4_
 ```
 
-# Robustness of the diagnostic assignment
-
-```{r fs8, fig.cap="Figure S8. Calibration of the three tests under a permutation null. Period labels were permuted among trawl sets within each cell of the between-period contrast (2004–2006 vs 2018–2019), preserving the number of sets per period, so that no between-period difference exists by construction; the rejection rate at α = 0.05 is the empirical false-positive rate of each test. Rates are shown by class of sample size (the smaller of the two per-period set counts), from 200 permutations over ten prey resolutions at the Gulf-wide scale. Dashed line: nominal 5%."}
-fig("^FigS8_null_calibration")
+```{r fs9, fig.cap="Figure S9. As Figure 5, with strata represented by fewer than five classifiable predator × size-class cells masked."}
+fig_safe("^FigS5_")                   # file FigS5_
 ```
 
-```{r fs9, fig.cap="Figure S9. Frequency of the four diagnostic families under the nominal significance threshold (α = 0.05 for all three tests, grey) and under thresholds calibrated on the permutation null of Figure S8 (blue; α = 0.014 in biomass and 0.030 in occurrence for the diversity test). Gulf-wide scale, means across the 100 prey resolutions."}
-fig("^FigS9_calibrated_thresholds")
+```{r fs10, fig.cap="Figure S10. As Figure S9, occurrence currency."}
+fig_safe("^FigS6_")                   # file FigS6_
 ```
 
-```{r fs10, fig.cap="Figure S10. Family frequencies under equalized sampling effort, Gulf-wide scale. Each cell of each contrast was capped at the smallest per-period number of trawl sets observed among the within-period contrasts of that cell, sets were drawn without replacement, and the analysis repeated over independent draws. Boxes: distribution across draws; crosses: values from the full, unbalanced data. Cells whose target fell below three sets or that were absent from any contrast were excluded (14 of 65)."}
-fig("^FigS10_balanced_effort_gulf")
-```
-
-```{r fs11, fig.cap="Figure S11. As Figure S10, ecoregion scale. At this scale two thirds of cells were excluded (132 of 200), most because they were absent from at least one contrast, and the median target was six sets per period; the figure is reported for completeness and is interpreted in the text with these restrictions."}
-fig("^FigS11_balanced_effort_ecoregion")
+```{r fs11, fig.cap="Figure S11. Sensitivity of the across-unit summaries to sparsely represented spatial units, at the ecoregion and stratum scales."}
+fig_safe("^FigS7_")                   # file FigS7_
 ```

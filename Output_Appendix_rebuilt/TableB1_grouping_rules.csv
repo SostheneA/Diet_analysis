@@ -1,0 +1,31 @@
+Rule,Contrast,Currency,Stability,Substitution,Functional change,Reorganization
+Pooled (primary),2004 vs 2006,Biomass,52.4,22.4,15,10.1
+Pooled (primary),2004–2005 vs 2006,Biomass,47.2,25.5,21.1,6.2
+Pooled (primary),2018 vs 2019,Biomass,58.5,15.1,18.4,8
+Pooled (primary),2006 vs 2018,Biomass,13.8,42.1,3.5,40.6
+Pooled (primary),2004–2006 vs 2018–2019,Biomass,8.3,48.5,4.8,38.4
+Pooled cross-predator,2004 vs 2006,Biomass,53.7,21.4,14.7,10.1
+Pooled cross-predator,2004–2005 vs 2006,Biomass,47.7,23.9,22.3,6.2
+Pooled cross-predator,2018 vs 2019,Biomass,58,15.5,18.5,8
+Pooled cross-predator,2006 vs 2018,Biomass,11.9,42.1,5.5,40.5
+Pooled cross-predator,2004–2006 vs 2018–2019,Biomass,8.4,46.8,3.7,41.2
+Per-predator,2004 vs 2006,Biomass,61.8,17.9,12.3,8
+Per-predator,2004–2005 vs 2006,Biomass,59.5,16.1,16.1,8.3
+Per-predator,2018 vs 2019,Biomass,75.7,7.2,12,5.2
+Per-predator,2006 vs 2018,Biomass,31,35.9,5.6,27.5
+Per-predator,2004–2006 vs 2018–2019,Biomass,31.7,39,2.7,26.6
+Pooled (primary),2004 vs 2006,Occurrence,46.1,35.6,1.8,16.5
+Pooled (primary),2004–2005 vs 2006,Occurrence,49,29.3,5.8,15.9
+Pooled (primary),2018 vs 2019,Occurrence,63.7,14.5,14.3,7.5
+Pooled (primary),2006 vs 2018,Occurrence,10.2,49.4,2.5,37.9
+Pooled (primary),2004–2006 vs 2018–2019,Occurrence,4.5,44.3,4.6,46.6
+Pooled cross-predator,2004 vs 2006,Occurrence,49.4,32.9,1.1,16.6
+Pooled cross-predator,2004–2005 vs 2006,Occurrence,50.3,28.6,5.7,15.3
+Pooled cross-predator,2018 vs 2019,Occurrence,63.2,14,14.7,8.1
+Pooled cross-predator,2006 vs 2018,Occurrence,10.8,49.5,2,37.7
+Pooled cross-predator,2004–2006 vs 2018–2019,Occurrence,4.5,39.5,4.6,51.4
+Per-predator,2004 vs 2006,Occurrence,53.4,18.7,12.5,15.4
+Per-predator,2004–2005 vs 2006,Occurrence,53.7,21.2,13.4,11.7
+Per-predator,2018 vs 2019,Occurrence,72,3.9,12.8,11.2
+Per-predator,2006 vs 2018,Occurrence,26,47.4,3.8,22.8
+Per-predator,2004–2006 vs 2018–2019,Occurrence,21.7,37.9,7.5,33

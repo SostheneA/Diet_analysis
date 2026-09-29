@@ -3,12 +3,12 @@
 # -----------------------------------------------------------------------------
 # Rebuilds the robustness figures in English, publication-ready, from the CSV
 # outputs of 6h, 6j, 6k and 6l. Writes them to Output_Appendices/ under the
-# FigS<n>_ names that Paper_Figures.qmd picks up.
+# FigC<n>_ names that Paper_Appendix.qmd picks up (Appendix C).
 #
-#   FigS8_null_calibration.png           6k  (NullCalibration_all_gulf_1/)
-#   FigS9_calibrated_thresholds.png      6l  (Calibrated_all_gulf_1/)
-#   FigS10_balanced_effort_gulf.png      6j  (Robustness_all_gulf_1_BAL/)
-#   FigS11_balanced_effort_ecoregion.png 6j  (Robustness_ecoregion_1_BAL/)
+#   FigC1_null_calibration.png           6k  (NullCalibration_all_gulf_1/)
+#   FigC2_calibrated_thresholds.png      6l  (Calibrated_all_gulf_1/)
+#   FigC3_balanced_effort_gulf.png      6j  (Robustness_all_gulf_1_BAL/)
+#   FigC4_balanced_effort_ecoregion.png 6j  (Robustness_ecoregion_1_BAL/)
 #
 # Nothing is recomputed: the script only reads and redraws.
 # =============================================================================
@@ -67,7 +67,7 @@ save_fig <- function(p, name, w = 6.5, h = 4.5) {
 }
 
 # =============================================================================
-# FIGURE S8 — Null calibration of the three tests
+# FIGURE C1 — Null calibration of the three tests
 # =============================================================================
 
 fpr <- read_req("NullCalibration_all_gulf_1/null_fpr_by_sample_size.csv")
@@ -97,10 +97,10 @@ p8 <- ggplot(s8, aes(n_bin, rate, colour = test, group = test)) +
   labs(x = "Trawl sets per period (smaller of the two)",
        y = "Rejection rate under the null (%)") +
   theme_paper() + theme(axis.text.x = element_text(angle = 0, hjust = 0.5))
-save_fig(p8, "FigS8_null_calibration.png", h = 3.6)
+save_fig(p8, "FigC1_null_calibration.png", h = 3.6)
 
 # =============================================================================
-# FIGURE S9 — Family frequencies under nominal and calibrated thresholds
+# FIGURE C2 — Family frequencies under nominal and calibrated thresholds
 # =============================================================================
 
 cal <- read_req("Calibrated_all_gulf_1/calibrated_vs_nominal.csv") %>%
@@ -116,10 +116,10 @@ p9 <- ggplot(cal, aes(contrast, pct, fill = threshold)) +
   scale_fill_manual(values = c("grey70", "#1F5FA8")) +
   labs(x = NULL, y = "Classifiable cells (%)") +
   theme_paper()
-save_fig(p9, "FigS9_calibrated_thresholds.png", w = 7.5, h = 5)
+save_fig(p9, "FigC2_calibrated_thresholds.png", w = 7.5, h = 5)
 
 # =============================================================================
-# FIGURES S10 / S11 — Balanced sampling effort
+# FIGURES C3 / C4 — Balanced sampling effort
 # =============================================================================
 
 balanced_plot <- function(dir) {
@@ -142,12 +142,12 @@ balanced_plot <- function(dir) {
 
 if (dir.exists("Robustness_all_gulf_1_BAL")) {
   save_fig(balanced_plot("Robustness_all_gulf_1_BAL"),
-           "FigS10_balanced_effort_gulf.png", w = 7.5, h = 5)
-} else message("Robustness_all_gulf_1_BAL absent : FigS10 non produite.")
+           "FigC3_balanced_effort_gulf.png", w = 7.5, h = 5)
+} else message("Robustness_all_gulf_1_BAL absent : FigC3 non produite.")
 
 if (dir.exists("Robustness_ecoregion_1_BAL")) {
   save_fig(balanced_plot("Robustness_ecoregion_1_BAL"),
-           "FigS11_balanced_effort_ecoregion.png", w = 7.5, h = 5)
-} else message("Robustness_ecoregion_1_BAL absent : FigS11 non produite.")
+           "FigC4_balanced_effort_ecoregion.png", w = 7.5, h = 5)
+} else message("Robustness_ecoregion_1_BAL absent : FigC4 non produite.")
 
 message("7r termine.")
